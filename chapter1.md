@@ -10,21 +10,22 @@
 
 ```
 [vpn]
-node01 vpn_ip=10.28.59.165 ansible_host=59.110.52.213
-node02 vpn_ip=10.27.240.159 ansible_host=59.110.52.53
-node03 vpn_ip=10.27.73.189 ansible_host=59.110.52.189
-node04 vpn_ip=10.28.56.143 ansible_host=59.110.21.206
-node05 vpn_ip=10.28.120.2 ansible_host=59.110.23.166
-node06 vpn_ip=10.28.60.253 ansible_host=59.110.20.136
-node07 vpn_ip=10.28.56.170 ansible_host=47.93.91.234
-node08 vpn_ip=10.27.247.231 ansible_host=59.110.51.128
-node09 vpn_ip=10.28.120.15 ansible_host=59.110.23.133
-node10 vpn_ip=10.28.57.102 ansible_host=59.110.53.26
-node11 vpn_ip=10.28.57.116 ansible_host=59.110.52.161
-node12 vpn_ip=10.28.119.144 ansible_host=59.110.53.67
-node13 vpn_ip=10.28.50.127 ansible_host=59.110.49.143
-node14 vpn_ip=10.28.116.251 ansible_host=47.93.89.12
-node15 vpn_ip=10.28.119.37 ansible_host=47.93.84.113
+node01 vpn_ip=10.0.0.1 ansible_host=77.222.52.211
+node02 vpn_ip=10.0.0.2 ansible_host=77.222.52.212
+node03 vpn_ip=10.0.0.3 ansible_host=77.222.52.213
+node04 vpn_ip=10.0.0.4 ansible_host=77.222.52.214
+node05 vpn_ip=10.0.0.5 ansible_host=77.222.52.215
+node06 vpn_ip=10.0.0.6 ansible_host=77.222.52.216
+node07 vpn_ip=10.0.0.7 ansible_host=77.222.52.217
+node08 vpn_ip=10.0.0.8 ansible_host=77.222.52.218
+node09 vpn_ip=10.0.0.9 ansible_host=77.222.52.219
+node10 vpn_ip=10.0.0.10 ansible_host=77.222.52.220
+node11 vpn_ip=10.0.0.11 ansible_host=77.222.52.221
+node12 vpn_ip=10.0.0.12 ansible_host=77.222.52.222
+node13 vpn_ip=10.0.0.13 ansible_host=77.222.52.223
+node14 vpn_ip=10.0.0.14 ansible_host=77.222.52.224
+node15 vpn_ip=10.0.0.15 ansible_host=77.222.52.225
+
 
 [removevpn]
 
@@ -52,7 +53,7 @@ node01
 node02
 ```
 
-在`node01 10.28.59.165`上安装`ansible`
+在`node01 10.0.0.1`上安装`ansible`
 
 ```
 $ sudo apt-get install software-properties-common
@@ -88,21 +89,21 @@ vi ./hosts
 
 ```
 sudo ssh-keygen
-ssh-copy-id idatage@59.110.52.213
-ssh-copy-id idatage@59.110.52.53
-ssh-copy-id idatage@59.110.52.189
-ssh-copy-id idatage@59.110.21.206
-ssh-copy-id idatage@59.110.23.166
-ssh-copy-id idatage@59.110.20.136
-ssh-copy-id idatage@47.93.91.234
-ssh-copy-id idatage@59.110.51.128
-ssh-copy-id idatage@59.110.23.133
-ssh-copy-id idatage@59.110.53.26
-ssh-copy-id idatage@59.110.52.161
-ssh-copy-id idatage@59.110.53.67
-ssh-copy-id idatage@59.110.49.143
-ssh-copy-id idatage@47.93.89.12
-ssh-copy-id idatage@47.93.84.113
+ssh-copy-id idatage@77.222.52.211
+ssh-copy-id idatage@77.222.52.211
+ssh-copy-id idatage@77.222.52.211
+ssh-copy-id idatage@77.222.52.211
+ssh-copy-id idatage@77.222.52.211
+ssh-copy-id idatage@77.222.52.211
+ssh-copy-id idatage@77.222.52.211
+ssh-copy-id idatage@77.222.52.211
+ssh-copy-id idatage@77.222.52.211
+ssh-copy-id idatage@77.222.52.211
+ssh-copy-id idatage@77.222.52.211
+ssh-copy-id idatage@77.222.52.211
+ssh-copy-id idatage@77.222.52.211
+ssh-copy-id idatage@77.222.52.211
+ssh-copy-id idatage@77.222.52.211
 ```
 
 执行命令`ansible all -m ping`结果如下：
