@@ -30,21 +30,21 @@ node02
 修改配置目录：`/etc/nginx/sites-available/default` 文件
 
 ```
-        location /port/{
+        location /x/{
                 proxy_set_header    Host $http_host;
                 proxy_set_header    X-Real-IP   $remote_addr;
                 proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
                 proxy_redirect off;
                 proxy_pass http://127.0.0.1:9222/;
         }
-        location /head/{
+        location /y/{
                 proxy_set_header    Host $http_host;
                 proxy_set_header    X-Real-IP   $remote_addr;
                 proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
                 proxy_redirect off;
                 proxy_pass  http://127.0.0.1:9100/;
         }
-        location /bigdesk/{
+        location /z/{
                 proxy_set_header    Host $http_host;
                 proxy_set_header    X-Real-IP   $remote_addr;
                 proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
