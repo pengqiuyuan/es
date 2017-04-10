@@ -61,7 +61,7 @@ node02
 
 生成`passfile`文件，
 
-`sudo htpasswd -c -d /etc/nginx/conf.d/pass_file idatage`
+`sudo htpasswd -c -d /etc/nginx/conf.d/pass_file xxxx`
 
 修改配置目录：`/etc/nginx/sites-available/default`文件，添加
 
