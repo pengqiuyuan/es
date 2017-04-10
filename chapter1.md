@@ -1,0 +1,387 @@
+* [x] 使用分布式配置管理工具`ansible`来做集群的部署
+
+集群的初始部署，配置批量更改，集群版本升级，重启故障结点（快捷和安全）
+
+如果ES集群规模比较大，那么部署ES实例将会成为一个比较繁琐和麻烦的事情，如果后期涉及到集群的参数修改或者调优，那么修改配置文件也将是一个头疼的问题
+
+官方提供了三个工具：`Puppet`、`Chef`和`ansible`
+
+`Ubuntu 16.04`
+
+```
+[vpn]
+node01 vpn_ip=10.28.59.165 ansible_host=59.110.52.213
+node02 vpn_ip=10.27.240.159 ansible_host=59.110.52.53
+node03 vpn_ip=10.27.73.189 ansible_host=59.110.52.189
+node04 vpn_ip=10.28.56.143 ansible_host=59.110.21.206
+node05 vpn_ip=10.28.120.2 ansible_host=59.110.23.166
+node06 vpn_ip=10.28.60.253 ansible_host=59.110.20.136
+node07 vpn_ip=10.28.56.170 ansible_host=47.93.91.234
+node08 vpn_ip=10.27.247.231 ansible_host=59.110.51.128
+node09 vpn_ip=10.28.120.15 ansible_host=59.110.23.133
+node10 vpn_ip=10.28.57.102 ansible_host=59.110.53.26
+node11 vpn_ip=10.28.57.116 ansible_host=59.110.52.161
+node12 vpn_ip=10.28.119.144 ansible_host=59.110.53.67
+node13 vpn_ip=10.28.50.127 ansible_host=59.110.49.143
+node14 vpn_ip=10.28.116.251 ansible_host=47.93.89.12
+node15 vpn_ip=10.28.119.37 ansible_host=47.93.84.113
+
+[removevpn]
+
+[elasticsearch_master_nodes]
+
+[elasticsearch_master_data_nodes]
+node03
+node04
+node05
+
+[elasticsearch_data_nodes]
+node06
+node07
+node08
+node09
+node10
+node11
+node12
+node13
+node14
+node15
+
+[elasticsearch_client_nodes]
+node01
+node02
+```
+
+在`node01 10.28.59.165`上安装`ansible`
+
+```
+$ sudo apt-get install software-properties-common
+$ sudo apt-add-repository ppa:ansible/ansible
+$ sudo apt-get update
+$ sudo apt-get install ansible
+```
+
+安装`git`
+
+```
+$ sudo apt-get install git
+```
+
+克隆`ansible-tinc-elasticsearch`此项目`hosts、platbook`文件已配置好，已下是解释：
+
+```
+$ git clone https://github.com/pengqiuyuan/ansible-tinc-elasticsearch.git
+```
+
+项目在`/home/idatage`下，`/home/idatage/ansible-tinc-elasticsearch/hosts`文件：
+
+```
+cd /home/idatage/ansible-tinc-elasticsearch
+vi ./hosts
+```
+
+保存`hosts`，十五台机器`vpn_ip`为内网`ip`，`ansible_host`为公网`ip`，`hosts`文件修改完后记得执行
+
+`ansible-playbook -s site.yml`
+
+`ansible`配置私钥用来免密码登录：
+
+```
+sudo ssh-keygen
+ssh-copy-id idatage@59.110.52.213
+ssh-copy-id idatage@59.110.52.53
+ssh-copy-id idatage@59.110.52.189
+ssh-copy-id idatage@59.110.21.206
+ssh-copy-id idatage@59.110.23.166
+ssh-copy-id idatage@59.110.20.136
+ssh-copy-id idatage@47.93.91.234
+ssh-copy-id idatage@59.110.51.128
+ssh-copy-id idatage@59.110.23.133
+ssh-copy-id idatage@59.110.53.26
+ssh-copy-id idatage@59.110.52.161
+ssh-copy-id idatage@59.110.53.67
+ssh-copy-id idatage@59.110.49.143
+ssh-copy-id idatage@47.93.89.12
+ssh-copy-id idatage@47.93.84.113
+```
+
+执行命令`ansible all -m ping`结果如下：
+
+```
+$ ansible all -m ping
+node02 | SUCCESS => {
+"changed": false,
+"ping": "pong"
+}
+node01 | SUCCESS => {
+"changed": false,
+"ping": "pong"
+}
+node03 | SUCCESS => {
+"changed": false,
+"ping": "pong"
+}
+```
+
+`sity.yml`文件
+
+```
+---
+
+- hosts: vpn
+  become: yes
+  roles:
+    - tinc
+
+- hosts: removevpn
+  become: yes
+  roles:
+    - tinc-remove
+```
+
+执行命令`ansible-playbook -s site.yml`成功结果：
+
+```
+PLAY RECAP *********************************************************************
+node01 : ok=18 changed=15 unreachable=0 failed=0
+node02 : ok=18 changed=15 unreachable=0 failed=0
+node03 : ok=18 changed=15 unreachable=0 failed=0
+```
+
+安装`ansible`的主机`213`执行如下命令，`-s su`权限，修改系统配置（`System`配置后面介绍），
+
+`/home/idatage/ansible-tinc-elasticsearch`
+
+```
+ansible all -s -m raw -a '
+grep "* - nofile 512000" /etc/security/limits.conf || echo "* - nofile 512000" >> /etc/security/limits.conf
+grep "elasticsearch - nproc unlimited" /etc/security/limits.conf || echo "elasticsearch - nproc unlimited" >> /etc/security/limits.conf
+grep "fs.file-max = 1024000" /etc/sysctl.conf || echo "fs.file-max = 1024000" >> /etc/sysctl.conf
+grep "vm.max_map_count = 262144" /etc/sysctl.conf || echo "vm.max_map_count = 262144" >> /etc/sysctl.conf
+grep "vm.swappiness = 1" /etc/sysctl.conf || echo "vm.swappiness = 1" >> /etc/sysctl.conf #禁用 swapping
+sysctl -p'
+```
+
+成功如下：
+
+```
+$ ansible all -s -m raw -a '
+> grep "* - nofile 512000" /etc/security/limits.conf || echo "* - nofile 512000" >> /etc/security/limits.conf
+> grep "elasticsearch - nproc unlimited" /etc/security/limits.conf || echo "elasticsearch - nproc unlimited" >> /etc/security/limits.conf
+> grep "fs.file-max = 1024000" /etc/sysctl.conf || echo "fs.file-max = 1024000" >> /etc/sysctl.conf
+> grep "vm.max_map_count = 262144" /etc/sysctl.conf || echo "vm.max_map_count = 262144" >> /etc/sysctl.conf
+> grep "vm.swappiness = 1" /etc/sysctl.conf || echo "vm.swappiness = 1" >> /etc/sysctl.conf #禁用 swapping
+> sysctl -p'
+node01 | SUCCESS | rc=0 >>
+* - nofile 512000
+elasticsearch - nproc unlimited
+fs.file-max = 1024000
+vm.max_map_count = 262144
+vm.swappiness = 1
+vm.swappiness = 0
+net.ipv4.neigh.default.gc_stale_time = 120
+net.ipv4.conf.all.rp_filter = 0
+net.ipv4.conf.default.rp_filter = 0
+net.ipv4.conf.default.arp_announce = 2
+net.ipv4.conf.lo.arp_announce = 2
+net.ipv4.conf.all.arp_announce = 2
+net.ipv4.tcp_max_tw_buckets = 5000
+net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_max_syn_backlog = 1024
+net.ipv4.tcp_synack_retries = 2
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1
+fs.file-max = 1024000
+vm.max_map_count = 262144
+vm.swappiness = 1
+Shared connection to 59.110.52.213 closed.
+```
+
+`elasticsearch.yml`文件，`ansible playbook`用来完成集群的初始部署、配置
+
+```
+- hosts: elasticsearch_master_nodes
+  become: yes
+  roles:
+    - { role: elasticsearch, es_instance_name: "node",
+    es_config: {
+        cluster.name: "tarantula",
+        discovery.zen.ping.unicast.hosts: "node01, node02, node03,node04,node05,node06,node07,node08,node09,node10,node11,node12,node13,node14,node15", 
+        network.host: "_eth0_, _local_",
+        http.port: 9222,
+        transport.tcp.port: 9333,
+        node.data: false,
+        node.master: true,
+        bootstrap.memory_lock: true,
+        discovery.zen.minimum_master_nodes: 2,
+        gateway.recover_after_nodes: 2,
+        action.destructive_requires_name: true,
+        indices.breaker.total.limit: 70%,
+        indices.breaker.fielddata.limit: 25%,
+        indices.breaker.request.limit: 40%,
+        indices.fielddata.cache.size: 20%,
+        indices.queries.cache.size: 40%,
+        indices.memory.index_buffer_size: 10%
+        }
+    }
+  vars:
+    es_templates: false
+    es_scripts: true
+    es_java_install: true
+    es_major_version: "5.x"
+    es_version: "5.3.0"
+    es_heap_size: "4g"
+    es_api_port: 9222
+    es_max_map_count: 262144
+    es_max_open_files: 512000   
+    es_pid_dir: "/mnt/run/elasticsearch"
+    es_data_dirs: "/mnt/lib/elasticsearch"
+    es_log_dir: "/mnt/log/elasticsearch"
+
+- hosts: elasticsearch_master_data_nodes
+  become: yes
+  roles:
+    - { role: elasticsearch, es_instance_name: "node",
+    es_config: {
+        cluster.name: "tarantula",
+        discovery.zen.ping.unicast.hosts: "node01, node02, node03,node04,node05,node06,node07,node08,node09,node10,node11,node12,node13,node14,node15",
+        network.host: "_eth0_, _local_",
+        http.port: 9222,
+        transport.tcp.port: 9333,
+        node.data: true,
+        node.master: true,
+        bootstrap.memory_lock: true,
+        discovery.zen.minimum_master_nodes: 2,
+        gateway.recover_after_nodes: 2,
+        action.destructive_requires_name: true,
+        indices.breaker.total.limit: 70%,
+        indices.breaker.fielddata.limit: 25%,
+        indices.breaker.request.limit: 40%,
+        indices.fielddata.cache.size: 20%,
+        indices.queries.cache.size: 40%,
+        indices.memory.index_buffer_size: 10%
+        }
+    }
+  vars:
+    es_templates: false
+    es_scripts: true
+    es_java_install: true
+    es_major_version: "5.x"
+    es_version: "5.3.0"
+    es_heap_size: "16g"
+    es_api_port: 9222
+    es_max_map_count: 262144
+    es_max_open_files: 512000
+    es_pid_dir: "/mnt/run/elasticsearch"
+    es_data_dirs: "/mnt/lib/elasticsearch"
+    es_log_dir: "/mnt/log/elasticsearch"
+
+- hosts: elasticsearch_data_nodes
+  become: yes
+  roles:
+    - { role: elasticsearch, es_instance_name: "node",
+    es_config: {
+        cluster.name: "tarantula",
+        discovery.zen.ping.unicast.hosts: "node01, node02, node03,node04,node05,node06,node07,node08,node09,node10,node11,node12,node13,node14,node15",
+        network.host: "_eth0_, _local_",
+        http.port: 9222,
+        transport.tcp.port: 9333,
+        node.data: true,
+        node.master: false,
+        bootstrap.memory_lock: true,
+        discovery.zen.minimum_master_nodes: 2,
+        gateway.recover_after_nodes: 2,
+        action.destructive_requires_name: true,
+        indices.breaker.total.limit: 70%,
+        indices.breaker.fielddata.limit: 25%,
+        indices.breaker.request.limit: 40%,
+        indices.fielddata.cache.size: 20%,
+        indices.queries.cache.size: 40%,
+        indices.memory.index_buffer_size: 10%
+        } 
+    }
+  vars:
+    es_templates: false
+    es_scripts: true
+    es_java_install: true
+    es_major_version: "5.x"
+    es_version: "5.3.0"
+    es_heap_size: "16g"
+    es_api_port: 9222
+    es_max_map_count: 262144
+    es_max_open_files: 512000
+    es_pid_dir: "/mnt/run/elasticsearch"
+    es_data_dirs: "/mnt/lib/elasticsearch"
+    es_log_dir: "/mnt/log/elasticsearch"
+
+- hosts: elasticsearch_client_nodes
+  become: yes
+  roles:
+    - { role: elasticsearch, es_instance_name: "node",
+    es_config: {
+        cluster.name: "tarantula",
+        discovery.zen.ping.unicast.hosts: "node01, node02, node03,node04,node05,node06,node07,node08,node09,node10,node11,node12,node13,node14,node15",        
+        network.host: "_eth0_, _local_",
+        http.port: 9222,
+        transport.tcp.port: 9333,
+        node.data: false,
+        node.master: false,
+        bootstrap.memory_lock: true,
+        discovery.zen.minimum_master_nodes: 2,
+        gateway.recover_after_nodes: 2,
+        action.destructive_requires_name: true,
+        indices.breaker.total.limit: 70%,
+        indices.breaker.fielddata.limit: 25%,
+        indices.breaker.request.limit: 40%,
+        indices.fielddata.cache.size: 20%,
+        indices.queries.cache.size: 40%,
+        indices.memory.index_buffer_size: 10%
+        } 
+    }
+  vars:
+    es_templates: false
+    es_scripts: true
+    es_java_install: false
+    es_major_version: "5.x"
+    es_version: "5.3.0"
+    es_heap_size: "16g"
+    es_api_port: 9222
+    es_max_map_count: 262144
+    es_max_open_files: 512000
+    es_pid_dir: "/mnt/run/elasticsearch"
+    es_data_dirs: "/mnt/lib/elasticsearch"
+    es_log_dir: "/mnt/log/elasticsearch"
+```
+
+执行`ansible-playbook elasticsearch.yml`，成功如下：
+
+```
+TASK [elasticsearch : Update Native Roles] *************************************
+
+PLAY RECAP *********************************************************************
+node01 : ok=48 changed=0 unreachable=0 failed=0
+node02 : ok=49 changed=7 unreachable=0 failed=0
+node03 : ok=46 changed=1 unreachable=0 failed=0
+```
+
+`elasticsearch`实例的`restart、start、stop`，`node_elasticsearch.service`中的`node`为上面`playbook`中定义的名称
+
+`es_instance_name: "node"`
+
+```
+systemctl restart node_elasticsearch.service
+systemctl start node_elasticsearch.service
+systemctl stop node_elasticsearch.service
+systemctl status node_elasticsearch.service
+```
+
+```
+service node_elasticsearch restart
+service node_elasticsearch start
+service node_elasticsearch stop
+service node_elasticsearch status
+```
+
+
+
