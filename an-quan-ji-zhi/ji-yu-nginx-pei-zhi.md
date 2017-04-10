@@ -1,5 +1,4 @@
-基于 `nginx` 的简单安全配置  
-
+基于 `nginx` 的简单安全配置
 
 * [x] 修改 `elasticsearch` `http`（`9222`） 和 transport （`9333`）默认端口
 
@@ -7,8 +6,8 @@
 
 ```
 [vpn]
-node01 vpn_ip=10.28.59.165 ansible_host=59.110.52.213
-node02 vpn_ip=10.27.240.159 ansible_host=59.110.52.53
+node01 vpn_ip=10.0.0.1 ansible_host=77.222.52.211
+node02 vpn_ip=10.0.0.2 ansible_host=77.222.52.212
 [elasticsearch_client_nodes]
 node01
 node02
@@ -64,7 +63,7 @@ node02
 
 `sudo htpasswd -c -d /etc/nginx/conf.d/pass_file idatage`
 
-修改配置目录：`/etc/nginx/sites-available/default `文件，添加
+修改配置目录：`/etc/nginx/sites-available/default`文件，添加
 
 ```
 auth_basic "Protected Elasticsearch";
