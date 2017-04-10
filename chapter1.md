@@ -90,20 +90,20 @@ vi ./hosts
 ```
 sudo ssh-keygen
 ssh-copy-id idatage@77.222.52.211
-ssh-copy-id idatage@77.222.52.211
-ssh-copy-id idatage@77.222.52.211
-ssh-copy-id idatage@77.222.52.211
-ssh-copy-id idatage@77.222.52.211
-ssh-copy-id idatage@77.222.52.211
-ssh-copy-id idatage@77.222.52.211
-ssh-copy-id idatage@77.222.52.211
-ssh-copy-id idatage@77.222.52.211
-ssh-copy-id idatage@77.222.52.211
-ssh-copy-id idatage@77.222.52.211
-ssh-copy-id idatage@77.222.52.211
-ssh-copy-id idatage@77.222.52.211
-ssh-copy-id idatage@77.222.52.211
-ssh-copy-id idatage@77.222.52.211
+ssh-copy-id idatage@77.222.52.212
+ssh-copy-id idatage@77.222.52.213
+ssh-copy-id idatage@77.222.52.214
+ssh-copy-id idatage@77.222.52.215
+ssh-copy-id idatage@77.222.52.216
+ssh-copy-id idatage@77.222.52.217
+ssh-copy-id idatage@77.222.52.218
+ssh-copy-id idatage@77.222.52.219
+ssh-copy-id idatage@77.222.52.220
+ssh-copy-id idatage@77.222.52.221
+ssh-copy-id idatage@77.222.52.222
+ssh-copy-id idatage@77.222.52.223
+ssh-copy-id idatage@77.222.52.224
+ssh-copy-id idatage@77.222.52.225
 ```
 
 执行命令`ansible all -m ping`结果如下：
@@ -149,7 +149,7 @@ node02 : ok=18 changed=15 unreachable=0 failed=0
 node03 : ok=18 changed=15 unreachable=0 failed=0
 ```
 
-安装`ansible`的主机`213`执行如下命令，`-s su`权限，修改系统配置（`System`配置后面介绍），
+安装`ansible`的主机`1`执行如下命令，`-s su`权限，修改系统配置（`System`配置后面介绍），
 
 `/home/idatage/ansible-tinc-elasticsearch`
 
