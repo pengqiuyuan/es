@@ -28,7 +28,7 @@ curl -XPOST http://localhost:9222/_reindex?requests_per_second=100000 -d '
 {
   "source": {
     "remote": {
-      "host": "http://10.171.101.99:9200"
+      "host": "http://10.0.0.1:9200"
     },
     "index": "weixiners",
     "size": 100000
