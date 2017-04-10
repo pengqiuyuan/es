@@ -196,7 +196,7 @@ net.ipv6.conf.lo.disable_ipv6 = 1
 fs.file-max = 1024000
 vm.max_map_count = 262144
 vm.swappiness = 1
-Shared connection to 59.110.52.213 closed.
+Shared connection to 10.0.0.1 closed.
 ```
 
 `elasticsearch.yml`文件，`ansible playbook`用来完成集群的初始部署、配置
