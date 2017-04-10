@@ -47,7 +47,7 @@ copy and unzip`target/releases/elasticsearch-analysis-ik-{version}.zip 到 your-
 
 集群手动安装`ik`插件
 
-上传到安装`ansible` 的`client`节点`scp ./elasticsearch-analysis-ik-5.3.0.zip idatage@59.110.52.213:/home/idatage/plugins`
+上传到安装`ansible` 的`client`节点`scp ./elasticsearch-analysis-ik-5.3.0.zip idatage@10.0.0.1:/home/idatage/plugins`
 
 ```
 ansible all -s -m copy -a 'src=/home/idatage/plugins/elasticsearch-analysis-ik-5.3.0.zip dest=/usr/share/elasticsearch/elasticsearch-analysis-ik-5.3.0.zip'
