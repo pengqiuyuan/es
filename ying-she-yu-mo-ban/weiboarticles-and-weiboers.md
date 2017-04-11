@@ -1,9 +1,5 @@
 `weibo_articles_and_weiboers`
 
-`weibo_articles` 的下划线`id`修改为`weibo_articles_uid`
-
-`weiboers` 的下划线`id` 修改为`weiboers_uid`
-
 ```
 curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
 {
@@ -133,7 +129,7 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     "search_analyzer": "ik_max_word"
                 },
                 "published_at": {
-                    "format": "strict_date_optional_time||epoch_millis",
+                	"format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
                 "repost_count": {
@@ -168,52 +164,24 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     "ignore_above": 256
                 },
                 "crawled_at": {
-                    "format": "strict_date_optional_time||epoch_millis",
+                	"format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
                 "video_links": {
-                    "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
+                    "type": "keyword"
                 },
                 "music_links": {
-                    "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
+                    "type": "keyword"
                 },
                 "web_links": {
-                    "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
-                },
-                "weibo_articles_uid": {
-                    "type": "keyword",
-                    "ignore_above": 256
+                    "type": "keyword"
                 },
                 "relationship_agg": {
                     "type": "keyword",
                     "ignore_above": 256
                 },
                 "gender": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "status_info": {
                     "type": "keyword",
@@ -227,14 +195,10 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     }
                 },
                 "follower_count": {
-                    "type": "long"
-                },
-                "weiboers_uid": {
-                    "type": "keyword",
-                    "ignore_above": 256
+                    "type": "integer"
                 },
                 "updated_at": {
-                    "format": "strict_date_optional_time||epoch_millis",
+                	"format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
                 "province_agg": {
@@ -247,7 +211,7 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     "search_analyzer": "ik_max_word"
                 },
                 "verify": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "company": {
                     "type": "keyword",
@@ -269,10 +233,10 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     "ignore_above": 256
                 },
                 "vip": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "weibo_count": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "email": {
                     "type": "keyword",
@@ -291,11 +255,11 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     "search_analyzer": "ik_max_word"
                 },
                 "status_updated_at": {
-                    "format": "strict_date_optional_time||epoch_millis",
+                	"format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
                 "birthday_date_agg": {
-                    "format": "strict_date_optional_time||epoch_millis",
+                	"format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
                 "industry_str": {
@@ -321,7 +285,7 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     }
                 },
                 "level": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "city_agg": {
                     "type": "keyword",
@@ -347,10 +311,10 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     "ignore_above": 256
                 },
                 "fans_count": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "last_weibo_at": {
-                    "format": "strict_date_optional_time||epoch_millis",
+                	"format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
                 "edu_str_agg": {
@@ -388,7 +352,7 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     }
                 },
                 "status": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "username": {
                     "type": "keyword",
