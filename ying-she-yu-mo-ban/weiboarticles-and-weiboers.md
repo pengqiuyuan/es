@@ -213,7 +213,7 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     "ignore_above": 256
                 },
                 "gender": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "status_info": {
                     "type": "keyword",
@@ -227,7 +227,7 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     }
                 },
                 "follower_count": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "weiboers_uid": {
                     "type": "keyword",
@@ -247,7 +247,7 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     "search_analyzer": "ik_max_word"
                 },
                 "verify": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "company": {
                     "type": "keyword",
@@ -269,10 +269,10 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     "ignore_above": 256
                 },
                 "vip": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "weibo_count": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "email": {
                     "type": "keyword",
@@ -321,7 +321,7 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     }
                 },
                 "level": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "city_agg": {
                     "type": "keyword",
@@ -347,7 +347,7 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     "ignore_above": 256
                 },
                 "fans_count": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "last_weibo_at": {
                     "format": "strict_date_optional_time||epoch_millis",
@@ -388,7 +388,7 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     }
                 },
                 "status": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "username": {
                     "type": "keyword",
