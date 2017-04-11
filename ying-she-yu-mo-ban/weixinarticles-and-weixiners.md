@@ -170,7 +170,7 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                     "type": "boolean"
                 },
                 "stat_like_count": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "author": {
                     "type": "keyword",
@@ -180,7 +180,7 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                     "type": "long"
                 },
                 "stat_status": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "title": {
                     "type": "keyword",
@@ -235,17 +235,17 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                     }
                 },
                 "stat_real_read_num": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "digest": {
                     "type": "keyword",
                     "ignore_above": 256
                 },
                 "stat_ret": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "stat_read_count": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "weixin_articles_uid": {
                     "type": "keyword",
@@ -256,7 +256,7 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                     "ignore_above": 256
                 },
                 "idx": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "stat_info_crawled_at": {
                     "format": "strict_date_optional_time||epoch_millis",
