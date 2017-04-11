@@ -7,7 +7,7 @@
 ```
 curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
 {
-    "template": "weixin_articles_and_weixiners*",
+    "template": "weibo_articles_and_weiboers*",
     "settings": {
         "refresh_interval": "60s",
         "number_of_replicas": "1",
@@ -108,14 +108,252 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                 "@timestamp": {
                     "type": "date"
                 },
-                "score": {
-                    "type": "float"
+                "is_hot": {
+                    "type": "boolean"
                 },
-                "weixiners_uid": {
+                "is_pin": {
+                    "type": "boolean"
+                },
+                "id_short": {
                     "type": "keyword",
                     "ignore_above": 256
                 },
-                "openid": {
+                "weiboer_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "content": {
+                    "type": "text",
+                    "analyzer": "ik_max_word",
+                    "search_analyzer": "ik_max_word"
+                },
+                "content_full": {
+                    "type": "text",
+                    "analyzer": "ik_max_word",
+                    "search_analyzer": "ik_max_word"
+                },
+                "published_at": {
+                    "format": "strict_date_optional_time||epoch_millis",
+                    "type": "date"
+                },
+                "repost_count": {
+                    "type": "integer"
+                },
+                "comment_count": {
+                    "type": "integer"
+                },
+                "up_count": {
+                    "type": "integer"
+                },
+                "repost_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "repost_level": {
+                    "type": "integer"
+                },
+                "app_source": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "href": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "crawled_at": {
+                    "format": "strict_date_optional_time||epoch_millis",
+                    "type": "date"
+                },
+                "video_links": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "music_links": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "web_links": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "weibo_articles_uid": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "relationship_agg": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "gender": {
+                    "type": "integer"
+                },
+                "status_info": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "follower_count": {
+                    "type": "integer"
+                },
+                "weiboers_uid": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "updated_at": {
+                    "format": "strict_date_optional_time||epoch_millis",
+                    "type": "date"
+                },
+                "province_agg": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "intro": {
+                    "type": "text",
+                    "analyzer": "ik_max_word",
+                    "search_analyzer": "ik_max_word"
+                },
+                "verify": {
+                    "type": "integer"
+                },
+                "company": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "constellation_agg": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "relationship": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "vip": {
+                    "type": "integer"
+                },
+                "weibo_count": {
+                    "type": "integer"
+                },
+                "email": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "info": {
+                    "type": "text",
+                    "analyzer": "ik_max_word",
+                    "search_analyzer": "ik_max_word"
+                },
+                "status_updated_at": {
+                    "format": "strict_date_optional_time||epoch_millis",
+                    "type": "date"
+                },
+                "birthday_date_agg": {
+                    "format": "strict_date_optional_time||epoch_millis",
+                    "type": "date"
+                },
+                "industry_str": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "birthday_str": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "level": {
+                    "type": "integer"
+                },
+                "city_agg": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "location_str": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "sys_tags": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "tags": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "fans_count": {
+                    "type": "integer"
+                },
+                "last_weibo_at": {
+                    "format": "strict_date_optional_time||epoch_millis",
+                    "type": "date"
+                },
+                "edu_str_agg": {
                     "type": "keyword",
                     "ignore_above": 256
                 },
@@ -130,143 +368,31 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                         }
                     }
                 },
+                "county_agg": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "sexual": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "edu_str": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "status": {
+                    "type": "integer"
+                },
                 "username": {
                     "type": "keyword",
                     "ignore_above": 256
-                },
-                "intro": {
-                    "type": "text",
-                    "analyzer": "ik_max_word",
-                    "search_analyzer": "ik_max_word"
-                },
-                "certification": {
-                    "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
-                },
-                "crawled_at": {
-                    "format": "strict_date_optional_time||epoch_millis",
-                    "type": "date"
-                },
-                "updated_at": {
-                    "format": "strict_date_optional_time||epoch_millis",
-                    "type": "date"
-                },
-                "tags": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
-                "categories": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
-                "copyright": {
-                    "type": "boolean"
-                },
-                "stat_like_count": {
-                    "type": "integer"
-                },
-                "author": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
-                "mid": {
-                    "type": "long"
-                },
-                "stat_status": {
-                    "type": "integer"
-                },
-                "title": {
-                    "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
-                },
-                "content": {
-                    "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
-                },
-                "source_url": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
-                "last_modified_at": {
-                    "format": "strict_date_optional_time||epoch_millis",
-                    "type": "date"
-                },
-                "cover": {
-                    "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
-                },
-                "biz": {
-                    "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
-                },
-                "stat_real_read_num": {
-                    "type": "integer"
-                },
-                "digest": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
-                "stat_ret": {
-                    "type": "integer"
-                },
-                "stat_read_count": {
-                    "type": "integer"
-                },
-                "weixin_articles_uid": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
-                "sn": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
-                "idx": {
-                    "type": "integer"
-                },
-                "stat_info_crawled_at": {
-                    "format": "strict_date_optional_time||epoch_millis",
-                    "type": "date"
-                },
-                "stat_interval": {
-                    "type": "long"
-                },
-                "fileid": {
-                    "type": "long"
                 }
             }
         }
