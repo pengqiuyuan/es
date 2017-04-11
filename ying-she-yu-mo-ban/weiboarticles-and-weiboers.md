@@ -1,9 +1,5 @@
 `weibo_articles_and_weiboers`
 
-`weibo_articles` 的下划线`id`修改为`weibo_articles_uid`
-
-`weiboers` 的下划线`id` 修改为`weiboers_uid`
-
 ```
 curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
 {
