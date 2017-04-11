@@ -176,13 +176,13 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                 },
                 "title": {
                     "type": "text",
-"analyzer": "ik_max_word",
-"search_analyzer": "ik_max_word"
+                    "analyzer": "ik_max_word",
+                    "search_analyzer": "ik_max_word"
                 },
                 "content": {
-"type": "text",
-"analyzer": "ik_max_word",
-"search_analyzer": "ik_max_word"
+                    "type": "text",
+                    "analyzer": "ik_max_word",
+                    "search_analyzer": "ik_max_word"
                 },
                 "source_url": {
                     "type": "keyword",
@@ -213,7 +213,7 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                 "biz": {
                     "type": "keyword",
                     "ignore_above": 256
-                    
+
                 },
                 "stat_real_read_num": {
                     "type": "integer"

@@ -18,6 +18,7 @@
   * [xpack](an-quan-ji-zhi/xpack.md)
 * [Reindex 重新索引](reindexff08-zhong-xin-suo-yin-ff09.md)
 * [分词](fen-ci.md)
+  * [测试一](fen-ci/ce-shi-yi.md)
 * [插件](cha-jian.md)
   * [Head](cha-jian/head.md)
   * [Bigdesk](cha-jian/bigdesk.md)
