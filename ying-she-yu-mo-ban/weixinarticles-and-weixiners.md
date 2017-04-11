@@ -1,9 +1,5 @@
 `weixin_articles_and_weixiners`
 
-`weixin_articles` 的下划线`id`修改为`weixin_articles_uid`
-
-`weixiners` 的下划线`id` 修改为`weixiners_uid`
-
 ```
 curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
 {
@@ -111,10 +107,6 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                 "score": {
                     "type": "float"
                 },
-                "weixiners_uid": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
                 "openid": {
                     "type": "keyword",
                     "ignore_above": 256
@@ -170,7 +162,7 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                     "type": "boolean"
                 },
                 "stat_like_count": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "author": {
                     "type": "keyword",
@@ -180,33 +172,28 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                     "type": "long"
                 },
                 "stat_status": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "title": {
-                    "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
+                    "type": "text",
+"analyzer": "ik_max_word",
+"search_analyzer": "ik_max_word"
                 },
                 "content": {
-                    "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
+"type": "text",
+"analyzer": "ik_max_word",
+"search_analyzer": "ik_max_word"
                 },
                 "source_url": {
                     "type": "keyword",
-                    "ignore_above": 256
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
                 },
                 "last_modified_at": {
                     "format": "strict_date_optional_time||epoch_millis",
@@ -225,6 +212,14 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                 },
                 "biz": {
                     "type": "keyword",
+                    "ignore_above": 256
+                    
+                },
+                "stat_real_read_num": {
+                    "type": "integer"
+                },
+                "digest": {
+                    "type": "keyword",
                     "ignore_above": 256,
                     "fields": {
                         "raw": {
@@ -234,18 +229,11 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                         }
                     }
                 },
-                "stat_real_read_num": {
-                    "type": "long"
-                },
-                "digest": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
                 "stat_ret": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "stat_read_count": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "weixin_articles_uid": {
                     "type": "keyword",
@@ -256,7 +244,7 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                     "ignore_above": 256
                 },
                 "idx": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "stat_info_crawled_at": {
                     "format": "strict_date_optional_time||epoch_millis",
