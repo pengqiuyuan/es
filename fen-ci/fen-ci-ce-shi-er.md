@@ -1,6 +1,6 @@
 `match_phrase` 测试，`es5.3.0` 、`elasticsearch-analysis-ik-5.3.0`
 
-前提：`elasticsearch-analysis-ik-5.3.0` 
+前提：`elasticsearch-analysis-ik-5.3.0` 修改过 `CharacterUtil`
 
 测试 ：验证`match_phrase` 查询，能否命中带有特殊符号的短语、词组
 
@@ -284,7 +284,7 @@ curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
 }
 ```
 
-三、测试`match_phrase`，查询` 巅峰，`，预期一条符合，结果如下（与预期相符）：
+三、测试`match_phrase`，查询`巅峰，`，预期一条符合，结果如下（与预期相符）：
 
 ```
 curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
@@ -372,10 +372,9 @@ curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
     ]
   }
 }
-
 ```
 
-四、测试`match_phrase`，查询` 巅峰。`，预期一条符合，结果如下（与预期相符）：
+四、测试`match_phrase`，查询`巅峰。`，预期一条符合，结果如下（与预期相符）：
 
 ```
 curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
@@ -454,5 +453,5 @@ curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
 
 结论
 
-`match_phrase`，1、可以命中带有特殊符号的短语、词组。2、特殊符号有大小写的区分 
+`match_phrase`，1、可以命中带有特殊符号的短语、词组。2、特殊符号有大小写的区分
 

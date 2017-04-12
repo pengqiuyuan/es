@@ -4,7 +4,7 @@
 
 `oopsdata: https://github.com/OopsData/elasticsearch-analysis-ik`
 
-源代码
+源代码 `src/main/java/org/wltea/analyzer/core/CharacterUtil.java`
 
 ```
 if(ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS  
