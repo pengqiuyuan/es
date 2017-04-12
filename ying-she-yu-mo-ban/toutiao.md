@@ -1,4 +1,4 @@
-weibo\_articles\_and\_weiboers`toutiao`
+索引名称（索引前缀名称为`toutiao`的都能匹配到，名称为`toutiao`的`mapping`模板，`*`为通配符）：如，`toutiao`
 
 元数据，来源`mongodb`
 
@@ -64,7 +64,7 @@ curl -XPUT http://127.0.0.1:9222/_template/toutiao -d '
     "settings": {
         "refresh_interval": "60s",
         "number_of_replicas": "1",
-        "number_of_shards": "5"
+        "number_of_shards": "10"
     },
     "mappings": {
         "_default_": {
