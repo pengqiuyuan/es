@@ -129,7 +129,7 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     "search_analyzer": "ik_max_word"
                 },
                 "published_at": {
-                	"format": "strict_date_optional_time||epoch_millis",
+                    "format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
                 "repost_count": {
@@ -164,7 +164,7 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     "ignore_above": 256
                 },
                 "crawled_at": {
-                	"format": "strict_date_optional_time||epoch_millis",
+                    "format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
                 "video_links": {
@@ -198,7 +198,7 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     "type": "integer"
                 },
                 "updated_at": {
-                	"format": "strict_date_optional_time||epoch_millis",
+                    "format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
                 "province_agg": {
@@ -255,11 +255,11 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     "search_analyzer": "ik_max_word"
                 },
                 "status_updated_at": {
-                	"format": "strict_date_optional_time||epoch_millis",
+                    "format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
                 "birthday_date_agg": {
-                	"format": "strict_date_optional_time||epoch_millis",
+                    "format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
                 "industry_str": {
@@ -314,7 +314,7 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                     "type": "integer"
                 },
                 "last_weibo_at": {
-                	"format": "strict_date_optional_time||epoch_millis",
+                    "format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
                 "edu_str_agg": {

@@ -235,10 +235,6 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                 "stat_read_count": {
                     "type": "integer"
                 },
-                "weixin_articles_uid": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
                 "sn": {
                     "type": "keyword",
                     "ignore_above": 256
