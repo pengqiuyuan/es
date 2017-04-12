@@ -59,6 +59,8 @@ curl -XPOST http://localhost:9222/_reindex?requests_per_second=100000 -d '
 
 `"refresh_interval" : "60s"`、`"number_of_replicas" : "1"`、`"number_of_shards" : "5"`
 
+索引名称（索引前缀名称为`weiboers`的都能匹配到，名称为`weiboers`的`mapping`模板，`*`为通配符）：如，`weiboers`
+
 ```
 curl -XPUT http://localhost:9222/_template/weiboers -d '
 {
