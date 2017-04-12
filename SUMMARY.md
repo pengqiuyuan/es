@@ -20,7 +20,7 @@
 * [Reindex 重新索引](reindexff08-zhong-xin-suo-yin-ff09.md)
 * [分词](fen-ci.md)
   * [分词测试一](fen-ci/ce-shi-yi.md)
-  * 分词测试二
+  * [分词测试二](fen-ci/fen-ci-ce-shi-er.md)
 * [插件](cha-jian.md)
   * [Head](cha-jian/head.md)
   * [Bigdesk](cha-jian/bigdesk.md)

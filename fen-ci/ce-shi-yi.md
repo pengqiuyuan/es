@@ -1,3 +1,5 @@
+`match` 测试
+
 创建索引
 
 `curl -XPUT http://127.0.0.1:9222/ikindex2`
@@ -18,8 +20,6 @@ curl -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/_mapping -d'
      }
  }'
 ```
-
-
 
 ```
 curl -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/1 -d'
