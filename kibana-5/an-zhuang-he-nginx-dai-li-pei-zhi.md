@@ -1,4 +1,4 @@
-**安装 `kibana 5`**
+**安装 **`kibana 5`
 
 安装 `64 bit`：
 
@@ -33,7 +33,7 @@ $ sudo service kibana status
 
 ---
 
-**`kibana 5 nginx` 代理配置**
+`kibana 5 nginx`** 代理配置**
 
 生成`passfile`文件，
 
@@ -53,5 +53,12 @@ $ sudo service kibana status
         }
 ```
 
+> 注意：需要修改 `/etc/kibana/kibana.yml`
 
+```
+server.basePath:"/kibana"
+elasticsearch.url:"http://localhost:9222"
+```
+
+浏览器访问：`http://127.0.0.1/kibana`
 
