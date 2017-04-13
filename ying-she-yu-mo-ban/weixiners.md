@@ -45,7 +45,7 @@ curl -XPOST http://localhost:9222/_reindex?requests_per_second=100000 -d '
 
 `Mapping`（`weixiners 738Mi/1.43Gi    504k`）
 
-`"refresh_interval" : "60s"`、`"number_of_replicas" : "1"`、`"number_of_shards" : "5"`
+`"refresh_interval" : "60s"`、`"number_of_replicas" : "1"`、`"number_of_shards" : "15"`
 
 索引名称（索引前缀名称为`weixiners`的都能匹配到，名称为`weixiners`的`mapping`模板，`*`为通配符）：如，`weixiners`
 
