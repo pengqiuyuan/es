@@ -56,7 +56,7 @@ curl -XPUT http://localhost:9222/_template/weixiners -d '
   "settings" : {  
     "refresh_interval" : "60s",  
     "number_of_replicas" : "1",  
-    "number_of_shards" : "5"
+    "number_of_shards" : "15"
   },
   "mappings" : {
     "_default_" : {
