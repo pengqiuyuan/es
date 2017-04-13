@@ -1,3 +1,5 @@
+**安装 `kibana 5`**
+
 安装 `64 bit`：
 
 ```
@@ -25,11 +27,31 @@ $ sudo service kibana status
            └─30796 /usr/share/kibana/bin/../node/bin/node --no-warnings /usr/share/kibana/bin/../src/cli -c /etc/kibana/kibana.yml
 ```
 
-`home` 位置` /usr/share/kibana`
+`home` 位置`/usr/share/kibana`
 
 `config` 位置 `/etc/kibana`
 
 ---
+
+**`kibana 5 nginx` 代理配置**
+
+生成`passfile`文件，
+
+`sudo htpasswd -c -d /etc/nginx/conf.d/pass_file_kibana5 xxxx`
+
+配置 `nginx`，目录 `/etc/nginx/sites-available/default`
+
+```
+        location /kibana/ {
+                proxy_pass http://127.0.0.1:5601;
+                rewrite /kibana/(.*)$ /$1 break;
+                proxy_set_header    Host $http_host;
+                proxy_set_header    X-Real-IP   $remote_addr;
+                proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
+                auth_basic           "Restricted";
+                auth_basic_user_file /etc/nginx/conf.d/pass_file_kibana5;
+        }
+```
 
 
 
