@@ -126,9 +126,6 @@ curl -XPUT http://localhost:9222/_template/weixiners -d '
         "score": {
             "type": "float"
         },
-        "uid": {
-            "type": "keyword"
-        },
         "openid": {
             "type": "keyword"
         },
