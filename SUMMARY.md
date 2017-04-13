@@ -26,4 +26,6 @@
   * [Bigdesk](cha-jian/bigdesk.md)
 * [坑&](575126.md)
   * [问题一](575126/wen-ti-yi.md)
+* [Kibana 5](kibana-5.md)
+  * [安装和Nginx代理配置](kibana-5/an-zhuang-he-nginx-dai-li-pei-zhi.md)
 

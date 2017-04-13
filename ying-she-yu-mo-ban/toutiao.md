@@ -57,6 +57,12 @@
 | 类型 | type | 数值 |
 | 视频时长 | duration | 数值（秒） |
 
+创建索引`toutiao`
+
+```
+curl -XPUT http://127.0.0.1:9222/toutiao
+```
+
 ```
 curl -XPUT http://127.0.0.1:9222/_template/toutiao -d '
 {
