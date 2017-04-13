@@ -168,10 +168,6 @@ curl -XPUT http://127.0.0.1:9222/_template/toutiao -d '
                     "type": "keyword",
                     "ignore_above": 256
                 },
-                "item_id": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
                 "title": {
                     "type": "text",
                     "analyzer": "ik_max_word",
