@@ -57,7 +57,7 @@ curl -XPOST http://localhost:9222/_reindex?requests_per_second=100000 -d '
 
 `Mapping`（`weiboers 28.0Gi/55.9Gi    52.1M`）
 
-`"refresh_interval" : "60s"`、`"number_of_replicas" : "1"`、`"number_of_shards" : "5"`
+`"refresh_interval" : "60s"`、`"number_of_replicas" : "1"`、`"number_of_shards" : "15"`
 
 索引名称（索引前缀名称为`weiboers`的都能匹配到，名称为`weiboers`的`mapping`模板，`*`为通配符）：如，`weiboers`
 
