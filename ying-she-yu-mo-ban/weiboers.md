@@ -183,10 +183,6 @@ curl -XPUT http://localhost:9222/_template/weiboers -d '
                 "follower_count": {
                     "type": "long"
                 },
-                "uid": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
                 "updated_at": {
                     "type": "date"
                 },
