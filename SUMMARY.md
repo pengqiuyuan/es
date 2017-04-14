@@ -14,6 +14,7 @@
   * [weibo\_articles\_and\_weiboers](ying-she-yu-mo-ban/weiboarticles-and-weiboers.md)
   * [toutiao\_articles\_and\_users](ying-she-yu-mo-ban/toutiaoarticles-and-users.md)
   * [toutiao\_users](ying-she-yu-mo-ban/toutiaousers.md)
+  * [baidunews\_news](ying-she-yu-mo-ban/baidunews.md)
 * [System 配置](system-pei-zhi.md)
 * [Reindex 重新索引](reindexff08-zhong-xin-suo-yin-ff09.md)
 * [分词](fen-ci.md)
