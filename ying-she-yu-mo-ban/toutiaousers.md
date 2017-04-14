@@ -1,6 +1,6 @@
-索引名称（索引前缀名称为`toutiao_users`的都能匹配到，名称为`toutiao_users`的`mapping`模板，`*`为通配符）：如，`toutiao_users`
+索引名称（索引前缀名称为`toutiaors`的都能匹配到，名称为`toutiaors`的`mapping`模板，`*`为通配符）：如，`toutiaors`
 
-`index` 名称：`toutiao_users`
+`index` 名称：`toutiaors`
 
 | 字段含义 | 字段名称 | 数据类型 |
 | :---: | :---: | :---: |
@@ -12,16 +12,16 @@
 | 粉丝量 | fans\_count | 数值 |
 | 抓取时间 | crawled\_at | 日期 |
 
-创建索引`toutiao_users`
+创建索引`toutiaors`
 
 ```
-curl -XPUT http://127.0.0.1:9222/toutiao_users
+curl -XPUT http://127.0.0.1:9222/toutiaors
 ```
 
 ```
-curl -XPUT http://127.0.0.1:9222/_template/toutiao_users -d '
+curl -XPUT http://127.0.0.1:9222/_template/toutiaors -d '
 {
-    "template": "toutiao_users*",
+    "template": "toutiaors*",
     "settings": {
         "refresh_interval": "60s",
         "number_of_replicas": "1",
