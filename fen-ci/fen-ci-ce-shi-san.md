@@ -1,5 +1,3 @@
-
-
 ```
 curl 'http://127.0.0.1:9222/ikindex3/_analyze?analyzer=ik_max_word&pretty=true' -d '
 {
@@ -528,6 +526,190 @@ curl 'http://127.0.0.1:9222/ikindex3/_analyze?analyzer=ik_max_word&pretty=true' 
 ```
 
 插入数据
+
+```
+curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/8 -d'
+{
+    "content": "$中西拳术。巅峰，对决@甄子丹#张晋打到飞起：茶客 #千机伞#[代发]耗时一个月自制-的『金属版』千机伞模型~支持全（形态）十三种变化，不锈钢结构，"
+}'
+```
+
+搜索
+
+```
+curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
+ {
+     "query" : { "match_phrase" : { "content" : "自制-" }},
+     "highlight" : {
+         "pre_tags" : ["<tag1", "<tag2"],
+         "post_tags" : ["</tag1", "</tag2"],
+         "fields" : {
+             "content" : {}
+         }
+     }
+}'
+
+{
+  "took" : 22,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 1,
+    "max_score" : 1.4696478,
+    "hits" : [
+      {
+        "_index" : "ikindex3",
+        "_type" : "fulltext2",
+        "_id" : "8",
+        "_score" : 1.4696478,
+        "_source" : {
+          "content" : "$中西拳术。巅峰，对决@甄子丹#张晋打到飞起：茶客 #千机伞#[代发]耗时一个月自制-的『金属版』千机伞模型~支持全（形态）十三种变化，不锈钢结构，"
+        },
+        "highlight" : {
+          "content" : [
+            "$中西拳术。巅峰，对决@甄子丹#张晋打到飞起：茶客 #千机伞#[代发]耗时一个月<tag1自制</tag1<tag1-</tag1的『金属版』千机伞模型~支持全（形态）十三种变化，不锈钢结构，"
+          ]
+        }
+      }
+    ]
+  }
+}
+
+curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
+ {
+     "query" : { "match_phrase" : { "content" : "（形态）" }},
+     "highlight" : {
+         "pre_tags" : ["<tag1", "<tag2"],
+         "post_tags" : ["</tag1", "</tag2"],
+         "fields" : {
+             "content" : {}
+         }
+     }
+}'
+
+{
+  "took" : 28,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 1,
+    "max_score" : 1.4696478,
+    "hits" : [
+      {
+        "_index" : "ikindex3",
+        "_type" : "fulltext2",
+        "_id" : "8",
+        "_score" : 1.4696478,
+        "_source" : {
+          "content" : "$中西拳术。巅峰，对决@甄子丹#张晋打到飞起：茶客 #千机伞#[代发]耗时一个月自制-的『金属版』千机伞模型~支持全（形态）十三种变化，不锈钢结构，"
+        },
+        "highlight" : {
+          "content" : [
+            "$中西拳术。巅峰，对决@甄子丹#张晋打到飞起：茶客 #千机伞#[代发]耗时一个月自制-的『金属版』千机伞模型~支持全<tag1（</tag1<tag1形态</tag1<tag1）</tag1十三种变化，不锈钢结构，"
+          ]
+        }
+      }
+    ]
+  }
+}
+
+curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
+ {
+     "query" : { "match_phrase" : { "content" : "飞起：" }},
+     "highlight" : {
+         "pre_tags" : ["<tag1", "<tag2"],
+         "post_tags" : ["</tag1", "</tag2"],
+         "fields" : {
+             "content" : {}
+         }
+     }
+}'
+
+{
+  "took" : 6,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 1,
+    "max_score" : 0.6187386,
+    "hits" : [
+      {
+        "_index" : "ikindex3",
+        "_type" : "fulltext2",
+        "_id" : "8",
+        "_score" : 0.6187386,
+        "_source" : {
+          "content" : "$中西拳术。巅峰，对决@甄子丹#张晋打到飞起：茶客 #千机伞#[代发]耗时一个月自制-的『金属版』千机伞模型~支持全（形态）十三种变化，不锈钢结构，"
+        },
+        "highlight" : {
+          "content" : [
+            "$中西拳术。巅峰，对决@甄子丹#张晋打到<tag1飞起</tag1<tag1：</tag1茶客 #千机伞#[代发]耗时一个月自制-的『金属版』千机伞模型~支持全（形态）十三种变化，不锈钢结构，"
+          ]
+        }
+      }
+    ]
+  }
+}
+
+
+curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
+ {
+     "query" : { "match_phrase" : { "content" : "『金属版』" }},
+     "highlight" : {
+         "pre_tags" : ["<tag1", "<tag2"],
+         "post_tags" : ["</tag1", "</tag2"],
+         "fields" : {
+             "content" : {}
+         }
+     }
+}'
+
+{
+  "took" : 3,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 1,
+    "max_score" : 1.9595305,
+    "hits" : [
+      {
+        "_index" : "ikindex3",
+        "_type" : "fulltext2",
+        "_id" : "8",
+        "_score" : 1.9595305,
+        "_source" : {
+          "content" : "$中西拳术。巅峰，对决@甄子丹#张晋打到飞起：茶客 #千机伞#[代发]耗时一个月自制-的『金属版』千机伞模型~支持全（形态）十三种变化，不锈钢结构，"
+        },
+        "highlight" : {
+          "content" : [
+            "$中西拳术。巅峰，对决@甄子丹#张晋打到飞起：茶客 #千机伞#[代发]耗时一个月自制-的<tag1『</tag1<tag1金属</tag1<tag1版</tag1<tag1』</tag1千机伞模型~支持全（形态）十三种变化，不锈钢结构，"
+          ]
+        }
+      }
+    ]
+  }
+}
+
+
+
+
+```
 
 
 
