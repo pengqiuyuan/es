@@ -84,5 +84,16 @@ mongo-connector --auto-commit-interval=0 -m 127.0.0.1:3717 -t 127.0.0.1:9222 -a 
 nohup mongo-connector --auto-commit-interval=0 -m 127.0.0.1:3717 -t 127.0.0.1:9222 -a username -p password -d elastic2_doc_manager -n toutiao.toutiaors -g test.test &
 ```
 
+```
+--auto-commit-interval=0 #表示实时同步将mongodb中的修改同步到ES
+-m 127.0.0.1:3717 #连接mongodb
+-t 127.0.0.1:9222 #连接es
+-a username #mongo 用户名
+-p password #mongo 密码
+-d elastic2_doc_manager 
+-n toutiao.toutiaors #mongo里面的db.Collection
+-g test.test #写入es的index和type
+```
 
+[`mongo-connector` 文档](https://github.com/mongodb-labs/mongo-connector/wiki/Configuration-Options)
 
