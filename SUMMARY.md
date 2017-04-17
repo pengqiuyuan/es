@@ -15,6 +15,13 @@
   * [toutiao\_articles\_and\_users](ying-she-yu-mo-ban/toutiaoarticles-and-users.md)
   * [toutiaors](ying-she-yu-mo-ban/toutiaousers.md)
   * [baidunews\_news](ying-she-yu-mo-ban/baidunews.md)
+  * [news\_articles](ying-she-yu-mo-ban/newsarticles.md)
+  * old\_news\_articles
+  * news\_comments
+  * old\_news\_comments
+  * tieba\_posts
+  * weibo\_article\_tops
+  * zhihu\_questions
 * [System 配置](system-pei-zhi.md)
 * [Reindex 重新索引](reindexff08-zhong-xin-suo-yin-ff09.md)
 * [分词](fen-ci.md)
@@ -31,4 +38,7 @@
   * [问题一](575126/wen-ti-yi.md)
 * [Kibana 5](kibana-5.md)
   * [生产环境部署和Nginx代理配置](kibana-5/an-zhuang-he-nginx-dai-li-pei-zhi.md)
+* 客户端连接
+  * [Python](python.md)
+  * Nodejs
 
