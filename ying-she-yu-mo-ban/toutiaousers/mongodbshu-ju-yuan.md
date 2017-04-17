@@ -75,7 +75,13 @@ mgset-3056331:PRIMARY> db.toutiaors.find()
 执行
 
 ```
-mongo-connector --auto-commit-interval=0 -m 101.201.37.28:3717 -t 127.0.0.1:9222 -a root -p joke123098 -d elastic2_doc_manager -n toutiao.toutiaors -g test.test
+mongo-connector --auto-commit-interval=0 -m 127.0.0.1:3717 -t 127.0.0.1:9222 -a username -p password -d elastic2_doc_manager -n toutiao.toutiaors -g test.test
+```
+
+后台执行
+
+```
+nohup mongo-connector --auto-commit-interval=0 -m 127.0.0.1:3717 -t 127.0.0.1:9222 -a username -p password -d elastic2_doc_manager -n toutiao.toutiaors -g test.test &
 ```
 
 
