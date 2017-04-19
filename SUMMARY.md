@@ -35,6 +35,7 @@
 * [插件](cha-jian.md)
   * [Head](cha-jian/head.md)
   * [Bigdesk](cha-jian/bigdesk.md)
+  * [cerebro](cha-jian/cerebro.md)
 * [坑&](575126.md)
   * [问题一](575126/wen-ti-yi.md)
 * [Kibana 5](kibana-5.md)
