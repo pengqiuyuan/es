@@ -1,5 +1,7 @@
 Reindex
 
+注意：读取远端集群数据需要先配置对应的`reindex.remote.whitelist:192.168.0.2:9200`到 `elasticsearch.yml` 的白名单里。
+
 `weixiners`
 
 ```
