@@ -71,7 +71,7 @@ $ sudo apt-get install git
 克隆`ansible-tinc-elasticsearch`此项目`hosts、platbook`文件已配置好，已下是解释：
 
 ```
-$ git clone https://github.com/pengqiuyuan/ansible-tinc-elasticsearch.git
+$ git clone https://github.com/thisismitch/ansible-tinc-elasticsearch.git
 ```
 
 项目在`/home/idatage`下，`/home/idatage/ansible-tinc-elasticsearch/hosts`文件：
