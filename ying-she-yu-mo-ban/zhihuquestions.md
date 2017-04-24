@@ -8,7 +8,6 @@
 | 问题标题 | title | 字符串 |
 | 问题关键字分类 | topics | 数组 |
 | 问题描述 | desc | 字符串 |
-| 问题链接 | url | 字符串 |
 | 关注者数 | followsNum | 数值 |
 | 被浏览数 | viewsNum | 数值 |
 | 回答数 | answersNum | 数值 |
@@ -176,10 +175,6 @@ curl -XPUT http://127.0.0.1:9222/_template/zhihu_questions -d '
                 },
                 "commentsNum": {
                     "type": "integer"
-                },
-                "url": {
-                    "type": "keyword",
-                    "ignore_above": 256
                 }
             }
         }
