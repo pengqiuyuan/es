@@ -30,15 +30,13 @@
 }
 ```
 
-新索引需要移除的重复字段：略
-
 创建索引`news_articles`
 
 ```
 curl -XPUT http://127.0.0.1:9222/news_articles
 ```
 
-`mapping`（原索引字段`comments_num`类型为字符串）
+`mapping`（原索引字段`comments_num`类型为字符串）[测试](/fen-ci/ce-shi-ignore-malformed.md)
 
 ```
 "comments_num": {

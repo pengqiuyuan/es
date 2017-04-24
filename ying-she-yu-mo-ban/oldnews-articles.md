@@ -36,7 +36,7 @@
 curl -XPUT http://127.0.0.1:9222/old_news_articles
 ```
 
-`mapping`（原索引字段`comments_num`类型为字符串）
+`mapping`（原索引字段`comments_num`类型为字符串）[测试](/fen-ci/ce-shi-ignore-malformed.md)
 
 ```
 "comments_num": {
