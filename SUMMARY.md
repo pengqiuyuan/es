@@ -23,7 +23,7 @@
   * [old\_news\_comments](ying-she-yu-mo-ban/oldnews-comments.md)
   * [tieba\_posts](ying-she-yu-mo-ban/tiebaposts.md)
   * [weibo\_article\_tops](ying-she-yu-mo-ban/weiboarticle-tops.md)
-  * zhihu\_questions
+  * [zhihu\_questions](ying-she-yu-mo-ban/zhihuquestions.md)
 * [Reindex 重新索引](reindexff08-zhong-xin-suo-yin-ff09.md)
 * [分词](fen-ci.md)
   * [分词测试一](fen-ci/ce-shi-yi.md)
