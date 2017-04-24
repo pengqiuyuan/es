@@ -32,6 +32,12 @@
 
 新索引需要移除的重复字段：略
 
+创建索引`news_articles`
+
+```
+curl -XPUT http://127.0.0.1:9222/news_articles
+```
+
 `mapping`
 
 ```
