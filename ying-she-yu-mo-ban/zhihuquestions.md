@@ -2,7 +2,15 @@
 
 新索引：`zhihu_questions`
 
-
+| 字段含义 | 字段名称 | 数据类型 |
+| :---: | :---: | :---: |
+| 头条号ID | id | 字符串 |
+| 头像图片链接 | avatar\_img | 字符串 |
+| 头条号名称 | name | 字符串 |
+| 头条号简介 | introduction | 字符串 |
+| 关注量 | follower\_count | 数值 |
+| 粉丝量 | fans\_count | 数值 |
+| 抓取时间 | crawled\_at | 日期 |
 
 部分数据：
 
