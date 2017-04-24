@@ -14,7 +14,6 @@
 | 回答数 | answersNum | 数值 |
 | 问题评论量 | commentsNum | 数值 |
 | 问题时间 | createdAt | 日期 |
-| 日期（旧索引中字段） | publishedAt | 日期 |
 
 注意：插入数据时，问题ID字段值覆盖`elasticsearch`的元数据`_id`，如下所示 `_id`和`questionId`（移除）重复
 
@@ -149,10 +148,6 @@ curl -XPUT http://127.0.0.1:9222/_template/zhihu_questions -d '
             ],
             "properties": {
                 "createdAt": {
-                    "format": "strict_date_optional_time||epoch_millis",
-                    "type": "date"
-                },
-                "publishedAt": {
                     "format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
