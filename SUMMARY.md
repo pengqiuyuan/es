@@ -19,8 +19,8 @@
   * [baidunews\_news](ying-she-yu-mo-ban/baidunews.md)
   * [news\_articles](ying-she-yu-mo-ban/newsarticles.md)
   * [old\_news\_articles](ying-she-yu-mo-ban/oldnews-articles.md)
-  * news\_comments
-  * old\_news\_comments
+  * [news\_comments](ying-she-yu-mo-ban/newscomments.md)
+  * [old\_news\_comments](ying-she-yu-mo-ban/oldnews-comments.md)
   * tieba\_posts
   * weibo\_article\_tops
   * zhihu\_questions
