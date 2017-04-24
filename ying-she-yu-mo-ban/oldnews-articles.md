@@ -242,8 +242,8 @@ curl -XPUT http://127.0.0.1:9222/_template/old_news_articles -d '
                     "ignore_above": 256
                 },
                 "comments_num": {
-                    "type": "keyword",
-                    "ignore_above": 256
+                    "type": "integer",
+                    "ignore_malformed": true
                 },
                 "created_at": {
                     "format": "strict_date_optional_time||epoch_millis",
