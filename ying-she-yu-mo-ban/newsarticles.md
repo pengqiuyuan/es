@@ -1,6 +1,8 @@
-`news_articles`
+旧索引：`latest_news_articles`
 
-数据
+新索引：`news_articles`
+
+部分数据：
 
 ```
 {
@@ -28,12 +30,11 @@
 }
 ```
 
-新索引移除字段：略
+新索引需要移除的重复字段：略
 
 `mapping`
 
 ```
-
 curl -XPUT http://127.0.0.1:9222/_template/news_articles -d '
 {
     "template": "news_articles*",
@@ -133,7 +134,7 @@ curl -XPUT http://127.0.0.1:9222/_template/news_articles -d '
                     }
                 }
             ],
-	    "properties": {
+        "properties": {
                 "comment_num": {
                     "type": "integer"
                 },
