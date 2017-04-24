@@ -28,13 +28,25 @@
 curl -XPUT http://127.0.0.1:9222/news_comments
 ```
 
-`mapping`（原索引字段`comments_num`类型为字符串）[测试](/fen-ci/ce-shi-ignore-malformed.md)
+`mapping`（原索引字段 `reply_count`、`total`、`praise_num`、`is_following`，类型为字符串）[测试](/fen-ci/ce-shi-ignore-malformed.md)
 
 ```
-"comments_num": {
-    "ignore_malformed": true,
-    "type": "integer"
-},
+    "reply_count": {
+        "ignore_malformed": true,
+        "type": "integer"
+    },
+    "total": {
+        "ignore_malformed": true,
+        "type": "integer"
+    },    
+    "praise_num": {
+        "ignore_malformed": true,
+        "type": "integer"
+    },    
+    "is_following": {
+        "ignore_malformed": true,
+        "type": "integer"
+    }
 ```
 
 ```
