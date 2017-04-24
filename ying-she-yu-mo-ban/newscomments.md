@@ -211,3 +211,190 @@ curl -XPUT http://127.0.0.1:9222/_template/news_comments -d '
 
 
 
+```
+curl -XPUT http://127.0.0.1:9222/_template/news_comments -d '
+{
+    "template": "news_comments*",
+    "settings": {
+        "refresh_interval": "60s",
+        "number_of_replicas": "1",
+        "number_of_shards": "15"
+    },
+    "mappings": {
+        "_default_": {
+            "_all": {
+                "enabled": true
+            },
+            "_source": {
+                "enabled": true
+            },
+            "dynamic_templates": [
+                {
+                    "message_field": {
+                        "match": "message",
+                        "match_mapping_type": "string",
+                        "mapping": {
+                            "type": "text"
+                        }
+                    }
+                },
+                {
+                    "string_fields": {
+                        "match": "*",
+                        "match_mapping_type": "string",
+                        "mapping": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                {
+                    "double_fields": {
+                        "match": "*",
+                        "match_mapping_type": "double",
+                        "mapping": {
+                            "type": "double"
+                        }
+                    }
+                },
+                {
+                    "byte_fields": {
+                        "match": "*",
+                        "match_mapping_type": "byte",
+                        "mapping": {
+                            "type": "byte"
+                        }
+                    }
+                },
+                {
+                    "short_fields": {
+                        "match": "*",
+                        "match_mapping_type": "short",
+                        "mapping": {
+                            "type": "short"
+                        }
+                    }
+                },
+                {
+                    "integer_fields": {
+                        "match": "*",
+                        "match_mapping_type": "integer",
+                        "mapping": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                {
+                    "long_fields": {
+                        "match": "*",
+                        "match_mapping_type": "long",
+                        "mapping": {
+                            "type": "long"
+                        }
+                    }
+                },
+                {
+                    "date_fields": {
+                        "match": "*",
+                        "match_mapping_type": "date",
+                        "mapping": {
+                            "type": "date"
+                        }
+                    }
+                },
+                {
+                    "geo_point_fields": {
+                        "match": "*",
+                        "match_mapping_type": "geo_point",
+                        "mapping": {
+                            "type": "geo_point"
+                        }
+                    }
+                }
+            ],
+            "properties": {
+                "artcleid": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "user_name": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "ip": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "channel": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "created_at": {
+                    "format": "strict_date_optional_time||epoch_millis",
+                    "type": "date"
+                },
+                "reply_count": {
+                    "ignore_malformed": true,
+                    "type": "integer"
+                },
+                "content": {
+                    "type": "text",
+                    "analyzer": "ik_max_word",
+                    "search_analyzer": "ik_max_word"
+                },
+                "post_time": {
+                    "format": "strict_date_optional_time||epoch_millis",
+                    "type": "date"
+                },
+                "site": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "total": {
+                    "ignore_malformed": true,
+                    "type": "integer"
+                },
+                "cmt_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "praise_num": {
+                    "ignore_malformed": true,
+                    "type": "integer"
+                },
+                "location": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "is_following": {
+                    "ignore_malformed": true,
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}'
+```
+
+
+
