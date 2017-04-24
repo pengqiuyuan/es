@@ -4,13 +4,16 @@
 
 | 字段含义 | 字段名称 | 数据类型 |
 | :---: | :---: | :---: |
-| 头条号ID | id | 字符串 |
-| 头像图片链接 | avatar\_img | 字符串 |
-| 头条号名称 | name | 字符串 |
-| 头条号简介 | introduction | 字符串 |
-| 关注量 | follower\_count | 数值 |
-| 粉丝量 | fans\_count | 数值 |
-| 抓取时间 | crawled\_at | 日期 |
+| 问题ID | questionId | 字符串 |
+| 头像图片链接 | title | 字符串 |
+| 头条号名称 | topics | 数组 |
+| 头条号简介 | desc | 字符串 |
+| 关注量 | url | 字符串 |
+| 粉丝量 | followsNum | 数值 |
+| 抓取时间 | viewsNum | 数值 |
+|  | answersNum | 数值 |
+|  | commentsNum | 数值 |
+|  | createdAt | 日期 |
 
 部分数据：
 
