@@ -36,7 +36,14 @@
 curl -XPUT http://127.0.0.1:9222/old_news_articles
 ```
 
-`mapping`
+`mapping`（原索引字段`comments_num`类型为字符串）
+
+```
+"comments_num": {
+    "ignore_malformed": true,
+    "type": "integer"
+},
+```
 
 ```
 curl -XPUT http://127.0.0.1:9222/_template/old_news_articles -d '
