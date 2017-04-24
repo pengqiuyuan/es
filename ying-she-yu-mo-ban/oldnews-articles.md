@@ -40,6 +40,341 @@ curl -XPUT http://127.0.0.1:9222/old_news_articles
 
 ```
 
+
+curl -XPUT http://127.0.0.1:9222/_template/old_news_articles -d '
+{
+    "template": "old_news_articles*",
+    "settings": {
+        "refresh_interval": "60s",
+        "number_of_replicas": "1",
+        "number_of_shards": "15"
+    },
+    "mappings": {
+        "_default_": {
+            "_all": {
+                "enabled": true
+            },
+            "_source": {
+                "enabled": true
+            },
+            "dynamic_templates": [
+                {
+                    "message_field": {
+                        "match": "message",
+                        "match_mapping_type": "string",
+                        "mapping": {
+                            "type": "text"
+                        }
+                    }
+                },
+                {
+                    "string_fields": {
+                        "match": "*",
+                        "match_mapping_type": "string",
+                        "mapping": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                {
+                    "double_fields": {
+                        "match": "*",
+                        "match_mapping_type": "double",
+                        "mapping": {
+                            "type": "double"
+                        }
+                    }
+                },
+                {
+                    "byte_fields": {
+                        "match": "*",
+                        "match_mapping_type": "byte",
+                        "mapping": {
+                            "type": "byte"
+                        }
+                    }
+                },
+                {
+                    "short_fields": {
+                        "match": "*",
+                        "match_mapping_type": "short",
+                        "mapping": {
+                            "type": "short"
+                        }
+                    }
+                },
+                {
+                    "integer_fields": {
+                        "match": "*",
+                        "match_mapping_type": "integer",
+                        "mapping": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                {
+                    "long_fields": {
+                        "match": "*",
+                        "match_mapping_type": "long",
+                        "mapping": {
+                            "type": "long"
+                        }
+                    }
+                },
+                {
+                    "date_fields": {
+                        "match": "*",
+                        "match_mapping_type": "date",
+                        "mapping": {
+                            "type": "date"
+                        }
+                    }
+                },
+                {
+                    "geo_point_fields": {
+                        "match": "*",
+                        "match_mapping_type": "geo_point",
+                        "mapping": {
+                            "type": "geo_point"
+                        }
+                    }
+                }
+            ],
+            "properties": {
+                "date": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "channel": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "sign": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "source": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "type": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "source_uri": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "news_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "topic_source_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "show_num": {
+                    "type": "integer"
+                },
+                "__v": {
+                    "type": "integer"
+                },
+                "praise_num": {
+                    "type": "integer"
+                },
+                "total_num": {
+                    "type": "integer"
+                },
+                "reply_num": {
+                    "type": "integer"
+                },
+                "id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "imglinks": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "image": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "image_uri": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "pre_url": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "real_comment_num": {
+                    "type": "integer"
+                },
+                "category_link": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "post_date": {
+                    "format": "strict_date_optional_time||epoch_millis",
+                    "type": "date"
+                },
+                "status": {
+                    "type": "integer"
+                },
+                "comment_num": {
+                    "type": "integer"
+                },
+                "uinname": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "comments_num": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "created_at": {
+                    "format": "strict_date_optional_time||epoch_millis",
+                    "type": "date"
+                },
+                "title": {
+                    "type": "text",
+                    "analyzer": "ik_max_word",
+                    "search_analyzer": "ik_max_word"
+                },
+                "dispraise_num": {
+                    "type": "integer"
+                },
+                "content": {
+                    "type": "text",
+                    "analyzer": "ik_max_word",
+                    "search_analyzer": "ik_max_word"
+                },
+                "last_modified_at": {
+                    "format": "strict_date_optional_time||epoch_millis",
+                    "type": "date"
+                },
+                "sid": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "newsid": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "tian": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "commentid": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "docuri": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "summary": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "comments": {
+                    "properties": {
+                        "cmt_id": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        },
+                        "user_name": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        },
+                        "ip": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        },
+                        "location": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        },
+                        "content": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        },
+                        "post_time": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "item_id": {
+                    "type": "string"
+                },
+                "docid": {
+                    "type": "string"
+                },
+                "comment_uri": {
+                    "type": "string"
+                },
+                "comment_id": {
+                    "type": "string"
+                },
+                "uri": {
+                    "type": "string"
+                },
+                "post_time": {
+                    "format": "strict_date_optional_time||epoch_millis",
+                    "type": "date"
+                },
+                "source_link": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "url": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "site": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "group_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "image_links": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
+                "category": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}'
 ```
 
 
