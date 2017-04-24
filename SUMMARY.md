@@ -29,6 +29,7 @@
   * [分词测试一](fen-ci/ce-shi-yi.md)
   * [分词测试二](fen-ci/fen-ci-ce-shi-er.md)
   * [分词测试三](fen-ci/fen-ci-ce-shi-san.md)
+  * [测试 ignore\_malformed ](fen-ci/ce-shi-ignore-malformed.md)
 * [安全机制](an-quan-ji-zhi.md)
   * [基于 nginx 配置](an-quan-ji-zhi/ji-yu-nginx-pei-zhi.md)
   * [xpack](an-quan-ji-zhi/xpack.md)
