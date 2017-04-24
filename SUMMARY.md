@@ -21,7 +21,7 @@
   * [old\_news\_articles](ying-she-yu-mo-ban/oldnews-articles.md)
   * [news\_comments](ying-she-yu-mo-ban/newscomments.md)
   * [old\_news\_comments](ying-she-yu-mo-ban/oldnews-comments.md)
-  * tieba\_posts
+  * [tieba\_posts](ying-she-yu-mo-ban/tiebaposts.md)
   * weibo\_article\_tops
   * zhihu\_questions
 * [Reindex 重新索引](reindexff08-zhong-xin-suo-yin-ff09.md)
