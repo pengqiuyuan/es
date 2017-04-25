@@ -40,6 +40,8 @@ curl -XPUT http://127.0.0.1:9222/old_news_comments
 
 `mapping`
 
+记录需要删除的字段：sign、status、0、total、posted\_time、item、comments
+
 ```
 curl -XPUT http://127.0.0.1:9222/_template/old_news_comments -d '
 {
@@ -141,10 +143,6 @@ curl -XPUT http://127.0.0.1:9222/_template/old_news_comments -d '
                 }
             ],
             "properties": {
-                "0": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
                 "artcleid": {
                     "type": "keyword",
                     "ignore_above": 256
@@ -161,10 +159,6 @@ curl -XPUT http://127.0.0.1:9222/_template/old_news_comments -d '
                     "type": "integer"
                 },
                 "channel": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
-                "sign": {
                     "type": "keyword",
                     "ignore_above": 256
                 },
@@ -189,10 +183,6 @@ curl -XPUT http://127.0.0.1:9222/_template/old_news_comments -d '
                     "type": "keyword",
                     "ignore_above": 256
                 },
-                "total": {
-                    "ignore_malformed": true,
-                    "type": "integer"
-                },
                 "cmt_id": {
                     "type": "keyword",
                     "ignore_above": 256
@@ -200,86 +190,9 @@ curl -XPUT http://127.0.0.1:9222/_template/old_news_comments -d '
                 "praise_num": {
                     "type": "integer"
                 },
-                "posted_time": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
                 "posted_at": {
                     "format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
-                },
-                "item": {
-                    "properties": {
-                        "uid": {
-                            "type": "long"
-                        },
-                        "cmt_id": {
-                            "type": "long"
-                        },
-                        "user_name": {
-                            "type": "keyword",
-                            "ignore_above": 256,
-                            "fields": {
-                                "raw": {
-                                    "type": "text",
-                                    "analyzer": "ik_max_word",
-                                    "search_analyzer": "ik_max_word"
-                                }
-                            }
-                        },
-                        "praise_num": {
-                            "ignore_malformed": true,
-                            "type": "integer"
-                        },
-                        "content": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        },
-                        "post_time": {
-                            "format": "strict_date_optional_time||epoch_millis",
-                            "type": "date"
-                        }
-                    }
-                },
-                "comments": {
-                    "properties": {
-                        "cmt_id": {
-                            "type": "keyword",
-                            "ignore_above": 256
-                        },
-                        "user_name": {
-                            "type": "keyword",
-                            "ignore_above": 256,
-                            "fields": {
-                                "raw": {
-                                    "type": "text",
-                                    "analyzer": "ik_max_word",
-                                    "search_analyzer": "ik_max_word"
-                                }
-                            }
-                        },
-                        "location": {
-                            "type": "keyword",
-                            "ignore_above": 256,
-                            "fields": {
-                                "raw": {
-                                    "type": "text",
-                                    "analyzer": "ik_max_word",
-                                    "search_analyzer": "ik_max_word"
-                                }
-                            }
-                        },
-                        "content": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        },
-                        "post_time": {
-                            "format": "strict_date_optional_time||epoch_millis",
-                            "type": "date"
-                        }
-                    }
                 },
                 "ip": {
                     "type": "keyword",
@@ -329,9 +242,6 @@ curl -XPUT http://127.0.0.1:9222/_template/old_news_comments -d '
                 "is_following": {
                     "type": "keyword",
                     "ignore_above": 256
-                },
-                "status": {
-                    "type": "integer"
                 }
             }
         }
