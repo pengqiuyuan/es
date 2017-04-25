@@ -156,17 +156,6 @@ curl -XPUT http://127.0.0.1:9222/_template/old_news_articles -d '
                     "type": "keyword",
                     "ignore_above": 256
                 },
-                "sign": {
-                    "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
-                },
                 "source": {
                     "type": "keyword",
                     "ignore_above": 256,
@@ -197,16 +186,7 @@ curl -XPUT http://127.0.0.1:9222/_template/old_news_articles -d '
                 "show_num": {
                     "type": "integer"
                 },
-                "__v": {
-                    "type": "integer"
-                },
                 "praise_num": {
-                    "type": "integer"
-                },
-                "total_num": {
-                    "type": "integer"
-                },
-                "reply_num": {
                     "type": "integer"
                 },
                 "id": {
@@ -239,9 +219,6 @@ curl -XPUT http://127.0.0.1:9222/_template/old_news_articles -d '
                 "post_date": {
                     "format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
-                },
-                "status": {
-                    "type": "integer"
                 },
                 "comment_num": {
                     "type": "integer"
@@ -298,35 +275,6 @@ curl -XPUT http://127.0.0.1:9222/_template/old_news_articles -d '
                 "summary": {
                     "type": "keyword",
                     "ignore_above": 256
-                },
-                "comments": {
-                    "properties": {
-                        "cmt_id": {
-                            "type": "keyword",
-                            "ignore_above": 256
-                        },
-                        "user_name": {
-                            "type": "keyword",
-                            "ignore_above": 256
-                        },
-                        "ip": {
-                            "type": "keyword",
-                            "ignore_above": 256
-                        },
-                        "location": {
-                            "type": "keyword",
-                            "ignore_above": 256
-                        },
-                        "content": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        },
-                        "post_time": {
-                            "type": "keyword",
-                            "ignore_above": 256
-                        }
-                    }
                 },
                 "item_id": {
                     "type": "keyword",
