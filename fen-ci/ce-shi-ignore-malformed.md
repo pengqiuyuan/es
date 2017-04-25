@@ -29,7 +29,7 @@
      }'
 ```
 
-插入数据 `"id":"测试测试"` 数据插入无异常符合预期
+插入数据 `"id":"测试测试"` 数据插入无异常符合预期（对 `id` 做 `sum` 聚合计算 ，`id`为 "测试测试" 的值被忽略）
 
 ```
     curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext3/1 -d'
@@ -37,16 +37,16 @@
         "id":1,
         "title":"测试 test"
     }'
-    
+
     {"_index":"ikindex3","_type":"fulltext3","_id":"1","_version":2,"result":"updated","_shards":{"total":2,"successful":2,"failed":0},"created":false}
-    
+
     curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext3/2 -d'
     {
         "id":"2",
         "title":"测试 test"
     }'
     {"_index":"ikindex3","_type":"fulltext3","_id":"2","_version":3,"result":"updated","_shards":{"total":2,"successful":2,"failed":0},"created":false}
-    
+
     curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext3/3 -d'
     {
         "id":"测试测试",
