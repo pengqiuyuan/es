@@ -160,14 +160,7 @@ curl -XPUT http://127.0.0.1:9222/_template/news_comments -d '
                 },
                 "channel": {
                     "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
+                    "ignore_above": 256
                 },
                 "created_at": {
                     "format": "strict_date_optional_time||epoch_millis",
@@ -188,14 +181,7 @@ curl -XPUT http://127.0.0.1:9222/_template/news_comments -d '
                 },
                 "site": {
                     "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
+                    "ignore_above": 256
                 },
                 "total": {
                     "ignore_malformed": true,
