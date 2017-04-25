@@ -154,14 +154,7 @@ curl -XPUT http://127.0.0.1:9222/_template/old_news_comments -d '
                 },
                 "user_name": {
                     "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
+                    "ignore_above": 256
                 },
                 "comments_num": {
                     "ignore_malformed": true,
@@ -169,14 +162,7 @@ curl -XPUT http://127.0.0.1:9222/_template/old_news_comments -d '
                 },
                 "channel": {
                     "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
+                    "ignore_above": 256
                 },
                 "sign": {
                     "type": "keyword",
@@ -316,14 +302,7 @@ curl -XPUT http://127.0.0.1:9222/_template/old_news_comments -d '
                 },
                 "site": {
                     "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
+                    "ignore_above": 256
                 },
                 "next_sync_at": {
                     "format": "strict_date_optional_time||epoch_millis",
