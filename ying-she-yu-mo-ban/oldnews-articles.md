@@ -327,19 +327,24 @@ curl -XPUT http://127.0.0.1:9222/_template/old_news_articles -d '
                     }
                 },
                 "item_id": {
-                    "type": "string"
+                    "type": "keyword",
+                    "ignore_above": 256
                 },
                 "docid": {
-                    "type": "string"
+                    "type": "keyword",
+                    "ignore_above": 256
                 },
                 "comment_uri": {
-                    "type": "string"
+                    "type": "keyword",
+                    "ignore_above": 256
                 },
                 "comment_id": {
-                    "type": "string"
+                    "type": "keyword",
+                    "ignore_above": 256
                 },
                 "uri": {
-                    "type": "string"
+                    "type": "keyword",
+                    "ignore_above": 256
                 },
                 "post_time": {
                     "format": "strict_date_optional_time||epoch_millis",
