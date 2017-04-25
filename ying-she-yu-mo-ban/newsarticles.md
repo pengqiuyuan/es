@@ -169,9 +169,15 @@ curl -XPUT http://127.0.0.1:9222/_template/news_articles -d '
                     "type": "date"
                 },
                 "source": {
-                    "type": "text",
-                    "analyzer": "ik_max_word",
-                    "search_analyzer": "ik_max_word"
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
                 },
                 "title": {
                     "type": "text",
@@ -252,14 +258,7 @@ curl -XPUT http://127.0.0.1:9222/_template/news_articles -d '
                 },
                 "site": {
                     "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
+                    "ignore_above": 256
                 },
                 "group_id": {
                     "type": "keyword",
@@ -270,7 +269,8 @@ curl -XPUT http://127.0.0.1:9222/_template/news_articles -d '
                     "ignore_above": 256
                 },
                 "setid": {
-                    "type": "integer"
+                    "type": "keyword",
+                    "ignore_above": 256
                 },
                 "image_links": {
                     "type": "keyword",
