@@ -4,6 +4,8 @@
 
 为了避免重新索引到新集群的时候出现，字段类型格式的错误。对`integer`类型字段使用 `"ignore_malformed": true`
 
+[官网文档](https://www.elastic.co/guide/en/elasticsearch/reference/5.3/ignore-malformed.html)
+
 测试如下：
 
 创建 `mapping`
