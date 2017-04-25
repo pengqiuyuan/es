@@ -152,14 +152,7 @@ curl -XPUT http://127.0.0.1:9222/_template/news_comments -d '
                 },
                 "user_name": {
                     "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
+                    "ignore_above": 256
                 },
                 "ip": {
                     "type": "keyword",
