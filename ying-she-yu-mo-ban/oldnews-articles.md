@@ -45,7 +45,7 @@ curl -XPUT http://127.0.0.1:9222/old_news_articles
 },
 ```
 
-暂时记录需要删除的字段：`sign、__v、total_num、reply_num、status、comments`
+记录需要删除的字段：`sign、__v、total_num、reply_num、status、comments`
 
 ```
 curl -XPUT http://127.0.0.1:9222/_template/old_news_articles -d '
