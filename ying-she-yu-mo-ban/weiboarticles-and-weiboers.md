@@ -101,9 +101,6 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                 }
             ],
             "properties": {
-                "@timestamp": {
-                    "type": "date"
-                },
                 "is_hot": {
                     "type": "boolean"
                 },
