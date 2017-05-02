@@ -1,4 +1,4 @@
-索引（`_index`）：`tech_news`
+索引（`_index`）：`tech_news`，同一个`_index`，不同`_type`
 
 类型（`_type`）
 
