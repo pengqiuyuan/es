@@ -38,5 +38,175 @@
 | 浏览量 | viewsNum | 数值 |
 | 作者 ID 或者链接 | authorId | 字符串 |
 
+创建索引`tech_news`
+
+```
+curl -XPUT http://127.0.0.1:9222/tech_news
+```
+
+`mapping`
+
+```
+curl -XPUT http://127.0.0.1:9222/_template/tech_news -d '
+{
+    "template": "tech_news*", 
+    "settings": {
+        "refresh_interval": "60s", 
+        "number_of_replicas": "1", 
+        "number_of_shards": "30"
+    }, 
+    "mappings": {
+        "_default_": {
+            "_all": {
+                "enabled": true
+            }, 
+            "_source": {
+                "enabled": true
+            }, 
+            "dynamic_templates": [
+                {
+                    "message_field": {
+                        "match": "message", 
+                        "match_mapping_type": "string", 
+                        "mapping": {
+                            "type": "text"
+                        }
+                    }
+                }, 
+                {
+                    "string_fields": {
+                        "match": "*", 
+                        "match_mapping_type": "string", 
+                        "mapping": {
+                            "type": "keyword"
+                        }
+                    }
+                }, 
+                {
+                    "double_fields": {
+                        "match": "*", 
+                        "match_mapping_type": "double", 
+                        "mapping": {
+                            "type": "double"
+                        }
+                    }
+                }, 
+                {
+                    "byte_fields": {
+                        "match": "*", 
+                        "match_mapping_type": "byte", 
+                        "mapping": {
+                            "type": "byte"
+                        }
+                    }
+                }, 
+                {
+                    "short_fields": {
+                        "match": "*", 
+                        "match_mapping_type": "short", 
+                        "mapping": {
+                            "type": "short"
+                        }
+                    }
+                }, 
+                {
+                    "integer_fields": {
+                        "match": "*", 
+                        "match_mapping_type": "integer", 
+                        "mapping": {
+                            "type": "integer"
+                        }
+                    }
+                }, 
+                {
+                    "long_fields": {
+                        "match": "*", 
+                        "match_mapping_type": "long", 
+                        "mapping": {
+                            "type": "long"
+                        }
+                    }
+                }, 
+                {
+                    "date_fields": {
+                        "match": "*", 
+                        "match_mapping_type": "date", 
+                        "mapping": {
+                            "type": "date"
+                        }
+                    }
+                }, 
+                {
+                    "geo_point_fields": {
+                        "match": "*", 
+                        "match_mapping_type": "geo_point", 
+                        "mapping": {
+                            "type": "geo_point"
+                        }
+                    }
+                }
+            ], 
+            "properties": {
+                "title": {
+                    "type": "text", 
+                    "analyzer": "ik_max_word", 
+                    "search_analyzer": "ik_max_word"
+                }, 
+                "content": {
+                    "type": "text", 
+                    "analyzer": "ik_max_word", 
+                    "search_analyzer": "ik_max_word"
+                }, 
+                "createdAt": {
+                    "format": "strict_date_optional_time||epoch_millis", 
+                    "type": "date"
+                }, 
+                "desc": {
+                    "type": "text", 
+                    "analyzer": "ik_max_word", 
+                    "search_analyzer": "ik_max_word"
+                }, 
+                "pics": {
+                    "type": "keyword", 
+                    "ignore_above": 256
+                }, 
+                "url": {
+                    "type": "keyword", 
+                    "ignore_above": 256
+                }, 
+                "type": {
+                    "type": "keyword", 
+                    "ignore_above": 256
+                }, 
+                "keywords": {
+                    "type": "keyword", 
+                    "ignore_above": 256
+                }, 
+                "supportsNum": {
+                    "type": "integer", 
+                    "ignore_malformed": true
+                }, 
+                "collectionsNum": {
+                    "type": "integer", 
+                    "ignore_malformed": true
+                }, 
+                "commentsNum": {
+                    "type": "integer", 
+                    "ignore_malformed": true
+                }, 
+                "viewsNum": {
+                    "type": "integer", 
+                    "ignore_malformed": true
+                }, 
+                "authorId": {
+                    "type": "keyword", 
+                    "ignore_above": 256
+                }
+            }
+        }
+    }
+}'
+```
+
 
 
