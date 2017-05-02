@@ -1,6 +1,6 @@
 索引（`_index`）：`tech_news`
 
-类型（`_type`）：
+类型（`_type`）
 
 36kr（文章、快讯）：`tech_36kr_articles`、`tech_36kr_news`
 
@@ -37,8 +37,6 @@
 | 评论量 | commentsNum | 数值 |
 | 浏览量 | viewsNum | 数值 |
 | 作者 ID 或者链接 | authorId | 字符串 |
-
-
 
 
 
