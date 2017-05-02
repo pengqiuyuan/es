@@ -26,17 +26,17 @@
 | :---: | :---: | :---: |
 | 标题 | title | 字符串 |
 | 内容 | content | 字符串 |
-| 日期 | createdAt | 日期 |
+| 日期 | created\_at | 日期 |
 | 简介 | desc | 字符串 |
 | 图片 | pics | 数组 |
 | 链接 | url | 字符串 |
 | 文章分类 | type | 字符串 |
 | 关键词 | keywords | 数组 |
-| 点赞量 | supportsNum | 数值 |
-| 收藏量 | collectionsNum | 数值 |
-| 评论量 | commentsNum | 数值 |
-| 浏览量 | viewsNum | 数值 |
-| 作者 ID 或者链接 | authorId | 字符串 |
+| 点赞量 | supports\_num | 数值 |
+| 收藏量 | collections\_num | 数值 |
+| 评论量 | comments\_num | 数值 |
+| 浏览量 | views\_num | 数值 |
+| 作者 ID 或者链接 | author\_id | 字符串 |
 
 创建索引`tech_news`
 
@@ -157,7 +157,7 @@ curl -XPUT http://127.0.0.1:9222/_template/tech_news -d '
                     "analyzer": "ik_max_word", 
                     "search_analyzer": "ik_max_word"
                 }, 
-                "createdAt": {
+                "created_at": {
                     "format": "strict_date_optional_time||epoch_millis", 
                     "type": "date"
                 }, 
@@ -182,23 +182,23 @@ curl -XPUT http://127.0.0.1:9222/_template/tech_news -d '
                     "type": "keyword", 
                     "ignore_above": 256
                 }, 
-                "supportsNum": {
+                "supports_num": {
                     "type": "integer", 
                     "ignore_malformed": true
                 }, 
-                "collectionsNum": {
+                "collections_num": {
                     "type": "integer", 
                     "ignore_malformed": true
                 }, 
-                "commentsNum": {
+                "comments_num": {
                     "type": "integer", 
                     "ignore_malformed": true
                 }, 
-                "viewsNum": {
+                "views_num": {
                     "type": "integer", 
                     "ignore_malformed": true
                 }, 
-                "authorId": {
+                "author_id": {
                     "type": "keyword", 
                     "ignore_above": 256
                 }
