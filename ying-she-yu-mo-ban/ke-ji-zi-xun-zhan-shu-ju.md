@@ -2,9 +2,9 @@
 
 类型（`_type`）
 
-36kr（文章、快讯）：`tech_36kr_articles`、`tech_36kr_news`
+36kr（文章、快讯）：`tech_36kr_articles`、`tech_q36kr_articles`
 
-虎嗅（资讯）：`tech_huxiu_news`
+虎嗅（资讯）：`tech_huxiu_articles`
 
 雷锋（文章）：`tech_leiphone_articles`
 
