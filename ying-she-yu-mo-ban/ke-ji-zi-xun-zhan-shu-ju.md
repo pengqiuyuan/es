@@ -26,7 +26,7 @@
 | :---: | :---: | :---: |
 | 标题 | title | 字符串 |
 | 内容 | content | 字符串 |
-| 日期 | created\_at | 日期 |
+| 发布日期 | published\_at | 日期 |
 | 简介 | desc | 字符串 |
 | 图片 | pics | 数组 |
 | 链接 | url | 字符串 |
@@ -157,7 +157,7 @@ curl -XPUT http://127.0.0.1:9222/_template/tech_news -d '
                     "analyzer": "ik_max_word", 
                     "search_analyzer": "ik_max_word"
                 }, 
-                "created_at": {
+                "published_at": {
                     "format": "strict_date_optional_time||epoch_millis", 
                     "type": "date"
                 }, 
