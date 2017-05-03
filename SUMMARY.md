@@ -46,9 +46,10 @@
   * [Python](python.md)
   * [Nodejs](nodejs.md)
 * [消息队列](xiao-xi-dui-lie.md)
+  * [接口](xiao-xi-dui-lie/jie-kou.md)
+  * [测试](xiao-xi-dui-lie/ce-shi.md)
   * [Kafka](xiao-xi-dui-lie/kafka.md)
   * [Logstash](xiao-xi-dui-lie/logstash.md)
     * [Agent](xiao-xi-dui-lie/logstash/agent.md)
     * [Index](xiao-xi-dui-lie/logstash/index.md)
-  * [测试](xiao-xi-dui-lie/ce-shi.md)
 
