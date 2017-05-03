@@ -2,20 +2,20 @@ HTTP POST 请求数据写入 ES
 
 ```
 input {
-	http {
-    	host => "127.0.0.1"
-    	port => "8082"
-    	codec => "json"
-    	response_headers => {
-        	"Content-Type" => "application/json
-    	}
+    http {
+        host => "127.0.0.1"
+        port => "8082"
+        codec => "json"
+        response_headers => {
+            "Content-Type" => "application/json
+        }
   }
 }
 filter {
     split {
         field => "indexMessage"
     }
- 
+
     mutate {
         rename => [
             "[indexMessage][id]", "id",
@@ -31,9 +31,9 @@ filter {
     }
 
     mutate {
-        add_field => { "[@metadata][id]" => "%{id}"
-        add_field => { "[@metadata][index]" => "%{index}"
-        add_field => { "[@metadata][type]" => "%{type}"
+        add_field => { "[@metadata][id]" => "%{id}"}
+        add_field => { "[@metadata][index]" => "%{index}"}
+        add_field => { "[@metadata][type]" => "%{type}"}
         remove_field => ["headers","@timestamp","host","@version","indexMessage"]
     }
 }
@@ -48,7 +48,6 @@ output {
     }
     stdout {codec => rubydebug}
 }
-
 ```
 
 
