@@ -45,4 +45,10 @@
 * 客户端连接
   * [Python](python.md)
   * [Nodejs](nodejs.md)
+* [消息队列](xiao-xi-dui-lie.md)
+  * Kafka
+  * [Logstash](xiao-xi-dui-lie/logstash.md)
+    * Agent
+    * Index
+  * [测试](xiao-xi-dui-lie/ce-shi.md)
 
