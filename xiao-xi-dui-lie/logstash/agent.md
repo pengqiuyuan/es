@@ -1,6 +1,6 @@
 HTTP POST 请求数据写入 KAFKA 队列
 
-```
+```js
 input {
     http {
         host => "127.0.0.1"
