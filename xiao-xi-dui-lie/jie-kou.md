@@ -6,7 +6,7 @@
 
 ```
 index_name：索引名称（字符串）
-type_name：分类名称（字符串）
+type_name：分片名称（字符串）
 index_message：消息体（数组、集合），消息体内的每一个对象都有 id（字符串） 参数。
 ```
 
@@ -57,4 +57,14 @@ index_message：消息体（数组、集合），消息体内的每一个对象�
 ```
 
 
+
+微博（索引名称、分片名称）：`weibo_articles_and_weiboers`、`weibo_articles_and_weiboer`
+
+微信（索引名称、分片名称）：`weixin_articles_and_weixiners`、`weixin_articles_and_weixiner`
+
+头条（索引名称、分片名称）：`toutiao_articles_and_users`、`toutiao_articles_and_users`
+
+百度新闻（索引名称、分片名称）：`baidunews_news`、`baidunews_news`
+
+知乎问答（索引名称、分片名称）：`zhihu_questions`、`zhihu_questions`
 
