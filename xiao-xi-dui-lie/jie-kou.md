@@ -56,8 +56,6 @@ index_message：消息体（数组、集合），消息体内的每一个对象�
 }
 ```
 
-
-
 微博（索引名称、分片名称）：`weibo_articles_and_weiboers`、`weibo_articles_and_weiboer`
 
 微信（索引名称、分片名称）：`weixin_articles_and_weixiners`、`weixin_articles_and_weixiner`
@@ -67,4 +65,6 @@ index_message：消息体（数组、集合），消息体内的每一个对象�
 百度新闻（索引名称、分片名称）：`baidunews_news`、`baidunews_news`
 
 知乎问答（索引名称、分片名称）：`zhihu_questions`、`zhihu_questions`
+
+科技资讯（索引名称、分片名称）：`tech_news`、[分片参考](/ying-she-yu-mo-ban/ke-ji-zi-xun-zhan-shu-ju.md)
 
