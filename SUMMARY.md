@@ -53,7 +53,7 @@
     * [Baidu 测试](xiao-xi-dui-lie/ce-shi/baidu-ce-shi.md)
     * [Toutiao 测试](xiao-xi-dui-lie/ce-shi/toutiao-ce-shi.md)
     * [Weibo 测试](xiao-xi-dui-lie/ce-shi/weibo-ce-shi.md)
-    * Weixin 测试
+    * [Weixin 测试](xiao-xi-dui-lie/ce-shi/weixin-ce-shi.md)
   * [Kafka](xiao-xi-dui-lie/kafka.md)
   * [Logstash](xiao-xi-dui-lie/logstash.md)
     * [Agent](xiao-xi-dui-lie/logstash/agent.md)
