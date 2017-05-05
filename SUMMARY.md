@@ -48,9 +48,12 @@
 * [消息队列](xiao-xi-dui-lie.md)
   * [接口](xiao-xi-dui-lie/jie-kou.md)
   * [测试](xiao-xi-dui-lie/ce-shi.md)
-    * [知乎测试](xiao-xi-dui-lie/ce-shi/zhi-hu-ce-shi.md)
-    * [资讯博客](xiao-xi-dui-lie/ce-shi/zi-xun-bo-ke.md)
+    * [Zhihu测试](xiao-xi-dui-lie/ce-shi/zhi-hu-ce-shi.md)
+    * [Kejizixun 测试](xiao-xi-dui-lie/ce-shi/zi-xun-bo-ke.md)
     * [Baidu 测试](xiao-xi-dui-lie/ce-shi/baidu-ce-shi.md)
+    * [Toutiao 测试](xiao-xi-dui-lie/ce-shi/toutiao-ce-shi.md)
+    * Weibo 测试
+    * Weixin 测试
   * [Kafka](xiao-xi-dui-lie/kafka.md)
   * [Logstash](xiao-xi-dui-lie/logstash.md)
     * [Agent](xiao-xi-dui-lie/logstash/agent.md)
