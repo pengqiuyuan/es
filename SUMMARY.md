@@ -52,7 +52,7 @@
     * [Kejizixun 测试](xiao-xi-dui-lie/ce-shi/zi-xun-bo-ke.md)
     * [Baidu 测试](xiao-xi-dui-lie/ce-shi/baidu-ce-shi.md)
     * [Toutiao 测试](xiao-xi-dui-lie/ce-shi/toutiao-ce-shi.md)
-    * Weibo 测试
+    * [Weibo 测试](xiao-xi-dui-lie/ce-shi/weibo-ce-shi.md)
     * Weixin 测试
   * [Kafka](xiao-xi-dui-lie/kafka.md)
   * [Logstash](xiao-xi-dui-lie/logstash.md)
