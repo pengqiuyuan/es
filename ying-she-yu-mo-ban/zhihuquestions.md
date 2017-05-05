@@ -44,8 +44,6 @@ curl -XPUT http://127.0.0.1:9222/zhihu_questions
 `mapping`
 
 ```
-
-
 curl -XPUT http://127.0.0.1:9222/_template/zhihu_questions -d '
 {
     "template": "zhihu_questions*",
