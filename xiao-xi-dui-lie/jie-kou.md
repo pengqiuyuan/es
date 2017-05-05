@@ -5,9 +5,9 @@
 `BODY` 体参数说明：
 
 ```
-indexName：索引名称（字符串）
-typeName：分片名称（字符串）
-indexMessage：消息体（数组、集合），消息体内的每一个对象都有 id（字符串）、indexName、 typeName 参数。
+index_name：索引名称（字符串）
+type_name：分片名称（字符串）
+index_message：消息体（数组、集合），消息体内的每一个对象都有 id（字符串）、index_name、 type_name 参数。
 ```
 
 `HEADERS`：`"Content-Type" => "application/json"`
@@ -16,9 +16,9 @@ indexMessage：消息体（数组、集合），消息体内的每一个对象�
 
 ```js
 {
-    "indexName": "test",
-    "typeName": "test",
-    "indexMessage": [
+    "index_name": "test",
+    "type_name": "test",
+    "index_message": [
         {
             "id": "10",
             "index_name": "test",
