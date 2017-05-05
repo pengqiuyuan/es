@@ -1,6 +1,6 @@
 **POST 请求写入数据到 **`kafka`
 
-`POST` `http://127.0.0.1/api/v1/pa`
+`POST` `http://127.0.0.1/stq/api/v1/pa/toutiao/add`
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
@@ -126,22 +126,23 @@ input {
             codec => "json"
         }
 }
-#filter {
-#    mutate {
-#         add_field => { "[@metadata][index_name]" => "test"}
-#        add_field => { "[@metadata][type_name]" => "test"}
-#         remove_field => ["headers","@timestamp","host","@version","message","index_message","index_name","type_name","id"]
-#    }
-#}
+filter {
+    mutate {
+         add_field => { "[@metadata][index_name]" => "test"}         
+	 add_field => { "[@metadata][type_name]" => "test"}
+         remove_field => ["@timestamp","@version","index_name","type_name","id"]
+    }
+}
 output {
-        stdout {codec => rubydebug}
-#        elasticsearch {
-#            hosts => ["127.0.0.1:9222"]
-#            index => "%{[@metadata][index_name]}"
-#            workers => 1
-#            document_type => "%{[@metadata][type_name]}"
-#            template_overwrite => false
-#        }
+#        stdout {codec => rubydebug}
+         elasticsearch {
+            hosts => ["127.0.0.1:9222"]
+#           index => "%{[@metadata][index_name]}"
+            index => "test"
+	    workers => 1
+            document_type => "%{[@metadata][type_name]}"
+            template_overwrite => false
+        }
 }
 ```
 

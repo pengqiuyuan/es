@@ -42,7 +42,7 @@
   * [Cerebro](cha-jian/cerebro.md)
 * [Kibana 5](kibana-5.md)
   * [生产环境部署和Nginx代理配置](kibana-5/an-zhuang-he-nginx-dai-li-pei-zhi.md)
-* 客户端连接
+* [客户端连接](ke-hu-duan-lian-jie.md)
   * [Python](python.md)
   * [Nodejs](nodejs.md)
 * [消息队列](xiao-xi-dui-lie.md)
