@@ -2,6 +2,8 @@
 
 `POST` `http://127.0.0.1/api/v1/pa`
 
+`HEADERS`：`"Content-Type" => "application/json"`
+
 `BODY` 体参数说明：
 
 ```
@@ -9,10 +11,6 @@ index_name：索引名称（字符串）
 type_name：分片名称（字符串）
 index_message：消息体（数组、集合），消息体内的每一个对象都有 id（字符串）、index_name、 type_name 参数。
 ```
-
-`HEADERS`：`"Content-Type" => "application/json"`
-
-`BODY` 体：
 
 ```js
 {
