@@ -129,7 +129,7 @@ input {
 filter {
     mutate {
          add_field => { "[@metadata][index_name]" => "test"}         
-	 add_field => { "[@metadata][type_name]" => "test"}
+     add_field => { "[@metadata][type_name]" => "test"}
          remove_field => ["@timestamp","@version","index_name","type_name","id"]
     }
 }
@@ -139,7 +139,7 @@ output {
             hosts => ["127.0.0.1:9222"]
 #           index => "%{[@metadata][index_name]}"
             index => "test"
-	    workers => 1
+        workers => 1
             document_type => "%{[@metadata][type_name]}"
             template_overwrite => false
         }
