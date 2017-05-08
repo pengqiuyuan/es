@@ -1,6 +1,6 @@
-旧索引：`sogou_weixin_articles`
+索引：`sogou_weixin_articles`
 
-新索引：`sogou_weixin_articles`
+分片：`sogou_weixin_articles`
 
 | 字段含义 | 字段名称 | 数据类型 |
 | :---: | :---: | :---: |
@@ -209,8 +209,6 @@ curl -XPUT http://127.0.0.1:9222/_template/zhihu_questions -d '
         }
     }
 }'
-
-
 ```
 
 
