@@ -1,6 +1,6 @@
-索引：`sogou_weixin_articles`
+索引名称（`_index`）：`sogou_weixin_articles`
 
-分片：`sogou_weixin_articles`
+分片名称（`_type`）：`sogou_weixin_articles`
 
 | 字段含义 | 字段名称 | 数据类型 |
 | :---: | :---: | :---: |
