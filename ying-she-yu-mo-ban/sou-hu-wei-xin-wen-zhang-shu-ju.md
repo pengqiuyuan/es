@@ -32,7 +32,7 @@ curl -XPUT http://127.0.0.1:9222/sogou_weixin_articles
 `mapping`
 
 ```
-curl -XPUT http://127.0.0.1:9222/_template/zhihu_questions -d '
+curl -XPUT http://127.0.0.1:9222/_template/sogou_weixin_articles -d '
 {
     "template": "sogou_weixin_articles*",
     "settings": {
