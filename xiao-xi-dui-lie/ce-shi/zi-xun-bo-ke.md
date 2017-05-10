@@ -1,7 +1,5 @@
 科技资讯（索引名称、分片名称）：`tech_news`、[分片参考](/ying-she-yu-mo-ban/ke-ji-zi-xun-zhan-shu-ju.md)（`tech_36kr_articles`、`tech_q36kr_articles`、`tech_huxiu_articles`、`tech_leiphone_articles`、`tech_cyzone_articles`、`tech_tmtpost_articles`、`tech_geekpark_articles`、`tech_ikanchai_articles`、`tech_qianzhan_articles`、`tech_techxue_articles`、`tech_pingwest_articles`）
 
-
-
 **POST 请求写入数据到 **`kafka`
 
 `POST` `http://127.0.0.1/stq/api/v1/pa/kejizixun/add`
