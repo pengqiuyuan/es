@@ -57,6 +57,7 @@
       * [Weixin 测试](xiao-xi-dui-lie/ce-shi/weixin-ce-shi.md)
       * [Weibo 测试](xiao-xi-dui-lie/ce-shi/weibo-ce-shi.md)
       * [Baidu 测试](xiao-xi-dui-lie/ce-shi/baidu-ce-shi.md)
+      * [SogouWeixin 测试](xiao-xi-dui-lie/ce-shi/souhuweixin-ce-shi.md)
   * [部署](xiao-xi-dui-lie/bu-shu.md)
   * [Kafka](xiao-xi-dui-lie/kafka.md)
   * [Logstash](xiao-xi-dui-lie/logstash.md)
