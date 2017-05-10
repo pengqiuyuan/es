@@ -1,4 +1,4 @@
-百度新闻（索引名称、分片名称）：`sogou_weixin_articles`、`sogou_weixin_articles`
+搜狗微信文章（索引名称、分片名称）：`sogou_weixin_articles`、`sogou_weixin_articles`
 
 **POST 请求写入数据到 **`kafka`
 
@@ -15,14 +15,16 @@
       "index_name": "sogou_weixin_articles",
       "type_name": "sogou_weixin_articles",
       "avatar_img": "http://p3.pstatp.com/thumb/6427/6955928713",
-      "name": "乒乓网1"
+      "name": "乒乓网1",
+      ...
     },
     {
       "id": "11",
       "index_name": "sogou_weixin_articles",
       "type_name": "sogou_weixin_articles",
       "avatar_img": "http://p3.pstatp.com/thumb/6427/6955928713",
-      "name": "乒乓网2"
+      "name": "乒乓网2",
+      ...
     }
 ]
 ```
