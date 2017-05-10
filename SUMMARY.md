@@ -61,4 +61,6 @@
   * [部署](xiao-xi-dui-lie/bu-shu.md)
   * [Kafka](xiao-xi-dui-lie/kafka.md)
   * [Logstash](xiao-xi-dui-lie/logstash.md)
+    * [Agent](xiao-xi-dui-lie/logstash/agent.md)
+    * [Index](xiao-xi-dui-lie/logstash/index.md)
 
