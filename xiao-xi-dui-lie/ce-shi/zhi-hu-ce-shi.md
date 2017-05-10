@@ -1,78 +1,58 @@
+微博（索引名称、分片名称）：`weibo_articles_and_weiboers`、`weibo_articles_and_weiboer`
+
+微信（索引名称、分片名称）：`weixin_articles_and_weixiners`、`weixin_articles_and_weixiner`
+
+头条（索引名称、分片名称）：`toutiao_articles_and_users`、`toutiao_articles_and_users`
+
+百度新闻（索引名称、分片名称）：`baidunews_news`、`baidunews_news`
+
+知乎问答（索引名称、分片名称）：`zhihu_questions`、`zhihu_questions`
+
+科技资讯（索引名称、分片名称）：`tech_news`、[分片参考](/ying-she-yu-mo-ban/ke-ji-zi-xun-zhan-shu-ju.md)（`tech_36kr_articles`、`tech_q36kr_articles`、`tech_huxiu_articles`、`tech_leiphone_articles`、`tech_cyzone_articles`、`tech_tmtpost_articles`、`tech_geekpark_articles`、`tech_ikanchai_articles`、`tech_qianzhan_articles`、`tech_techxue_articles`、`tech_pingwest_articles`）
+
 **POST 请求写入数据到 **`kafka`
 
-`POST` `http://127.0.0.1/api/v1/pa`
+`POST` `http://127.0.0.1/stq/api/v1/pa/zhihu/add`
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
-`BODY` 体参数说明：
+`BODY` 体参数说明：List 集合、数组
 
 ```
-index_name：索引名称（字符串）
-type_name：分片名称（字符串）
-index_message：消息体（数组、集合），消息体内的每一个对象都有 id（字符串）、index_name、 type_name 参数。
-```
-
-```js
-
+[
+    {
+      "id": "10",
+      "index_name": "zhihu_questions",
+      "type_name": "zhihu_questions",
+      "avatar_img": "http://p3.pstatp.com/thumb/6427/6955928713",
+      "name": "乒乓网1"
+    },
+    {
+      "id": "11",
+      "index_name": "zhihu_questions",
+      "type_name": "zhihu_questions",
+      "avatar_img": "http://p3.pstatp.com/thumb/6427/6955928713",
+      "name": "乒乓网2"
+    }
+]
 ```
 
 `logstash`** 消费**`kafka`**中的数据到 **`elasticsearch`
 
 ```
-input {
-        kafka {
-            bootstrap_servers => "127.0.0.1:9092"
-            topics => ["weibo"]
-            auto_offset_reset => "earliest"
-            codec => "json"
-        }
-        kafka {
-            bootstrap_servers => "127.0.0.1:9092"
-            topics => ["weixin"]
-            auto_offset_reset => "earliest"
-            codec => "json"
-        }
-        kafka {
-            bootstrap_servers => "127.0.0.1:9092"
-            topics => ["toutiao"]
-            auto_offset_reset => "earliest"
-            codec => "json"
-        }
-        kafka {
-            bootstrap_servers => "127.0.0.1:9092"
-            topics => ["baidu"]
-            auto_offset_reset => "earliest"
-            codec => "json"
-        }
-        kafka {
-            bootstrap_servers => "127.0.0.1:9092"
-            topics => ["zhihu"]
-            auto_offset_reset => "earliest"
-            codec => "json"
-        }
-        kafka {
-            bootstrap_servers => "127.0.0.1:9092"
-            topics => ["kejizixun"]
-            auto_offset_reset => "earliest"
-            codec => "json"
-        }
+...
+```
+
+从 `kafka` 队列中读取的数据，两条符合预期（`index_name`、`type_name`、`id`会在`logstash filter`中处理后移除，保存或者更新数据到 `es`）
+
+```
+{
+    "avatar_img" => "http://p3.pstatp.com/thumb/6427/6955928713",
+          "name" => "乒乓网1"
 }
-#filter {
-#    mutate {
-#         add_field => { "[@metadata][index_name]" => "test"}
-#        add_field => { "[@metadata][type_name]" => "test"}
-#         remove_field => ["headers","@timestamp","host","@version","message","index_message","index_name","type_name","id"]
-#    }
-#}
-output {
-        stdout {codec => rubydebug}
-#        elasticsearch {
-#            hosts => ["127.0.0.1:9222"]
-#            index => "%{[@metadata][index_name]}"
-#            workers => 1
-#            document_type => "%{[@metadata][type_name]}"
-#            template_overwrite => false
-#        }
+{
+    "avatar_img" => "http://p3.pstatp.com/thumb/6427/6955928713",
+          "name" => "乒乓网2"
 }
 ```
 
