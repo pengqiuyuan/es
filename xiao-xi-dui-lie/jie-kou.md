@@ -10,6 +10,8 @@
 
 科技资讯（索引名称、分片名称）：`tech_news`、[分片参考](/ying-she-yu-mo-ban/ke-ji-zi-xun-zhan-shu-ju.md)
 
+搜狗微信文章（索引名称、分片名称）：`sogou_weixin_articles`、`sogou_weixin_articles`
+
 **POST 请求写入数据到 **`kafka`
 
 `POST` `http://127.0.0.1/stq/api/v1/pa/xxx/add`
