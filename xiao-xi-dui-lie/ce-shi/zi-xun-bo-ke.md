@@ -1,14 +1,6 @@
-微博（索引名称、分片名称）：`weibo_articles_and_weiboers`、`weibo_articles_and_weiboer`
-
-微信（索引名称、分片名称）：`weixin_articles_and_weixiners`、`weixin_articles_and_weixiner`
-
-头条（索引名称、分片名称）：`toutiao_articles_and_users`、`toutiao_articles_and_users`
-
-百度新闻（索引名称、分片名称）：`baidunews_news`、`baidunews_news`
-
-知乎问答（索引名称、分片名称）：`zhihu_questions`、`zhihu_questions`
-
 科技资讯（索引名称、分片名称）：`tech_news`、[分片参考](/ying-she-yu-mo-ban/ke-ji-zi-xun-zhan-shu-ju.md)（`tech_36kr_articles`、`tech_q36kr_articles`、`tech_huxiu_articles`、`tech_leiphone_articles`、`tech_cyzone_articles`、`tech_tmtpost_articles`、`tech_geekpark_articles`、`tech_ikanchai_articles`、`tech_qianzhan_articles`、`tech_techxue_articles`、`tech_pingwest_articles`）
+
+
 
 **POST 请求写入数据到 **`kafka`
 
@@ -25,14 +17,16 @@
       "index_name": "tech_news",
       "type_name": "tech_36kr_articles",
       "avatar_img": "http://p3.pstatp.com/thumb/6427/6955928713",
-      "name": "乒乓网1"
+      "name": "乒乓网1",
+      ...
     },
     {
       "id": "11",
       "index_name": "tech_news",
       "type_name": "tech_36kr_articles",
       "avatar_img": "http://p3.pstatp.com/thumb/6427/6955928713",
-      "name": "乒乓网2"
+      "name": "乒乓网2",
+      ...
     }
 ]
 ```
