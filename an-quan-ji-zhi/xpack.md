@@ -3,7 +3,9 @@ ansible all -s -m copy -a 'src=/home/idatage/plugins/peng-qiuyuan-a8b6beab-10ff-
 ansible all -s -m raw -a 'ls /tmp'
 ```
 
-`x-pack`
+[反编译工具](https://github.com/deathmarine/Luyten)：本地打包 `mvn clean install`
+
+`x-pack`重新编译 `LicenseVerifier.java`，`license`验证永远返回 `true`
 
 ```
 package org.elasticsearch.license;
@@ -51,8 +53,6 @@ ansible all -s -m raw -a 'service node_elasticsearch restart'
 
 ansible all -s -m raw -a 'tail -100 /mnt/log/elasticsearch/*/test.log'
 ```
-
-
 
 ```
 curl -XPUT -u elastic:changeme 'http://127.0.0.1:9222/_xpack/license' -d '
