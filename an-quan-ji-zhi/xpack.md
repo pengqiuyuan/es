@@ -36,7 +36,18 @@ jar cvf x-pack-5.3.0.jar .
 
 ```
 scp ./x-pack-5.3.0.jar root@127.0.0.1:/root/licenseVerifier
+```
 
+`ansible`目录 `/home/dev/ansible-tinc-elasticsearch`
+
+```
+ansible all -s -m copy -a 'src=/root/licenseVerifier/x-pack-5.3.0.jar dest=/usr/share/elasticsearch/plugins/x-pack/x-pack-5.3.0.jar'
+```
+
+重启集群
+
+```
+ansible all -s -m raw -a 'service node_elasticsearch restart'
 ```
 
 
