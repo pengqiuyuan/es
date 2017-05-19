@@ -74,5 +74,23 @@ curl -XPUT -u elastic:changeme 'http://127.0.0.1:9222/_xpack/license' -d '
 curl -XGET -u elastic:changeme 'http://127.0.0.1:9222/_xpack/license'
 ```
 
+卸载
+
+```
+/usr/share/elasticsearch/bin/elasticsearch-plugin remove x-pack
+
+/usr/share/kibana/bin/kibana-plugin remove x-pack
+
+ansible all -s -m raw -a '/usr/share/elasticsearch/bin/elasticsearch-plugin remove x-pack'
+```
+
+安装
+
+```
+/usr/share/elasticsearch/bin/elasticsearch-plugin install file:///root/x-pack-5.3.0.zip
+
+/usr/share/kibana/bin/kibana-plugin install file:///root/x-pack-5.3.0.zip
+```
+
 
 
