@@ -36,6 +36,14 @@ ansible all -s -m raw -a 'rm -rf /usr/share/elasticsearch/plugins/ik'
 本地打包修改过得 ik v5.4.0，上传服务器
 ```
 
+```
+ansible all -s -m copy -a 'src=/home/idatage/plugins/elasticsearch-analysis-ik-5.4.0.zip dest=/usr/share/elasticsearch/elasticsearch-analysis-ik-5.4.0.zip'
+ansible all -s -m raw -a 'ls /usr/share/elasticsearch'
+ansible all -s -m raw -a 'apt-get install unzip'
+ansible all -s -m raw -a 'unzip /usr/share/elasticsearch/elasticsearch-analysis-ik-5.4.0.zip -d /usr/share/elasticsearch/plugins/ik'
+ansible all -s -m raw -a 'ls /usr/share/elasticsearch/plugins/ik'
+```
+
 升级 `xpack`
 
 ```
@@ -60,7 +68,17 @@ ansible all -s -m copy -a 'src=/home/idatage/licenseVerifier/x-pack-5.4.0.jar de
 ansible all -s -m raw -a 'service node_elasticsearch start'
 
 查看日志
+ansible all -s -m raw -a 'tail -100 /mnt/log/elasticsearch/*/test.log'
+```
 
+升级 `kibana`
+
+```
+先移除
+/usr/share/kibana/bin/kibana-plugin remove x-pack
+
+安装
+/usr/share/kibana/bin/kibana-plugin install file:///home/idatage/download/x-pack-5.4.0.zip
 ```
 
 2、手动升级
