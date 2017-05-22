@@ -71,7 +71,15 @@ ansible all -s -m raw -a 'service node_elasticsearch start'
 ansible all -s -m raw -a 'tail -100 /mnt/log/elasticsearch/*/test.log'
 ```
 
-升级 `kibana`
+升级 `kibana` 及 `kibana` 中的 `x-pack`
+
+```
+cd /home/idatage/download
+
+wget https://artifacts.elastic.co/downloads/kibana/kibana-5.4.0-amd64.deb
+sha1sum kibana-5.4.0-amd64.deb 
+sudo dpkg -i kibana-5.4.0-amd64.deb
+```
 
 ```
 先移除

@@ -171,7 +171,7 @@ curl -XPUT http://127.0.0.1:9222/_template/zhihu_questions -d '
           "search_analyzer": "ik_max_word"
         },
         "views_num": {
-          "type": "integer"
+          "type": "long"
         },
         "desc": {
           "type": "text",
