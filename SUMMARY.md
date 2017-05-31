@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [集群的部署](chapter1.md)
   * [Elasticsearch 集群版本升级](chapter1/elasticsearch-ji-qun-ban-ben-sheng-ji.md)
-    * [安装 xpack 5.3.0](chapter1/elasticsearch-ji-qun-ban-ben-sheng-ji/an-zhuang-xpack.md)
+    * [安装 xpack 5.4.0](chapter1/elasticsearch-ji-qun-ban-ben-sheng-ji/an-zhuang-xpack.md)
   * [创建用户](chapter1/chuang-jian-yong-hu.md)
 * [硬件配置及版本选择](ying-jian-pei-zhi-ji-ban-ben-xuan-ze.md)
 * [集群角色划分和隔离、 副本分片建议（控制shard数量）、容量的规划](ji-qun-jiao-se-hua-fen-he-ge-li-3001-fu-ben-fen-pian-jian-yi-ff08-kong-zhi-shard-shu-liang-ff09-3001-rong-liang-de-gui-hua.md)
