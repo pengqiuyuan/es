@@ -13,6 +13,27 @@ ansible all -s -m raw -a 'ls /usr/share/'
 
 执行 `ansible-playbook -s elasticsearch.yml`
 
+```
+curl -XPUT http://127.0.0.1:9222/_cluster/settings -d '{
+  "transient" : {
+    "cluster.routing.allocation.enable" : "none"
+  }
+}'
+ GET 
+
+curl -XGET http://127.0.0.1:9222/_cluster/settings
+
+curl -XPOST http://127.0.0.1:9222/_flush/synced
+
+curl -XGET http://127.0.0.1:9222/_cat/health
+
+
+curl -XGET http://127.0.0.1:9222/_cat/nodes
+
+
+
+```
+
 升级`es`
 
 ```
