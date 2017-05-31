@@ -29,9 +29,6 @@ curl -XGET http://127.0.0.1:9222/_cat/health
 
 
 curl -XGET http://127.0.0.1:9222/_cat/nodes
-
-
-
 ```
 
 升级`es`
