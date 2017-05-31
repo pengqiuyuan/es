@@ -1,7 +1,7 @@
 安装 `xpack`
 
 ```
-安装（ ssh node* 手动安装）
+安装（ ssh node* ）
 
 ansible all -s -m raw -a 'mkdir /home/idatage/download && mkdir /home/idatage/plugins'
 
