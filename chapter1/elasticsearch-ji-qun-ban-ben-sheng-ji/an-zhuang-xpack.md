@@ -11,10 +11,11 @@ ansible all -s -m copy -a 'src=/home/idatage/download/x-pack-5.4.0.zip dest=/hom
 
 ansible all -s -m copy -a 'src=/usr/share/elasticsearch/bin/elasticsearch-plugin dest=/usr/share/elasticsearch/bin/elasticsearch-plugin'
 
-/usr/share/elasticsearch/bin/elasticsearch-plugin install file:///home/idatage/download/x-pack-5.4.0.zip
+sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install file:///home/idatage/download/x-pack-5.4.0.zip
 
 特殊：替换自己编译的 x-pack-5.4.0.jar
-ansible all -s -m copy -a 'src=/home/idatage/licenseVerifier/x-pack-5.4.0.jar dest=/usr/share/elasticsearch/plugins/x-pack/x-pack-5.4.0.jar'
+
+ansible all -s -m copy -a 'src=/home/idatage/plugins/x-pack-5.4.0.jar dest=/usr/share/elasticsearch/plugins/x-pack/x-pack-5.4.0.jar'
 启动（测试环境）
 ```
 
@@ -67,20 +68,28 @@ ansible all -s -m copy -a 'src=/home/idatage/licenseVerifier/x-pack-5.4.0.jar de
    一旦对方发现了[最小的主节点数](../../Modules/Discovery/Zen_Discovery.md#master-election)，它们将在集群中选举主节点。从这时开始，就可以使用[\_cat/health](../../cat_APIs/cat_health.md)与[\_cat/nodes](../../cat_APIs/cat_nodes.md)API来监控节点加入集群：
 
    ```js
-   curl -XGET http://127.0.0.1:9222/_cat/health?v
+   # master node
+   ansible node03,node04,node05 -s -m raw -a 'service node_elasticsearch start'
 
-   curl -XGET http://127.0.0.1:9222/_cat/nodes?v
+   # data node
+   ansible node01,node02,node06,node07,node08,node09,node10,node11,node12,node13,node14,node15 -s -m raw -a 'service node_elasticsearch start'
+
+   curl -u elastic:changeme -XGET http://127.0.0.1:9222/_cat/health?v
+
+   curl -u elastic:changeme -XGET http://127.0.0.1:9222/_cat/nodes?v
+
+   curl -XGET -u elastic:changeme 'http://127.0.0.1:9222/_xpack/license'
    ```
 
    使用这些API来检查所有节点已经成功地加入到集群。
 
-7. **等待状态**`yellow`
+1. **等待状态**`yellow`
 
    一旦节点加入了集群，他将开始恢复本地存储的分片数据。刚开始[\_cat/health](../../cat_APIs/cat_health.md)会返回`status`为`red`，这表示还有主分片未分配完成。
 
    一旦本地存储的分片恢复完成，`status`将会变成`yellow`，这表示所有主分片已恢复，但是副本分片没有分配。这是我们预料到的，因为分片分配被我们之前禁用了。
 
-8. **重新打开分片分配**
+2. **重新打开分片分配**
 
    延迟副本分片的分配，直到所有节点都加入了集群且完成了本地分片数据的分配。从这时开始，所有节点都已在集群中，重新打开分片分配是安全的：
 

@@ -55,6 +55,7 @@ ansible all -s -m raw -a 'tail -100 /mnt/log/elasticsearch/*/test.log'
 ```
 
 ```
+
 curl -XPUT -u elastic:changeme 'http://127.0.0.1:9222/_xpack/license' -d '
 {
   "license" : {
