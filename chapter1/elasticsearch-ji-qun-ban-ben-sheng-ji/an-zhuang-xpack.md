@@ -23,7 +23,7 @@ ansible all -s -m copy -a 'src=/home/idatage/plugins/x-pack-5.4.0.jar dest=/usr/
 
 执行全集群重启升级的过程如下：
 
-1. **停止** `logstash indexer` **端**
+1. **停止** `logstash indexer` **端，停止数据写入 **`es`
 
    ```js
    sudo docker-compose stop

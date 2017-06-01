@@ -201,7 +201,7 @@ Shared connection to 10.0.0.1 closed.
 
 `elasticsearch.yml`文件，`ansible playbook`用来完成集群的初始部署、配置
 
-```
+```js
 - hosts: elasticsearch_master_nodes
   become: yes
   roles:
@@ -216,10 +216,11 @@ Shared connection to 10.0.0.1 closed.
         node.master: true,
         bootstrap.memory_lock: true,
         discovery.zen.minimum_master_nodes: 2,
-        gateway.recover_after_nodes: 2,
+        gateway.expected_nodes: 15,
+        gateway.recover_after_nodes: 15,
         action.destructive_requires_name: true,
         indices.breaker.total.limit: 70%,
-        indices.breaker.fielddata.limit: 25%,
+        indices.breaker.fielddata.limit: 24%,
         indices.breaker.request.limit: 40%,
         indices.fielddata.cache.size: 20%,
         indices.queries.cache.size: 40%,
@@ -231,7 +232,7 @@ Shared connection to 10.0.0.1 closed.
     es_scripts: true
     es_java_install: true
     es_major_version: "5.x"
-    es_version: "5.3.0"
+    es_version: "5.4.0"
     es_heap_size: "4g"
     es_api_port: 9222
     es_max_map_count: 262144
@@ -239,6 +240,10 @@ Shared connection to 10.0.0.1 closed.
     es_pid_dir: "/mnt/run/elasticsearch"
     es_data_dirs: "/mnt/lib/elasticsearch"
     es_log_dir: "/mnt/log/elasticsearch"
+#    es_enable_xpack: true
+#    es_xpack_license: "{{ lookup('file', '/tmp/peng-qiuyuan-a8b6beab-10ff-480f-9eff-7295efd58242-v5.json')  }}"
+#    es_xpack_features:
+#      - monitoring
 
 - hosts: elasticsearch_master_data_nodes
   become: yes
@@ -254,10 +259,11 @@ Shared connection to 10.0.0.1 closed.
         node.master: true,
         bootstrap.memory_lock: true,
         discovery.zen.minimum_master_nodes: 2,
-        gateway.recover_after_nodes: 2,
+        gateway.expected_nodes: 15,
+        gateway.recover_after_nodes: 15,
         action.destructive_requires_name: true,
         indices.breaker.total.limit: 70%,
-        indices.breaker.fielddata.limit: 25%,
+        indices.breaker.fielddata.limit: 24%,
         indices.breaker.request.limit: 40%,
         indices.fielddata.cache.size: 20%,
         indices.queries.cache.size: 40%,
@@ -269,7 +275,7 @@ Shared connection to 10.0.0.1 closed.
     es_scripts: true
     es_java_install: true
     es_major_version: "5.x"
-    es_version: "5.3.0"
+    es_version: "5.4.0"
     es_heap_size: "16g"
     es_api_port: 9222
     es_max_map_count: 262144
@@ -277,6 +283,10 @@ Shared connection to 10.0.0.1 closed.
     es_pid_dir: "/mnt/run/elasticsearch"
     es_data_dirs: "/mnt/lib/elasticsearch"
     es_log_dir: "/mnt/log/elasticsearch"
+#    es_enable_xpack: true
+#    es_xpack_license: "{{ lookup('file', '/tmp/peng-qiuyuan-a8b6beab-10ff-480f-9eff-7295efd58242-v5.json')  }}"
+#    es_xpack_features:
+#      - monitoring
 
 - hosts: elasticsearch_data_nodes
   become: yes
@@ -292,10 +302,11 @@ Shared connection to 10.0.0.1 closed.
         node.master: false,
         bootstrap.memory_lock: true,
         discovery.zen.minimum_master_nodes: 2,
-        gateway.recover_after_nodes: 2,
+        gateway.expected_nodes: 15,
+        gateway.recover_after_nodes: 15,
         action.destructive_requires_name: true,
         indices.breaker.total.limit: 70%,
-        indices.breaker.fielddata.limit: 25%,
+        indices.breaker.fielddata.limit: 24%,
         indices.breaker.request.limit: 40%,
         indices.fielddata.cache.size: 20%,
         indices.queries.cache.size: 40%,
@@ -307,7 +318,7 @@ Shared connection to 10.0.0.1 closed.
     es_scripts: true
     es_java_install: true
     es_major_version: "5.x"
-    es_version: "5.3.0"
+    es_version: "5.4.0"
     es_heap_size: "16g"
     es_api_port: 9222
     es_max_map_count: 262144
@@ -315,6 +326,10 @@ Shared connection to 10.0.0.1 closed.
     es_pid_dir: "/mnt/run/elasticsearch"
     es_data_dirs: "/mnt/lib/elasticsearch"
     es_log_dir: "/mnt/log/elasticsearch"
+#    es_enable_xpack: true
+#    es_xpack_license: "{{ lookup('file', '/tmp/peng-qiuyuan-a8b6beab-10ff-480f-9eff-7295efd58242-v5.json')  }}"
+#    es_xpack_features:
+#      - monitoring
 
 - hosts: elasticsearch_client_nodes
   become: yes
@@ -330,10 +345,11 @@ Shared connection to 10.0.0.1 closed.
         node.master: false,
         bootstrap.memory_lock: true,
         discovery.zen.minimum_master_nodes: 2,
-        gateway.recover_after_nodes: 2,
+	gateway.expected_nodes: 15,
+        gateway.recover_after_nodes: 15,
         action.destructive_requires_name: true,
         indices.breaker.total.limit: 70%,
-        indices.breaker.fielddata.limit: 25%,
+        indices.breaker.fielddata.limit: 24%,
         indices.breaker.request.limit: 40%,
         indices.fielddata.cache.size: 20%,
         indices.queries.cache.size: 40%,
@@ -343,9 +359,9 @@ Shared connection to 10.0.0.1 closed.
   vars:
     es_templates: false
     es_scripts: true
-    es_java_install: false
+    es_java_install: true
     es_major_version: "5.x"
-    es_version: "5.3.0"
+    es_version: "5.4.0"
     es_heap_size: "16g"
     es_api_port: 9222
     es_max_map_count: 262144
@@ -353,6 +369,10 @@ Shared connection to 10.0.0.1 closed.
     es_pid_dir: "/mnt/run/elasticsearch"
     es_data_dirs: "/mnt/lib/elasticsearch"
     es_log_dir: "/mnt/log/elasticsearch"
+#    es_enable_xpack: true
+#    es_xpack_license: "{{ lookup('file', '/tmp/peng-qiuyuan-a8b6beab-10ff-480f-9eff-7295efd58242-v5.json')  }}"
+#    es_xpack_features:
+#      - monitoring
 ```
 
 执行`ansible-playbook elasticsearch.yml`，成功如下：
