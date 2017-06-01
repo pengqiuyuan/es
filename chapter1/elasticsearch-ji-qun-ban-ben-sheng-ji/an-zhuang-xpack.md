@@ -1,23 +1,4 @@
-安装 `xpack`
-
-```
-安装（ ssh node* ）
-
-ansible all -s -m raw -a 'mkdir /home/idatage/download && mkdir /home/idatage/plugins'
-
-ansible all -s -m copy -a 'src=/home/idatage/download/x-pack-5.4.0.zip dest=/home/idatage/download/x-pack-5.4.0.zip'
-
-修改 /usr/share/elasticsearch/bin/elasticsearch-plugin
-
-ansible all -s -m copy -a 'src=/usr/share/elasticsearch/bin/elasticsearch-plugin dest=/usr/share/elasticsearch/bin/elasticsearch-plugin'
-
-sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install file:///home/idatage/download/x-pack-5.4.0.zip
-
-特殊：替换自己编译的 x-pack-5.4.0.jar
-
-ansible all -s -m copy -a 'src=/home/idatage/plugins/x-pack-5.4.0.jar dest=/usr/share/elasticsearch/plugins/x-pack/x-pack-5.4.0.jar'
-启动（测试环境）
-```
+安装 `xpack 5.4.0`
 
 集群第一次安装 xpack 需要执行完全群集重新启动。升级时, 通常可以执行滚动升级。
 
