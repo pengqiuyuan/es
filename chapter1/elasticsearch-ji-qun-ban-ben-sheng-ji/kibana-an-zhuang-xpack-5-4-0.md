@@ -24,11 +24,11 @@ sudo service kibana status
 
 使用 nginx 代理
 
-* 注意不用修改 `/etc/kibana/kibana.yml` 中的 `server.basePath`
+1. 注意不用修改 `/etc/kibana/kibana.yml` 中的 `server.basePath`
 
-* 修改 `elasticsearch.url:"http://localhost:9222"`
+  修改 `elasticsearch.url:"http://localhost:9222"`
 
-* 修改 `nginx` ，`/etc/nginx/sites-available/default`
+2. 修改 `nginx` ，`/etc/nginx/sites-available/default`
 
   ```
     location / {
@@ -40,10 +40,9 @@ sudo service kibana status
         proxy_cache_bypass $http_upgrade;
     }
   ```
+3. 检查 `sudo nginx -t` 、重启 `sudo nginx -s reload`
 
-* 检查 `sudo nginx -t` 、重启 `sudo nginx -s reload`
-
-* 访问 `127.0.0.1` 页面跳转到 `kibana` 登录界面
+4. 访问 `127.0.0.1` 页面跳转到 `kibana` 登录界面
 
 
 
