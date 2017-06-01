@@ -1,5 +1,3 @@
-遇到的问题，使用 nginx ，然后修改 自带的 kibana用户密码，访问 127.0.0.1 出现页面重定向过多。
-
 **安装** `xpack`
 
 ```
@@ -45,5 +43,16 @@ sudo service kibana status
 
 4. 访问 `127.0.0.1` 页面跳转到 `kibana` 登录界面
 
+**问题**
 
+更改 `kibana` 用户的密码后，需要更新 `/etc/kibana/kibana.yml`
+
+```
+elasticsearch.username: "kibana"
+elasticsearch.password: "<kibana_user_password>"
+```
+
+然后重启 `Kibana` ：
+
+`sudo service kibana restart`
 
