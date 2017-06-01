@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [集群的部署](chapter1.md)
   * [Elasticsearch 集群版本升级](chapter1/elasticsearch-ji-qun-ban-ben-sheng-ji.md)
-    * [Es 安装 Xpack 5.4.0](chapter1/elasticsearch-ji-qun-ban-ben-sheng-ji/an-zhuang-xpack.md)
+    * [Elasticsearch 安装 Xpack 5.4.0](chapter1/elasticsearch-ji-qun-ban-ben-sheng-ji/an-zhuang-xpack.md)
     * [Kibana 安装 Xpack 5.4.0](chapter1/elasticsearch-ji-qun-ban-ben-sheng-ji/kibana-an-zhuang-xpack-5-4-0.md)
     * [Logstash 安装 Xpack 5.4.0](chapter1/elasticsearch-ji-qun-ban-ben-sheng-ji/logstash-an-zhuang-xpack.md)
   * [创建用户](chapter1/chuang-jian-yong-hu.md)
