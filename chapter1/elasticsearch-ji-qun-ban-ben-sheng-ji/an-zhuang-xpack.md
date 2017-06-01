@@ -53,13 +53,37 @@ ansible all -s -m copy -a 'src=/home/idatage/plugins/x-pack-5.4.0.jar dest=/usr/
 
    同步冲刷请求是一个”尽力而为“的操作。它可能会因为一些正在进行的索引操作而失败，但是如果有必要你可以反复的执行它，这是安全的。
 
-4. **停止与升级所有节点**
+4. **停止所有节点**
 
-   在集群的所有节点上停掉Elasticsearch服务。在每一个节点上执行同样的步骤来完成[节点升级](./Rolling_upgrades.md#upgrade-node)。
+   在集群的所有节点上停掉 Elasticsearch 服务。
+   
+   ```js
+   ansible all -s -m raw -a 'service node_elasticsearch stop'
+   ```
 
-5. **升级所有的插件**
+5. **安装 xpack 插件**
 
-   升级Elasticsearch节点时必须升级插件。使用`elasticsearch-plugin`脚本安装你所有需要插件的正确版本。
+   ```js
+   #在node01（安装ansible的机器）上执行
+   
+   ansible all -s -m raw -a 'mkdir /home/idatage/download && mkdir /home/idatage/plugins'
+   
+   # copy x-pack-5.4.0.zip 到每一台待安装的机器
+   
+   ansible all -s -m copy -a 'src=/home/idatage/download/x-pack-5.4.0.zip dest=/home/idatage/download/x-pack-5.4.0.zip'
+   
+   #修改 /usr/share/elasticsearch/bin/elasticsearch-plugin ansible安装es节点为ES_ENV_FILE="/etc/default/node_elasticsearch"
+   
+   ansible all -s -m copy -a 'src=/usr/share/elasticsearch/bin/elasticsearch-plugin dest=/usr/share/elasticsearch/bin/elasticsearch-plugin'
+
+   #ssh 的方式登录每一台机器安装 xpack
+   
+   sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install file:///home/idatage/download/x-pack-5.4.0.zip
+   
+   #在node01（安装ansible的机器）上执行，特殊：替换自己编译的 x-pack-5.4.0.jar
+   
+   ansible all -s -m copy -a 'src=/home/idatage/plugins/x-pack-5.4.0.jar dest=/usr/share/elasticsearch/plugins/x-pack/x-pack-5.4.0.jar'
+   ```
 
 6. **启动集群**
 
@@ -68,18 +92,28 @@ ansible all -s -m copy -a 'src=/home/idatage/plugins/x-pack-5.4.0.jar dest=/usr/
    一旦对方发现了[最小的主节点数](../../Modules/Discovery/Zen_Discovery.md#master-election)，它们将在集群中选举主节点。从这时开始，就可以使用[\_cat/health](../../cat_APIs/cat_health.md)与[\_cat/nodes](../../cat_APIs/cat_nodes.md)API来监控节点加入集群：
 
    ```js
-   # master node
+   # 先启动 master node
+   
    ansible node03,node04,node05 -s -m raw -a 'service node_elasticsearch start'
 
-   # data node
+   # 再启动 data node
+   
    ansible node01,node02,node06,node07,node08,node09,node10,node11,node12,node13,node14,node15 -s -m raw -a 'service node_elasticsearch start'
-
+   
+   #查看集群状态
+   
    curl -u elastic:changeme -XGET http://127.0.0.1:9222/_cat/health?v
-
+   
+   #查看节点
+   
    curl -u elastic:changeme -XGET http://127.0.0.1:9222/_cat/nodes?v
-
+   
+   #查看 _xpack 的 license 为 trial
+   
    curl -XGET -u elastic:changeme 'http://127.0.0.1:9222/_xpack/license'
-
+   
+   #更新 _xpack 的 license
+   
    curl -XPUT -u elastic:changeme 'http://127.0.0.1:9222/_xpack/license' -d '
    {
      "license" : {
@@ -93,15 +127,17 @@ ansible all -s -m copy -a 'src=/home/idatage/plugins/x-pack-5.4.0.jar dest=/usr/
        "signature" : "AAAAAgAAAA3wtFyCv7w82WuX+xfEAAABmC9ZN0hjZDBGYnVyRXpCOW5Bb3FjZDAxOWpSbTVoMVZwUzRxVk1PSmkxaktJRVl5MUYvUWh3bHZVUTllbXNPbzBUemtnbWpBbmlWRmRZb25KNFlBR2x0TXc2K2p1Y1VtMG1UQU9TRGZVSGRwaEJGUjE3bXd3LzRqZ05iLzRteWFNekdxRGpIYlFwYkJiNUs0U1hTVlJKNVlXekMrSlVUdFIvV0FNeWdOYnlESDc3MWhlY3hSQmdKSjJ2ZTcvYlBFOHhPQlV3ZHdDQ0tHcG5uOElCaDJ4K1hob29xSG85N0kvTWV3THhlQk9NL01VMFRjNDZpZEVXeUtUMXIyMlIveFpJUkk2WUdveEZaME9XWitGUi9WNTZVQW1FMG1DenhZU0ZmeXlZakVEMjZFT2NvOWxpZGlqVmlHNC8rWVVUYzMwRGVySHpIdURzKzFiRDl4TmM1TUp2VTBOUlJZUlAyV0ZVL2kvVk10L0NsbXNFYVZwT3NSU082dFNNa2prQ0ZsclZ4NTltbU1CVE5lR09Bck93V2J1Y3c9PQAAAQCYj3myHoaDvxR/jzfmPSlCcnnUdcf91IrmHc2vkI8vYcy5yJ3f/aedNKRihwIpJ7uy0CDDZEclKhM9cQroDL80nmAX398LPQS96vDtrNBKtkGLJcQObVnkQG/ZG9FyLWZbFaFw4WYYAi+wY1USj0psVd6izr93DlWh0YQtd1rfIW/rAmkt9lgHegAbpMfhq2aVb1ESiZdhNBWtWz0AuYD8ED14idjuyl78N87azxj6RsGyH/v3BP9ObHmsjcA0TEeq1+ehvqFykmAppnx+EOtgjEiqxDTNsctPfoMaBpovFxSJDV49uA9JGYRbVOqk8UC3fdwurKVGa6uV1LlrP7Ij"
      }
    }'
-
+   
+   #修改 elastic 初始密码
+   
    curl -XPUT -u elastic '127.0.0.1:9222/_xpack/security/user/elastic/_password' -d '{
      "password" : "自己的密码"
    }'
    ```
-
-```
-使用这些API来检查所有节点已经成功地加入到集群。
-```
+   
+   ```
+   使用这些API来检查所有节点已经成功地加入到集群。
+   ```
 
 1. **等待状态**`yellow`
 
