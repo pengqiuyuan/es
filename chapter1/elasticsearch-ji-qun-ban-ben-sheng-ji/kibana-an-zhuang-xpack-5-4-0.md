@@ -22,7 +22,7 @@ sudo service kibana stop
 sudo service kibana status
 ```
 
-使用 nginx 代理，
+使用 nginx 代理
 
 * 注意不用修改 `/etc/kibana/kibana.yml` 中的 `server.basePath`
 
@@ -30,16 +30,16 @@ sudo service kibana status
 
 * 修改 `nginx` ，`/etc/nginx/sites-available/default`
 
-	```
-	location / {
-		proxy_pass http://localhost:5601;
-		proxy_http_version 1.1;
-		proxy_set_header Upgrade $http_upgrade;
-		proxy_set_header Connection 'upgrade';
-		proxy_set_header Host $host;
-		proxy_cache_bypass $http_upgrade;
-	}
-	```
+  ```
+    location / {
+        proxy_pass http://localhost:5601;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+  ```
 
 * 检查 `sudo nginx -t` 、重启 `sudo nginx -s reload`
 
