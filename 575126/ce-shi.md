@@ -33,6 +33,23 @@ GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search
         }
     }
 }
+
+
+GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "query_string" : {
+              "fields" : ["content_full"],
+              "query" : "\"@MONSTER_阿凉\""
+          }
+        }
+      ]
+    }
+  }
+}  
 ```
 
 
