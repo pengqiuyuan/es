@@ -21,5 +21,19 @@ curl -u 用户名:密码 -XGET http://127.0.0.1:9200/weibo_articles_and_weiboers
 }'
 ```
 
+`query_string` 全文查询
+
+```
+GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search
+{
+   "query": {
+        "query_string" : {
+            "fields" : ["content_full"],
+            "query" : "\"@MONSTER_阿凉\""
+        }
+    }
+}
+```
+
 
 
