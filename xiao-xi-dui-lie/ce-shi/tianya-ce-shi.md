@@ -1,8 +1,8 @@
-搜狗微信文章（索引名称、分片名称）：`sogou_weixin_articles`、`sogou_weixin_articles`
+天涯论坛（索引名称、分片名称）：`tianya_news`、`tianya_news`
 
 **POST 请求写入数据到 **`kafka`
 
-`POST` `http://127.0.0.1/stq/api/v1/pa/sogouweixin/add`
+`POST` `http://127.0.0.1/stq/api/v1/pa/tianya/add`
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
@@ -12,17 +12,15 @@
 [
     {
       "id": "10",
-      "index_name": "sogou_weixin_articles",
-      "type_name": "sogou_weixin_articles",
-      "avatar_img": "http://p3.pstatp.com/thumb/6427/6955928713",
+      "index_name": "tianya_news",
+      "type_name": "tianya_news",
       "name": "乒乓网1",
       ...
     },
     {
       "id": "11",
-      "index_name": "sogou_weixin_articles",
-      "type_name": "sogou_weixin_articles",
-      "avatar_img": "http://p3.pstatp.com/thumb/6427/6955928713",
+      "index_name": "tianya_news",
+      "type_name": "tianya_news",
       "name": "乒乓网2",
       ...
     }
@@ -55,11 +53,9 @@
 
 ```
 {
-    "avatar_img" => "http://p3.pstatp.com/thumb/6427/6955928713",
           "name" => "乒乓网1"
 }
 {
-    "avatar_img" => "http://p3.pstatp.com/thumb/6427/6955928713",
           "name" => "乒乓网2"
 }
 ```

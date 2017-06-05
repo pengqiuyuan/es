@@ -1,6 +1,10 @@
-索引（`_index`）：`tech_news`，同一个`_index`，不同`_type`
+索引（`_index`）：`tech_news`
 
-类型（`_type`）
+（修改：`es 6.0` 以后，只允许一个 `index` 有一个 `type`，`es 7.0` 以后 `type` 被移除。所以不同`_type`，修改为唯一 `_type`）
+
+类型（`_type`）：`tech_news`
+
+（`mapping` 添加字段 `type_name` 用来区分不同的资讯来源）
 
 36kr（文章、快讯）：`tech_36kr_articles`、`tech_q36kr_articles`
 
@@ -166,6 +170,10 @@ curl -XPUT http://127.0.0.1:9222/_template/tech_news -d '
                     "analyzer": "ik_max_word", 
                     "search_analyzer": "ik_max_word"
                 }, 
+                "type_name": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                },
                 "pics": {
                     "type": "keyword", 
                     "ignore_above": 256

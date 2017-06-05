@@ -1,7 +1,5 @@
 百度新闻（索引名称、分片名称）：`baidunews_news`、`baidunews_news`
 
-
-
 **POST 请求写入数据到 **`kafka`
 
 `POST` `http://127.0.0.1/stq/api/v1/pa/baidu/add`
@@ -21,7 +19,7 @@
       ...
     },
     {
-      "id": "11",
+      "id": "11",  
       "index_name": "baidunews_news",
       "type_name": "baidunews_news",
       "avatar_img": "http://p3.pstatp.com/thumb/6427/6955928713",
@@ -29,6 +27,22 @@
       ...
     }
 ]
+```
+
+`response` 数据写入队列成功
+
+```
+{
+  "success" : "true"
+}
+```
+
+`response` 数据写入队列失败（有一条消息写入失败就会触发。返回 `false` 的 场景是 `web server` 与 `kafka` 连接断开）
+
+```
+{
+  "success" : "false"
+}
 ```
 
 `logstash`** 消费**`kafka`**中的数据到 **`elasticsearch`

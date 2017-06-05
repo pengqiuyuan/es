@@ -1,7 +1,5 @@
 头条（索引名称、分片名称）：`toutiao_articles_and_users`、`toutiao_articles_and_users`
 
-
-
 **POST 请求写入数据到 **`kafka`
 
 `POST` `http://127.0.0.1/stq/api/v1/pa/toutiao/add`
@@ -29,6 +27,22 @@
       ...
     }
 ]
+```
+
+`response` 数据写入队列成功
+
+```
+{
+  "success" : "true"
+}
+```
+
+`response` 数据写入队列失败（有一条消息写入失败就会触发。返回 `false` 的 场景是 `web server` 与 `kafka` 连接断开）
+
+```
+{
+  "success" : "false"
+}
 ```
 
 `logstash`** 消费**`kafka`**中的数据到 **`elasticsearch`
