@@ -39,6 +39,7 @@
   * [问题二](575126/wen-ti-er.md)
   * [问题三](575126/wen-ti-san.md)
   * [问题四](575126/wen-ti-si.md)
+  * [测试](575126/ce-shi.md)
 * [分词](fen-ci.md)
   * [分词测试一](fen-ci/ce-shi-yi.md)
   * [分词测试二](fen-ci/fen-ci-ce-shi-er.md)
