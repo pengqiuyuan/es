@@ -95,5 +95,11 @@ nohup mongo-connector --auto-commit-interval=0 -m 127.0.0.1:3717 -t 127.0.0.1:92
 -g test.test #写入es的index和type
 ```
 
+有 xpack 的情况
+
+```
+nohup mongo-connector --auto-commit-interval=0 -m 127.0.0.1:3717 -t 用户名:密码@127.0.0.1:9222 -a username -p password -d elastic2_doc_manager -n toutiao.toutiaors -g test.test &
+```
+
 [`mongo-connector` 文档](https://github.com/mongodb-labs/mongo-connector/wiki/Configuration-Options)
 
