@@ -213,7 +213,6 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                 "biz": {
                     "type": "keyword",
                     "ignore_above": 256
-
                 },
                 "stat_real_read_num": {
                     "type": "integer"
@@ -251,6 +250,24 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
                 },
                 "fileid": {
                     "type": "long"
+                },
+                "source": {
+                    "properties": {
+                        "biz": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        },
+                        "mid": {
+                            "type": "long"
+                        },
+                        "idx": {
+                            "type": "integer"
+                        },
+                        "name": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
                 }
             }
         }
