@@ -49,7 +49,7 @@ GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search
       ]
     }
   }
-}  
+}
 ```
 
 
