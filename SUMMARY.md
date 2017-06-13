@@ -66,6 +66,7 @@
       * [Baidu 测试](xiao-xi-dui-lie/ce-shi/baidu-ce-shi.md)
       * [SogouWeixin 测试](xiao-xi-dui-lie/ce-shi/souhuweixin-ce-shi.md)
       * [Tianya 测试](xiao-xi-dui-lie/ce-shi/tianya-ce-shi.md)
+      * [BaiduTieba 测试](xiao-xi-dui-lie/ce-shi/baidutieba-ce-shi.md)
   * [部署](xiao-xi-dui-lie/bu-shu.md)
   * [Kafka](xiao-xi-dui-lie/kafka.md)
   * [Logstash](xiao-xi-dui-lie/logstash.md)
