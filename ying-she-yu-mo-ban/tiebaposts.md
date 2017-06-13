@@ -9,7 +9,6 @@
     "_id": "4995640819",
     "_score": 1,
     "_source": {
-        "id": "4995640819",
         "tieba_id": 537,
         "title": "比利林恩的中场战事-极限特工3-西游伏妖篇-功夫瑜伽，高清版",
         "author_name": "物旧yes",
@@ -136,14 +135,7 @@ curl -XPUT http://127.0.0.1:9222/_template/tieba_posts -d '
             "properties": {
                 "author_name": {
                     "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer": "ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
+                    "ignore_above": 256
                 },
                 "date": {
                     "format": "strict_date_optional_time||epoch_millis",
@@ -160,10 +152,6 @@ curl -XPUT http://127.0.0.1:9222/_template/tieba_posts -d '
                 },
                 "reply_num": {
                     "type": "integer"
-                },
-                "id": {
-                    "index": "not_analyzed",
-                    "type": "string"
                 },
                 "author_id": {
                     "type": "keyword",
