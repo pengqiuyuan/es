@@ -1,6 +1,6 @@
 旧索引：`tieba_posts`
 
-新索引：`tieba_posts`
+新索引：`tieba_posts`、类型名称：`tieba_posts`
 
 部分数据：
 
