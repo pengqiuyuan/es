@@ -17,9 +17,9 @@
         "content": " 二楼地址",
         "date": "2017-02-24T06:26:00.000Z",
         "created_at": 1488509090,
-        "created_at_date": null,
+        "tie_url": null,
         "updated_at": null,
-        "updated_at_date": null
+        "ba_name": null
     }
 }
 ```
