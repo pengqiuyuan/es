@@ -151,16 +151,13 @@ curl -XPUT http://127.0.0.1:9222/_template/tieba_posts -d '
                     "format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
-                "updated_at": {
+                "last_reply_at": {
                     "format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
                 "created_at": {
                     "format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
-                },
-                "tieba_id": {
-                    "type": "long"
                 },
                 "reply_num": {
                     "type": "integer"
@@ -178,9 +175,6 @@ curl -XPUT http://127.0.0.1:9222/_template/tieba_posts -d '
                     "type": "text",
                     "analyzer": "ik_max_word",
                     "search_analyzer": "ik_max_word"
-                },
-                "tie_url": {
-                    "type": "keyword"
                 },
                 "ba_name": {
                     "type": "keyword",
