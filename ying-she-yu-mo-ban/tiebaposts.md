@@ -17,7 +17,7 @@
         "date": "2017-02-24T06:26:00.000Z",
         "created_at": 1488509090000,
         "last_reply_at": null,
-        "ba_name": null
+        "tieba_id": null
     }
 }
 ```
@@ -32,7 +32,7 @@
 | 帖子创建时间 | date | 日期 |
 | 帖子爬取时间 | created\_at | 日期 |
 | 帖子最后更新时间 | last\_reply\_at | 日期 |
-| 所属贴吧 | ba\_name | 字符串 |
+| 所属贴吧 | tieba\_id | 字符串 |
 
 创建索引`tieba_posts`
 
@@ -176,7 +176,7 @@ curl -XPUT http://127.0.0.1:9222/_template/tieba_posts -d '
                     "analyzer": "ik_max_word",
                     "search_analyzer": "ik_max_word"
                 },
-                "ba_name": {
+                "tieba_id": {
                     "type": "keyword",
                     "ignore_above": 256
                 }
