@@ -142,10 +142,12 @@ curl -XPUT http://127.0.0.1:9222/_template/tieba_posts -d '
                     "type": "date"
                 },
                 "updated_at": {
-                    "type": "long"
+                    "format": "strict_date_optional_time||epoch_millis",
+                    "type": "date"
                 },
                 "created_at": {
-                    "type": "long"
+                    "format": "strict_date_optional_time||epoch_millis",
+                    "type": "date"
                 },
                 "tieba_id": {
                     "type": "long"
@@ -162,23 +164,23 @@ curl -XPUT http://127.0.0.1:9222/_template/tieba_posts -d '
                     "analyzer": "ik_max_word",
                     "search_analyzer": "ik_max_word"
                 },
-                "updated_at_date": {
-                    "format": "strict_date_optional_time||epoch_millis",
-                    "type": "date"
-                },
                 "content": {
                     "type": "text",
                     "analyzer": "ik_max_word",
                     "search_analyzer": "ik_max_word"
                 },
-                "created_at_date": {
-                    "format": "strict_date_optional_time||epoch_millis",
-                    "type": "date"
+                "tie_url": {
+                    "type": "keyword"
+                },
+                "ba_name": {
+                    "type": "keyword",
+                    "ignore_above": 256
                 }
             }
         }
     }
-}'
+}
+'
 ```
 
 
