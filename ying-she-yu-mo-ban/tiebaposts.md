@@ -17,7 +17,7 @@
         "date": "2017-02-24T06:26:00.000Z",
         "created_at": 1488509090000,
         "last_reply_at": null,
-        "tieba_id": null
+        "tieba_id": null
     }
 }
 ```
