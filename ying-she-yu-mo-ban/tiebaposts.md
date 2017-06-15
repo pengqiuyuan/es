@@ -9,7 +9,6 @@
     "_id": "4995640819",
     "_score": 1,
     "_source": {
-        "tieba_id": 537,
         "title": "比利林恩的中场战事-极限特工3-西游伏妖篇-功夫瑜伽，高清版",
         "author_name": "物旧yes",
         "author_id": "2719429553",
@@ -17,8 +16,7 @@
         "content": " 二楼地址",
         "date": "2017-02-24T06:26:00.000Z",
         "created_at": 1488509090000,
-        "tie_url": null,
-        "updated_at": null,
+        "last_reply_at": null,
         "ba_name": null
     }
 }
