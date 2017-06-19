@@ -44,4 +44,7 @@
 * 客户端连接
   * [Python](python.md)
   * [Nodejs](nodejs.md)
+* NLP 与 机器学习
+  * [文本分类](wen-ben-fen-lei.md)
+  * 情感分析
 
