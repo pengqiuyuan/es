@@ -165,12 +165,56 @@ __label__新闻内容 __label__明星八卦 丰腴 真人秀 女星 打球 海�
 运行、结果（打分最高的10个标签）\_\_label\_\_新闻内容，\_\_label\_\_用户主动提及
 
 ```
+    测试程序
+    @Test
+    public void test0() throws IOException, ParseException {    
+        JFastText jft = new JFastText();
+        jft.loadModel("/Users/admin/pqy/github/fastText/weibo.bin");
+        String text = "丰腴 真人秀 女星 打球 海滩 身材 高清 快报 眼睛 网页 丰腴身材 女星海滩 微博快报 快报高清 打球丰腴 海滩打球 真人秀女星 眼睛网页 网页链接 身材眼睛";
+        List<ProbLabel> probLabels = jft.predictProba(text,10);
+        System.out.println(probLabels);
+        for (ProbLabel pro : probLabels) {
+            System.out.println("标签："+pro.label+"，打分："+Math.exp(pro.logProb));
+        }
+    }
+
+    打印结果
+    [logProb = -1.227689, label = __label__新闻内容, logProb = -1.751610, label = __label__用户主动提及, logProb = -2.611454, label = __label__营销内容, logProb = -2.705132, label = __label__知识性内容, logProb = -2.707546, label = __label__平台入口, logProb = -3.051701, label = __label__行业文章, logProb = -3.081810, label = __label__娱乐新闻, logProb = -3.147120, label = __label__其他, logProb = -3.468003, label = __label__新闻评价, logProb = -3.548918, label = __label__活动推广]
+    标签：__label__新闻内容，打分：0.292968768966334
+    标签：__label__用户主动提及，打分：0.17349446817388692
+    标签：__label__营销内容，打分：0.07342771900058004
+    标签：__label__知识性内容，打分：0.06686152892037624
+    标签：__label__平台入口，打分：0.06670027293226938
+    标签：__label__行业文章，打分：0.04727845462376656
+    标签：__label__娱乐新闻，打分：0.04587614574467157
+    标签：__label__其他，打分：0.04297572917160248
+    标签：__label__新闻评价，打分：0.031179232381571866
+    标签：__label__活动推广，打分：0.028755743137451696
+```
+
+随机抽取（验证集）五
+
+原数据
+
+```
+用户主动提及（主分类） 用户评价（次分类） 天天快报是诈骗网站，请大家一定要小心！就在刚才我在qq上看新闻，屏幕边上弹出一个小红包。于是我就好奇的点了下，然后上面提示我下载天天快报注册就送新手红包。好吧，我下载了之后根本没有红包。之后在该网站右上，如图2！之后让我填写手机，发验证。呵呵！不用我说你们懂得 2海城市 ​​​​
+```
+
+`NLP` 文本处理（[关键词提取](http://www.hankcs.com/nlp/textrank-algorithm-to-extract-the-keywords-java-implementation.html)和[短语提取](http://www.hankcs.com/nlp/extraction-and-identification-of-mutual-information-about-the-phrase-based-on-information-entropy.html)）
+
+```
+__label__用户主动提及 __label__用户评价 红包 网站 快报 之后 下载 刚才 小心 qq 验证 手机 一定小心 上面提示 下载之后 下载快报 不用懂得 之后填写 之后根本 之后网站 填写手机 屏幕边上
+```
+
+运行、结果（打分最高的10个标签）\_\_label\_\_营销内容，\_\_label\_\_活动推广
+
+```
 	测试程序
 	@Test
 	public void test0() throws IOException, ParseException {	
 		JFastText jft = new JFastText();
 		jft.loadModel("/Users/admin/pqy/github/fastText/weibo.bin");
-		String text = "丰腴 真人秀 女星 打球 海滩 身材 高清 快报 眼睛 网页 丰腴身材 女星海滩 微博快报 快报高清 打球丰腴 海滩打球 真人秀女星 眼睛网页 网页链接 身材眼睛";
+		String text = "红包 网站 快报 之后 下载 刚才 小心 qq 验证 手机 一定小心 上面提示 下载之后 下载快报 不用懂得 之后填写 之后根本 之后网站 填写手机 屏幕边上";
         List<ProbLabel> probLabels = jft.predictProba(text,10);
         System.out.println(probLabels);
         for (ProbLabel pro : probLabels) {
@@ -179,17 +223,17 @@ __label__新闻内容 __label__明星八卦 丰腴 真人秀 女星 打球 海�
 	}
 	
 	打印结果
-	[logProb = -1.227689, label = __label__新闻内容, logProb = -1.751610, label = __label__用户主动提及, logProb = -2.611454, label = __label__营销内容, logProb = -2.705132, label = __label__知识性内容, logProb = -2.707546, label = __label__平台入口, logProb = -3.051701, label = __label__行业文章, logProb = -3.081810, label = __label__娱乐新闻, logProb = -3.147120, label = __label__其他, logProb = -3.468003, label = __label__新闻评价, logProb = -3.548918, label = __label__活动推广]
-	标签：__label__新闻内容，打分：0.292968768966334
-	标签：__label__用户主动提及，打分：0.17349446817388692
-	标签：__label__营销内容，打分：0.07342771900058004
-	标签：__label__知识性内容，打分：0.06686152892037624
-	标签：__label__平台入口，打分：0.06670027293226938
-	标签：__label__行业文章，打分：0.04727845462376656
-	标签：__label__娱乐新闻，打分：0.04587614574467157
-	标签：__label__其他，打分：0.04297572917160248
-	标签：__label__新闻评价，打分：0.031179232381571866
-	标签：__label__活动推广，打分：0.028755743137451696
+	[logProb = -0.870515, label = __label__营销内容, logProb = -1.518276, label = __label__活动推广, logProb = -2.088133, label = __label__品牌推广, logProb = -3.060270, label = __label__新闻内容, logProb = -3.126143, label = __label__行业文章, logProb = -3.304752, label = __label__话题推广, logProb = -3.398077, label = __label__用户主动提及, logProb = -3.584448, label = __label__产品推广, logProb = -4.149024, label = __label__用户评价, logProb = -4.992616, label = __label__投诉声明]
+	标签：__label__营销内容，打分：0.41873564972797755
+	标签：__label__活动推广，打分：0.21908922444082563
+	标签：__label__品牌推广，打分：0.12391829296383723
+	标签：__label__新闻内容，打分：0.046875022745786143
+	标签：__label__行业文章，打分：0.04388676426104315
+	标签：__label__话题推广，打分：0.036708319030945194
+	标签：__label__用户主动提及，打分：0.033437500160464366
+	标签：__label__产品推广，打分：0.02775199297917488
+	标签：__label__用户评价，打分：0.015779817437454362
+	标签：__label__投诉声明，打分：0.0067878829419828176
 ```
 
 
