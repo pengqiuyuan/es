@@ -148,5 +148,49 @@ __label__新闻内容 __label__新闻内容 云南 惊艳 直营店 昆明 开�
     标签：__label__用户主动提及，打分：0.016916708643830082
 ```
 
+随机抽取（验证集）四
+
+原数据
+
+```
+新闻内容（主分类） 明星八卦（次分类） 转发微博 //@我的澎湃 转 // #天天快报# 《高清：真人秀女星海滩打球 丰腴身材辣眼睛》 O网页链接 ​​​​
+```
+
+`NLP` 文本处理（[关键词提取](http://www.hankcs.com/nlp/textrank-algorithm-to-extract-the-keywords-java-implementation.html)和[短语提取](http://www.hankcs.com/nlp/extraction-and-identification-of-mutual-information-about-the-phrase-based-on-information-entropy.html)）
+
+```
+__label__新闻内容 __label__明星八卦 丰腴 真人秀 女星 打球 海滩 身材 高清 快报 眼睛 网页 丰腴身材 女星海滩 微博快报 快报高清 打球丰腴 海滩打球 真人秀女星 眼睛网页 网页链接 身材眼睛
+```
+
+运行、结果（打分最高的10个标签）\_\_label\_\_新闻内容，\_\_label\_\_用户主动提及
+
+```
+	测试程序
+	@Test
+	public void test0() throws IOException, ParseException {	
+		JFastText jft = new JFastText();
+		jft.loadModel("/Users/admin/pqy/github/fastText/weibo.bin");
+		String text = "丰腴 真人秀 女星 打球 海滩 身材 高清 快报 眼睛 网页 丰腴身材 女星海滩 微博快报 快报高清 打球丰腴 海滩打球 真人秀女星 眼睛网页 网页链接 身材眼睛";
+        List<ProbLabel> probLabels = jft.predictProba(text,10);
+        System.out.println(probLabels);
+        for (ProbLabel pro : probLabels) {
+			System.out.println("标签："+pro.label+"，打分："+Math.exp(pro.logProb));
+		}
+	}
+	
+	打印结果
+	[logProb = -1.227689, label = __label__新闻内容, logProb = -1.751610, label = __label__用户主动提及, logProb = -2.611454, label = __label__营销内容, logProb = -2.705132, label = __label__知识性内容, logProb = -2.707546, label = __label__平台入口, logProb = -3.051701, label = __label__行业文章, logProb = -3.081810, label = __label__娱乐新闻, logProb = -3.147120, label = __label__其他, logProb = -3.468003, label = __label__新闻评价, logProb = -3.548918, label = __label__活动推广]
+	标签：__label__新闻内容，打分：0.292968768966334
+	标签：__label__用户主动提及，打分：0.17349446817388692
+	标签：__label__营销内容，打分：0.07342771900058004
+	标签：__label__知识性内容，打分：0.06686152892037624
+	标签：__label__平台入口，打分：0.06670027293226938
+	标签：__label__行业文章，打分：0.04727845462376656
+	标签：__label__娱乐新闻，打分：0.04587614574467157
+	标签：__label__其他，打分：0.04297572917160248
+	标签：__label__新闻评价，打分：0.031179232381571866
+	标签：__label__活动推广，打分：0.028755743137451696
+```
+
 
 
