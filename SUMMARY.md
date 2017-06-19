@@ -70,4 +70,7 @@
   * [部署](xiao-xi-dui-lie/bu-shu.md)
   * [Kafka](xiao-xi-dui-lie/kafka.md)
   * [Logstash](xiao-xi-dui-lie/logstash.md)
+* NLP 与 机器学习
+  * [文本分类](wen-ben-fen-lei.md)
+  * 情感分析
 

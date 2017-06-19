@@ -15,6 +15,8 @@ P@1    0.901
 R@1    0.457
 ```
 
+
+
 随机抽取（验证集）一
 
 原数据
@@ -76,31 +78,31 @@ __label__营销内容 __label__活动推广 红包 链接 返回 祝福 进去 �
 运行、结果（打分最高的10个标签）\_\_label\_\_营销内容，\_\_label\_\_活动推广
 
 ```
-	测试程序
-	@Test
-	public void test0() throws IOException, ParseException {	
-		JFastText jft = new JFastText();
-		jft.loadModel("/Users/admin/pqy/github/fastText/weibo.bin");
-		String text = "红包 链接 返回 祝福 进去 期间 活动 vx 必备 注册 一定重新 不用注册 分享网页 包有大全看 宝宝分享 居家必备 必备良品 接点祝福 活动期间 登录不用";
+    测试程序
+    @Test
+    public void test0() throws IOException, ParseException {    
+        JFastText jft = new JFastText();
+        jft.loadModel("/Users/admin/pqy/github/fastText/weibo.bin");
+        String text = "红包 链接 返回 祝福 进去 期间 活动 vx 必备 注册 一定重新 不用注册 分享网页 包有大全看 宝宝分享 居家必备 必备良品 接点祝福 活动期间 登录不用";
         List<ProbLabel> probLabels = jft.predictProba(text,10);
         System.out.println(probLabels);
         for (ProbLabel pro : probLabels) {
-			System.out.println("标签："+pro.label+"，打分："+Math.exp(pro.logProb));
-		}
-	}
-	
-	打印结果
-	[logProb = -0.779592, label = __label__营销内容, logProb = -0.949014, label = __label__活动推广, logProb = -2.716111, label = __label__品牌推广, logProb = -3.673375, label = __label__新闻内容, logProb = -3.952675, label = __label__投诉声明, logProb = -4.203053, label = __label__求助上访, logProb = -4.833073, label = __label__用户主动提及, logProb = -5.305556, label = __label__平台入口, logProb = -5.484654, label = __label__用户评价, logProb = -6.006136, label = __label__产品推广]
-	标签：__label__营销内容，打分：0.4585929527198938
-	标签：__label__活动推广，打分：0.38712255811929297
-	标签：__label__品牌推广，打分：0.06613141226821419
-	标签：__label__新闻内容，打分：0.025390640608013566
-	标签：__label__投诉声明，打分：0.019203266855028347
-	标签：__label__求助上访，打分：0.014949858046225568
-	标签：__label__用户主动提及，打分：0.007962015248943197
-	标签：__label__平台入口，打分：0.004963938402973328
-	标签：__label__用户评价，打分：0.004149970929360042
-	标签：__label__产品推广，打分：0.002463589267595421
+            System.out.println("标签："+pro.label+"，打分："+Math.exp(pro.logProb));
+        }
+    }
+
+    打印结果
+    [logProb = -0.779592, label = __label__营销内容, logProb = -0.949014, label = __label__活动推广, logProb = -2.716111, label = __label__品牌推广, logProb = -3.673375, label = __label__新闻内容, logProb = -3.952675, label = __label__投诉声明, logProb = -4.203053, label = __label__求助上访, logProb = -4.833073, label = __label__用户主动提及, logProb = -5.305556, label = __label__平台入口, logProb = -5.484654, label = __label__用户评价, logProb = -6.006136, label = __label__产品推广]
+    标签：__label__营销内容，打分：0.4585929527198938
+    标签：__label__活动推广，打分：0.38712255811929297
+    标签：__label__品牌推广，打分：0.06613141226821419
+    标签：__label__新闻内容，打分：0.025390640608013566
+    标签：__label__投诉声明，打分：0.019203266855028347
+    标签：__label__求助上访，打分：0.014949858046225568
+    标签：__label__用户主动提及，打分：0.007962015248943197
+    标签：__label__平台入口，打分：0.004963938402973328
+    标签：__label__用户评价，打分：0.004149970929360042
+    标签：__label__产品推广，打分：0.002463589267595421
 ```
 
 随机抽取（验证集）三
@@ -120,30 +122,30 @@ __label__新闻内容 __label__新闻内容 云南 惊艳 直营店 昆明 开�
 运行、结果（打分最高的10个标签）\_\_label\_\_新闻内容，\_\_label\_\_营销内容
 
 ```
-	测试程序
-	@Test
-	public void test0() throws IOException, ParseException {	
-		JFastText jft = new JFastText();
-		jft.loadModel("/Users/admin/pqy/github/fastText/weibo.bin");
-		String text = "云南 惊艳 直营店 昆明 开业 Apple 全球 快报 世界 不懂 不懂快报 世界不懂 云南全球 云南惊艳 全球直营店 开业网页 快报云南 惊艳云南 昆明开业 果粉世界";
+    测试程序
+    @Test
+    public void test0() throws IOException, ParseException {    
+        JFastText jft = new JFastText();
+        jft.loadModel("/Users/admin/pqy/github/fastText/weibo.bin");
+        String text = "云南 惊艳 直营店 昆明 开业 Apple 全球 快报 世界 不懂 不懂快报 世界不懂 云南全球 云南惊艳 全球直营店 开业网页 快报云南 惊艳云南 昆明开业 果粉世界";
         List<ProbLabel> probLabels = jft.predictProba(text,10);
         System.out.println(probLabels);
         for (ProbLabel pro : probLabels) {
-			System.out.println("标签："+pro.label+"，打分："+Math.exp(pro.logProb));
-		}
-	}
-	打印结果
-	[logProb = -0.476273, label = __label__新闻内容, logProb = -2.745898, label = __label__营销内容, logProb = -3.164738, label = __label__知识性内容, logProb = -3.624013, label = __label__行业文章, logProb = -3.636667, label = __label__求助上访, logProb = -3.671238, label = __label__其他, logProb = -3.789606, label = __label__活动推广, logProb = -4.027542, label = __label__娱乐新闻, logProb = -4.039658, label = __label__新闻评价, logProb = -4.079453, label = __label__用户主动提及]
-	标签：__label__新闻内容，打分：0.621093752236202
-	标签：__label__营销内容，打分：0.064190646636016
-	标签：__label__知识性内容，打分：0.042225205908758626
-	标签：__label__行业文章，打分：0.026675414391655997
-	标签：__label__求助上访，打分：0.02633999494054075
-	标签：__label__其他，打分：0.025444950977320926
-	标签：__label__活动推广，打分：0.02260450413933793
-	标签：__label__娱乐新闻，打分：0.01781807095900549
-	标签：__label__新闻评价，打分：0.017603498949053154
-	标签：__label__用户主动提及，打分：0.016916708643830082
+            System.out.println("标签："+pro.label+"，打分："+Math.exp(pro.logProb));
+        }
+    }
+    打印结果
+    [logProb = -0.476273, label = __label__新闻内容, logProb = -2.745898, label = __label__营销内容, logProb = -3.164738, label = __label__知识性内容, logProb = -3.624013, label = __label__行业文章, logProb = -3.636667, label = __label__求助上访, logProb = -3.671238, label = __label__其他, logProb = -3.789606, label = __label__活动推广, logProb = -4.027542, label = __label__娱乐新闻, logProb = -4.039658, label = __label__新闻评价, logProb = -4.079453, label = __label__用户主动提及]
+    标签：__label__新闻内容，打分：0.621093752236202
+    标签：__label__营销内容，打分：0.064190646636016
+    标签：__label__知识性内容，打分：0.042225205908758626
+    标签：__label__行业文章，打分：0.026675414391655997
+    标签：__label__求助上访，打分：0.02633999494054075
+    标签：__label__其他，打分：0.025444950977320926
+    标签：__label__活动推广，打分：0.02260450413933793
+    标签：__label__娱乐新闻，打分：0.01781807095900549
+    标签：__label__新闻评价，打分：0.017603498949053154
+    标签：__label__用户主动提及，打分：0.016916708643830082
 ```
 
 
