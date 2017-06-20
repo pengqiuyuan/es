@@ -209,31 +209,31 @@ __label__用户主动提及 __label__用户评价 红包 网站 快报 之后 �
 运行、结果（打分最高的10个标签）\_\_label\_\_营销内容，\_\_label\_\_活动推广
 
 ```
-	测试程序
-	@Test
-	public void test0() throws IOException, ParseException {	
-		JFastText jft = new JFastText();
-		jft.loadModel("/Users/admin/pqy/github/fastText/weibo.bin");
-		String text = "红包 网站 快报 之后 下载 刚才 小心 qq 验证 手机 一定小心 上面提示 下载之后 下载快报 不用懂得 之后填写 之后根本 之后网站 填写手机 屏幕边上";
+    测试程序
+    @Test
+    public void test0() throws IOException, ParseException {    
+        JFastText jft = new JFastText();
+        jft.loadModel("/Users/admin/pqy/github/fastText/weibo.bin");
+        String text = "红包 网站 快报 之后 下载 刚才 小心 qq 验证 手机 一定小心 上面提示 下载之后 下载快报 不用懂得 之后填写 之后根本 之后网站 填写手机 屏幕边上";
         List<ProbLabel> probLabels = jft.predictProba(text,10);
         System.out.println(probLabels);
         for (ProbLabel pro : probLabels) {
-			System.out.println("标签："+pro.label+"，打分："+Math.exp(pro.logProb));
-		}
-	}
-	
-	打印结果
-	[logProb = -0.870515, label = __label__营销内容, logProb = -1.518276, label = __label__活动推广, logProb = -2.088133, label = __label__品牌推广, logProb = -3.060270, label = __label__新闻内容, logProb = -3.126143, label = __label__行业文章, logProb = -3.304752, label = __label__话题推广, logProb = -3.398077, label = __label__用户主动提及, logProb = -3.584448, label = __label__产品推广, logProb = -4.149024, label = __label__用户评价, logProb = -4.992616, label = __label__投诉声明]
-	标签：__label__营销内容，打分：0.41873564972797755
-	标签：__label__活动推广，打分：0.21908922444082563
-	标签：__label__品牌推广，打分：0.12391829296383723
-	标签：__label__新闻内容，打分：0.046875022745786143
-	标签：__label__行业文章，打分：0.04388676426104315
-	标签：__label__话题推广，打分：0.036708319030945194
-	标签：__label__用户主动提及，打分：0.033437500160464366
-	标签：__label__产品推广，打分：0.02775199297917488
-	标签：__label__用户评价，打分：0.015779817437454362
-	标签：__label__投诉声明，打分：0.0067878829419828176
+            System.out.println("标签："+pro.label+"，打分："+Math.exp(pro.logProb));
+        }
+    }
+
+    打印结果
+    [logProb = -0.870515, label = __label__营销内容, logProb = -1.518276, label = __label__活动推广, logProb = -2.088133, label = __label__品牌推广, logProb = -3.060270, label = __label__新闻内容, logProb = -3.126143, label = __label__行业文章, logProb = -3.304752, label = __label__话题推广, logProb = -3.398077, label = __label__用户主动提及, logProb = -3.584448, label = __label__产品推广, logProb = -4.149024, label = __label__用户评价, logProb = -4.992616, label = __label__投诉声明]
+    标签：__label__营销内容，打分：0.41873564972797755
+    标签：__label__活动推广，打分：0.21908922444082563
+    标签：__label__品牌推广，打分：0.12391829296383723
+    标签：__label__新闻内容，打分：0.046875022745786143
+    标签：__label__行业文章，打分：0.04388676426104315
+    标签：__label__话题推广，打分：0.036708319030945194
+    标签：__label__用户主动提及，打分：0.033437500160464366
+    标签：__label__产品推广，打分：0.02775199297917488
+    标签：__label__用户评价，打分：0.015779817437454362
+    标签：__label__投诉声明，打分：0.0067878829419828176
 ```
 
 
