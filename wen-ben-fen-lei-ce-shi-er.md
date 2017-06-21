@@ -4,6 +4,14 @@
 
 一个主分类预测模型、六个次分类预测模型（新闻内容、营销内容、用户主动提及、求助上访、行业文章、其他）
 
+**文本分类预测流程**
+
+文本输入 -&gt; 使用 `Hanlp` 处理文本（[关键词](http://www.hankcs.com/nlp/textrank-algorithm-to-extract-the-keywords-java-implementation.html)、[短语提取](http://www.hankcs.com/nlp/extraction-and-identification-of-mutual-information-about-the-phrase-based-on-information-entropy.html)）
+
+处理后文本输入 -&gt; 主分类模型预测（预测结果如：新闻内容）
+
+选择新闻内容对应的次文本预测模型 -&gt; 输入处理后的文本 -&gt; 模型预测分类结果（如：新闻评价）
+
 **模型训练流程**
 
 [文本语料](https://docs.google.com/spreadsheets/d/1KshnYphZzOR73TATEMebrCrx1bfwpH4GUkSUUZBWKWw/edit?usp=sharing)，只使用主分类、次分类、内容带转发三个字段
@@ -21,6 +29,18 @@ __label__新闻内容 红衣 更新 游戏 上海 虹桥 低头 过年 机场 �
 
 __label__新闻内容 黄子 飞虎 铁道 视频 下载 网页 成龙 电影 在线 票房 上映 链接 拍摄 花絮 更新 今日 头条 相关 KNewdayL mp ## 黄子韬 铁道飞虎 网页链接 下载网页 花絮在线 链接下载 链接视频 飞虎上映 飞虎视频 飞虎黄子 黄子拍摄 黄子铁道 黄子韬黄子 在线铁道 头条更新 上映票房 相关花絮 电影铁道 拍摄相关 更新电影
 __label__新闻内容 少年 锦衣卫 宣传片 网页 期待 冬天 梦想 共同 青春 燃爆 热血 镜头 震撼 宣传 链接 来袭 优酷 看看 今日 全网 搜狐 上映 PPTV 奇艺 转发 微博 少年锦衣卫 锦衣卫宣传片 网页链接 优酷少年 全网上映 奇艺少年 宣传片奇艺 宣传片少年 宣传片来袭 宣传片看看 宣传片网页 链接搜狐 锦衣卫全网 搜狐少年 锦衣卫少年 锦衣卫宣传 震撼镜头 梦想青春 转发微博 期待少年 看看少年 宣传网页 共同期待 微博少年
+
+训练模型 6个分类 100个测试集 精确度0.87 召回率0.87
+
+admindeiMac:fastText admin$ ./fasttext supervised -input weibo1.txt -output weibo  -lr 1.0 -epoch 35 -wordNgrams 2 -bucket 200000 -dim 50 -loss hs
+Read 0M words
+Number of words:  23490
+Number of labels: 6
+Progress: 100.0%  words/sec/thread: 2651258  lr: 0.000000  loss: 0.023896  eta: 0h0m 
+admindeiMac:fastText admin$ ./fasttext test weibo.bin weibo2.txt
+N	100
+P@1	0.87
+R@1	0.87
 ```
 
 新闻内容（训练集 794 条、测试集 54 条，随机样本）
@@ -108,14 +128,7 @@ __label__其他 组合 STS 转发 网页 支持 链接 谢谢 支持转发 网�
 
 __label__鸡汤 新闻 客户端 凤凰 归途 路上 腊月 回家 凤凰新闻 回家路上 客户端归途 新闻客户端
 __label__其他 夏莉 显示 jbdxbl 新闻 网易 湖畔 @NoPingWest 观星 @-KoNoSuBang- _URaRa 缺德 手机 -Queen 型号 部落 大象 Twitter 劲爆 SnHine 劲爆大象 夏莉湖畔 大象部落 手机型号 新闻显示 显示手机 湖畔观星 缺德网易 网易新闻 观星缺德 部落夏莉
-
 ```
 
-**文本分类预测流程**
 
-文本输入 -&gt; 使用 `Hanlp` 处理文本（关键词、短语提取）
-
-处理后文本输入 -&gt; 主分类模型预测（预测结果如：新闻内容）
-
-选择新闻内容对应的次文本预测模型 -&gt; 输入处理后的文本 -&gt; 模型预测分类结果（如：新闻评价）
 
