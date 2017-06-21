@@ -126,7 +126,7 @@ R@1    1
 Number of examples: 10
 ```
 
-求助上访（训练集 111 条、测试集 6 条，随机样本）
+求助上访（训练集 111 条、测试集 5 条，随机样本）
 
 ```
 处理后文本训练集
@@ -139,20 +139,18 @@ Number of examples: 10
  __label__投诉声明 更多 宝宝 房子 关注 央视网 新闻 新京报 北京 晚报 民声 信报 媒体 报道 公正 网页 详情 链接 公平 追求 时报 发布 中国 社会 和谐 记者 周刊 覃丽慧 罗昌平 京华 黑心 新京报央视网 宝宝房子 信报报道 关注民声 发布新京报 央视网京华 央视网宝宝 开发商蒙骗 晚报更多 更多关注 更多媒体 网页链接 罗昌平新京报 胡蓉腾讯 腾讯新闻 腾讯胡蓉 覃丽慧罗昌平 记者覃丽慧 链接宝宝 黑心开发商 详情网页 京华时报 报道详情 房子和谐 公平公正 追求公平 新闻周刊 媒体关注 和谐社会 北京晚报
  __label__求助上访 律师 网易 新闻 启蒙 意义 朱孝顶 分享 偶像 追星 强拆 都有 求助 私信 案子 孝顶 支持 客户端 网易新闻 律师偶像 追星强拆 强拆私信 私信求助 个案都有 偶像网易 偶像追星 分享网易 客户端网易 支持孝顶 新闻客户端 新闻追星 朱孝顶律师 都有启蒙 求助律师 律师分享 启蒙意义
 
-训练模型 5个分类 6个测试集 精确度0.667 召回率0.667
+训练模型 5个分类 5个测试集 精确度0.8 召回率0.8
 
 admindeiMac:fastText admin$ ./fasttext supervised -input weibo1_4.txt -output weibo  -lr 1.0 -epoch 35 -wordNgrams 2 -bucket 200000 -dim 50 -loss hs
 Read 0M words
-Number of words:  1395
+Number of words:  1362
 Number of labels: 5
-Progress: 100.0%  words/sec/thread: 3960846  lr: 0.000000  loss: 0.437298  eta: 0h0m 
-admindeiMac:fastText admin$ 
-admindeiMac:fastText admin$ 
+Progress: 100.0%  words/sec/thread: 3991056  lr: 0.000000  loss: 0.571666  eta: 0h0m -14m 
 admindeiMac:fastText admin$ ./fasttext test weibo.bin weibo2_4.txt
-N    6
-P@1    0.667
-R@1    0.667
-Number of examples: 6
+N	5
+P@1	0.8
+R@1	0.8
+Number of examples: 5
 ```
 
 行业文章（训练集 794 条、测试集 54 条，随机样本）
@@ -176,9 +174,9 @@ Number of words:  934
 Number of labels: 2
 Progress: 100.0%  words/sec/thread: 3274850  lr: 0.000000  loss: 0.655315  eta: 0h0m -14m 
 admindeiMac:fastText admin$ ./fasttext test weibo.bin weibo2_5.txt
-N	4
-P@1	1
-R@1	1
+N    4
+P@1    1
+R@1    1
 Number of examples: 4
 ```
 
@@ -204,9 +202,9 @@ Number of words:  292
 Number of labels: 6
 Progress: 100.0%  words/sec/thread: 2805315  lr: 0.000000  loss: 0.000000  eta: 0h0m 
 admindeiMac:fastText admin$ ./fasttext test weibo.bin weibo2_6.txt
-N	2
-P@1	1
-R@1	1
+N    2
+P@1    1
+R@1    1
 Number of examples: 2
 ```
 
