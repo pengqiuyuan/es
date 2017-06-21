@@ -1,4 +1,4 @@
-使用 `Hanlp` 与 `FastText` 完成微博文本分类测试之二
+使用 [`Hanlp`](https://github.com/hankcs/HanLP) 与 [`FastText`](https://github.com/facebookresearch/fastText) 完成微博文本分类测试之二
 
 **需要模型**
 
@@ -147,9 +147,9 @@ Number of words:  1362
 Number of labels: 5
 Progress: 100.0%  words/sec/thread: 3991056  lr: 0.000000  loss: 0.571666  eta: 0h0m -14m 
 admindeiMac:fastText admin$ ./fasttext test weibo.bin weibo2_4.txt
-N	5
-P@1	0.8
-R@1	0.8
+N    5
+P@1    0.8
+R@1    0.8
 Number of examples: 5
 ```
 
@@ -208,5 +208,29 @@ R@1    1
 Number of examples: 2
 ```
 
+**FastText**
 
+`FastText` 是 `facebook` 开源的一个词向量计算以及文本分类工具，该工具的理论基础是以下两篇论文：
+
+[Enriching Word Vectors with Subword Information](https://arxiv.org/pdf/1607.04606v1.pdf)
+
+[Bag of Tricks for Efficient Text Classification](https://arxiv.org/pdf/1607.01759v2.pdf)
+
+[FastText 源码分析](https://heleifz.github.io/14732610572844.html)
+
+这篇论文提出了用` word n-gram` 的向量之和来代替简单的词向量的方法，以解决简单 `word2vec` 无法处理同一词的不同形态的问题。
+
+使用到的相关参数相关参数
+
+```
+-lr 学习率 –epoch 迭代次数 -wordNgrams -bucket –neg 负采样 –loss loss function {ns,hs, softmax}  ---dim 词向量维度 –ws 窗口大小
+```
+
+**Hanlp**
+
+获取文本关键字及短语提取，使用到以下两个算法：
+
+[《TextRank算法自动摘要的Java实现》](http://www.hankcs.com/nlp/textrank-algorithm-java-implementation-of-automatic-abstract.html)
+
+[《基于互信息和左右信息熵的短语提取识别》](http://www.hankcs.com/nlp/extraction-and-identification-of-mutual-information-about-the-phrase-based-on-information-entropy.html)
 
