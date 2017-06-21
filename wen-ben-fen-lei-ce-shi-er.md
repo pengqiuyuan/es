@@ -38,9 +38,9 @@ Number of words:  23490
 Number of labels: 6
 Progress: 100.0%  words/sec/thread: 2651258  lr: 0.000000  loss: 0.023896  eta: 0h0m 
 admindeiMac:fastText admin$ ./fasttext test weibo.bin weibo2.txt
-N	100
-P@1	0.87
-R@1	0.87
+N    100
+P@1    0.87
+R@1    0.87
 ```
 
 新闻内容（训练集 794 条、测试集 54 条，随机样本）
@@ -56,6 +56,19 @@ __label__科技新闻 中国 经济 声音 今日 财经 直播 快讯 央视网
 
 __label__新闻内容 马伊琍 OL 新剧 儿子 前半生 一家 接驾 养眼 靳东开 今日 街头 头条 靳东我 ## 靳东 演员 一家养眼 儿子街头 养眼头条 前半生马伊琍 头条马伊琍 接驾一家 新剧儿子 演员靳东 街头靳东开 靳东演员 靳东靳东我 靳东开接驾 靳东我前半生 马伊琍新剧
 __label__新闻内容 专辑 张艺兴 今年 功夫 瑜伽 地址 欢迎 得到 losecontrol# 国际上 希望 是不是 好成绩 凤凰 单上也 国外 新闻 受众 努力 粉丝 单曲 直播 采访 之前 演唱会 计划 大概 上面 音乐 春晚 努力努力 功夫瑜伽 张艺兴功夫 专辑二胎 之前单曲 二胎可不 单上也好成绩 单曲国外 国外单上也 国际上得到 地址张艺兴 希望国际上 张艺兴凤凰 张艺兴张艺兴 春晚努力 瑜伽张艺兴 瑜伽春晚 粉丝受众 歌曲粉丝 专辑大概 专辑上面 努力视频 直播采访 音乐专辑 是不是希望 担心歌曲 凤凰新闻 新闻直播 可不中国 上面计划
+
+训练模型 19个分类 51个测试集 精确度0.882 召回率0.882
+
+admindeiMac:fastText admin$ ./fasttext supervised -input weibo1_1.txt -output weibo  -lr 1.0 -epoch 35 -wordNgrams 2 -bucket 200000 -dim 50 -loss hs
+Read 0M words
+Number of words:  16006
+Number of labels: 19
+Progress: 100.0%  words/sec/thread: 2629780  lr: 0.000000  loss: 0.096460  eta: 0h0m 
+admindeiMac:fastText admin$ ./fasttext test weibo.bin weibo2_1.txt
+N	51
+P@1	0.882
+R@1	0.882
+Number of examples: 51
 ```
 
 营销内容（训练集 442 条、测试集 27 条，随机样本）
