@@ -6,3 +6,5 @@
 
 `idatage ALL=NOPASSWD:ALL`
 
+第二步、
+
