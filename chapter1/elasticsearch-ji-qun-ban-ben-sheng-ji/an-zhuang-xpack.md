@@ -61,6 +61,10 @@
 
    sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install file:///home/idatage/download/x-pack-5.4.0.zip
 
+   或者使用command 一次安装
+
+   ansible all -s -m command -a '/usr/share/elasticsearch/bin/elasticsearch-plugin install file:///home/dev/download/x-pack-5.4.0.zip'
+
    #在node01（安装ansible的机器）上执行，特殊：替换自己编译的 x-pack-5.4.0.jar
 
    ansible all -s -m copy -a 'src=/home/idatage/plugins/x-pack-5.4.0.jar dest=/usr/share/elasticsearch/plugins/x-pack/x-pack-5.4.0.jar'

@@ -345,7 +345,7 @@ Shared connection to 10.0.0.1 closed.
         node.master: false,
         bootstrap.memory_lock: true,
         discovery.zen.minimum_master_nodes: 2,
-	gateway.expected_nodes: 15,
+    gateway.expected_nodes: 15,
         gateway.recover_after_nodes: 15,
         action.destructive_requires_name: true,
         indices.breaker.total.limit: 70%,
