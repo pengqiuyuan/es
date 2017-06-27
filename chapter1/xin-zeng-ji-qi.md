@@ -14,3 +14,7 @@
 
 
 
+第五步、执行 `ansible-playbook -s site.yml`
+
+第六步、修改系统配置，[参考](/system-pei-zhi.md)
+
