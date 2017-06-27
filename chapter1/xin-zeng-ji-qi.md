@@ -6,5 +6,11 @@
 
 `idatage ALL=NOPASSWD:ALL`
 
-第二步、
+第二步、修改 `hosts` 文件，[参考](/chapter1.md)
+
+第三步、配置私钥免密码登录，[参考](/chapter1.md)
+
+第四部、挂载 `SSD`，参考
+
+
 
