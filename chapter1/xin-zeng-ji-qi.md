@@ -162,13 +162,70 @@ ansible all -s -m copy -a 'src=/usr/share/elasticsearch/bin/elasticsearch-plugin
 
 #使用command 一次安装
 
-ansible all -s -m command -a '/usr/share/elasticsearch/bin/elasticsearch-plugin install file:///home/dev/download/x-pack-5.4.0.zip'
+ansible all -s -m command -a '/usr/share/elasticsearch/bin/elasticsearch-plugin install file:///home/idatage/download/x-pack-5.4.0.zip'
 
 #在node01（安装ansible的机器）上执行，特殊：替换自己编译的 x-pack-5.4.0.jar
 
 ansible all -s -m copy -a 'src=/home/idatage/plugins/x-pack-5.4.0.jar dest=/usr/share/elasticsearch/plugins/x-pack/x-pack-5.4.0.jar'
-
 ```
+
+第十二步、重启集群
+
+1. 如果你有专门的master节点（在节点配置中设置`node.master`为`true`且`node.data`为`false`），先启动他们是一个好的主意。在处理数据节点之前等待它们形成一个集群并选举出一个主节点。你可以通过查看日志来检查进度。
+
+   一旦对方发现了[最小的主节点数](../../Modules/Discovery/Zen_Discovery.md#master-election)，它们将在集群中选举主节点。从这时开始，就可以使用[\_cat/health](../../cat_APIs/cat_health.md)与[\_cat/nodes](../../cat_APIs/cat_nodes.md)API来监控节点加入集群：
+
+   ```js
+   停止集群
+
+   ansible all -s -m raw -a 'service node_elasticsearch stop'
+
+   # 先启动 master node
+
+   ansible node03,node04,node05 -s -m raw -a 'service node_elasticsearch start'
+
+   # 再启动 data node
+
+   ansible node01,node02,node06,node07,node08,node09,node10,node11,node12,node13,node14,node15,node16,node17,node18,node19,node20,node21,node22,node23,node24,node25,node26,node27,node28,node29,node30 -s -m raw -a 'service node_elasticsearch start'
+
+   #查看集群状态
+
+   curl -u elastic:changeme -XGET http://127.0.0.1:9222/_cat/health?v
+
+   #查看节点
+
+   curl -u elastic:changeme -XGET http://127.0.0.1:9222/_cat/nodes?v
+
+   #查看 _xpack 的 license 为 trial
+
+   curl -XGET -u elastic:changeme 'http://127.0.0.1:9222/_xpack/license'
+
+   #更新 _xpack 的 license
+
+   curl -XPUT -u elastic:changeme 'http://127.0.0.1:9222/_xpack/license' -d '
+   {
+     "license" : {
+       "uid" : "9fa06f95-cc9b-480c-a11d-c7dd01c6ebcd",
+       "type" : "platinum",
+       "issue_date_in_millis" : 1483689705479,
+       "expiry_date_in_millis" : 3580889705000,
+       "max_nodes" : 1000,
+       "issued_to" : "app-es",
+       "issuer" : "ice leng",
+       "signature" : "AAAAAgAAAA3wtFyCv7w82WuX+xfEAAABmC9ZN0hjZDBGYnVyRXpCOW5Bb3FjZDAxOWpSbTVoMVZwUzRxVk1PSmkxaktJRVl5MUYvUWh3bHZVUTllbXNPbzBUemtnbWpBbmlWRmRZb25KNFlBR2x0TXc2K2p1Y1VtMG1UQU9TRGZVSGRwaEJGUjE3bXd3LzRqZ05iLzRteWFNekdxRGpIYlFwYkJiNUs0U1hTVlJKNVlXekMrSlVUdFIvV0FNeWdOYnlESDc3MWhlY3hSQmdKSjJ2ZTcvYlBFOHhPQlV3ZHdDQ0tHcG5uOElCaDJ4K1hob29xSG85N0kvTWV3THhlQk9NL01VMFRjNDZpZEVXeUtUMXIyMlIveFpJUkk2WUdveEZaME9XWitGUi9WNTZVQW1FMG1DenhZU0ZmeXlZakVEMjZFT2NvOWxpZGlqVmlHNC8rWVVUYzMwRGVySHpIdURzKzFiRDl4TmM1TUp2VTBOUlJZUlAyV0ZVL2kvVk10L0NsbXNFYVZwT3NSU082dFNNa2prQ0ZsclZ4NTltbU1CVE5lR09Bck93V2J1Y3c9PQAAAQCYj3myHoaDvxR/jzfmPSlCcnnUdcf91IrmHc2vkI8vYcy5yJ3f/aedNKRihwIpJ7uy0CDDZEclKhM9cQroDL80nmAX398LPQS96vDtrNBKtkGLJcQObVnkQG/ZG9FyLWZbFaFw4WYYAi+wY1USj0psVd6izr93DlWh0YQtd1rfIW/rAmkt9lgHegAbpMfhq2aVb1ESiZdhNBWtWz0AuYD8ED14idjuyl78N87azxj6RsGyH/v3BP9ObHmsjcA0TEeq1+ehvqFykmAppnx+EOtgjEiqxDTNsctPfoMaBpovFxSJDV49uA9JGYRbVOqk8UC3fdwurKVGa6uV1LlrP7Ij"
+     }
+   }'
+
+   #修改 elastic 初始密码
+
+   curl -XPUT -u elastic '127.0.0.1:9222/_xpack/security/user/elastic/_password' -d '{
+     "password" : "自己的密码"
+   }'
+   ```
+
+   ```
+   使用这些API来检查所有节点已经成功地加入到集群。
+   ```
 
 
 
