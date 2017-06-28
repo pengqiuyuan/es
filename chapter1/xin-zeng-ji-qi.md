@@ -227,5 +227,23 @@ ansible all -s -m copy -a 'src=/home/idatage/plugins/x-pack-5.4.0.jar dest=/usr/
    使用这些API来检查所有节点已经成功地加入到集群。
    ```
 
+第十二步、开启微博、微信副本
+
+```
+PUT /weibo/_settings
+{
+    "index" : {
+        "number_of_replicas" : 1
+    }
+}
+
+PUT /weixin/_settings
+{
+    "index" : {
+        "number_of_replicas" : 1
+    }
+}
+```
+
 
 
