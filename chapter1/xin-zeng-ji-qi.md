@@ -49,6 +49,10 @@ curl -XGET http://127.0.0.1:9222/_cat/nodes?v
 
 curl  -XGET http://127.0.0.1:9222/_cluster/settings?pretty
 
+curl -XGET '127.0.0.1:9222/_recovery?pretty&human&detailed=true&active_only=true' 
+
+curl -XGET '127.0.0.1:9222/_cat/recovery?v&pretty&human&active_only=true&detailed=true'
+
 curl -XPUT http://127.0.0.1:9222/_cluster/settings -d '{
   "transient" : {
     "cluster.routing.allocation.enable" : "none"
@@ -66,7 +70,7 @@ curl -XPUT http://127.0.0.1:9222/_cluster/settings -d '{
 ansible all -s -m raw -a 'tail -50 /mnt/log/elasticsearch/node*-node/tarantula.log'
 ```
 
-第九步、在这里的时候，新机器就已经加入到集群里了，只是没有安装 `IK` 分词插件导致，分片不平衡 。安装 `IK` 
+第九步、在这里的时候，新机器就已经加入到集群里了，只是没有安装 `IK` 分词插件导致，分片不平衡 。安装 `IK`
 
 ```
 ansible node16,node17,node18,node19,node20,node21,node22,node23,node24,node25,node26,node27,node28,node29,node30 -s -m copy -a 'src=/home/idatage/plugins/elasticsearch-analysis-ik-5.4.0.zip dest=/usr/share/elasticsearch/elasticsearch-analysis-ik-5.4.0.zip'
@@ -88,6 +92,14 @@ ansible node16,node17,node18,node19,node20,node21,node22,node23,node24,node25,no
 cluster.routing.allocation.cluster_concurrent_rebalance:22
 
 indices.recovery.max_bytes_per_sec:3072mb
+
+查看分片分配情况
+
+curl -XGET '127.0.0.1:9222/_recovery?pretty&human&detailed=true&active_only=true' 
+
+curl -XGET '127.0.0.1:9222/_cat/recovery?v&pretty&human&active_only=true&detailed=true'
+
+
 ```
 
 
