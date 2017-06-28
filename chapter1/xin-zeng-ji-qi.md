@@ -145,5 +145,7 @@ curl -XGET '127.0.0.1:9222/_recovery?pretty&human&detailed=true&active_only=true
 curl -XGET '127.0.0.1:9222/_cat/recovery?v&pretty&human&active_only=true&detailed=true'
 ```
 
+第十一步、安装 `xpack` （`ansible` 启动` xpack plugins `会被移除），重启
+
 
 
