@@ -145,7 +145,30 @@ curl -XGET '127.0.0.1:9222/_recovery?pretty&human&detailed=true&active_only=true
 curl -XGET '127.0.0.1:9222/_cat/recovery?v&pretty&human&active_only=true&detailed=true'
 ```
 
-第十一步、安装 `xpack` （`ansible` 启动` xpack plugins `会被移除），重启
+第十一步、安装 `xpack` （`ansible` 启动`xpack plugins`会被移除），重启
+
+```
+#在node01（安装ansible的机器）上执行
+
+ansible all -s -m raw -a 'mkdir /home/idatage/download && mkdir /home/idatage/plugins'
+
+# copy x-pack-5.4.0.zip 到每一台待安装的机器
+
+ansible all -s -m copy -a 'src=/home/idatage/download/x-pack-5.4.0.zip dest=/home/idatage/download/x-pack-5.4.0.zip'
+
+#修改 /usr/share/elasticsearch/bin/elasticsearch-plugin ansible安装es节点为ES_ENV_FILE="/etc/default/node_elasticsearch"
+
+ansible all -s -m copy -a 'src=/usr/share/elasticsearch/bin/elasticsearch-plugin dest=/usr/share/elasticsearch/bin/elasticsearch-plugin'
+
+#使用command 一次安装
+
+ansible all -s -m command -a '/usr/share/elasticsearch/bin/elasticsearch-plugin install file:///home/dev/download/x-pack-5.4.0.zip'
+
+#在node01（安装ansible的机器）上执行，特殊：替换自己编译的 x-pack-5.4.0.jar
+
+ansible all -s -m copy -a 'src=/home/idatage/plugins/x-pack-5.4.0.jar dest=/usr/share/elasticsearch/plugins/x-pack/x-pack-5.4.0.jar'
+
+```
 
 
 
