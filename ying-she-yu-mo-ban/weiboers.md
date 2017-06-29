@@ -59,6 +59,12 @@ curl -XPOST http://localhost:9222/_reindex?requests_per_second=100000 -d '
 }'
 ```
 
+创建索引`weiboers`
+
+```
+curl -XPUT http://127.0.0.1:9222/weiboers
+```
+
 `Mapping`（`weiboers 28.0Gi/55.9Gi    52.1M`）
 
 `"refresh_interval" : "60s"`、`"number_of_replicas" : "1"`、`"number_of_shards" : "15"`
