@@ -331,7 +331,7 @@ curl -XPUT http://localhost:9222/_template/weiboers -d '
                     }
                 },
                 "status": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "username": {
                     "type": "keyword",
