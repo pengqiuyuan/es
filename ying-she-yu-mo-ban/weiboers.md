@@ -1,3 +1,7 @@
+旧索引：`weiboers`
+
+新索引：`weiboers` 新类型：`weiboer`
+
 元数据
 
 ```
