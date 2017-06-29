@@ -40,6 +40,7 @@
   * [问题四](575126/wen-ti-si.md)
   * [测试一](575126/ce-shi.md)
   * [测试二](575126/ce-shi-er.md)
+  * [测试三](575126/ce-shi-san.md)
 * [分词](fen-ci.md)
   * [分词测试一](fen-ci/ce-shi-yi.md)
   * [分词测试二](fen-ci/fen-ci-ce-shi-er.md)
