@@ -23,6 +23,7 @@
   * [baidunews\_news](ying-she-yu-mo-ban/baidunews.md)
   * [news\_articles](ying-she-yu-mo-ban/newsarticles.md)
   * [old\_news\_articles](ying-she-yu-mo-ban/oldnews-articles.md)
+  * [news\_comments](ying-she-yu-mo-ban/newscomments.md)
   * [old\_news\_comments](ying-she-yu-mo-ban/oldnews-comments.md)
   * [tieba\_posts](ying-she-yu-mo-ban/tiebaposts.md)
   * [weibo\_article\_tops](ying-she-yu-mo-ban/weiboarticle-tops.md)
