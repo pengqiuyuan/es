@@ -1,6 +1,6 @@
 旧索引：`latest_news_articles`
 
-新索引：`news_articles`
+新索引：`news_articles` 新类型：`news_articles`
 
 部分数据：
 
