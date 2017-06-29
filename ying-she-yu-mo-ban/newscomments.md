@@ -1,6 +1,6 @@
 旧索引：`new_news_comments`
 
-新索引：`news_comments`
+新索引：`news_comments` 新类型：`news_comments`
 
 部分数据：
 
