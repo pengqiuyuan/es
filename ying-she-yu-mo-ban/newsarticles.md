@@ -52,7 +52,7 @@ curl -XPUT http://127.0.0.1:9222/_template/news_articles -d '
     "settings": {
         "refresh_interval": "60s",
         "number_of_replicas": "1",
-        "number_of_shards": "15"
+        "number_of_shards": "30"
     },
     "mappings": {
         "_default_": {
