@@ -1,8 +1,8 @@
-百度贴吧（索引名称、分片名称）：`tieba_posts`、`tieba_posts`
+新闻评论（索引名称、分片名称）：`news_comments`、`news_comments`
 
 **POST 请求写入数据到 **`kafka`
 
-`POST` `http://127.0.0.1/stq/api/v1/pa/baidutieba/add`
+`POST` `http://127.0.0.1/stq/api/v1/pa/newscomments/add`
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
@@ -12,16 +12,16 @@
 [
     {
       "id": "10",
-      "index_name": "tieba_posts",
-      "type_name": "tieba_posts",
-      "author_name": "乒乓网1",
+      "index_name": "news_comments",
+      "type_name": "news_comments",
+      "content": "乒乓网1",
       ...
     },
     {
       "id": "11",  
-      "index_name": "tieba_posts",
-      "type_name": "tieba_posts",
-      "author_name": "乒乓网2",
+      "index_name": "news_comments",
+      "type_name": "news_comments",
+      "content": "乒乓网2",
       ...
     }
 ]
@@ -53,10 +53,10 @@
 
 ```
 {
-          "author_name" => "乒乓网1"
+          "content" => "乒乓网1"
 }
 {
-          "author_name" => "乒乓网2"
+          "content" => "乒乓网2"
 }
 ```
 
