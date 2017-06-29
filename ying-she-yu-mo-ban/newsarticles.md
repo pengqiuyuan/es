@@ -153,10 +153,6 @@ curl -XPUT http://127.0.0.1:9222/_template/news_articles -d '
                     "type": "keyword",
                     "ignore_above": 256
                 },
-                "comments_num": {
-                    "type": "integer",
-                    "ignore_malformed": true
-                },
                 "channel": {
                     "type": "keyword",
                     "ignore_above": 256
