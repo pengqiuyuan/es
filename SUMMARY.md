@@ -23,7 +23,6 @@
   * [baidunews\_news](ying-she-yu-mo-ban/baidunews.md)
   * [news\_articles](ying-she-yu-mo-ban/newsarticles.md)
   * [news\_comments](ying-she-yu-mo-ban/newscomments.md)
-  * [news\_articles](ying-she-yu-mo-ban/newsarticles.md)
   * [weibo\_article\_tops](ying-she-yu-mo-ban/weiboarticle-tops.md)
   * [zhihu\_questions](ying-she-yu-mo-ban/zhihuquestions.md)
   * [科技资讯站数据（tech\_news）](ying-she-yu-mo-ban/ke-ji-zi-xun-zhan-shu-ju.md)
