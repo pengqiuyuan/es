@@ -130,14 +130,7 @@ curl -XPUT http://localhost:9222/_template/weixiners -d '
             "type": "keyword"
         },
         "name": {
-            "type": "keyword", 
-            "fields": {
-                "raw": { 
-                    "type": "text",
-                    "analyzer":"ik_max_word",
-                    "search_analyzer": "ik_max_word"
-                }
-            }
+            "type": "keyword"
         },  
         "username": {
             "type": "keyword"
