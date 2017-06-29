@@ -1,3 +1,7 @@
+旧索引：`weixiners`
+
+新索引：`weixiners` 新类型：`weixiner`
+
 元数据
 
 ```
