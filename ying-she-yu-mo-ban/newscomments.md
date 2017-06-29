@@ -209,8 +209,6 @@ curl -XPUT http://127.0.0.1:9222/_template/news_comments -d '
 }'
 ```
 
-
-
 ```
 curl -XPUT http://127.0.0.1:9222/_template/news_comments -d '
 {
