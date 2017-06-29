@@ -225,15 +225,7 @@ curl -XPUT http://localhost:9222/_template/weiboers -d '
                     "type": "long"
                 },
                 "email": {
-                    "type": "keyword",
-                    "ignore_above": 256,
-                    "fields": {
-                        "raw": {
-                            "type": "text",
-                            "analyzer":"ik_max_word",
-                            "search_analyzer": "ik_max_word"
-                        }
-                    }
+                    "type": "keyword"
                 },
                 "info": {
                     "type": "text",
