@@ -282,7 +282,13 @@ curl -XPUT http://127.0.0.1:9222/_template/news_articles -d '
                             "search_analyzer": "ik_max_word"
                         }
                     }
-                }
+                },
+				"trtl_tags": {
+					"ignore_above": 256,
+					"type": "keyword"
+				},"sentiment": {
+					"type": "integer"
+				}
             }
         }
     }
