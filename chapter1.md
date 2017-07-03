@@ -88,7 +88,7 @@ vi ./hosts
 `ansible`配置私钥用来免密码登录：
 
 ```
-sudo ssh-keygen
+sudo ssh-keygen   #非root用户使用，ssh-keygen
 ssh-copy-id idatage@77.222.52.211
 ssh-copy-id idatage@77.222.52.212
 ssh-copy-id idatage@77.222.52.213
