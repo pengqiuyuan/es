@@ -29,6 +29,7 @@
   * [科技资讯站数据（tech\_news）](ying-she-yu-mo-ban/ke-ji-zi-xun-zhan-shu-ju.md)
   * [搜狗微信文章数据](ying-she-yu-mo-ban/sou-hu-wei-xin-wen-zhang-shu-ju.md)
   * [天涯论坛（tianya\_news）](ying-she-yu-mo-ban/tian-ya-lun-tan-ff08-tianya-news.md)
+  * [china\_news](ying-she-yu-mo-ban/chinanews.md)
 * [Reindex 重新索引](reindexff08-zhong-xin-suo-yin-ff09.md)
 * [安全机制](an-quan-ji-zhi.md)
   * [基于 nginx 配置](an-quan-ji-zhi/ji-yu-nginx-pei-zhi.md)
