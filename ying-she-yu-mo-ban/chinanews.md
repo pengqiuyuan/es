@@ -8,7 +8,6 @@
 
 | 字段含义 | 字段名称 | 数据类型 |
 | :---: | :---: | :---: |
-| \_id | Mongo自动生成id | 字符串 |
 | 新闻标题 | news\_title | 字符串 |
 | 新闻URL | news\_url | 字符串 |
 | 新闻发表时间 | published\_at | 日期 |
@@ -26,9 +25,9 @@ curl -XPUT http://127.0.0.1:9222/china_news
 `mapping`
 
 ```
-curl -XPUT http://127.0.0.1:9222/_template/tieba_posts -d '
+curl -u idatage:abc@123456 -XPUT http://127.0.0.1:9222/_template/china_news -d '
 {
-    "template": "tieba_posts*",
+    "template": "china_news*",
     "settings": {
         "refresh_interval": "60s",
         "number_of_replicas": "1",
@@ -114,52 +113,42 @@ curl -XPUT http://127.0.0.1:9222/_template/tieba_posts -d '
                             "type": "date"
                         }
                     }
-                },
-                {
-                    "geo_point_fields": {
-                        "match": "*",
-                        "match_mapping_type": "geo_point",
-                        "mapping": {
-                            "type": "geo_point"
-                        }
-                    }
                 }
             ],
             "properties": {
-                "author_name": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
-                "date": {
+                "published_at": {
                     "format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
-                "last_reply_at": {
+                "crawled_at": {
                     "format": "strict_date_optional_time||epoch_millis",
                     "type": "date"
                 },
-                "created_at": {
-                    "format": "strict_date_optional_time||epoch_millis",
-                    "type": "date"
-                },
-                "reply_num": {
-                    "type": "integer"
-                },
-                "author_id": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                },
-                "title": {
+                "news_title": {
                     "type": "text",
                     "analyzer": "ik_max_word",
                     "search_analyzer": "ik_max_word"
                 },
-                "content": {
+                "news_url": {
+                    "type": "keyword"
+                },
+                "news_text": {
                     "type": "text",
                     "analyzer": "ik_max_word",
                     "search_analyzer": "ik_max_word"
                 },
-                "tieba_id": {
+                "news_source": {
+                    "type": "keyword",
+                    "ignore_above": 256,
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "news_type": {
                     "type": "keyword",
                     "ignore_above": 256
                 }
