@@ -70,6 +70,7 @@
       * [BaiduTieba 测试](xiao-xi-dui-lie/ce-shi/baidutieba-ce-shi.md)
       * [NewsArticles 测试](xiao-xi-dui-lie/ce-shi/newsarticles-ce-shi.md)
       * [NewsComments 测试](xiao-xi-dui-lie/ce-shi/newscomments-ce-shi.md)
+      * [ChinaNews 测试](xiao-xi-dui-lie/ce-shi/chinanews-ce-shi.md)
   * [部署](xiao-xi-dui-lie/bu-shu.md)
   * [Kafka](xiao-xi-dui-lie/kafka.md)
   * [Logstash](xiao-xi-dui-lie/logstash.md)
