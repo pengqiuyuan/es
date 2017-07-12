@@ -40,10 +40,9 @@ docker pull wurstmeister/zookeeper:latest
 │       └── zoo.cfg
 ├── kafka
 │   └── docker-compose.yml
-
 ```
 
-* 配置 `docker-compose.yml` ，`KAFKA_ADVERTISED_HOST_NAME: "10.28.1.1"` 的值，分别配置对应 `IP`
+* 配置 `zb` 的 `docker-compose.yml` ，`KAFKA_ADVERTISED_HOST_NAME: "10.28.1.1"` 的值，分别配置对应 `IP`
 
 ```
 zookeeper:
@@ -52,39 +51,22 @@ zookeeper:
     - ./zookeeper/zoo.cfg:/opt/zookeeper-3.4.9/conf/zoo.cfg
     - ./zookeeper/myid:/opt/product/data/myid
   ports:
-    - "2182:2182"
-    - "2889:2889"
-    - "3889:3889"
+    - "2182:2181"
+    - "2889:2888"
+    - "3889:3888"
   restart: always
-  privileged: true
-kafka:
-  image: wurstmeister/kafka
-  ports:
-    - "9093:9093"
-#  links:
-#    - zookeeper:zk
-  environment:
-    KAFKA_ADVERTISED_HOST_NAME: "10.28.1.1"
-    KAFKA_ADVERTISED_PORT: "9093"
-    KAFKA_ZOOKEEPER_CONNECT: "10.28.1.1:2182,10.28.2.2:2182,10.28.3.3:2182"
-    KAFKA_MESSAGE_MAX_BYTES: 2000000
-    KAFKA_LOG_ROLL_HOURS: 24
-    KAFKA_LOG_RETENTION_HOURS: 72
-  restart: always
-  volumes:
-    - /kafka/kafka/:/kafka/
 ```
 
-* 配置 `Dockerfile`
+* 配置`zookeeper`  的 `Dockerfile`
 
 ```
 FROM wurstmeister/zookeeper
 RUN echo "Asia/Shanghai" > /etc/timezone
 ```
 
-* 配置 `myid` ，文件内只有一个数字，分别为 `1`、`2`、`3` ，代表 `zookeeper` 的三台服务器
+* 配置`zookeeper` 的`myid` ，文件内只有一个数字，分别为 `1`、`2`、`3` ，代表 `zookeeper` 的三台服务器
 
-* 配置 `zoo.cfg`
+* 配置 `zoo.cfg `,注意 `0.0.0.0:2888:3888` 对应的是 `2888` 和 `3888`
 
 `10.28.1.1`
 
@@ -94,8 +76,8 @@ initLimit=10
 syncLimit=5
 dataDir=/opt/product/data/
 dataLogDir=/opt/product/data/zkdatalog
-clientPort=2182
-server.1=0.0.0.0:2889:3889
+clientPort=2181
+server.1=0.0.0.0:2888:3888
 server.2=10.28.2.2:2889:3889
 server.3=10.27.3.3:2889:3889
 ```
@@ -110,7 +92,7 @@ dataDir=/opt/product/data/
 dataLogDir=/opt/product/data/zkdatalog
 clientPort=2182
 server.1=10.28.1.1:2889:3889
-server.2=0.0.0.0:2889:3889
+server.2=0.0.0.0:2888:3888
 server.3=10.27.3.3:2889:3889
 ```
 
@@ -125,7 +107,27 @@ dataLogDir=/opt/product/data/zkdatalog
 clientPort=2182
 server.1=10.28.1.1:2889:3889
 server.2=10.28.2.2:2889:3889
-server.3=0.0.0.0:2889:3889
+server.3=0.0.0.0:2888:3888
+```
+
+配置 `kafka` 的 `docker-compose.yml`
+
+```
+kafka:
+  image: wurstmeister/kafka
+  ports:
+    - "9093:9093"
+  environment:
+    KAFKA_ADVERTISED_HOST_NAME: "10.28.1.1"
+    KAFKA_ADVERTISED_PORT: "9093"
+    KAFKA_PORT: "9093"
+    KAFKA_ZOOKEEPER_CONNECT: "10.28.1.1:2182,10.28.2.2:2182,10.27.3.3:2182"
+    KAFKA_MESSAGE_MAX_BYTES: 2000000
+    KAFKA_LOG_ROLL_HOURS: 24
+    KAFKA_LOG_RETENTION_HOURS: 72
+  restart: always
+  volumes:
+    - /kafka/kafka/:/kafka/
 ```
 
 分别启动容器：
