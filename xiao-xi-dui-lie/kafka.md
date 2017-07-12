@@ -147,7 +147,7 @@ input {
             codec => "json"
             group_id => "weibo_group_1"
         }
-      }  
+      }
 ```
 
 Web Server 配置
@@ -173,7 +173,7 @@ Web Server 配置
             </bean>  
         </constructor-arg>  
         <property name="producerListener" ref="producerListener"/>
-    </bean>  
+    </bean>
 ```
 
 
