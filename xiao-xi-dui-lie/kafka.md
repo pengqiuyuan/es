@@ -66,7 +66,7 @@ RUN echo "Asia/Shanghai" > /etc/timezone
 
 * 配置`zookeeper` 的`myid` ，文件内只有一个数字，分别为 `1`、`2`、`3` ，代表 `zookeeper` 的三台服务器
 
-* 配置 `zoo.cfg `,注意 `0.0.0.0:2888:3888` 对应的是 `2888` 和 `3888`
+* 配置 `zoo.cfg`,注意 `0.0.0.0:2888:3888` 对应的是 `2888` 和 `3888`
 
 `10.28.1.1`
 
@@ -133,4 +133,48 @@ kafka:
 分别启动容器：
 
 `sudo docker-compose up -d`
+
+---
+
+Logtash 配置
+
+```
+input {
+        kafka {
+            bootstrap_servers => "10.28.1.1:9093,10.28.2.2:9093,10.27.3.3:9093"
+            topics => ["weibo"]
+            auto_offset_reset => "earliest"
+            codec => "json"
+            group_id => "weibo_group_1"
+        }
+      }  
+```
+
+Web Server 配置
+
+```
+    <!-- 生产者配置 -->  
+    <bean id="template" class="org.springframework.kafka.core.KafkaTemplate">  
+        <constructor-arg index="0">  
+            <bean class="org.springframework.kafka.core.DefaultKafkaProducerFactory">  
+                <constructor-arg>  
+                    <map>  
+                        <entry key="bootstrap.servers" value="10.28.1.1:9093,10.28.2.2:9093,10.27.2.2:9093"/>  
+                        <entry key="acks" value="all"/>  
+                        <entry key="retries" value="3"/>  
+                        <entry key="batch.size" value="14000"/>  
+                        <entry key="linger.ms" value="1"/>  
+                        <entry key="buffer.memory" value="33554432"/> 
+                        <!-- <entry key="max.block.ms" value="2000"/>    -->
+                        <entry key="key.serializer" value="org.apache.kafka.common.serialization.StringSerializer"></entry>  
+                        <entry key="value.serializer" value="org.apache.kafka.common.serialization.StringSerializer"></entry>  
+                    </map>  
+                </constructor-arg>  
+            </bean>  
+        </constructor-arg>  
+        <property name="producerListener" ref="producerListener"/>
+    </bean>  
+```
+
+
 
