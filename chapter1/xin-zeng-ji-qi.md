@@ -21,6 +21,9 @@ echo /dev/vdb1 /mnt ext3 defaults 0 0 >> /etc/fstab
 cat /etc/fstab
 mount /dev/vdb1 /mnt
 df -h
+
+后四条
+echo /dev/vdb1 /mnt ext3 defaults 0 0 >> /etc/fstab && cat /etc/fstab && mount /dev/vdb1 /mnt && df -h
 ```
 
 第五步、执行 `ansible-playbook -s site.yml`
@@ -28,6 +31,7 @@ df -h
 第六步、修改系统配置，[参考](/system-pei-zhi.md)
 
 ```
+
 ansible all -s -m raw -a '
 grep "* - nofile 512000" /etc/security/limits.conf || echo "* - nofile 512000" >> /etc/security/limits.conf
 grep "elasticsearch - nproc unlimited" /etc/security/limits.conf || echo "elasticsearch - nproc unlimited" >> /etc/security/limits.conf
