@@ -42,7 +42,7 @@ grep "vm.swappiness = 1" /etc/sysctl.conf || echo "vm.swappiness = 1" >> /etc/sy
 sysctl -p'
 ```
 
-第八步、新增 `elasticsearch_32g_9tai.yml `，主要两个方面，修改 `discovery.zen.ping.unicast.hosts` 只加入三个 `master` 节点。
+第八步、新增 `elasticsearch_32g_9tai.yml`，主要两个方面，修改 `discovery.zen.ping.unicast.hosts` 只加入三个 `master` 节点。
 
 ```
 - hosts: elasticsearch_data_nodes_32g_9tai
@@ -92,7 +92,6 @@ sysctl -p'
 第十步、停止分片自动分配
 
 ```
-
 curl -XPUT http://127.0.0.1:9222/_cluster/settings -d '{
   "transient" : {
     "cluster.routing.allocation.enable" : "none"
@@ -139,7 +138,6 @@ ansible all -s -m raw -a 'tail -50 /mnt/log/elasticsearch/node*-node/tarantula.l
 第九步、在这里的时候，新机器就已经加入到集群里了，只是没有安装 `IK` 分词插件导致，分片不平衡 。安装 `IK`
 
 ```
-
 ansible node31,node32,node33,node34,node35,node36,node37,node38,node39 -s -m copy -a 'src=/home/idatage/plugins/elasticsearch-analysis-ik-5.4.0.zip dest=/usr/share/elasticsearch/elasticsearch-analysis-ik-5.4.0.zip'
 
 ansible node31,node32,node33,node34,node35,node36,node37,node38,node39 -s -m raw -a 'ls /usr/share/elasticsearch'
@@ -194,7 +192,6 @@ ansible node31,node32,node33,node34,node35,node36,node37,node38,node39 -s -m cop
 第十二步、重启新增集群
 
 ```
-
 ansible node31,node32,node33,node34,node35,node36,node37,node38,node39 -s -m raw -a 'service node_elasticsearch restart'
 
 ansible all -s -m raw -a 'tail -50 /mnt/log/elasticsearch/node*-node/tarantula.log'
