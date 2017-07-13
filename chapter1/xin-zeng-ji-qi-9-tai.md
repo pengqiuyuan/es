@@ -72,7 +72,7 @@ curl -XPUT http://127.0.0.1:9222/_cluster/settings -d '{
 ansible all -s -m raw -a 'service node_elasticsearch stop'
 ```
 
-第十二步、执行 `ansible` 的 elasticsearch.yml ，等待节点全部启动，等待新增完毕。
+第十二步、执行 `ansible` 的 `elasticsearch.yml `，等待节点全部启动，等待新增完毕。`xpack` 会被自动删除，后面机器全部启动后需要重新安装 `xpack` 和部分集群安装 `IK`
 
 ```
 ansible-playbook -s elasticsearch.yml
