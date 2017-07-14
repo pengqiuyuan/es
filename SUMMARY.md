@@ -9,6 +9,7 @@
   * [创建用户](chapter1/chuang-jian-yong-hu.md)
   * [新增机器](chapter1/xin-zeng-ji-qi.md)
   * [新增机器9台](chapter1/xin-zeng-ji-qi-9-tai.md)
+    * [UNASSIGNED 问题](chapter1/xin-zeng-ji-qi-9-tai/unassigned-wen-ti.md)
 * [硬件配置及版本选择](ying-jian-pei-zhi-ji-ban-ben-xuan-ze.md)
 * [集群角色划分和隔离、 副本分片建议（控制shard数量）、容量的规划](ji-qun-jiao-se-hua-fen-he-ge-li-3001-fu-ben-fen-pian-jian-yi-ff08-kong-zhi-shard-shu-liang-ff09-3001-rong-liang-de-gui-hua.md)
 * [Elasticsearch 配置](elasticsearch-pei-zhi.md)
