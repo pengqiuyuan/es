@@ -25,6 +25,18 @@ node02
 
 修改配置重启：`sudo nginx -s reload`
 
+```
+当nginx启动后，可以使用“-s”参数向nginx管理进程发送信号来控制nginx：
+
+nginx -s signal
+其中，signal可以是以下值：
+
+stop：快速关闭
+quit：安全关闭
+reload：重载配置文件
+reopen：重新打开一个log文件，用于日志切割
+```
+
 查看nginx日志：`/var/log/nginx`
 
 修改配置目录：`/etc/nginx/sites-available/default` 文件
