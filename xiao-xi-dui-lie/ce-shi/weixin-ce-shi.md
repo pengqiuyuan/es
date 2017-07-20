@@ -64,5 +64,33 @@
 }
 ```
 
+---
+
+**POST 请求直接 Bulk 写入数据到 Elasticsearch**
+
+`response` 数据写入队列成功
+
+```
+{
+  "success" : "true"
+}
+```
+
+`response` 数据 `bulk` 写入 `es` 失败 ，返回 `bulkResponse.buildFailureMessage()` 的错误 `message`
+
+```
+{
+  "success" : "这里面的内容为 bulk 请求失败的 message 提示信息"
+}
+```
+
+传入的 List 集合为空 `[]`，直接返回 `response`
+
+```
+{
+  "success" : "null"
+}
+```
+
 
 
