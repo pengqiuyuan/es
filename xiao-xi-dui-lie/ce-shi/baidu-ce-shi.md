@@ -64,5 +64,41 @@
 }
 ```
 
+---
+
+**POST 请求直接 Bulk 写入数据到 Elasticsearch**
+
+注意：与上面的 `API` 相比，爬虫只用注意 `URL` 和 多出了两种返回值就好，其他一样。
+
+`POST` `http://127.0.0.1/stq/api/v1/pabulk/baidu/add`
+
+`HEADERS`：如上
+
+`BODY` ：如上
+
+`response` 数据 `bulk` 写入 `es` 成功
+
+```
+{
+  "success" : "true"
+}
+```
+
+`response` 数据 `bulk` 写入 `es` 失败 ，返回 `bulkResponse.buildFailureMessage()` 的错误 `message`
+
+```
+{
+  "success" : "这里面的内容为 bulk 请求失败的 message 提示信息"
+}
+```
+
+传入的 List 集合为空 `[]`，直接返回 `response`
+
+```
+{
+  "success" : "null"
+}
+```
+
 
 
