@@ -68,6 +68,14 @@
 
 **POST 请求直接 Bulk 写入数据到 Elasticsearch**
 
+注意：与上面的 `API` 相比，爬虫只用注意 `URL` 和 多出了两种返回值就好，其他一样。
+
+`POST` `http://127.0.0.1/stq/api/v1/pabulk/weixin/add`
+
+`HEADERS`：如上
+
+`BODY` ：如上
+
 `response` 数据写入队列成功
 
 ```
