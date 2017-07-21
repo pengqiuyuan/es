@@ -76,7 +76,7 @@
 
 `BODY` ：如上
 
-`response` 数据写入队列成功
+`response` 数据 `bulk` 写入 `es` 成功
 
 ```
 {
