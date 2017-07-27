@@ -3,6 +3,11 @@ ES 慢查询添加日志
 为了排查 `node15 OOM` 的原因，是否为聚合查询导致。
 
 ```
+tarantula_index_indexing_slowlog.log
+tarantula_index_search_slowlog.log
+```
+
+```
 curl -u 用户名:密码 -XPUT http://127.0.0.1:9200/weibo/_settings -d'
 {
     "index.search.slowlog.threshold.query.warn": "13s",
