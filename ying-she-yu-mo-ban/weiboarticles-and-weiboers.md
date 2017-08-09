@@ -1,4 +1,4 @@
-索引名称（索引前缀名称为`weibo_articles_and_weiboers`的都能匹配到，名称为`weibo_articles_and_weiboers`的`mapping`模板，`* `为通配符）：如，`weibo_articles_and_weiboers`
+索引名称（索引前缀名称为`weibo_articles_and_weiboers`的都能匹配到，名称为`weibo_articles_and_weiboers`的`mapping`模板，`*`为通配符）：如，`weibo_articles_and_weiboers`
 
 ```
 curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
@@ -354,6 +354,9 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                 "username": {
                     "type": "keyword",
                     "ignore_above": 256
+                },
+                "machine_identifier": {
+                    "type": "keyword"
                 }
             }
         }
