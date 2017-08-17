@@ -92,5 +92,5 @@
     * 实际声量
     * 声量
     * 系数
-    * 独立用户曝光量
+    * [独立用户曝光量](shu-ju-ping-tai/wei-bo-tong-ji/du-li-yong-hu-pu-guang-liang.md)
 
