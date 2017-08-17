@@ -88,4 +88,9 @@
   * [安装](docker/an-zhuang.md)
 * [数据平台](shu-ju-ping-tai.md)
   * [微博统计](shu-ju-ping-tai/wei-bo-tong-ji.md)
+    * 每天总文章量
+    * 实际声量
+    * 声量
+    * 系数
+    * 独立用户曝光量
 
