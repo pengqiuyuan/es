@@ -87,5 +87,5 @@
 * [Docker](docker.md)
   * [安装](docker/an-zhuang.md)
 * [数据平台](shu-ju-ping-tai.md)
-  * 微博统计
+  * [微博统计](shu-ju-ping-tai/wei-bo-tong-ji.md)
 
