@@ -93,4 +93,6 @@
     * 声量
     * 系数
     * [独立用户曝光量](shu-ju-ping-tai/wei-bo-tong-ji/du-li-yong-hu-pu-guang-liang.md)
+    * [独立账号占比](shu-ju-ping-tai/wei-bo-tong-ji/du-li-zhang-hao-zhan-bi.md)
+    * 原发提及占比
 
