@@ -4,7 +4,7 @@
 
 ```
 {
-    "mainAddress": "127.0.0.1:7717",
+    "mainAddress": "127.0.0.1:6717",
     "authentication": {
           "adminUsername": "用户名",
           "password": "密码"
