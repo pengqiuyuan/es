@@ -17,6 +17,7 @@
 * [System 配置](system-pei-zhi.md)
 * [映射与模板](ying-she-yu-mo-ban.md)
   * [weixiners](ying-she-yu-mo-ban/weixiners.md)
+    * [Mongodb 数据源更新](ying-she-yu-mo-ban/weixiners/mongodb-shu-ju-yuan-geng-xin.md)
   * [weiboers](ying-she-yu-mo-ban/weiboers.md)
   * [weixin\_articles\_and\_weixiners](ying-she-yu-mo-ban/weixinarticles-and-weixiners.md)
   * [weibo\_articles\_and\_weiboers](ying-she-yu-mo-ban/weiboarticles-and-weiboers.md)

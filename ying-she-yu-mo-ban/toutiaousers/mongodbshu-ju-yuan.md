@@ -103,7 +103,7 @@ nohup mongo-connector --auto-commit-interval=0 -m 127.0.0.1:3717 -t 用户名:�
 
 [`mongo-connector` 文档](https://github.com/mongodb-labs/mongo-connector/wiki/Configuration-Options)
 
-`config.json` 模式，`mongo-connector -c weixin.json`
+`config.json` 模式，`mongo-connector -c toutiao.json`
 
 ```
 {
