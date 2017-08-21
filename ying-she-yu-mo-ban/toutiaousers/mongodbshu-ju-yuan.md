@@ -107,30 +107,29 @@ nohup mongo-connector --auto-commit-interval=0 -m 127.0.0.1:3717 -t 用户名:�
 
 ```
 {
-        "mainAddress": "127.0.0.1:3717 ",
-        "verbosity": 2,
-        "authentication": {
-        "adminUsername": "用户名",
-        "password": "密码"
+    "mainAddress": "127.0.0.1:3717",
+    "authentication": {
+          "adminUsername": "用户名",
+          "password": "密码"
     },
     "namespaces": {
-            "include": ["toutiao.toutiaors"],
-            "mapping": {
-              "toutiao.toutiaors": "test.test"
-            }
+        "include": ["toutiao.toutiaors"],
+        "mapping": {
+          "toutiao.toutiaors": "toutiaors.toutiaors"
+        }
     },
-        "docManagers": [
-                {
-                  "docManager": "elastic2_doc_manager",
-                  "targetURL": "用户名:密码@127.0.0.1:9222",
-                  "autoCommitInterval":0,
-                  "bulkSize":1000,
-                  "args": {
-                    "meta_index_name": "mongodb_meta_1",
-                    "meta_type": "mongodb_meta_1"
-                  }
-                }
-        ]
+    "docManagers": [
+      {
+        "docManager": "elastic2_doc_manager",
+        "targetURL": "用户名:密码@node01:9222",
+        "autoCommitInterval":0,
+        "bulkSize":3000,
+        "args": {
+          "meta_index_name": "mongodb_toutiaors",
+          "meta_type": "mongodb_toutiaors"
+        }
+      }
+    ]
 }
 ```
 
@@ -156,7 +155,6 @@ nohup mongo-connector --auto-commit-interval=0 -m 127.0.0.1:3717 -t 用户名:�
 mongo-connector only logs warnings and errors by default. Try setting the [verbosity](https://github.com/mongodb-labs/mongo-connector/wiki/Configuration-Options#verbosity) to 2 for INFO logging:
 
 ```
-
 {
 "mainAddress": "localhost:3006",
 "verbosity": 2,
