@@ -60,7 +60,6 @@ curl -XPUT http://127.0.0.1:9222/weixiners
 索引名称（索引前缀名称为`weixiners`的都能匹配到，名称为`weixiners`的`mapping`模板，`*`为通配符）：如，`weixiners`
 
 ```
-
 curl -XPUT http://localhost:9222/_template/weixiners -d '
 {
   "template" : "weixiners*",
@@ -172,9 +171,6 @@ curl -XPUT http://localhost:9222/_template/weixiners -d '
         },
         "categories": {
             "type": "keyword"        
-        },
-        "nr_crawled_status": {
-            "type": "keyword"
         }
       }
     }
