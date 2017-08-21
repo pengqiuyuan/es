@@ -171,7 +171,10 @@ curl -XPUT http://localhost:9222/_template/weixiners -d '
         },
         "categories": {
             "type": "keyword"        
-            }
+        },
+        "nr_crawled_status": {
+            "type": "keyword"
+        }
       }
     }
   }
