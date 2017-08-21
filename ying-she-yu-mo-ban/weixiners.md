@@ -60,121 +60,176 @@ curl -XPUT http://127.0.0.1:9222/weixiners
 索引名称（索引前缀名称为`weixiners`的都能匹配到，名称为`weixiners`的`mapping`模板，`*`为通配符）：如，`weixiners`
 
 ```
+
 curl -XPUT http://localhost:9222/_template/weixiners -d '
 {
-  "template" : "weixiners*",
-  "settings" : {  
-    "refresh_interval" : "60s",  
-    "number_of_replicas" : "1",  
-    "number_of_shards" : "15"
-  },
-  "mappings" : {
-    "_default_" : {
-      "_all" : {"enabled" : true},
-      "_source" : { "enabled" : true },
-      "dynamic_templates" : [ {
-        "message_field" : {
-          "match" : "message",
-          "match_mapping_type" : "string",
-          "mapping" : {
-            "type" : "text"
-          }
-        }
-      }, {
-        "string_fields" : {
-          "match" : "*",
-          "match_mapping_type" : "string",
-          "mapping" : {
-            "type" : "keyword"
-          }
-        }
-      }, {
-        "double_fields" : {
-          "match" : "*",  
-          "match_mapping_type" : "double",
-          "mapping" : { "type" : "double"}
-        }
-      }, {
-        "byte_fields" : {
-          "match" : "*",
-          "match_mapping_type" : "byte",
-          "mapping" : { "type" : "byte"}
-        }
-      }, {
-        "short_fields" : {
-          "match" : "*",
-          "match_mapping_type" : "short",
-          "mapping" : { "type" : "short"}
-        }
-      }, {
-        "integer_fields" : {
-          "match" : "*",
-          "match_mapping_type" : "integer",
-          "mapping" : { "type" : "integer"}
-        }
-      }, {
-        "long_fields" : {
-          "match" : "*",
-          "match_mapping_type" : "long",
-          "mapping" : { "type" : "long"}
-        }
-      }, {
-        "date_fields" : {
-          "match" : "*",
-          "match_mapping_type" : "date",
-          "mapping" : { "type" : "date"}
-        }
-      }, {
-        "geo_point_fields" : {
-          "match" : "*",
-          "match_mapping_type" : "geo_point",
-          "mapping" : { "type" : "geo_point"}
-        }
-      } ],
-      "properties" : {
-        "@timestamp": { "type": "date"  },
-        "score": {
-            "type": "float"
-        },
-        "openid": {
-            "type": "keyword"
-        },
-        "name": {
-            "type": "keyword"
-        },  
-        "username": {
-            "type": "keyword"
-        },
-        "intro": {
-            "type": "text",
-            "analyzer":"ik_max_word",
-            "search_analyzer": "ik_max_word"
-        },  
-        "certification": {
-            "type": "keyword",
-            "fields": {
-                "raw": {
-                  "type": "text",
-                  "analyzer":"ik_max_word",
-                  "search_analyzer": "ik_max_word"
+    "template": "weixiners*",
+    "settings": {
+        "refresh_interval": "60s",
+        "number_of_replicas": "1",
+        "number_of_shards": "15"
+    },
+    "mappings": {
+        "_default_": {
+            "_all": {
+                "enabled": true
+            },
+            "_source": {
+                "enabled": true
+            },
+            "dynamic_templates": [
+                {
+                    "message_field": {
+                        "match": "message",
+                        "match_mapping_type": "string",
+                        "mapping": {
+                            "type": "text"
+                        }
+                    }
+                },
+                {
+                    "string_fields": {
+                        "match": "*",
+                        "match_mapping_type": "string",
+                        "mapping": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                {
+                    "double_fields": {
+                        "match": "*",
+                        "match_mapping_type": "double",
+                        "mapping": {
+                            "type": "double"
+                        }
+                    }
+                },
+                {
+                    "byte_fields": {
+                        "match": "*",
+                        "match_mapping_type": "byte",
+                        "mapping": {
+                            "type": "byte"
+                        }
+                    }
+                },
+                {
+                    "short_fields": {
+                        "match": "*",
+                        "match_mapping_type": "short",
+                        "mapping": {
+                            "type": "short"
+                        }
+                    }
+                },
+                {
+                    "integer_fields": {
+                        "match": "*",
+                        "match_mapping_type": "integer",
+                        "mapping": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                {
+                    "long_fields": {
+                        "match": "*",
+                        "match_mapping_type": "long",
+                        "mapping": {
+                            "type": "long"
+                        }
+                    }
+                },
+                {
+                    "date_fields": {
+                        "match": "*",
+                        "match_mapping_type": "date",
+                        "mapping": {
+                            "type": "date"
+                        }
+                    }
+                },
+                {
+                    "geo_point_fields": {
+                        "match": "*",
+                        "match_mapping_type": "geo_point",
+                        "mapping": {
+                            "type": "geo_point"
+                        }
+                    }
                 }
-            }        
-        },
-        "crawled_at": {
-            "type": "date"
-        },
-        "updated_at": {
-            "type": "date"
-        },
-        "tags": {
-            "type": "keyword"
-        },
-        "categories": {
-            "type": "keyword"        
+            ],
+            "properties": {
+                "@timestamp": {
+                    "type": "date"
+                },
+                "score": {
+                    "type": "float"
+                },
+                "openid": {
+                    "type": "keyword"
+                },
+                "name": {
+                    "type": "keyword"
+                },
+                "username": {
+                    "type": "keyword"
+                },
+                "intro": {
+                    "type": "text",
+                    "analyzer": "ik_max_word",
+                    "search_analyzer": "ik_max_word"
+                },
+                "certification": {
+                    "type": "keyword",
+                    "fields": {
+                        "raw": {
+                            "type": "text",
+                            "analyzer": "ik_max_word",
+                            "search_analyzer": "ik_max_word"
+                        }
+                    }
+                },
+                "crawled_at": {
+                    "type": "date"
+                },
+                "updated_at": {
+                    "type": "date"
+                },
+                "tags": {
+                    "type": "keyword"
+                },
+                "categories": {
+                    "type": "keyword"
+                },
+                "created_at": {
+                "type": "date"
+                },
+                "crawled_status": {
+                "type": "keyword"
+                },
+                "gs_id": {
+                "type": "keyword"
+                },
+                "gs_crawled_status": {
+                "type": "keyword"
+                },
+                "gs_crawled_at": {
+                "type": "date"
+                },
+                "nr_id": {
+                "type": "keyword"
+                },
+                "nr_crawled_status": {
+                "type": "keyword"
+                },
+                "nr_crawled_at": {
+                "type": "date"
+                }
+            }
         }
-      }
     }
-  }
 }'
 ```
 
