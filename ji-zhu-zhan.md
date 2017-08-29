@@ -15,7 +15,7 @@ Spring Data JPA, JPA/Hibernate, Mysql DataSource, Ehcache, Memcached
 
 #### Service
 
-Shiro   
+Shiro  
 Schedule/Quartz  
 JMS/ActiveMQ/kafka/redis  
 log4j  
@@ -27,11 +27,13 @@ Unit Test,JMeter
 
 #### Environment
 
- Maven, Git, Jetty
+Maven, Git, Jetty
 
-#### General 
+#### General
 
-、常见设计模式、集合、IO、并发
+常见设计模式、数据结构、集合、IO、并发、多线程
+
+
 
 
 
@@ -59,15 +61,9 @@ JAVA基础扎实，拥有良好的编码习惯，理解io、多线程、集合�
 
 思维逻辑能力强，善沟通，学习能力强
 
-
-
 JAVA Web后端开发工程师
 
 JAVA 后端开发工程师
-
-
-
-
 
 Elasticsearch、Logstash、Kibana、Filbeat、Kafka、Zookeeper、Docker
 
