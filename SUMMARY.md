@@ -91,7 +91,7 @@
   * [微博统计](shu-ju-ping-tai/wei-bo-tong-ji.md)
     * [每天总文章量](shu-ju-ping-tai/wei-bo-tong-ji/mei-tian-zong-wen-zhang-liang.md)
     * [实际声量](shu-ju-ping-tai/wei-bo-tong-ji/shi-ji-sheng-liang.md)
-    * 声量
+    * [声量](shu-ju-ping-tai/wei-bo-tong-ji/sheng-liang.md)
     * 系数
     * [独立用户曝光量](shu-ju-ping-tai/wei-bo-tong-ji/du-li-yong-hu-pu-guang-liang.md)
     * [独立账号占比](shu-ju-ping-tai/wei-bo-tong-ji/du-li-zhang-hao-zhan-bi.md)
