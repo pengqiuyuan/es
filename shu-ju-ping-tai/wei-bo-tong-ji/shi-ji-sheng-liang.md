@@ -1,4 +1,4 @@
-实际声量
+实际声量 = Es 查询文章量
 
 ```
 GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search 
