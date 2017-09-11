@@ -1,5 +1,3 @@
-
-
 ```
 ansible all -s -m raw -a 'service node_elasticsearch stop'
 
