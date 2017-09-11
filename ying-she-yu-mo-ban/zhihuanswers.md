@@ -132,36 +132,35 @@ curl -XPUT http://127.0.0.1:9222/_template/zhihu_answers -d '
           "format": "strict_date_optional_time||epoch_millis",
           "type": "date"
         },
-        "topics": {
-          "type": "keyword",
-          "ignore_above": 256
-        },
-        "answers_num": {
-          "type": "integer"
-        },
-        "title": {
+        "excerpt": {
           "type": "text",
           "analyzer": "ik_max_word",
           "search_analyzer": "ik_max_word"
         },
-        "views_num": {
-          "type": "long"
-        },
-        "desc": {
-          "type": "text",
-          "analyzer": "ik_max_word",
-          "search_analyzer": "ik_max_word"
-        },
-        "follows_num": {
-          "type": "integer"
-        },
-        "author": {
+        "author_name": {
           "type": "keyword",
           "ignore_above": 256
         },
         "author_id": {
           "type": "keyword",
           "ignore_above": 256
+        },
+        "author_follower_count": {
+          "type": "integer"
+        },
+        "voteup_count": {
+          "type": "integer"
+        },
+        "comment_count": {
+          "type": "integer"
+        },
+        "question_id": {
+          "type": "keyword"
+        },
+        "content": {
+          "type": "text",
+          "analyzer": "ik_max_word",
+          "search_analyzer": "ik_max_word"
         }
       }
     }
