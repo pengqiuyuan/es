@@ -8,7 +8,7 @@ ansible all -s -m raw -a 'tail -50 /mnt/log/elasticsearch/node*-node/tarantula.l
 
 `Linux` 扩容数据盘，需要从阿里云控制台重启机器，之后再重新挂载`SSD`磁盘。
 
-步骤
+步骤（`ROOT`用户）
 
 ```
 df -H
