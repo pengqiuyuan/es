@@ -77,13 +77,13 @@ type：微博（1）、微信（2）等等
             "keyword": "1",
             "startDate": "2017-01-01",
             "endDate": "2017-01-02",
-            "subDate": "2017-01-02"
+            "subDate": "0"
         },
         {
             "keyword": "1",
             "startDate": "2017-01-01",
             "endDate": "2017-01-02",
-            "subDate": "2017-01-02"
+            "subDate": "1"
         }
     ],
     "type": "1,2,3,4"
