@@ -143,7 +143,7 @@ primaryId：客户端获取指标的唯一ID
 ```
 request 
 
-get ?primaryId=1&type=2 客户端获取指标的唯一ID+type
+get ? 
 
 response
 
