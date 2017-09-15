@@ -102,4 +102,5 @@
 * [技术栈](ji-zhu-zhan.md)
 * [任务](ren-wu.md)
   * [指标存入 Es](ren-wu/zhi-biao-cun-ru-es.md)
+  * [词包任务2](ren-wu/ci-bao-ren-wu-2.md)
 
