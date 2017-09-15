@@ -76,12 +76,14 @@ type：微博（1）、微信（2）等等
         {
             "keyword": "1",
             "startDate": "2017-01-01",
-            "endDate": "2017-01-02"
+            "endDate": "2017-01-02",
+            "subDate": "2017-01-02"
         },
         {
             "keyword": "1",
             "startDate": "2017-01-01",
-            "endDate": "2017-01-02"
+            "endDate": "2017-01-02",
+            "subDate": "2017-01-02"
         }
     ],
     "type": "1,2,3,4"
@@ -91,12 +93,10 @@ response
 primaryId：客户端获取指标的唯一ID
 [
     {
-        "primaryId": "1",
-        "type": "1"
+        "primaryId": "1"
     },
     {
-        "primaryId": "2",
-        "type": "2"
+        "primaryId": "2"
     }
 ]
 ```
