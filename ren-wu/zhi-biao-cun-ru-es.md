@@ -93,11 +93,11 @@ curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
       ],
       "properties": {
         "startDate": {
-          "format": "yyyy-MM-dd",
+          "format": "strict_date_optional_time||epoch_millis",
           "type": "date"
         },
         "endDate": {
-          "format": "yyyy-MM-dd",
+          "format": "strict_date_optional_time||epoch_millis",
           "type": "date"
         },
         "keywords": {
@@ -108,55 +108,22 @@ curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
           "ignore_above": 256
         },
         "volume": {
-          "type": "double"
+          "type": "long"
         },
         "actualVolume": {
-          "type": "double"
-        },
-        "coefficient": {
-          "type": "double"
+          "type": "integer"
         },
         "exposure": {
-          "type": "double"
-        },
-        "primaryPercentage": {
-          "type": "double"
-        },
-        "independentPercentage": {
-          "type": "double"
+          "type": "long"
         },
         "interactive": {
-          "type": "double"
+          "type": "integer"
         },
         "oldInteractive": {
-          "type": "double"
-        },
-        "commentsPercentage": {
-          "type": "double"
-        },
-        "praisePercentage": {
-          "type": "double"
-        },
-        "secondaryPercentage": {
-          "type": "double"
-        },
-        "threePercentage": {
-          "type": "double"
-        },
+          "type": "integer"
+        }
         "forwardDepth": {
-          "type": "double"
-        },
-        "positiveSentiment": {
-          "type": "double"
-        },
-        "neutralSentiment": {
-          "type": "double"
-        },
-        "negativeSentiment": {
-          "type": "double"
-        },
-        "reputationValue": {
-          "type": "double"
+          "type": "integer"
         }
       }
     }
