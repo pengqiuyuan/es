@@ -89,13 +89,11 @@ type：微博（1）、微信（2）等等
     "taskType": "weibo"
 }
 
-response 返回map，key为监测项名称，value为次任务Id（secondId）
-
-
+response 
+primaryId：主任务ID
 
 {
-     "三少爷的剑": "1",
-     "电影": "2"
+     "primaryId": "1"
 }
 ```
 
@@ -141,27 +139,20 @@ response 返回map，key为监测项名称，value为次任务Id（secondId）
 ```
 request 
 
-get ? secondId=1
+get ? primaryId=1
 
 response
 
-es已保存指标数据
+指标任务已计算好
+{
+    "success":"true"
+}
 
-[
-    {
-        "startDate": "2017-01-01",
-        "endDate": "2017-01-02",
-        "keyword": "三少爷的剑+电影+-测试1+-测试2+测试3+-测试4+中文加+-中文减||三少爷的剑+林更新||三少爷的剑+何润东||三少爷的剑+江一燕||三少爷的剑+蒋梦婕",
-        "volume": "1111",
-        "actualVolume": "1111",
-        ....
-    }
-]
+指标任务未计算好
 
-es未保存指标数据
-[
-
-]
+{
+    "success":"false"
+}
 ```
 
 【3】API ，客户端通过传入参数，词包监测项名称、起始日期、结束日期、类别（微博、微信等等），返回指标结果
