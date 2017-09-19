@@ -121,7 +121,7 @@ curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
         },
         "oldInteractive": {
           "type": "integer"
-        }
+        },
         "forwardDepth": {
           "type": "integer"
         }

@@ -74,13 +74,13 @@ type：微博（1）、微信（2）等等
 {
     "taskList": [
         {
-            "keyword": "1",
+            "keyword": "三少爷的剑",
             "startDate": "2017-01-01",
             "endDate": "2017-01-02",
             "subDate": "0"
         },
         {
-            "keyword": "1",
+            "keyword": "电影",
             "startDate": "2017-01-01",
             "endDate": "2017-01-02",
             "subDate": "1"
@@ -89,12 +89,13 @@ type：微博（1）、微信（2）等等
     "taskType": "weibo"
 }
 
-response
-primaryId：主任务ID
-secondId：次任务ID
+response 返回map，key为监测项名称，value为次任务Id（secondId）
+
+
 
 {
-    "primaryId": "1"
+     "三少爷的剑": "1",
+     "电影": "2"
 }
 ```
 
@@ -135,14 +136,16 @@ secondId：次任务ID
 2、点击下载，去es或者mongodb？根据 主任务id+type，获取计算好的指标结果，写入服务器excel，生成对应地址。
 ```
 
-【2】API ，客户端提交任务词包主ID，返回指标结果
+【2】API ，客户端提交任务词包次ID，返回指标结果
 
 ```
 request 
 
-get ? 
+get ? secondId=1
 
 response
+
+es已保存指标数据
 
 [
     {
@@ -155,6 +158,7 @@ response
     }
 ]
 
+es未保存指标数据
 [
 
 ]
