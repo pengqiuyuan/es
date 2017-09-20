@@ -143,15 +143,35 @@ get ? primaryId=1
 
 response
 
-指标任务已计算好
 {
-    "success":"true"
+    "message":"",  //字符串
+    "taskStatus","" //字符串
+}
+--------
+
+{
+    "message":"任务未开始",
+    "taskStatus","0"
 }
 
-指标任务未计算好
+{
+    "message":"任务进行中",
+    "taskStatus","1"
+}
 
 {
-    "success":"false"
+    "message":"任务已完成，可以调用 findByKeywords 接口查询！",
+    "taskStatus","2"
+}
+
+{
+    "message":"任务执行错误！",
+    "taskStatus","3"
+}
+
+{
+    "message":"不存在 primaryId:1的任务",
+    "taskStatus","3"
 }
 ```
 
