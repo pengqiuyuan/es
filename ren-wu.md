@@ -157,6 +157,39 @@ response
 
 【3】API ，客户端通过传入参数，词包监测项名称、起始日期、结束日期、类别（微博、微信等等），返回指标结果
 
+```
+POST /findByKeywords
+
+{
+    "keyWord": "你的名字+电影",
+    "startDate": "2016-11-02",
+    "endDate": "2017-05-01",
+    "subDate": "1",
+    "taskType": "weibo"
+}
+
+response
+
+[
+    {
+    "keywords": "你的名字+电影",
+    "startDate": "2016-11-02",
+    "endDate": "2016-11-03",
+    "volume": "3183",
+    "actualVolume": "90",
+    "exposure": "8431368",
+    "interactive": "781",
+    "oldInteractive": "13969",
+    "forwardDepth": "6"
+    },
+    ...
+]
+
+OR
+
+[]
+```
+
 > 生产环境配置
 
 JDK8+、Mysql、mongodb、Jetty、Nginx
