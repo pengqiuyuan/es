@@ -103,6 +103,6 @@
 * [Narnia](ren-wu.md)
   * [词包模块](ren-wu/ci-bao-ren-wu-2.md)
     * [计算指标存入Es](ren-wu/zhi-biao-cun-ru-es.md)
-    * [API ](ren-wu/narnia.md)
+    * [接入API ](ren-wu/narnia.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
 
