@@ -100,7 +100,9 @@
     * [独立账号占比](shu-ju-ping-tai/wei-bo-tong-ji/du-li-zhang-hao-zhan-bi.md)
     * [原发提及占比](shu-ju-ping-tai/wei-bo-tong-ji/yuan-fa-ti-ji-zhan-bi.md)
 * [技术栈](ji-zhu-zhan.md)
-* [任务](ren-wu.md)
-  * [指标存入 Es](ren-wu/zhi-biao-cun-ru-es.md)
-  * [词包任务2](ren-wu/ci-bao-ren-wu-2.md)
+* [Narnia](ren-wu.md)
+  * [词包模块](ren-wu/ci-bao-ren-wu-2.md)
+    * [计算指标存入Es](ren-wu/zhi-biao-cun-ru-es.md)
+    * [API ](ren-wu/narnia.md)
+    * [基本功能](ren-wu/ji-ben-gong-neng.md)
 
