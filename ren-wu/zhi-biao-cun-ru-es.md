@@ -92,9 +92,6 @@ curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
         }
       ],
       "properties": {
-        "name": {
-          "type": "keyword"
-        },
         "startDate": {
           "format": "strict_date_optional_time||epoch_millis",
           "type": "date"
