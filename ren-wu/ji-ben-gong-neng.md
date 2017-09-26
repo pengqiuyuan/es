@@ -226,7 +226,7 @@ JDK8+、Mysql、mongodb、Jetty、Nginx
 
 新增 production 分支，我们三人，保证本地代码不会和 production 有冲突的情况下，每天都必须把自己的 merge 到 production 分支。然后 production = merge &gt; master
 
-
+---
 
 词包模块修改：预计时间下周一或者周二能完成。提供给研究使用。
 
@@ -251,4 +251,16 @@ JDK8+、Mysql、mongodb、Jetty、Nginx
 2、子任务监测项，不同数据源图表对比展示。
 
 
+
+数据源分类
+
+api
+
+账号
+
+微信计算
+
+测试
+
+cibao\_index
 
