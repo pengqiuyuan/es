@@ -5,7 +5,7 @@ curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
 {
   "template": "cibao_index*",
   "settings": {
-    "refresh_interval": "3s",
+    "refresh_interval": "60s",
     "number_of_replicas": "1",
     "number_of_shards": "15"
   },
