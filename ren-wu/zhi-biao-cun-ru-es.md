@@ -100,10 +100,17 @@ curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
           "format": "strict_date_optional_time||epoch_millis",
           "type": "date"
         },
+        "updateDate": {
+          "format": "strict_date_optional_time||epoch_millis",
+          "type": "date"
+        },
         "startDateString": {
           "type": "keyword"
         },
         "endDateString": {
+          "type": "keyword"
+        },
+        "updateDateString": {
           "type": "keyword"
         },
         "keywords": {
