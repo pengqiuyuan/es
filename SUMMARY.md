@@ -110,7 +110,7 @@
       * [知乎问题](ren-wu/zhi-biao-cun-ru-es/zhi-hu-wen-ti.md)
       * [天涯](ren-wu/zhi-biao-cun-ru-es/tian-ya.md)
       * [头条](ren-wu/zhi-biao-cun-ru-es/tou-tiao.md)
-      * 资讯博客
+      * [资讯博客](ren-wu/zhi-biao-cun-ru-es/zi-xun-bo-ke.md)
     * [接入API ](ren-wu/narnia.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
   * [操作文档](ren-wu/cao-zuo-wen-dang.md)
