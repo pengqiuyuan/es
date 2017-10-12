@@ -1,5 +1,4 @@
 ```
-
 curl -XPUT http://127.0.0.1:9222/cibao_index
 
 curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
@@ -316,6 +315,8 @@ curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
         zixunList.add("zixun_actualVolume");//实际声量
         zixunList.add("zixun_account");//帐号提及量
     }
+
+     articleNumMap accountNumMap
 ```
 
 
