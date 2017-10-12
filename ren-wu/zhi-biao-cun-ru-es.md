@@ -232,24 +232,34 @@ curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
         weiboList.add("weibo_exposure");//曝光量
         weiboList.add("weibo_interactive");//互动量
         weiboList.add("weibo_forwardDepth");//转发深度
-
+        weiboList.add("weibo_account");//帐号提及量
+        
         weixinList.add("weixin_volume");//总文章量
         weixinList.add("weixin_actualVolume");//实际文章量
         weixinList.add("weixin_readCount");//总阅读数
         weixinList.add("weixin_upCount");//总点赞量
         weixinList.add("weixin_readArticleCount");//有阅读的文章数量
+        weixinList.add("weixin_account");//帐号提及量
 
         tiebaList.add("tieba_recoveryCount");//回复数
+        tiebaList.add("tieba_actualVolume");//实际声量
+        tiebaList.add("tieba_account");//帐号提及量
 
         baidunewsList.add("baidunews_volume");//声量
+        baidunewsList.add("baidunews_actualVolume");//实际声量
+        baidunewsList.add("baidunews_account");//帐号提及量
 
         zhihuquestionsList.add("zhihuquestions_questionsCount");//问题数
         zhihuquestionsList.add("zhihuquestions_followCount");//关注人数
         zhihuquestionsList.add("zhihuquestions_seeCount");//查看人数
         zhihuquestionsList.add("zhihuquestions_answerCount");//回答人数
+        zhihuquestionsList.add("zhihuquestions_actualVolume");//实际声量
+        zhihuquestionsList.add("zhihuquestions_account");//帐号提及量
 
         tianyaList.add("tianya_clicksCount");//帖子点击数
         tianyaList.add("tianya_answerCount");//贴子回复数
+        tianyaList.add("tianya_actualVolume");//实际声量
+        tianyaList.add("tianya_account");//帐号提及量
 
         toutiaoList.add("toutiao_followCount");//关注量
         toutiaoList.add("toutiao_fansCount");//粉丝量
@@ -257,11 +267,15 @@ curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
         toutiaoList.add("toutiao_commentCount");//评论量
         toutiaoList.add("toutiao_upCount");//点赞量
         toutiaoList.add("toutiao_stepCount");//踩量
+        toutiaoList.add("toutiao_actualVolume");//实际声量
+        toutiaoList.add("toutiao_account");//帐号提及量
 
         zixunList.add("zixun_upCount");//点赞量
         zixunList.add("zixun_collectionCount");//收藏量
         zixunList.add("zixun_commentCount");//评论量
         zixunList.add("zixun_seeCount");//浏览量
+        zixunList.add("zixun_actualVolume");//实际声量
+        zixunList.add("zixun_account");//帐号提及量
     }
 ```
 

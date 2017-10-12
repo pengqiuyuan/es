@@ -105,4 +105,5 @@
     * [计算指标存入Es](ren-wu/zhi-biao-cun-ru-es.md)
     * [接入API ](ren-wu/narnia.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
+  * [操作文档](ren-wu/cao-zuo-wen-dang.md)
 
