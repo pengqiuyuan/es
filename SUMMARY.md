@@ -109,7 +109,7 @@
       * [百度新闻](ren-wu/zhi-biao-cun-ru-es/bai-du-xin-wen.md)
       * [知乎问题](ren-wu/zhi-biao-cun-ru-es/zhi-hu-wen-ti.md)
       * [天涯](ren-wu/zhi-biao-cun-ru-es/tian-ya.md)
-      * 头条
+      * [头条](ren-wu/zhi-biao-cun-ru-es/tou-tiao.md)
       * 资讯博客
     * [接入API ](ren-wu/narnia.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
