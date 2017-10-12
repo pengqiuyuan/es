@@ -105,7 +105,7 @@
     * [计算指标存入Es](ren-wu/zhi-biao-cun-ru-es.md)
       * [微博](ren-wu/zhi-biao-cun-ru-es/wei-bo.md)
       * [微信](ren-wu/zhi-biao-cun-ru-es/wei-xin.md)
-      * 贴吧
+      * [贴吧](ren-wu/zhi-biao-cun-ru-es/tie-ba.md)
       * 百度新闻
       * 知乎问题
       * 天涯
