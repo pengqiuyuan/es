@@ -106,8 +106,8 @@
       * [微博](ren-wu/zhi-biao-cun-ru-es/wei-bo.md)
       * [微信](ren-wu/zhi-biao-cun-ru-es/wei-xin.md)
       * [贴吧](ren-wu/zhi-biao-cun-ru-es/tie-ba.md)
-      * 百度新闻
-      * 知乎问题
+      * [百度新闻](ren-wu/zhi-biao-cun-ru-es/bai-du-xin-wen.md)
+      * [知乎问题](ren-wu/zhi-biao-cun-ru-es/zhi-hu-wen-ti.md)
       * 天涯
       * 头条
       * 资讯博客
