@@ -104,7 +104,7 @@
   * [词包模块](ren-wu/ci-bao-ren-wu-2.md)
     * [计算指标存入Es](ren-wu/zhi-biao-cun-ru-es.md)
       * [微博](ren-wu/zhi-biao-cun-ru-es/wei-bo.md)
-      * 微信
+      * [微信](ren-wu/zhi-biao-cun-ru-es/wei-xin.md)
       * 贴吧
       * 百度新闻
       * 知乎问题
