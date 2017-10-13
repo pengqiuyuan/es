@@ -1,4 +1,5 @@
 ```
+
 curl -XPUT http://127.0.0.1:9222/cibao_index
 
 curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
@@ -121,141 +122,141 @@ curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
           "ignore_above": 256
         },
         "weibo_volume": {
-          "type": "long"
+          "type": "double"
         },
         "weibo_actualVolume": {
-          "type": "integer"
+          "type": "float"
         },
         "weibo_exposure": {
-          "type": "long"
+          "type": "double"
         },
         "weibo_interactive": {
-          "type": "long"
+          "type": "double"
         },
         "weibo_forwardDepth": {
-          "type": "integer"
+          "type": "float"
         },
         "weibo_account": {
-          "type": "integer"
+          "type": "float"
         }
 
         ,
         "weixin_volume": {
-          "type": "long"
+          "type": "double"
         },
         "weixin_actualVolume": {
-          "type": "integer"
+          "type": "float"
         },
         "weixin_readCount": {
-          "type": "long"
+          "type": "double"
         },
         "weixin_upCount": {
-          "type": "long"
+          "type": "double"
         },
         "weixin_readArticleCount": {
-          "type": "long"
+          "type": "double"
         },
         "weixin_account": {
-          "type": "integer"
+          "type": "float"
         }
 
         ,
         "tieba_recoveryCount": {
-          "type": "long"
+          "type": "double"
         },
         "tieba_actualVolume": {
-          "type": "integer"
+          "type": "float"
         },
         "tieba_account": {
-          "type": "integer"
+          "type": "float"
         }
 
         ,
         "tieba_actualVolume": {
-          "type": "integer"
+          "type": "float"
         },
         "tieba_account": {
-          "type": "integer"
+          "type": "float"
         }
 
         ,
         "zhihuquestions_questionsCount": {
-          "type": "integer"
+          "type": "float"
         },
         "zhihuquestions_followCount": {
-          "type": "integer"
+          "type": "float"
         },
         "zhihuquestions_seeCount": {
-          "type": "long"
+          "type": "double"
         },
         "zhihuquestions_answerCount": {
-          "type": "integer"
+          "type": "float"
         },
         "zhihuquestions_actualVolume": {
-          "type": "integer"
+          "type": "float"
         },
         "zhihuquestions_account": {
-          "type": "integer"
+          "type": "float"
         }
 
         ,
         "tianya_clicksCount": {
-          "type": "long"
+          "type": "double"
         },
         "tianya_answerCount": {
-          "type": "integer"
+          "type": "float"
         },
         "tianya_actualVolume": {
-          "type": "integer"
+          "type": "float"
         },
         "tianya_account": {
-          "type": "integer"
+          "type": "float"
         }
 
         ,
         "toutiao_followCount": {
-          "type": "integer"
+          "type": "float"
         },
         "toutiao_fansCount": {
-          "type": "integer"
+          "type": "float"
         },
         "toutiao_readCount": {
-          "type": "integer"
+          "type": "float"
         },
         "toutiao_commentCount": {
-          "type": "integer"
+          "type": "float"
         },
         "toutiao_upCount": {
-          "type": "integer"
+          "type": "float"
         },
         "toutiao_stepCount": {
-          "type": "integer"
+          "type": "float"
         },
         "toutiao_actualVolume": {
-          "type": "integer"
+          "type": "float"
         },
         "toutiao_account": {
-          "type": "integer"
+          "type": "float"
         }
 
         ,
         "zixun_upCount": {
-          "type": "integer"
+          "type": "float"
         },
         "zixun_collectionCount": {
-          "type": "integer"
+          "type": "float"
         },
         "zixun_commentCount": {
-          "type": "integer"
+          "type": "float"
         },
         "zixun_seeCount": {
-          "type": "integer"
+          "type": "float"
         },
         "zixun_actualVolume": {
-          "type": "integer"
+          "type": "float"
         },
         "zixun_account": {
-          "type": "integer"
+          "type": "float"
         }
 
       }
