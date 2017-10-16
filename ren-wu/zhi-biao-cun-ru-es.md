@@ -1,4 +1,5 @@
 ```
+
 curl -XPUT http://127.0.0.1:9222/cibao_index
 
 curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
@@ -137,6 +138,15 @@ curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
         },
         "weibo_account": {
           "type": "float"
+        },
+        "weibo_commentCount": {
+          "type": "double"
+        },
+        "weibo_upCount": {
+          "type": "double"
+        },
+        "weibo_repostCount": {
+          "type": "double"
         }
 
         ,
@@ -272,6 +282,9 @@ curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
         weiboList.add("weibo_interactive");//互动量
         weiboList.add("weibo_forwardDepth");//转发深度
         weiboList.add("weibo_account");//帐号提及量
+        weiboList.add("weibo_commentCount");//评
+        weiboList.add("weibo_upCount");//点赞
+        weiboList.add("weibo_repostCount");//转
 
         weixinList.add("weixin_volume");//总文章量
         weixinList.add("weixin_actualVolume");//实际文章量
