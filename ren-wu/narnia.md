@@ -1,16 +1,17 @@
-**添加词包任务**
+**一**、**添加词包任务**
 
-`POST` `http://127.0.0.1/stq/api/v1/words/addWordsTask`
+`POST` `http://127.0.0.1/stq/api/v1/words/addIvstWordsTask`
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
 `参数说明`：
 
 ```
+添加剧目任务
 
-添加子任务，数组结构。
-keyword为监测项名称，startDate为监测项起始时间（含），endDate为监测项结束时间（含）
-taskType：监测项计算任务的数据源。weibo、weixin等等，需要约定。
+keyword为监测项名称
+startDate为监测项起始时间（含），不可以大于结束时间
+endDate为监测项结束时间（含），不可以大于当前时间，可以为空字符串（代表无限期计算）
 ```
 
 `BODY` 体：
@@ -19,16 +20,21 @@ taskType：监测项计算任务的数据源。weibo、weixin等等，需要约�
 {
     "keyword": "测试",
     "startDate": "2017-01-01",
-    "endDate": "2017-01-10",
-    "taskType": "weibo"
+    "endDate": "2017-01-10"
 }
 ```
 
-`response` 数据写入成功，返回主任务ID，通过ID可以查询出任务执行的状态
+`response` 数据写入成功，返回提示信息
 
 ```
 {
-    "primaryId": 45
+    "message": "任务添加成功"
+}
+
+或者
+
+{
+    "message": "任务已存在"
 }
 ```
 
