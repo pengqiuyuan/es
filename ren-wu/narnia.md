@@ -72,54 +72,54 @@ endDate为监测项结束时间（含），
 
 ```
 [
-	{
-		"name": "大鱼海棠",
-		"keywords": "大鱼海棠",
-		"source": null,
-		"startDateString": "2017-01-01",
-		"endDateString": "2017-01-02",
-		"weibo_volume": 7272,
-		"weibo_actualVolume": 240,
-		"weibo_exposure": 9660401,
-		"weibo_interactive": 7306,
-		"weibo_forwardDepth": 9,
-		"weibo_account": 233,
-		"weibo_commentCount": 2857,
-		"weibo_upCount": 4449,
-		"weibo_repostCount": 1535
-	},
-	{
-		"name": "大鱼海棠",
-		"keywords": "大鱼海棠",
-		"source": null,
-		"startDateString": "2017-01-02",
-		"endDateString": "2017-01-03",
-		"weibo_volume": 4736,
-		"weibo_actualVolume": 127,
-		"weibo_exposure": 33728971,
-		"weibo_interactive": 2642,
-		"weibo_forwardDepth": 7,
-		"weibo_account": 119,
-		"weibo_commentCount": 560,
-		"weibo_upCount": 2082,
-		"weibo_repostCount": 1174
-	},
-	{
-		"name": "大鱼海棠",
-		"keywords": "大鱼海棠",
-		"source": null,
-		"startDateString": "2017-01-03",
-		"endDateString": "2017-01-04",
-		"weibo_volume": 4769,
-		"weibo_actualVolume": 122,
-		"weibo_exposure": 18982573,
-		"weibo_interactive": 1671,
-		"weibo_forwardDepth": 8,
-		"weibo_account": 120,
-		"weibo_commentCount": 318,
-		"weibo_upCount": 1353,
-		"weibo_repostCount": 706
-	}
+    {
+        "name": "大鱼海棠",
+        "keywords": "大鱼海棠",
+        "source": "weibo",
+        "startDateString": "2017-01-01",
+        "endDateString": "2017-01-02",
+        "weibo_volume": 7272,
+        "weibo_actualVolume": 240,
+        "weibo_exposure": 9660401,
+        "weibo_interactive": 7306,
+        "weibo_forwardDepth": 9,
+        "weibo_account": 233,
+        "weibo_commentCount": 2857,
+        "weibo_upCount": 4449,
+        "weibo_repostCount": 1535
+    },
+    {
+        "name": "大鱼海棠",
+        "keywords": "大鱼海棠",
+        "source": "weibo",
+        "startDateString": "2017-01-02",
+        "endDateString": "2017-01-03",
+        "weibo_volume": 4736,
+        "weibo_actualVolume": 127,
+        "weibo_exposure": 33728971,
+        "weibo_interactive": 2642,
+        "weibo_forwardDepth": 7,
+        "weibo_account": 119,
+        "weibo_commentCount": 560,
+        "weibo_upCount": 2082,
+        "weibo_repostCount": 1174
+    },
+    {
+        "name": "大鱼海棠",
+        "keywords": "大鱼海棠",
+        "source": "weibo",
+        "startDateString": "2017-01-03",
+        "endDateString": "2017-01-04",
+        "weibo_volume": 4769,
+        "weibo_actualVolume": 122,
+        "weibo_exposure": 18982573,
+        "weibo_interactive": 1671,
+        "weibo_forwardDepth": 8,
+        "weibo_account": 120,
+        "weibo_commentCount": 318,
+        "weibo_upCount": 1353,
+        "weibo_repostCount": 706
+    }
 ]
 ```
 
@@ -130,4 +130,24 @@ endDate为监测项结束时间（含），
 ```
 
 `response` 请求失败 500
+
+三、**通过**`keyword`**获取 **`IVST`** 剧目任务的计算结果集（微信、贴吧、知乎问题、天涯、头条、资讯博客）**
+
+`POST` `http://127.0.0.1/stq/api/v1/words/findWeixinByKeywords`
+
+`POST` `http://127.0.0.1/stq/api/v1/words/findTiebaByKeywords`
+
+`POST` `http://127.0.0.1/stq/api/v1/words/findZhihuByKeywords`
+
+`POST` `http://127.0.0.1/stq/api/v1/words/findTianyaByKeywords`
+
+`POST` `http://127.0.0.1/stq/api/v1/words/findToutiaoByKeywords`
+
+`POST` `http://127.0.0.1/stq/api/v1/words/findZixunByKeywords`
+
+`参数说明`：同微博
+
+`BODY` 体：同微博
+
+`response` ：同微博
 
