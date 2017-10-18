@@ -42,24 +42,25 @@ endDate为监测项结束时间（含），不可以大于当前时间，可以�
 
 ---
 
-**通过**`keyword`**获取词包任务的计算结果集**
+二、**通过**`keyword`**获取 `IVST` 剧目任务的计算结果集（以获取微博数据接口为例）**
 
-`POST` `http://127.0.0.1/stq/api/v1/words/findByKeywords`
+`POST` `http://127.0.0.1/stq/api/v1/words/findWeiboByKeywords`
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
 `参数说明`：
 
 ```
-keyword为监测项名称，startDate为监测项起始时间（含），endDate为监测项结束时间（含），subDate是否分天（0不分天，1分天）
-，taskType监测项计算任务的数据源 weibo、weixin等等，需要约定。
+keyword为监测项名称，
+startDate为监测项起始时间（含），
+endDate为监测项结束时间（含），
 ```
 
 `BODY` 体：
 
 ```
 {
-    "keyWord": "你的名字+电影",
+    "keyWord": "你的名字+电影||大鱼海棠+电影",
     "startDate": "2016-11-02",
     "endDate": "2016-11-04",
     "subDate": "1",
