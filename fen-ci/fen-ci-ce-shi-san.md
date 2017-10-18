@@ -705,10 +705,6 @@ curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
     ]
   }
 }
-
-
-
-
 ```
 
 

@@ -55,6 +55,7 @@
   * [分词测试二](fen-ci/fen-ci-ce-shi-er.md)
   * [分词测试三](fen-ci/fen-ci-ce-shi-san.md)
   * [测试 ignore\_malformed ](fen-ci/ce-shi-ignore-malformed.md)
+  * [分词测试四](fen-ci/fen-ci-ce-shi-si.md)
 * [插件](cha-jian.md)
   * [Head](cha-jian/head.md)
   * [Bigdesk](cha-jian/bigdesk.md)
