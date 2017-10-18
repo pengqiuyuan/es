@@ -1,8 +1,8 @@
 ```
-curl  -u idatage:abc@123456 -XPUT http://127.0.0.1:9222/ikindex2
+curl  -u 用户:密码 -XPUT http://127.0.0.1:9222/ikindex2
 
 
-curl -u idatage:abc@123456 -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/_mapping -d'
+curl -u 用户:密码 -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/_mapping -d'
  {
      "fulltext2": {
          "properties": {
@@ -15,17 +15,17 @@ curl -u idatage:abc@123456 -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/_mapp
      }
  }'
 
-curl -u idatage:abc@123456 -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/1 -d'
+curl -u 用户:密码 -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/1 -d'
 {
 "content": "习近平主席将迎接金砖国家及受邀国领导人并集体合影"
 }'
 
-curl -u idatage:abc@123456 -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/2 -d'
+curl -u 用户:密码 -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/2 -d'
 {
 "content": "全景报道金砖国家工商论坛等重要活动"
 }'
 
-curl -u idatage:abc@123456 -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/_search?pretty  -d'
+curl -u 用户:密码 -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/_search?pretty  -d'
  {
      "query" : { "match_phrase" : { "content" : "金砖国家工商" }},
      "highlight" : {
@@ -38,15 +38,15 @@ curl -u idatage:abc@123456 -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/_sear
 }'
 
 
-curl  -u elastic:abc123456  'http://127.0.0.1:9222/ikindex2/_analyze?analyzer=ik_max_word&pretty=true' -d '
+curl -u 用户:密码  'http://127.0.0.1:9222/ikindex2/_analyze?analyzer=ik_max_word&pretty=true' -d '
 {
-	"text":"全景报道金砖国家工商论坛等重要活动"
+    "text":"全景报道金砖国家工商论坛等重要活动"
 }'
 
 
-curl  -u elastic:abc123456  'http://127.0.0.1:9222/ikindex2/_analyze?analyzer=ik_max_word&pretty=true' -d '
+curl -u 用户:密码  'http://127.0.0.1:9222/ikindex2/_analyze?analyzer=ik_max_word&pretty=true' -d '
 {
-	"text":"习近平主席将迎接金砖国家及受邀国领导人并集体合影"
+    "text":"习近平主席将迎接金砖国家及受邀国领导人并集体合影"
 }'
 ```
 
