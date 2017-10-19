@@ -324,7 +324,7 @@
 
 四、使用 `_all` 能匹配出所有文档的原因
 
-`_all` 字段并没有设置 ik 分词，使用默认分词 standard analyzer ，所以不会有像 `ik_max_word` 词与词位置重叠的情况。
+`_all` 字段并没有设置 ik 分词，使用默认分词 `standard analyzer` ，所以不会有像 `ik_max_word` 词与词位置重叠的情况。
 
 不同的分词会产生不同的分词结果，`ik_max_word`产生的词位置有重叠；`ik_smart`不会有位置重叠；
 
