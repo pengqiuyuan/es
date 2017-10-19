@@ -404,5 +404,7 @@ GET ikindex2/_analyze
     }
 ```
 
+[相关章节一](https://www.elastic.co/guide/en/elasticsearch/guide/current/phrase-matching.html)
 
+[相关章节二](https://www.elastic.co/guide/en/elasticsearch/guide/current/slop.html)
 
