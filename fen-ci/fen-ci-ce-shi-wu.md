@@ -283,7 +283,7 @@
 二、解决办法
 
 ```
-1、修改索引 Mapping field 
+1、修改索引 Mapping field ，
 
 "search_analyzer": "ik_max_word"
 改为
@@ -332,6 +332,76 @@
  "_all": {
   "enabled": true
  }
+```
+
+```
+GET ikindex2/_analyze 
+{
+  "analyzer": "standard",
+  "field": "content_full", 
+  "text":  "彭丽媛为金砖国家和对话会受邀国"
+}
+
+GET ikindex2/_analyze 
+{
+  "analyzer": "standard",
+  "field": "content_full", 
+  "text":  "金砖国家工商论坛"
+}
+
+GET ikindex2/_analyze 
+{
+  "analyzer": "standard",
+  "field": "content_full", 
+  "text":  "金砖国家世界文化遗产"
+}
+```
+
+部分分词结果
+
+```
+    {
+      "token": "金",
+      "start_offset": 0,
+      "end_offset": 1,
+      "type": "<IDEOGRAPHIC>",
+      "position": 0
+    },
+    {
+      "token": "砖",
+      "start_offset": 1,
+      "end_offset": 2,
+      "type": "<IDEOGRAPHIC>",
+      "position": 1
+    },
+    {
+      "token": "国",
+      "start_offset": 2,
+      "end_offset": 3,
+      "type": "<IDEOGRAPHIC>",
+      "position": 2
+    },
+    {
+      "token": "家",
+      "start_offset": 3,
+      "end_offset": 4,
+      "type": "<IDEOGRAPHIC>",
+      "position": 3
+    },
+    {
+      "token": "世",
+      "start_offset": 4,
+      "end_offset": 5,
+      "type": "<IDEOGRAPHIC>",
+      "position": 4
+    },
+    {
+      "token": "界",
+      "start_offset": 5,
+      "end_offset": 6,
+      "type": "<IDEOGRAPHIC>",
+      "position": 5
+    }
 ```
 
 
