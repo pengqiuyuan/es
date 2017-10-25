@@ -115,7 +115,7 @@
       * [资讯博客](ren-wu/zhi-biao-cun-ru-es/zi-xun-bo-ke.md)
     * [接入API ](ren-wu/narnia.md)
       * [Ivst 接口](ren-wu/narnia/ivst-jie-kou.md)
-      * Narnia 接口
+      * [Narnia 接口](ren-wu/narnia/narnia-jie-kou.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
   * [操作文档](ren-wu/cao-zuo-wen-dang.md)
   * 问题
