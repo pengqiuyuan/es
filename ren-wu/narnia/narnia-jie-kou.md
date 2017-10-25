@@ -1,6 +1,6 @@
 **一**、**添加词包任务**
 
-`POST` `http://127.0.0.1/stq/api/v1/words/addIvstWordsTask`
+`POST` `http://127.0.0.1/stq/api/v1/words/addWordsTask`
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
@@ -12,6 +12,7 @@
 keyword为监测项关键字
 startDate为监测项起始时间（含），不可以大于结束时间
 endDate为监测项结束时间（含），不可以大于当前时间，可以为空字符串（代表无限期计算）
+category为标识字段（Narnia项目使用 narnia）
 ```
 
 `BODY` 体：
@@ -20,7 +21,8 @@ endDate为监测项结束时间（含），不可以大于当前时间，可以�
 {
     "keyword": "大鱼海棠",
     "startDate": "2017-01-01",
-    "endDate": "2017-01-10"
+    "endDate": "2017-01-10",
+    "category":"narnia"
 }
 ```
 
@@ -28,13 +30,19 @@ endDate为监测项结束时间（含），不可以大于当前时间，可以�
 
 ```
 {
-    "message": "任务添加成功"
+    "message": "任务添加成功",
+    "primaryId":[
+        "4220"
+    ]
 }
 
 或者
 
 {
-    "message": "任务已存在"
+    "message": "任务已存在",
+    "primaryId":[
+        "4221"
+    ]
 }
 ```
 
@@ -44,7 +52,7 @@ endDate为监测项结束时间（含），不可以大于当前时间，可以�
 
 二、**通过 **`primaryId`** 获取词包任务是否完成的状态**
 
-`GET` `http://127.0.0.1/stq/api/v1/words/findTaskStatusByPrimaryId?primaryId=3`
+`GET` `http://127.0.0.1/stq/api/v1/words/findTaskStatusByPrimaryId?primaryId=4221`
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
@@ -68,7 +76,7 @@ primaryId：主任务Id，使用添加词包任务API之后返回。
 }
 
 {
-    "message": "任务已完成，可以调用 findByKeywords 接口查询！",
+    "message": "任务已完成",
     "taskStatus": "2"
 }
 
