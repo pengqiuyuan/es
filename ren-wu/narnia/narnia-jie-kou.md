@@ -430,7 +430,7 @@ endDate为监测项结束时间（含），
 
 `response` 请求失败 500
 
-七、**通过**`keyword`**获取 **`IVST`** 剧目任务的计算结果集（微信、贴吧、知乎问题、天涯、头条、资讯博客）**
+七、**通过**`keyword`**获取任务的计算结果集（微信、贴吧、知乎问题、天涯、头条、资讯博客）**
 
 `POST` `http://127.0.0.1/stq/api/v1/words/findWeixinByKeywords`
 
