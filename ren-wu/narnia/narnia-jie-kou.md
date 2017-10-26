@@ -343,7 +343,7 @@ pageSize为每页多少条，默认10
 }
 ```
 
-六、**通过**`keyword`**获取 **`IVST`** 剧目任务的计算结果集（以获取微博数据接口为例）**
+六、**通过**`keyword`**获取任务的计算结果集（以获取微博数据接口为例）**
 
 `POST` `http://127.0.0.1/stq/api/v1/words/findWeiboByKeywords`
 
