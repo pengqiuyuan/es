@@ -95,7 +95,7 @@ primaryId：主任务Id，使用添加词包任务API之后返回。
 
 ---
 
-三、**通过 **`primaryId`** 集合，批量获取词包任务是否完成的状态，返回 **`List`
+三、**通过 **`primaryId`** 集合，批量获取词包任务是否完成的状态，返回集合**
 
 `POST` `http://127.0.0.1/stq/api/v1/words/findTaskStatusByPrimaryIdList`
 
