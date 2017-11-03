@@ -16,6 +16,7 @@
 * [集群角色划分和隔离、 副本分片建议（控制shard数量）、容量的规划](ji-qun-jiao-se-hua-fen-he-ge-li-3001-fu-ben-fen-pian-jian-yi-ff08-kong-zhi-shard-shu-liang-ff09-3001-rong-liang-de-gui-hua.md)
 * [Elasticsearch 配置](elasticsearch-pei-zhi.md)
 * [System 配置](system-pei-zhi.md)
+* [Reindex 重新索引](reindexff08-zhong-xin-suo-yin-ff09.md)
 * [映射与模板](ying-she-yu-mo-ban.md)
   * [weixiners](ying-she-yu-mo-ban/weixiners.md)
     * [Mongodb 数据源更新](ying-she-yu-mo-ban/weixiners/mongodb-shu-ju-yuan-geng-xin.md)
@@ -36,7 +37,6 @@
   * [天涯论坛（tianya\_news）](ying-she-yu-mo-ban/tian-ya-lun-tan-ff08-tianya-news.md)
   * [china\_news](ying-she-yu-mo-ban/chinanews.md)
   * [zhihu\_answers](ying-she-yu-mo-ban/zhihuanswers.md)
-* [Reindex 重新索引](reindexff08-zhong-xin-suo-yin-ff09.md)
 * [安全机制](an-quan-ji-zhi.md)
   * [基于 nginx 配置](an-quan-ji-zhi/ji-yu-nginx-pei-zhi.md)
   * [xpack](an-quan-ji-zhi/xpack.md)
@@ -116,7 +116,6 @@
     * [接入API ](ren-wu/narnia.md)
       * [Narnia、Ivst 接口](ren-wu/narnia/narnia-jie-kou.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
-  * [操作文档](ren-wu/cao-zuo-wen-dang.md)
   * 问题
     * [超时](ren-wu/chao-shi.md)
   * [导出、统计模块](ren-wu/dao-chu-3001-tong-ji-mo-kuai.md)
