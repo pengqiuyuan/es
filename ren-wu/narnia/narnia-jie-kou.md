@@ -428,9 +428,9 @@ pageSize为每页多少条，默认10
 
 ---
 
-六、按照指定字段排序，**通过 **keyword  **获取 **`Es`** 库中匹配到的结果集（微博、微信）**
+六、按照指定字段排序，**通过 **keyword  **获取 **`Es`** 库中匹配到的热门结果集（微博、微信）**
 
-`POST` `http://127.0.0.1/stq/api/v1/words/findEsListByKeyword`
+`POST` `http://127.0.0.1/stq/api/v1/words/findEsHotListByKeyword`
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
@@ -441,9 +441,9 @@ keyword为监测项名称，
 startDate为监测项起始时间（含），
 endDate为监测项结束时间（含），
 taskType为数据源 weibo、weixin
+sortField 为排序字段 粉丝数（weibo）、阅读量（weixin）
 sort为排序 asc（升序）、desc（降序）
-pageNumber为第几页，默认1
-pageSize为每页多少条，默认10
+size获取多少个排序结果，不超过50。传空字符串“”时，默认为10。
 ```
 
 `BODY` 体：
@@ -454,13 +454,45 @@ pageSize为每页多少条，默认10
 "startDate": "2017-05-01",
 "endDate": "2017-05-02",
 "taskType":"weibo",
+"sortField":"粉丝数",
 "sort":"desc",
-"pageNumber":"1",
-"pageSize":"10"
+"size":"10"
 }
 ```
 
-`response` Es查询有保存计算指标
+`response` ，`List`集合
+
+```
+[
+    {
+        "_index": "weibo_articles_and_weiboers",
+        "_type": "weibo_articles_and_weiboer",
+        "_source":{"comment_count": 4, "sentiment": -2, "repost_count": 22, "repost_level": 0, "gender": 0,…},
+        "_id": "4102512023694826",
+        "sort":[
+            10827132
+        ]
+    },
+    {
+        "_index": "weibo_articles_and_weiboers",
+        "_type": "weibo_articles_and_weiboer",
+        "_source":{"comment_count": 34, "repost_count": 145, "repost_level": 0, "gender": 1, "web_links":[],…},
+        "_id": "4102550297426847",
+        "sort":[
+            5758927
+        ]
+    },
+    {
+        "_index": "weibo_articles_and_weiboers",
+        "_type": "weibo_articles_and_weiboer",
+        "_source":{"comment_count": 177, "web_links":[], "vote_links":[], "up_count": 2054,…},
+        "_id": "4102679036436232",
+        "sort":[
+            1014487
+        ]
+    }
+]
+```
 
 ---
 
