@@ -428,7 +428,7 @@ pageSize为每页多少条，默认10
 
 ---
 
-六、 **按照指定字段排序，通过 **keyword  **获取 **`Es`** 库中匹配到的热门结果集（微博、微信）**
+六、 **按照指定字段排序，通过 `keyword` 获取 `Es` 库中匹配到的热门结果集（微博、微信）**
 
 `POST` `http://127.0.0.1/stq/api/v1/words/findEsHotListByKeyword`
 
