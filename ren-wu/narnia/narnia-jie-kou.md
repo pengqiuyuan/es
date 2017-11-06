@@ -426,7 +426,45 @@ pageSize为每页多少条，默认10
 }
 ```
 
-六、**通过**`keyword`**获取任务的计算结果集（以获取微博数据接口为例）**
+---
+
+六、按照指定字段排序，**通过 **keyword  **获取 **`Es`** 库中匹配到的结果集（微博、微信）**
+
+`POST` `http://127.0.0.1/stq/api/v1/words/findEsListByKeyword`
+
+`HEADERS`：`"Content-Type" => "application/json"`
+
+`参数说明`：
+
+```
+keyword为监测项名称，
+startDate为监测项起始时间（含），
+endDate为监测项结束时间（含），
+taskType为数据源 weibo、weixin
+sort为排序 asc（升序）、desc（降序）
+pageNumber为第几页，默认1
+pageSize为每页多少条，默认10
+```
+
+`BODY` 体：
+
+```
+{
+"keyword": "欧美+电影",
+"startDate": "2017-05-01",
+"endDate": "2017-05-02",
+"taskType":"weibo",
+"sort":"desc",
+"pageNumber":"1",
+"pageSize":"10"
+}
+```
+
+`response` Es查询有保存计算指标
+
+---
+
+七、**通过**`keyword`**获取任务的计算结果集（以获取微博数据接口为例）**
 
 `POST` `http://127.0.0.1/stq/api/v1/words/findWeiboByKeywords`
 
@@ -513,7 +551,7 @@ endDate为监测项结束时间（含），
 
 `response` 请求失败 500
 
-七、**通过**`keyword`**获取任务的计算结果集（微信、贴吧、知乎问题、天涯、头条、资讯博客）**
+八、**通过**`keyword`**获取任务的计算结果集（微信、贴吧、知乎问题、天涯、头条、资讯博客）**
 
 `POST` `http://127.0.0.1/stq/api/v1/words/findWeixinByKeywords`
 
