@@ -443,7 +443,7 @@ endDate为监测项结束时间（含），
 taskType为数据源 weibo、weixin
 sortField 为排序字段 粉丝数（weibo）、阅读量（weixin）
 sort为排序 asc（升序）、desc（降序）
-size获取多少个排序结果，不超过50。传空字符串“”时，默认为10。
+size获取多少个排序结果，不超过20。传空字符串“”时，默认为10。
 ```
 
 `BODY` 体：
