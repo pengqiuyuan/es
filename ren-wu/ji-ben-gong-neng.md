@@ -250,7 +250,7 @@ JDK8+、Mysql、mongodb、Jetty、Nginx
 
 2、子任务监测项，不同数据源图表对比展示。
 
------
+---
 
 数据源分类
 
@@ -263,4 +263,21 @@ api
 测试
 
 cibao\_index
+
+```
+narnia、ivst 任务，支持增、删、改、查
+
+增：（有改动）调整任务存在时，返回“任务已存在”的处理。任何关键词任务（相同关键词、起始、结束时间），都会新增。
+删：（有改动）根据新增任务是返回的 primaryId 和 category（分类）删除任务。
+改：（新增接口）支持对关键字、起始时间、结束时间的修改
+查：（未改动）。根据 primaryId 查询任务状态。
+
+具体参考接口文档：一、四、九
+
+https://github.com/pengqiuyuan/es/blob/master/ren-wu/narnia/narnia-jie-kou.md @魏晓光(魏晓光)
+
+https://github.com/pengqiuyuan/es/blob/master/ren-wu/narnia/ivst-jie-kou.md @孙飞(孙飞)
+```
+
+
 
