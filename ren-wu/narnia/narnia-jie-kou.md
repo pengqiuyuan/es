@@ -635,13 +635,18 @@ primaryId为Long类型，与新增任务是返回的 primaryId 一致。
     "message": "任务修改成功",
     "primaryId":[
         "4219"
-    ]
+    ],
+    "taskStatus": "1"
 }
 
 或者
 
 {
-    "message": "任务修改失败，参数不能为空"
+    "message": "任务修改失败",
+    "primaryId":[
+        "4219"
+    ],
+    "taskStatus": "0"
 }
 ```
 
