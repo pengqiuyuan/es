@@ -168,7 +168,7 @@ primaryId：主任务Id，使用添加词包任务API之后返回。
 
 四、**通过 **`primaryId`** 删除任务**
 
-`GET` `http://127.0.0.1/stq/api/v1/words/delTaskByPrimaryId?primaryId=4221`
+`GET` `http://127.0.0.1/stq/api/v1/words/delTaskByPrimaryId?primaryId=4221&category=narnia`
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
@@ -176,7 +176,7 @@ primaryId：主任务Id，使用添加词包任务API之后返回。
 
 ```
 primaryId：主任务Id，使用添加词包任务API之后返回。
-category：ivst。任务分类
+category：narnia。任务分类
 ```
 
 `response` 任务执行的状态，四种结果。
