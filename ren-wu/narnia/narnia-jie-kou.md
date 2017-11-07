@@ -598,7 +598,7 @@ endDate为监测项结束时间（含），
 
 ---
 
-**一**、修改**词包任务**
+九、修改**词包任务**
 
 `POST` `http://127.0.0.1/stq/api/v1/words/updateWordsTask`
 
