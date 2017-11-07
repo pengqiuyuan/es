@@ -168,7 +168,7 @@ primaryId：主任务Id，使用添加词包任务API之后返回。
 
 四、**通过 **`primaryId`** 删除任务**
 
-`GET` `http://127.0.0.1/stq/api/v1/words/delTaskByPrimaryId?primaryId=4221`
+`GET` `http://127.0.0.1/stq/api/v1/words/delTaskByPrimaryId?primaryId=4221&category=ivst`
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
@@ -176,13 +176,14 @@ primaryId：主任务Id，使用添加词包任务API之后返回。
 
 ```
 primaryId：主任务Id，使用添加词包任务API之后返回。
+category：ivst。任务分类
 ```
 
-`response` 任务执行的状态，四种结果。
+`response` 任务执行的状态。
 
 ```
 {
-    "message": "任务删除失败",
+    "message": "不存在 primaryId:4217的任务",
     "taskStatus": "0"
 }
 
@@ -428,7 +429,7 @@ pageSize为每页多少条，默认10
 
 ---
 
-六、 **按照指定字段排序，通过 `keyword` 获取 `Es` 库中匹配到的热门结果集（微博、微信）**
+六、 **按照指定字段排序，通过 **`keyword`** 获取 **`Es`** 库中匹配到的热门结果集（微博、微信）**
 
 `POST` `http://127.0.0.1/stq/api/v1/words/findEsHotListByKeyword`
 
