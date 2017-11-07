@@ -183,7 +183,7 @@ category：narnia。任务分类
 
 ```
 {
-    "message": "任务删除失败",
+    "message": "不存在 primaryId:4217的任务",
     "taskStatus": "0"
 }
 
