@@ -457,34 +457,101 @@ size获取多少个排序结果，不超过20。传空字符串“”时，默�
 
 ```
 [
-    {
-        "_index": "weibo_articles_and_weiboers",
-        "_type": "weibo_articles_and_weiboer",
-        "_source":{"comment_count": 4, "sentiment": -2, "repost_count": 22, "repost_level": 0, "gender": 0,…},
-        "_id": "4102512023694826",
-        "sort":[
-            10827132
-        ]
-    },
-    {
-        "_index": "weibo_articles_and_weiboers",
-        "_type": "weibo_articles_and_weiboer",
-        "_source":{"comment_count": 34, "repost_count": 145, "repost_level": 0, "gender": 1, "web_links":[],…},
-        "_id": "4102550297426847",
-        "sort":[
-            5758927
-        ]
-    },
-    {
-        "_index": "weibo_articles_and_weiboers",
-        "_type": "weibo_articles_and_weiboer",
-        "_source":{"comment_count": 177, "web_links":[], "vote_links":[], "up_count": 2054,…},
-        "_id": "4102679036436232",
-        "sort":[
-            1014487
-        ]
-    }
+  {
+    "_index": "weixin_articles_and_weixiners",
+    "_type": "weixin_articles_and_weixiner",
+    "_source":{"sentiment": 1, "copyright": false, "mid": 2653395749, "created_at": "2016-10-12T00:00:00.000Z",…},
+    "_id": "MTA5NTIzNDE2MQ==:2653395749:1",
+    "sort":[
+      96488
+    ],
+    "_werxiner":{"_index": "weixiners", "_type": "weixiner", "_source":{"crawled_status": 0,…}
+  },
+  {
+    "_index": "weixin_articles_and_weixiners",
+    "_type": "weixin_articles_and_weixiner",
+    "_source":{"sentiment": 0, "copyright": false, "mid": 2651897595, "created_at": "2016-10-12T00:00:00.000Z",…},
+    "_id": "MjM5NzE0Mjk2Mg==:2651897595:3",
+    "sort":[
+      32528
+    ],
+    "_werxiner":{"_index": "weixiners", "_type": "weixiner", "_source":{"crawled_status": 0,…}
+  },
+  {
+    "_index": "weixin_articles_and_weixiners",
+    "_type": "weixin_articles_and_weixiner",
+    "_source":{"sentiment": 0, "copyright": false, "mid": 2651885836, "stat_status": 3, "title": "杨幂、景甜、唐嫣等流量小花们，P图团队哪家强？",…},
+    "_id": "MzAxODIxNjg0Nw==:2651885836:3",
+    "sort":[
+      24090
+    ],
+    "_werxiner":{"_index": "weixiners", "_type": "weixiner", "_source":{"crawled_status": -1,…}
+  }
 ]
+
+单条结果
+
+[ {
+  "_index" : "weixin_articles_and_weixiners",
+  "_type" : "weixin_articles_and_weixiner",
+  "_source" : {
+    "sentiment" : 1,
+    "copyright" : false,
+    "mid" : 2653395749,
+    "created_at" : "2016-10-12T00:00:00.000Z",
+    "stat_status" : 3,
+    "title" : "杨幂佟丽娅隐形臀，Baby颖儿排骨胸，赵丽颖穿裙子得用夹子：太瘦啦！",
+    "crawled_at" : "2017-05-29T18:10:34.149Z",
+    "content" : "本文由腾讯娱乐原创，微信号：txent近日，一组娜扎的照片引发热议，原来瘦弱的她在拍写真时，穿最小号的衣服都撑不起来，还要在背后夹一排夹子，才能让衣服从正面看起来是合身的。▲图为娜扎、赵丽颖衣服背后都带夹子女明星在镜头前的模样窈窕纤细，但事实上，她们很多人都比我们想象的还要瘦，比如长着可爱包子脸的赵丽颖，其实她虽非常瘦，之前参加活动时，也要在一条裙子背后夹好几个夹子，才能让衣服不至于掉下来。不少女星在镜头里看上去窈窕可人，但身体的很多细节藏不住她们暴瘦的事实。杨幂佟丽娅瘦出“隐形臀”▲图左为佟丽娅，图右为杨幂杨幂、佟丽娅曾一起参加《真正男子汉》，她俩都有纤细骨感的身材，尤其是还有一个共同点，那就是瘦到臀部快消失不见。佟丽娅很少穿太过性感的衣服，但她早年参加选秀时的照片还是暴露了她身材的特点，瘦到仿佛前后都是平板一片。而一向在机场秀美腿的杨幂，无意间被镜头捕捉到了背影照，看上去背后的风景线有些平坦。Baby颖儿都瘦出“排骨胸”▲图左为颖儿，因“排骨胸”上热搜，图右为Baby的“排骨胸”Baby一向是以天使脸孔、魔鬼身材著称的美人儿，对身材管理非常严格的她，从来没有胖过，甚至生完小海绵后，她也很快恢复了少女身材，其实她也是偏瘦的身材，曾在穿深V装时被拍到“排骨胸”的模样。女星颖儿则是因为“排骨胸”上过热搜的人，她刚出道时一度因为胖被群嘲，后来她通过节食加运动来减肥，甩掉了40斤肉，一下从出道时的130斤变成了后来的90斤，瘦到连胸前的骨头都清晰可见。 李嘉欣萧蔷瘦出“鸡爪手”▲图左为萧蔷，图右为李嘉欣李嘉欣、萧蔷昔日都是名震江湖的大美人，随着岁月流逝，她们的美貌没有减分，但手部的状况还是难免会出卖她们的年龄。出席活动时，她们的纤纤玉指看上去关节略微突出，瘦得皮包骨，被一些网友吐槽为“鸡爪手”。陈鲁豫林依晨都曾瘦成“大头娃娃”▲图左为林依晨，图右为鲁豫陈鲁豫是功力精湛的主持人，但她一直都因为瘦成火柴人的身材而被网友热议，据悉她身高168厘米但体重只有43公斤，网络上还流传着她的“十粒米减肥法”——每顿饭只吃十粒米，但不能少了蔬菜鱼肉。林依晨虽然一直给人元气满满的少女感，但也曾被拍到暴瘦后仿佛大头娃娃的模样。郑爽唐嫣都是“麻杆腿”▲郑爽、唐嫣的腿太细，仿佛风一吹就可以倒下。郑爽过去因为屡次暴瘦，而成了圈内纸片人女星的代名词，尤其是她在最瘦时期的那双细腿，仿佛麻杆一样，似乎只有骨头在支撑身体。其实，这样的麻杆腿女星并不止郑爽一个，唐嫣也是有着堪比郑爽的麻杆腿，在她自己晒出来的出游照里，这小细腿仿佛风一吹就要倒。日本女星暴瘦脱相撞脸“咕噜”▲图左为神田留美减肥暴瘦还整容，图右为Becky眼睛太大撞脸咕噜日本女优神田留美，她不满意自己39公斤的体重，减重到了35公斤以下，还通过整容弄大了眼睛、垫尖了鼻子，如今五官跟电影《指环王》里的咕噜神撞脸；无独有偶，另一名日本女星Becky因为勾人夫、当小三的私事被曝光，一时间形象尽毁、工作尽失，停工半年多再复出，瘦到脱相，大眼睛配小脸，又撞脸了咕噜。欧美模特实力演绎行走的骷髅▲图为欧美模特“瘦到极致”减肥对生活在镜头下的明星们如此重要，而对于走T台的模特们则更加重要。在追求消瘦美感最甚的年代，曾有不少欧美模特因为节食而患上厌食症，最终甚至失去生命的。好在近些年欧美对于“极致瘦”的追求开始反省，反对瘦成皮包骨，如今不少超模都是以身材凹凸有致为美的。『存照』相关阅读：李湘冰箱装燕窝虫草，唐嫣手机壳价格过万…明星“小手笔”吓到你曹颖被疑整容自称发福，赵薇已成小燕子plus…多少人曾爱慕你们年轻的容颜TVB金牌绿叶突倒地、黄家驹英年早逝…他们在台上猝逝，令人唏嘘",
+    "last_modified_at" : "2017-04-30T20:46:27.000Z",
+    "biz" : "MTA5NTIzNDE2MQ==",
+    "account_crawled_at" : "2017-01-20T07:38:11.256Z",
+    "__v" : 4,
+    "intro" : "在这里，读懂娱乐圈。",
+    "sn" : "1202a49ff79f96f1e078c4a90bc4b801",
+    "categories" : [ ],
+    "stat_like_count" : 92,
+    "author" : "2017-04-30小番",
+    "openid" : "oIWsFt_74QFYxUOwGriBEwExPnGw",
+    "account_updated_at" : "2017-01-20T07:38:11.376Z",
+    "certification" : "深圳市腾讯计算机系统有限公司",
+    "tags" : [ ],
+    "stat_real_read_num" : 0,
+    "name" : "腾讯娱乐",
+    "stat_read_count" : 96488,
+    "idx" : 1,
+    "stat_info_crawled_at" : "2017-05-29T18:07:31.095Z",
+    "stat_interval" : 2496064095,
+    "username" : "txent"
+  },
+  "_id" : "MTA5NTIzNDE2MQ==:2653395749:1",
+  "sort" : [ 96488 ],
+  "_werxiner" : {
+    "_index" : "weixiners",
+    "_type" : "weixiner",
+    "_source" : {
+      "crawled_status" : 0,
+      "gs_crawled_status" : 2,
+      "created_at" : "2017-06-30T06:00:27.445000",
+      "nr_crawled_status" : 2,
+      "crawled_at" : "2017-10-19T01:00:16.229000",
+      "certification" : "深圳市腾讯计算机系统有限公司",
+      "tags" : [ ],
+      "gs_id" : "dQHBhDlSbJnqQiO0O0On",
+      "nr_crawled_at" : "2017-11-07T03:03:36.965000",
+      "updated_at" : "2017-07-01T00:00:00",
+      "nr_id" : "7F9B5A0E2DDCC49BD0FF10BBFB76A8CE",
+      "intro" : "在这里，读懂娱乐圈。",
+      "__v" : 4,
+      "name" : "腾讯娱乐",
+      "gs_crawled_at" : "2017-11-06T23:22:45.625000",
+      "categories" : [ ],
+      "username" : "txent"
+    },
+    "_id" : "MTA5NTIzNDE2MQ==",
+    "_score" : 1.0
+  }
+} ]
 ```
 
 ---
