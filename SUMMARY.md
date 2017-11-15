@@ -117,6 +117,9 @@
       * [Narnia 接口](ren-wu/narnia/narnia-jie-kou.md)
       * [Ivst 接口](ren-wu/narnia/ivst-jie-kou.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
+    * 百度指数
+    * 百度新闻
+    * [用户画像](ren-wu/yong-hu-hua-xiang.md)
   * 问题
     * [超时](ren-wu/chao-shi.md)
   * [导出、统计模块](ren-wu/dao-chu-3001-tong-ji-mo-kuai.md)
