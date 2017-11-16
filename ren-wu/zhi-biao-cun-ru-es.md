@@ -1,7 +1,7 @@
 ```
-curl -XPUT http://127.0.0.1:9222/cibao_index
+curl -XPUT http://127.0.0.1:9200/cibao_index
 
-curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
+curl -XPUT http://127.0.0.1:9200/_template/cibao_index -d '
 {
   "template": "cibao_index*",
   "settings": {
@@ -327,6 +327,43 @@ curl -XPUT http://127.0.0.1:9222/_template/cibao_index -d '
         zixunList.add("zixun_actualVolume");//实际声量
         zixunList.add("zixun_account");//帐号提及量
     }
+```
+
+```
+curl -u -XPUT http://127.0.0.1:9200/cibao_coefficient
+
+
+curl -u -XPUT http://127.0.0.1:9200/_template/cibao_coefficient -d '
+{
+  "template": "cibao_coefficient*",
+  "settings": {
+    "refresh_interval": "60s",
+    "number_of_replicas": "1",
+    "number_of_shards": "15"
+  },
+  "mappings": {
+    "_default_": {
+      "_all": {
+        "enabled": true
+      },
+      "_source": {
+        "enabled": true
+      },
+      "properties": {
+      	"type": {
+          "type": "keyword"
+        },
+        "key": {
+          "format": "strict_date_optional_time||epoch_millis",
+          "type": "date"
+        },
+        "value": {
+          "type": "double"
+        }
+      }
+    }
+  }
+}'
 ```
 
 

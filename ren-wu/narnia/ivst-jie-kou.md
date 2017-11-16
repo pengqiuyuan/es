@@ -392,8 +392,8 @@ et为监测项结束时间（含），此参数可以不传，表示无限计算
 
 ```
 {
-	"addBaiduIndexSuccess": true,
-	"theOnlyIdentifier": "theOnlyIdentifier"
+    "addBaiduIndexSuccess": true,
+    "theOnlyIdentifier": "theOnlyIdentifier"
 }
 ```
 
@@ -427,20 +427,20 @@ et为监测项结束时间（含），必填
 
 ```
 {
-	"getDataSuccess": true,
-	"baiduIndexList":[
-		{
-			"acount": "0",
-			"date": "2017-09-01",
-			"keyword": "keywordtesttest"
-		},
-		....
-		{
-			"acount": "0",
-			"date": "2017-09-09",
-			"keyword": "keywordtesttest"
-		}
-	]
+    "getDataSuccess": true,
+    "baiduIndexList":[
+        {
+            "acount": "0",
+            "date": "2017-09-01",
+            "keyword": "keywordtesttest"
+        },
+        ....
+        {
+            "acount": "0",
+            "date": "2017-09-09",
+            "keyword": "keywordtesttest"
+        }
+    ]
 }
 ```
 
@@ -470,8 +470,10 @@ theOnlyIdentifier唯一标识字段
 
 ```
 {
-	"deleteBaiduIndexSuccess": true,
-	"theOnlyIdentifier": "theOnlyIdentifier"
+    "deleteBaiduIndexSuccess": true,
+    "theOnlyIdentifier": "theOnlyIdentifier"
 }
 ```
+
+
 
