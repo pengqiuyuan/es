@@ -844,4 +844,272 @@ theOnlyIdentifier唯一标识字段
 }
 ```
 
+---
+
+十三、新增**百度新闻**
+
+`POST` `http://127.0.0.1/stq/api/v1/words/addBaiduXinwen`
+
+`HEADERS`：`"Content-Type" => "application/json"`
+
+`参数说明`：
+
+```
+fromId唯一标识字段，必填
+keyword为监测项关键字（不为null或者空字符串），必填
+startDate为监测项起始时间（含），必填
+endDate为监测项结束时间（含），此参数可以不传，表示无限计算百度新闻
+```
+
+`BODY` 体：
+
+```
+{
+	"fromId":"soon-1113-21",
+	"keyword":"猎场+胡歌||猎场+万茜",
+	"startDate":"2017-09-01",
+	"endDate":"2017-09-09"
+}
+```
+
+`response` 数据写入成功，返回提示信息
+
+```
+成功：
+{
+	"statusCode":200,
+	"keyword_id":"5a0d2fc318bd074c1e0aade8",
+	"keyword":"猎场+胡歌||猎场+万茜",
+	"msg":"[百度新闻] 添加关键词add成功",
+	"error":"",
+	"stamp":1510813635596
+}
+
+失败：
+{
+	"statusCode":400,	
+	"keyword_id":"",
+	"keyword":"猎场+胡歌||猎场+万茜",
+	"msg":"[百度新闻] 添加关键词add失败",
+	"error":"add 请求参数不完整",
+	"stamp":1510813812817
+}
+
+```
+
+---
+
+十四、检测百度新闻爬取情况
+
+`POST` `http://127.0.0.1/stq/api/v1/words/checkBaiduXinwenStatus`
+
+`HEADERS`：`"Content-Type" => "application/json"`
+
+`参数说明`：
+
+```
+fromId唯一标识字段，必填
+keyword为监测项关键字（不为null或者空字符串），必填
+startDate为监测项起始时间（含），必填
+endDate为监测项结束时间（含），必填
+```
+
+`BODY` 体：
+
+```
+{
+	"fromId":"soon-1113-21",
+	"keyword":"猎场+胡歌||猎场+万茜",
+	"startDate":"2017-09-01",
+	"endDate":"2017-09-09"
+}
+```
+
+`response` 数据写入成功，返回提示信息
+
+```
+成功：
+{
+	"statusCode":200,
+	"keyword_id":"5a0d2fc318bd074c1e0aade8",
+	"keyword":"猎场+胡歌||猎场+万茜",
+	"status":"数据完整",
+	"msg":"[百度新闻] 查询关键词状态status成功",
+	"error":"",
+	"stamp":1510814653954
+}
+
+失败:
+{
+	"statusCode":400,
+	"keyword_id":"5a0d2fc318bd074c1e0aade8",
+	"keyword":"猎场+胡歌||猎场+万茜",
+	"status":"数据不完整",
+	"msg":"[百度新闻] 查询关键词状态status失败",
+	"error":"查询结束时间(2017-11-30)大于结束监测时间(2017-09-09)",
+	"stamp":1510815253712
+}
+```
+
+---
+
+十五、删除**百度新闻任务**
+
+`POST` `http://127.0.0.1/stq/api/v1/words/deleteBaiduXinwen`
+
+`HEADERS`：`"Content-Type" => "application/json"`
+
+`参数说明`：
+
+```
+fromId唯一标识字段，必填
+keyword为监测项关键字（不为null或者空字符串），必填
+```
+
+`BODY` 体：
+
+```
+{
+	"fromId":"soon-1113-21",
+	"keyword":"猎场+胡歌||猎场+万茜"
+}
+```
+
+`response` 删除任务返回提示信息：
+
+```
+{
+	"statusCode":200,
+	"keyword_id":"5a0d306918bd074c1e0aade9",
+	"keyword":"猎场+胡歌||猎场+万茜",
+	"msg":"[百度新闻] 删除关键词delete成功",
+	"error":"",
+	"stamp":1510815605552
+}
+```
+
+---
+
+十六、获得百度新闻声量数据
+
+`POST` `http://127.0.0.1/stq/api/v1/words/getBaiduXinwenVolume`
+
+`HEADERS`：`"Content-Type" => "application/json"`
+
+`参数说明`：
+
+```
+fromId唯一标识字段，必填
+keyword为监测项关键字（不为null或者空字符串），必填
+startDate为监测项起始时间（含），必填
+endDate为监测项结束时间（含），必填
+```
+
+`BODY` 体：
+
+```
+{
+	"fromId":"soon-1113-21",
+	"keyword":"猎场+胡歌||猎场+万茜",
+	"startDate":"2017-11-01",
+	"endDate":"2017-11-02"
+}
+```
+
+`response` 数据写入成功，返回提示信息
+
+```
+{
+    "statusCode": 200,
+    "keyword_id": "5a0d393318bd074c1e0aadeb",
+    "keyword": "猎场+胡歌||猎场+万茜",
+    "news": [
+        {
+            "_id": "5a0d39a61613daceb7eeb4b4",
+            "date": "2017-11-01T00:00:00.000Z",
+            "key_id": "5a0d393318bd074c1e0aadeb",
+            "create_at": "2017-11-16T07:09:26.206Z",
+            "count": 91
+        },
+        {
+            "_id": "5a0d39ae1613daceb7eeb4b7",
+            "date": "2017-11-02T00:00:00.000Z",
+            "key_id": "5a0d393318bd074c1e0aadeb",
+            "create_at": "2017-11-16T07:09:34.151Z",
+            "count": 127
+        }
+    ],
+    "msg": "[百度新闻] 查询关键词提及量get成功",
+    "error": "",
+    "stamp": 1510816463419
+}
+```
+
+---
+
+十七、获取百度新闻文章
+
+`POST` `http://127.0.0.1/stq/api/v1/words/getBaiduXinwenArticle`
+
+`HEADERS`：`"Content-Type" => "application/json"`
+
+`参数说明`：
+
+```
+fromId唯一标识字段，必填
+keyword为监测项关键字（不为null或者空字符串），必填
+startDate为监测项起始时间（含），必填
+endDate为监测项结束时间（含），必填
+```
+
+`BODY` 体：
+
+```
+{
+	"fromId":"soonfy-1113-21",
+	"keyword":"猎场+胡歌||猎场+万茜",
+	"startDate":"2017-01-01",
+	"endDate":"2017-09-09"
+}
+```
+
+`response` 返回文章数据和提示信息：
+
+```
+
+成功：
+{
+    "statusCode": 200,
+    "keyword_id": "5a0be316cacb184e8e0aa9e3",
+    "keyword": "猎场+胡歌||猎场+万茜",
+    "total": 1,
+    "news": [
+        {
+            "id": "5a0be316cacb184e8e0aa9e3httpmzmopcoma170707130115142html",
+            "author": "猫扑",
+            "title": "电视剧《猎场》能否挽回多事之秋的乐视?",
+            "summary": "《猎场》是东阳青雨传媒股份有限公司、浙江影视集团、蓝色星空影业出品,由姜伟执导,胡歌、孙红雷、张嘉译、祖峰等大牌主演的国内首部以猎头在商界中纵横捭阖、在情感上",
+            "date": "2017-07-07T05:00:00.000Z",
+            "url": "http://mz.mop.com/a/170707130115142.html",
+            "crawl_at": "2017-11-15T06:53:04.824Z"
+        }
+    ],
+    "msg": "[百度新闻] 查询关键词原文content成功",
+    "error": "",
+    "stamp": 1510813121324
+}
+
+失败：
+{
+	"statusCode":400,
+	"keyword_id":"",
+	"keyword":"猎场+胡歌||猎场+万茜",
+	"total":0,
+	"news":[],
+	"msg":"[百度新闻] 查询关键词原文content失败",
+	"error":"content 请求没有匹配到关键词",
+	"stamp":1510813215063
+}
+
+```
 
