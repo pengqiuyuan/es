@@ -350,7 +350,7 @@ curl -u -XPUT http://127.0.0.1:9200/_template/cibao_coefficient -d '
         "enabled": true
       },
       "properties": {
-      	"type": {
+          "type": {
           "type": "keyword"
         },
         "key": {
