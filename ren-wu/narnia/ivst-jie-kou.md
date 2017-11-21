@@ -747,6 +747,13 @@ endDate为监测项结束时间（含），必填
 
 十八、微博用户画像
 
+`说明：`
+
+```
+1、新增词包任务，会同时计算此词包关键词的用户画像数据，并保存。
+2、从词包匹配的时间段内（2016-01-01 ~ 计算的当前时间），抽样选择 45000条（45个Es分片，每个取1000条） 文档进行用户画像分析。
+```
+
 `POST` `http://127.0.0.1/stq/api/v1/words/findEsWeiboUserAnalysis`
 
 `HEADERS`：`"Content-Type" => "application/json"`
