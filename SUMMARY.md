@@ -117,6 +117,7 @@
       * [接口 Narnia](ren-wu/narnia/jie-kou-narnia.md)
         * [添加词包任务](ren-wu/narnia/jie-kou-narnia/tian-jia-ci-bao-ren-wu.md)
         * [通过 primaryId 获取词包任务是否完成的状态](ren-wu/narnia/jie-kou-narnia/tong-guo-primaryid-huo-qu-ci-bao-ren-wu-shi-fou-wan-cheng-de-zhuang-tai.md)
+        * [通过 primaryId 集合，批量获取词包任务是否完成的状态，返回集合](ren-wu/narnia/jie-kou-narnia/tong-guo-primaryid-ji-he-ff0c-pi-liang-huo-qu-ci-bao-ren-wu-shi-fou-wan-cheng-de-zhuang-tai-ff0c-fan-hui-ji-he.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
     * 百度指数
     * 百度新闻
