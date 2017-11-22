@@ -114,8 +114,9 @@
       * [头条](ren-wu/zhi-biao-cun-ru-es/tou-tiao.md)
       * [资讯博客](ren-wu/zhi-biao-cun-ru-es/zi-xun-bo-ke.md)
     * [接入API ](ren-wu/narnia.md)
-      * [Narnia 接口](ren-wu/narnia/narnia-jie-kou.md)
-      * [Ivst 接口](ren-wu/narnia/ivst-jie-kou.md)
+      * [接口 Narnia](ren-wu/narnia/jie-kou-narnia.md)
+        * [添加词包任务](ren-wu/narnia/jie-kou-narnia/tian-jia-ci-bao-ren-wu.md)
+        * [通过 primaryId 获取词包任务是否完成的状态](ren-wu/narnia/jie-kou-narnia/tong-guo-primaryid-huo-qu-ci-bao-ren-wu-shi-fou-wan-cheng-de-zhuang-tai.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
     * 百度指数
     * 百度新闻
