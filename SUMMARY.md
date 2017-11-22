@@ -131,7 +131,6 @@
         * [十五、删除百度新闻任务](ren-wu/narnia/jie-kou-ivst/shi-wu-3001-shan-chu-bai-du-xin-wen-ren-wu.md)
         * [十六、获得百度新闻声量数据](ren-wu/narnia/jie-kou-ivst/shi-liu-3001-huo-de-bai-du-xin-wen-sheng-liang-shu-ju.md)
         * [十七、获取百度新闻文章](ren-wu/narnia/jie-kou-ivst/shi-qi-3001-huo-qu-bai-du-xin-wen-wen-zhang.md)
-        * [五、通过 keyword 获取 Es 库中匹配到的结果集（微博、微信）](ren-wu/narnia/jie-kou-ivst/wu-3001-tong-guo-keyword-huo-qu-es-ku-zhong-pi-pei-dao-de-jie-guo-ji-ff08-wei-bo-3001-wei-xin-ff09.md)
       * [接口 Narnia](ren-wu/narnia/jie-kou-narnia.md)
         * [一、添加词包任务](ren-wu/narnia/jie-kou-narnia/tian-jia-ci-bao-ren-wu.md)
         * [二、通过 primaryId 获取词包任务是否完成的状态](ren-wu/narnia/jie-kou-narnia/tong-guo-primaryid-huo-qu-ci-bao-ren-wu-shi-fou-wan-cheng-de-zhuang-tai.md)
