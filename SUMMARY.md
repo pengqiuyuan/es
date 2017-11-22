@@ -133,6 +133,23 @@
         * 十六、获得百度新闻声量数据
         * [十七、获取百度新闻文章](ren-wu/narnia/jie-kou-narnia/shi-qi-3001-huo-qu-bai-du-xin-wen-wen-zhang.md)
         * [十八、微博用户画像](ren-wu/narnia/jie-kou-narnia/shi-ba-3001-wei-bo-yong-hu-hua-xiang.md)
+      * [接口 Ivst](ren-wu/narnia/jie-kou-ivst.md)
+        * 一、添加词包任务
+        * [二、通过 primaryId 获取词包任务是否完成的状态](ren-wu/narnia/jie-kou-ivst/er-3001-tong-guo-primaryid-huo-qu-ci-bao-ren-wu-shi-fou-wan-cheng-de-zhuang-tai.md)
+        * [三、通过 primaryId 集合，批量获取词包任务是否完成的状态，返回集合](ren-wu/narnia/jie-kou-ivst/san-3001-tong-guo-primaryid-ji-he-ff0c-pi-liang-huo-qu-ci-bao-ren-wu-shi-fou-wan-cheng-de-zhuang-tai-ff0c-fan-hui-ji-he.md)
+        * [四、通过 primaryId 删除任务](ren-wu/narnia/jie-kou-ivst/si-3001-tong-guo-primaryid-shan-chu-ren-wu.md)
+        * [七、通过 keyword 获取任务的计算结果集（以获取微博数据接口为例）](ren-wu/narnia/jie-kou-ivst/qi-3001-tong-guo-keyword-huo-qu-ren-wu-de-ji-suan-jie-guo-ji-ff08-yi-huo-qu-wei-bo-shu-ju-jie-kou-wei-li-ff09.md)
+        * [八、通过 keyword 获取任务的计算结果集（微信、贴吧、知乎问题、天涯、头条、资讯博客）](ren-wu/narnia/jie-kou-ivst/ba-3001-tong-guo-keyword-huo-qu-ren-wu-de-ji-suan-jie-guo-ji-ff08-wei-xin-3001-tie-ba-3001-zhi-hu-wen-ti-3001-tian-ya-3001-tou-tiao-3001-zi-xun-bo-ke-ff09.md)
+        * [九、修改词包任务](ren-wu/narnia/jie-kou-ivst/jiu-3001-xiu-gai-ci-bao-ren-wu.md)
+        * [十、新增百度指数](ren-wu/narnia/jie-kou-ivst/shi-3001-xin-zeng-bai-du-zhi-shu.md)
+        * [十一、查询百度指数](ren-wu/narnia/jie-kou-ivst/shi-yi-3001-cha-xun-bai-du-zhi-shu.md)
+        * [十二、删除百度指数任务](ren-wu/narnia/jie-kou-ivst/shi-er-3001-shan-chu-bai-du-zhi-shu-ren-wu.md)
+        * [十三、新增百度新闻](ren-wu/narnia/jie-kou-ivst/shi-san-3001-xin-zeng-bai-du-xin-wen.md)
+        * [十四、检测百度新闻爬取情况](ren-wu/narnia/jie-kou-ivst/shi-si-3001-jian-ce-bai-du-xin-wen-pa-qu-qing-kuang.md)
+        * [十五、删除百度新闻任务](ren-wu/narnia/jie-kou-ivst/shi-wu-3001-shan-chu-bai-du-xin-wen-ren-wu.md)
+        * [十六、获得百度新闻声量数据](ren-wu/narnia/jie-kou-ivst/shi-liu-3001-huo-de-bai-du-xin-wen-sheng-liang-shu-ju.md)
+        * [十七、获取百度新闻文章](ren-wu/narnia/jie-kou-ivst/shi-qi-3001-huo-qu-bai-du-xin-wen-wen-zhang.md)
+        * [十八、微博用户画像](ren-wu/narnia/jie-kou-ivst/shi-ba-3001-wei-bo-yong-hu-hua-xiang.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
     * 百度指数
     * 百度新闻
