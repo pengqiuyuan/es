@@ -11,6 +11,9 @@ keyword为监测项名称，
 startDate为监测项起始时间（含），
 endDate为监测项结束时间（含），
 taskType为数据源 weibo、weixin
+sortField为排序字段
+    微博（默认 published_at 爬取时间）：fans_count（关注数）, follower_count（粉丝数）, repost_count（转发）, comment_count（评论）, up_count（点赞）
+    微信（默认 last_modified_at 爬取时间）：stat_read_count（阅读数）, stat_like_count（点赞）
 sort为排序 asc（升序）、desc（降序）
 pageNumber为第几页，默认1
 pageSize为每页多少条，默认10
@@ -20,13 +23,14 @@ pageSize为每页多少条，默认10
 
 ```
 {
-    "keyword": "欧美+电影",
-    "startDate": "2017-05-01",
-    "endDate": "2017-05-02",
-    "taskType":"weibo",
-    "sort":"desc",
-    "pageNumber":"1",
-    "pageSize":"10"
+  "keyword": "欧美+电影",
+  "startDate": "2017-05-01",
+  "endDate": "2017-05-02",
+  "taskType":"weibo",
+  "sortField":"up_count",
+  "sort":"desc",
+  "pageNumber":"1",
+  "pageSize":"10"
 }
 ```
 
@@ -228,3 +232,6 @@ pageSize为每页多少条，默认10
   } ]
 }
 ```
+
+
+
