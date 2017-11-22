@@ -1,4 +1,4 @@
-五、**通过**`keyword`**获取 **`Es`** 库中匹配到的结果集（微博、微信）**
+五、微博、微信 KOL
 
 `POST` `http://127.0.0.1/stq/api/v1/words/findEsListByKeyword`
 
@@ -50,7 +50,16 @@ sort为排序 asc（升序）、desc（降序）
 微信
 
 ```
-
+{
+"threeKolArticle":[
+  {"_index": "weixin_articles_and_weixiners", "_type": "weixin_articles_and_weixiner", "_source":{"sentiment": 1,…},
+  {"_index": "weixin_articles_and_weixiners", "_type": "weixin_articles_and_weixiner", "_source":{"sentiment": 1,…},
+  {"_index": "weixin_articles_and_weixiners", "_type": "weixin_articles_and_weixiner", "_source":{"sentiment": -1,…}
+],
+"MjM5MzY0MTkzOQ==":[{"_index": "weixin_articles_and_weixiners", "_type": "weixin_articles_and_weixiner", "_source":{"biz": "MjM5MzY0MTkzOQ==",…],
+"MjM5MTc3NTYzMw==":[{"_index": "weixin_articles_and_weixiners", "_type": "weixin_articles_and_weixiner", "_source":{"biz": "MjM5MTc3NTYzMw==",…],
+"MzA5MDY3MjMwOQ==":[{"_index": "weixin_articles_and_weixiners", "_type": "weixin_articles_and_weixiner", "_source":{"biz": "MzA5MDY3MjMwOQ==",…]
+}
 ```
 
 
