@@ -121,6 +121,7 @@
         * [四、通过 primaryId 删除任务](ren-wu/narnia/jie-kou-narnia/tong-guo-primaryid-shan-chu-ren-wu.md)
         * [五、通过 keyword 获取 Es 库中匹配到的结果集（微博、微信）](ren-wu/narnia/jie-kou-narnia/wu-3001-tong-guo-keyword-huo-qu-es-ku-zhong-pi-pei-dao-de-jie-guo-ji-ff08-wei-bo-3001-wei-xin-ff09.md)
         * [六、 按照指定字段排序，通过 keyword 获取 Es 库中匹配到的热门结果集（微博、微信）](ren-wu/narnia/jie-kou-narnia/liu-3001-an-zhao-zhi-ding-zi-duan-pai-xu-ff0c-tong-guo-keyword-huo-qu-es-ku-zhong-pi-pei-dao-de-re-men-jie-guo-ji-ff08-wei-bo-3001-wei-xin-ff09.md)
+        * [七、通过 keyword 获取任务的计算结果集（以获取微博数据接口为例）](ren-wu/narnia/jie-kou-narnia/qi-3001-tong-guo-keyword-huo-qu-ren-wu-de-ji-suan-jie-guo-ji-ff08-yi-huo-qu-wei-bo-shu-ju-jie-kou-wei-li-ff09.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
     * 百度指数
     * 百度新闻
