@@ -131,6 +131,8 @@
         * [十四、检测百度新闻爬取情况](ren-wu/narnia/jie-kou-narnia/shi-si-3001-jian-ce-bai-du-xin-wen-pa-qu-qing-kuang.md)
         * [十五、删除百度新闻任务](ren-wu/narnia/jie-kou-narnia/shi-wu-3001-shan-chu-bai-du-xin-wen-ren-wu.md)
         * 十六、获得百度新闻声量数据
+        * [十七、获取百度新闻文章](ren-wu/narnia/jie-kou-narnia/shi-qi-3001-huo-qu-bai-du-xin-wen-wen-zhang.md)
+        * [十八、微博用户画像](ren-wu/narnia/jie-kou-narnia/shi-ba-3001-wei-bo-yong-hu-hua-xiang.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
     * 百度指数
     * 百度新闻
