@@ -124,6 +124,7 @@
         * [七、通过 keyword 获取任务的计算结果集（以获取微博数据接口为例）](ren-wu/narnia/jie-kou-narnia/qi-3001-tong-guo-keyword-huo-qu-ren-wu-de-ji-suan-jie-guo-ji-ff08-yi-huo-qu-wei-bo-shu-ju-jie-kou-wei-li-ff09.md)
         * [八、通过 keyword 获取任务的计算结果集（微信、贴吧、知乎问题、天涯、头条、资讯博客）](ren-wu/narnia/jie-kou-narnia/ba-3001-tong-guo-keyword-huo-qu-ren-wu-de-ji-suan-jie-guo-ji-ff08-wei-xin-3001-tie-ba-3001-zhi-hu-wen-ti-3001-tian-ya-3001-tou-tiao-3001-zi-xun-bo-ke-ff09.md)
         * [九、修改词包任务](ren-wu/narnia/jie-kou-narnia/jiu-3001-xiu-gai-ci-bao-ren-wu.md)
+        * [十、新增百度指数](ren-wu/narnia/jie-kou-narnia/shi-3001-xin-zeng-bai-du-zhi-shu.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
     * 百度指数
     * 百度新闻
