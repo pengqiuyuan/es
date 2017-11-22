@@ -115,10 +115,11 @@
       * [资讯博客](ren-wu/zhi-biao-cun-ru-es/zi-xun-bo-ke.md)
     * [接入API ](ren-wu/narnia.md)
       * [接口 Narnia](ren-wu/narnia/jie-kou-narnia.md)
-        * [添加词包任务](ren-wu/narnia/jie-kou-narnia/tian-jia-ci-bao-ren-wu.md)
-        * [通过 primaryId 获取词包任务是否完成的状态](ren-wu/narnia/jie-kou-narnia/tong-guo-primaryid-huo-qu-ci-bao-ren-wu-shi-fou-wan-cheng-de-zhuang-tai.md)
-        * [通过 primaryId 集合，批量获取词包任务是否完成的状态，返回集合](ren-wu/narnia/jie-kou-narnia/tong-guo-primaryid-ji-he-ff0c-pi-liang-huo-qu-ci-bao-ren-wu-shi-fou-wan-cheng-de-zhuang-tai-ff0c-fan-hui-ji-he.md)
-        * [通过 primaryId 删除任务](ren-wu/narnia/jie-kou-narnia/tong-guo-primaryid-shan-chu-ren-wu.md)
+        * [一、添加词包任务](ren-wu/narnia/jie-kou-narnia/tian-jia-ci-bao-ren-wu.md)
+        * [二、通过 primaryId 获取词包任务是否完成的状态](ren-wu/narnia/jie-kou-narnia/tong-guo-primaryid-huo-qu-ci-bao-ren-wu-shi-fou-wan-cheng-de-zhuang-tai.md)
+        * [三、通过 primaryId 集合，批量获取词包任务是否完成的状态，返回集合](ren-wu/narnia/jie-kou-narnia/tong-guo-primaryid-ji-he-ff0c-pi-liang-huo-qu-ci-bao-ren-wu-shi-fou-wan-cheng-de-zhuang-tai-ff0c-fan-hui-ji-he.md)
+        * [四、通过 primaryId 删除任务](ren-wu/narnia/jie-kou-narnia/tong-guo-primaryid-shan-chu-ren-wu.md)
+        * [五、通过 keyword 获取 Es 库中匹配到的结果集（微博、微信）](ren-wu/narnia/jie-kou-narnia/wu-3001-tong-guo-keyword-huo-qu-es-ku-zhong-pi-pei-dao-de-jie-guo-ji-ff08-wei-bo-3001-wei-xin-ff09.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
     * 百度指数
     * 百度新闻
