@@ -132,6 +132,7 @@
         * [十六、获得百度新闻声量数据](ren-wu/narnia/jie-kou-ivst/shi-liu-3001-huo-de-bai-du-xin-wen-sheng-liang-shu-ju.md)
         * [十七、获取百度新闻文章](ren-wu/narnia/jie-kou-ivst/shi-qi-3001-huo-qu-bai-du-xin-wen-wen-zhang.md)
         * [十八、微博用户画像](ren-wu/narnia/jie-kou-ivst/shi-ba-3001-wei-bo-yong-hu-hua-xiang.md)
+        * [十九、微博、微信 KOL](ren-wu/narnia/jie-kou-ivst/shi-jiu-3001-wei-bo-3001-wei-xin-kol.md)
       * [接口 Narnia](ren-wu/narnia/jie-kou-narnia.md)
         * [一、添加词包任务](ren-wu/narnia/jie-kou-narnia/tian-jia-ci-bao-ren-wu.md)
         * [二、通过 primaryId 获取词包任务是否完成的状态](ren-wu/narnia/jie-kou-narnia/tong-guo-primaryid-huo-qu-ci-bao-ren-wu-shi-fou-wan-cheng-de-zhuang-tai.md)
