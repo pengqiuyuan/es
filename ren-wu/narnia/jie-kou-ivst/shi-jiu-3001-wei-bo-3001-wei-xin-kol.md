@@ -1,4 +1,4 @@
-五、微博、微信 KOL
+十九、微博、微信 KOL
 
 `POST` `http://127.0.0.1/stq/api/v1/words/findEsListByKeyword`
 
