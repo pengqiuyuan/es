@@ -1,6 +1,6 @@
 十九、微博、微信 KOL
 
-`POST` `http://127.0.0.1/stq/api/v1/words/findEsListByKeyword`
+`POST` `http://127.0.0.1/stq/api/v1/words/findIvstKolArticlesByKeyword`
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
