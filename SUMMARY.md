@@ -84,6 +84,7 @@
     * [NewsComments 测试](xiao-xi-dui-lie/ce-shi/newscomments-ce-shi.md)
     * [ChinaNews 测试](xiao-xi-dui-lie/ce-shi/chinanews-ce-shi.md)
     * [ZhihuAnswers](xiao-xi-dui-lie/ce-shi/zhihuanswers.md)
+    * [ElecArticles 测试](xiao-xi-dui-lie/ce-shi/elecarticles.md)
   * [Kafka](xiao-xi-dui-lie/kafka.md)
   * [Logstash](xiao-xi-dui-lie/logstash.md)
 * [NLP 与 机器学习](nlp-yu-ji-qi-xue-xi.md)
