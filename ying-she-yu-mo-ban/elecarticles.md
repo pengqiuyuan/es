@@ -132,7 +132,14 @@ curl -XPUT http://127.0.0.1:9222/_template/elec_articles -d '
         "title": {
           "type": "text",
           "analyzer": "ik_max_word",
-          "search_analyzer": "ik_max_word"
+          "search_analyzer": "ik_max_word",
+          "fields": {
+            "standard": {
+              "type": "text",
+              "analyzer": "standard",
+              "search_analyzer": "standard"
+            }
+          }
         },
         "url": {
           "type": "keyword"
@@ -146,12 +153,20 @@ curl -XPUT http://127.0.0.1:9222/_template/elec_articles -d '
         "content": {
           "type": "text",
           "analyzer": "ik_max_word",
-          "search_analyzer": "ik_max_word"
+          "search_analyzer": "ik_max_word",
+          "fields": {
+            "standard": {
+              "type": "text",
+              "analyzer": "standard",
+              "search_analyzer": "standard"
+            }
+          }
         }
       }
     }
   }
 }'
+
 ```
 
 
