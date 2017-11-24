@@ -2,7 +2,7 @@
 
 **POST 请求写入数据到 **`kafka`
 
-`POST` `http://127.0.0.1/stq/api/v1/pa/elecarticles/add`
+`POST` `http://127.0.0.1/stq/api/v1/pa/tianjinpowers/add`
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
@@ -66,7 +66,7 @@
 
 注意：与上面的 `API` 相比，爬虫只用注意 `URL` 和 多出了两种返回值就好，其他一样。
 
-`POST` `http://127.0.0.1/stq/api/v1/pabulk/elecarticles/add`
+`POST` `http://127.0.0.1/stq/api/v1/pabulk/tianjinpowers/add`
 
 `HEADERS`：如上
 
