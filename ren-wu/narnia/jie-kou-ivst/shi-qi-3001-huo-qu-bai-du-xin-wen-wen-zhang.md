@@ -1,4 +1,4 @@
-十七、获取百度新闻文章
+十七、获取百度新闻文章（不分页）
 
 `POST` `http://127.0.0.1/stq/api/v1/words/getBaiduXinwenArticle`
 
@@ -17,17 +17,16 @@ endDate为监测项结束时间（含），必填
 
 ```
 {
-	"fromId":"soonfy-1113-21",
-	"keyword":"猎场+胡歌||猎场+万茜",
-	"startDate":"2017-01-01",
-	"endDate":"2017-09-09"
+    "fromId":"soonfy-1113-21",
+    "keyword":"猎场+胡歌||猎场+万茜",
+    "startDate":"2017-01-01",
+    "endDate":"2017-09-09"
 }
 ```
 
 `response` 返回文章数据和提示信息：
 
 ```
-
 成功：
 {
     "statusCode": 200,
@@ -52,14 +51,49 @@ endDate为监测项结束时间（含），必填
 
 失败：
 {
-	"statusCode":400,
-	"keyword_id":"",
-	"keyword":"猎场+胡歌||猎场+万茜",
-	"total":0,
-	"news":[],
-	"msg":"[百度新闻] 查询关键词原文content失败",
-	"error":"content 请求没有匹配到关键词",
-	"stamp":1510813215063
+    "statusCode":400,
+    "keyword_id":"",
+    "keyword":"猎场+胡歌||猎场+万茜",
+    "total":0,
+    "news":[],
+    "msg":"[百度新闻] 查询关键词原文content失败",
+    "error":"content 请求没有匹配到关键词",
+    "stamp":1510813215063
 }
+```
+
+---
+
+获取百度新闻文章（分页）
+
+`POST` `http://127.0.0.1/stq/api/v1/words/getBaiduXinwenPageArticle`
+
+`HEADERS`：`"Content-Type" => "application/json"`
+
+`参数说明`：
 
 ```
+fromId唯一标识字段，必填
+keyword为监测项关键字（不为null或者空字符串），必填
+startDate为监测项起始时间（含），必填
+endDate为监测项结束时间（含），必填
+pageNumber 必填 Long
+pageSize 必填 Long
+
+```
+
+`BODY` 体：
+
+```
+{
+    "fromId":"soonfy-1113-21",
+    "keyword":"猎场+胡歌||猎场+万茜",
+    "startDate":"2017-01-01",
+    "endDate":"2017-09-09",
+    "pageNumber":1,
+    "pageSize":10
+}
+```
+
+
+
