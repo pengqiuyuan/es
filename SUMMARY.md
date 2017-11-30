@@ -85,6 +85,10 @@
     * [ChinaNews 测试](xiao-xi-dui-lie/ce-shi/chinanews-ce-shi.md)
     * [ZhihuAnswers](xiao-xi-dui-lie/ce-shi/zhihuanswers.md)
     * [ElecArticles 测试](xiao-xi-dui-lie/ce-shi/elecarticles.md)
+    * [TopicRank、TopicDynamicData、TopicStaticData](xiao-xi-dui-lie/ce-shi/topicranktopicdynamicdatatopicstaticdata.md)
+      * [TopicRank](xiao-xi-dui-lie/ce-shi/topicranktopicdynamicdatatopicstaticdata/topicrank.md)
+      * TopicDynamicData
+      * TopicStaticData
   * [Kafka](xiao-xi-dui-lie/kafka.md)
   * [Logstash](xiao-xi-dui-lie/logstash.md)
 * [NLP 与 机器学习](nlp-yu-ji-qi-xue-xi.md)
