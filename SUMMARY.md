@@ -87,7 +87,7 @@
     * [ElecArticles 测试](xiao-xi-dui-lie/ce-shi/elecarticles.md)
     * [TopicRank、TopicDynamicData、TopicStaticData](xiao-xi-dui-lie/ce-shi/topicranktopicdynamicdatatopicstaticdata.md)
       * [TopicRank](xiao-xi-dui-lie/ce-shi/topicranktopicdynamicdatatopicstaticdata/topicrank.md)
-      * TopicDynamicData
+      * [TopicDynamicData](xiao-xi-dui-lie/ce-shi/topicranktopicdynamicdatatopicstaticdata/topicdynamicdata.md)
       * TopicStaticData
   * [Kafka](xiao-xi-dui-lie/kafka.md)
   * [Logstash](xiao-xi-dui-lie/logstash.md)
