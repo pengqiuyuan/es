@@ -40,7 +40,7 @@
   * [elec\_articles](ying-she-yu-mo-ban/elecarticles.md)
   * [话题排行榜（topic\_rank）](ying-she-yu-mo-ban/topicrank.md)
   * [topic\_dynamic\_data](ying-she-yu-mo-ban/topicdynamic-data.md)
-  * topic\_static\_data
+  * [topic\_static\_data](ying-she-yu-mo-ban/topicstatic-data.md)
 * [安全机制](an-quan-ji-zhi.md)
   * [基于 nginx 配置](an-quan-ji-zhi/ji-yu-nginx-pei-zhi.md)
   * [xpack](an-quan-ji-zhi/xpack.md)
