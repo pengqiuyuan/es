@@ -38,8 +38,8 @@
   * [china\_news](ying-she-yu-mo-ban/chinanews.md)
   * [zhihu\_answers](ying-she-yu-mo-ban/zhihuanswers.md)
   * [elec\_articles](ying-she-yu-mo-ban/elecarticles.md)
-  * [topic\_rank](ying-she-yu-mo-ban/topicrank.md)
-  * topic\_dynamic\_data
+  * [话题排行榜（topic\_rank）](ying-she-yu-mo-ban/topicrank.md)
+  * [topic\_dynamic\_data](ying-she-yu-mo-ban/topicdynamic-data.md)
   * topic\_static\_data
 * [安全机制](an-quan-ji-zhi.md)
   * [基于 nginx 配置](an-quan-ji-zhi/ji-yu-nginx-pei-zhi.md)
