@@ -88,7 +88,7 @@
     * [TopicRank、TopicDynamicData、TopicStaticData](xiao-xi-dui-lie/ce-shi/topicranktopicdynamicdatatopicstaticdata.md)
       * [TopicRank](xiao-xi-dui-lie/ce-shi/topicranktopicdynamicdatatopicstaticdata/topicrank.md)
       * [TopicDynamicData](xiao-xi-dui-lie/ce-shi/topicranktopicdynamicdatatopicstaticdata/topicdynamicdata.md)
-      * TopicStaticData
+      * [TopicStaticData](xiao-xi-dui-lie/ce-shi/topicranktopicdynamicdatatopicstaticdata/topicstaticdata.md)
   * [Kafka](xiao-xi-dui-lie/kafka.md)
   * [Logstash](xiao-xi-dui-lie/logstash.md)
 * [NLP 与 机器学习](nlp-yu-ji-qi-xue-xi.md)
