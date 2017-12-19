@@ -163,6 +163,7 @@
         * [十六、获得百度新闻声量数据](ren-wu/narnia/jie-kou-narnia/shi-liu-3001-huo-de-bai-du-xin-wen-sheng-liang-shu-ju.md)
         * [十七、获取百度新闻文章](ren-wu/narnia/jie-kou-narnia/shi-qi-3001-huo-qu-bai-du-xin-wen-wen-zhang.md)
         * [十八、微博用户画像](ren-wu/narnia/jie-kou-narnia/shi-ba-3001-wei-bo-yong-hu-hua-xiang.md)
+        * [十九、获取指数 Excel 下载链接](ren-wu/narnia/jie-kou-narnia/shi-jiu-3001-huo-qu-zhi-shu-excel-xia-zai-lian-jie.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
     * 百度指数
     * 百度新闻
