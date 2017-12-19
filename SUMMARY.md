@@ -170,4 +170,6 @@
   * 问题
     * [超时](ren-wu/chao-shi.md)
   * [导出、统计模块](ren-wu/dao-chu-3001-tong-ji-mo-kuai.md)
+  * [旅游](ren-wu/lv-you.md)
+    * [自动导出模板API](ren-wu/lv-you/zi-dong-dao-chu-mo-ban-api.md)
 
