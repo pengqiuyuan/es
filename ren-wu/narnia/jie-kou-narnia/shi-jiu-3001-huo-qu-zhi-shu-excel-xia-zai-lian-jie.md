@@ -1,4 +1,4 @@
-十九、获取指数 Excel 下载链接
+十九、获取计算指标 Excel 下载链接
 
 `POST` `http://127.0.0.1/stq/api/v1/words/findEsWeiboUserAnalysis`
 
