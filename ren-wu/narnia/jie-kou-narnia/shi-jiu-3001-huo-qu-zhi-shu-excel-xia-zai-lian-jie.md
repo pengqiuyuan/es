@@ -1,6 +1,6 @@
 十九、获取计算指标 Excel 下载链接
 
-`POST` `http://127.0.0.1/stq/api/v1/words/findEsWeiboUserAnalysis`
+`POST` `http://127.0.0.1/stq/api/v1/words/downIndexExcelByKeyword`
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
