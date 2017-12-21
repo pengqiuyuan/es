@@ -146,7 +146,23 @@ curl -XPUT http://127.0.0.1:9200/_template/cibao_index -d '
         },
         "weibo_repostCount": {
           "type": "double"
+        },
+        "weibo_oldinteractive": {
+          "type": "double"
+        },
+        "weibo_primaryCount": {
+          "type": "double"
+        },
+        "weibo_firstLevelCount": {
+          "type": "double"
+        },
+        "weibo_secondLevelCount": {
+          "type": "double"
+        },
+        "weibo_thirdLevelCount": {
+          "type": "double"
         }
+
 
         ,
         "weixin_volume": {
