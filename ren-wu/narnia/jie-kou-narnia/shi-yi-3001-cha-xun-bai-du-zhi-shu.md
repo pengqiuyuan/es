@@ -22,11 +22,12 @@ et为监测项结束时间（含），必填
 }
 ```
 
-`response` 数据写入成功，返回提示信息
+`response` 数据写入成功，返回提示信息，`"isDataCompleted": false` 判断数据是否完整
 
 ```
 {
     "getDataSuccess": true,
+    "isDataCompleted": false,
     "baiduIndexList":[
         {
             "acount": "0",
@@ -42,3 +43,6 @@ et为监测项结束时间（含），必填
     ]
 }
 ```
+
+
+
