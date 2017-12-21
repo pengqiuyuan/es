@@ -15,13 +15,12 @@ taskType为数据源，必填，weibo、weixin、baiduindex
 keyword为监测项名称，必填
 startDate为监测项起始时间（含），必填
 endDate为监测项结束时间（含），必填
-taskType为数据源，必填，weibo、weixin、baiduindex
-sortField 为排序字段 
+taskType为数据源，必填，weibo、weixin
+sortField 为排序字段 ，必填
         weibo ：follower_count（粉丝数，默认）、fans_count（关注数）、comment_count（评论）、up_count（点赞）、repost_count（转发）
         weixin：stat_read_count（阅读数，默认）、stat_like_count（点赞数）
 sort为排序 asc（升序）、desc（降序）
-size获取多少个排序结果，不超过20。传空字符串“”时，默认为10。
-
+size获取多少个排序结果，不超过100，必填
 ```
 
 `BODY` 体：
@@ -44,7 +43,7 @@ size获取多少个排序结果，不超过20。传空字符串“”时，默�
 成功
 
 {
-    "msPath": "https://narnia.oss-cn-beijing.aliyuncs.com/20171219163117.xlsx?Expires=1515499666&OSSAccessKeyId=LTAIARWAKGUIqkn6&Signature=QHMUJKSKHjsZM6Ob91mjQ6tzrw0%3D",
+    "msPath": "https://narnia.oss-cn-beijing.aliyuncs.com/20171221193940.xlsx?Expires=1515683768&OSSAccessKeyId=LTAIARWAKGUIqkn6&Signature=jEQW0G9hGdXTtBVFDqgnCk%2FWwyw%3D",
     "message": "任务执行成功"
 }
 
