@@ -26,54 +26,72 @@ endDate为监测项结束时间（含），
 
 ```
 [
-    {
-        "name": "大鱼海棠",
-        "keywords": "大鱼海棠",
-        "source": "weibo",
-        "startDateString": "2017-01-01",
-        "endDateString": "2017-01-02",
-        "weibo_volume": 7272,
-        "weibo_actualVolume": 240,
-        "weibo_exposure": 9660401,
-        "weibo_interactive": 7306,
-        "weibo_forwardDepth": 9,
-        "weibo_account": 233,
-        "weibo_commentCount": 2857,
-        "weibo_upCount": 4449,
-        "weibo_repostCount": 1535
-    },
-    {
-        "name": "大鱼海棠",
-        "keywords": "大鱼海棠",
-        "source": "weibo",
-        "startDateString": "2017-01-02",
-        "endDateString": "2017-01-03",
-        "weibo_volume": 4736,
-        "weibo_actualVolume": 127,
-        "weibo_exposure": 33728971,
-        "weibo_interactive": 2642,
-        "weibo_forwardDepth": 7,
-        "weibo_account": 119,
-        "weibo_commentCount": 560,
-        "weibo_upCount": 2082,
-        "weibo_repostCount": 1174
-    },
-    {
-        "name": "大鱼海棠",
-        "keywords": "大鱼海棠",
-        "source": "weibo",
-        "startDateString": "2017-01-03",
-        "endDateString": "2017-01-04",
-        "weibo_volume": 4769,
-        "weibo_actualVolume": 122,
-        "weibo_exposure": 18982573,
-        "weibo_interactive": 1671,
-        "weibo_forwardDepth": 8,
-        "weibo_account": 120,
-        "weibo_commentCount": 318,
-        "weibo_upCount": 1353,
-        "weibo_repostCount": 706
-    }
+      {
+            "name": "百事可乐",
+            "keywords": "百事可乐",
+            "source": "weibo",
+            "startDateString": "2017-11-01",
+            "endDateString": "2017-11-02",
+            "updateDateString": "2017-12-21",
+            "weibo_volume": 24102, #文章量
+            "weibo_actualVolume": 435, #实际文章量
+            "weibo_exposure": 151737346, #曝光量
+            "weibo_interactive": 78980, #互动量
+            "weibo_forwardDepth": 9, #转发深度
+            "weibo_account": 431, #账号量（每日去重）
+            "weibo_commentCount": 36916, #评论量
+            "weibo_upCount": 42064, #点赞量
+            "weibo_repostCount": 51540, #转发量
+            "weibo_oldinteractive": 1088790, #互动量（旧）
+            "weibo_primaryCount": 25, #原发提及量
+            "weibo_firstLevelCount": 73, #一级转发量
+            "weibo_secondLevelCount": 31, #二级转发量
+            "weibo_thirdLevelCount": 306 #三级及以上转发量
+      },
+      {
+            "name": "百事可乐",
+            "keywords": "百事可乐",
+            "source": "weibo",
+            "startDateString": "2017-11-02",
+            "endDateString": "2017-11-03",
+            "updateDateString": "2017-12-21",
+            "weibo_volume": 4929,
+            "weibo_actualVolume": 90,
+            "weibo_exposure": 5922386,
+            "weibo_interactive": 4768,
+            "weibo_forwardDepth": 9,
+            "weibo_account": 84,
+            "weibo_commentCount": 2073,
+            "weibo_upCount": 2695,
+            "weibo_repostCount": 2054,
+            "weibo_oldinteractive": 118890,
+            "weibo_primaryCount": 17,
+            "weibo_firstLevelCount": 25,
+            "weibo_secondLevelCount": 10,
+            "weibo_thirdLevelCount": 38
+      },
+      {
+            "name": "百事可乐",
+            "keywords": "百事可乐",
+            "source": "weibo",
+            "startDateString": "2017-11-03",
+            "endDateString": "2017-11-04",
+            "updateDateString": "2017-12-21",
+            "weibo_volume": 4478,
+            "weibo_actualVolume": 101,
+            "weibo_exposure": 147323129,
+            "weibo_interactive": 63567,
+            "weibo_forwardDepth": 8,
+            "weibo_account": 93,
+            "weibo_commentCount": 27467,
+            "weibo_upCount": 36099,
+            "weibo_repostCount": 30324,
+            "weibo_oldinteractive": 375101,
+            "weibo_primaryCount": 17,
+            "weibo_firstLevelCount": 41,
+            "weibo_secondLevelCount": 20,
+            "weibo_thirdLevelCount": 23
+      }
 ]
 ```
 
