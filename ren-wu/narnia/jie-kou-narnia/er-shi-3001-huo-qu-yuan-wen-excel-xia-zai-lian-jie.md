@@ -1,4 +1,4 @@
-十九、获取计算指标 Excel 下载链接
+十九、获取原文 Excel 下载链接
 
 `POST` `http://127.0.0.1/stq/api/v1/words/downArticleExcelByKeyword`
 
@@ -7,11 +7,6 @@
 `参数说明`：
 
 ```
-keyword为监测项名称，必填
-startDate为监测项起始时间（含），必填
-endDate为监测项结束时间（含），必填
-taskType为数据源，必填，weibo、weixin、baiduindex
-
 keyword为监测项名称，必填
 startDate为监测项起始时间（含），必填
 endDate为监测项结束时间（含），必填
