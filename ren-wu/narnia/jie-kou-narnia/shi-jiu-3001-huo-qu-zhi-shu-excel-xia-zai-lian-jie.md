@@ -17,13 +17,10 @@ taskType为数据源，必填，weibo、weixin、baiduindex
 
 ```
 {
-  "keyword": "芈月传",
-  "startDate": "2016-03-01",
-  "endDate": "2017-05-02",
-  "taskType":"weixin",
-  "sortField":"stat_read_count",
-  "sort":"desc",
-  "size":"20"
+  "keyword": "清华大学",
+  "startDate": "2017-10-01",
+  "endDate": "2017-12-02",
+  "taskType":"weixin"
 }
 ```
 
