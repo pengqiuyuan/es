@@ -16,9 +16,9 @@ endDate为监测项结束时间（含），
 
 ```
 {
-    "keyWord": "大鱼海棠",
-    "startDate": "2017-01-01",
-    "endDate": "2017-01-03"
+      "keyWord": "百事可乐",
+      "startDate": "2017-11-01",
+      "endDate": "2017-11-03"
 }
 ```
 
