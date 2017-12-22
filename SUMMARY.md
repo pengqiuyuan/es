@@ -166,6 +166,7 @@
         * [十九、获取计算指标 Excel 下载链接](ren-wu/narnia/jie-kou-narnia/shi-jiu-3001-huo-qu-zhi-shu-excel-xia-zai-lian-jie.md)
         * [二十、获取原文 Excel 下载链接](ren-wu/narnia/jie-kou-narnia/er-shi-3001-huo-qu-yuan-wen-excel-xia-zai-lian-jie.md)
         * [二十一、Narnia 自动报告导出](ren-wu/narnia/jie-kou-narnia/er-shi-yi3001-narnia-zi-dong-bao-gao-dao-chu.md)
+        * [二十二、百度指数检测接口](ren-wu/narnia/jie-kou-narnia/er-shi-er-3001-bai-du-zhi-shu-jian-ce-jie-kou.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
     * 百度指数
     * 百度新闻
