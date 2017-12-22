@@ -1,4 +1,4 @@
-十一、查询**百度指数**
+二十二、百度指数检测接口
 
 `POST` `http://127.0.0.1/stq/api/v1/words/checkBaiduIndex`
 
