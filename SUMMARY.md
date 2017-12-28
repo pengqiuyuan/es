@@ -103,9 +103,9 @@
   * [安装](docker/an-zhuang.md)
 * [数据平台](shu-ju-ping-tai.md)
   * [微博统计](shu-ju-ping-tai/wei-bo-tong-ji.md)
-    * 每天总文章量
+    * [每天总文章量](shu-ju-ping-tai/wei-bo-tong-ji/mei-tian-zong-wen-zhang-liang.md)
     * [实际声量](shu-ju-ping-tai/wei-bo-tong-ji/shi-ji-sheng-liang.md)
-    * 声量
+    * [声量](shu-ju-ping-tai/wei-bo-tong-ji/sheng-liang.md)
     * 系数
     * [独立用户曝光量](shu-ju-ping-tai/wei-bo-tong-ji/du-li-yong-hu-pu-guang-liang.md)
     * [独立账号占比](shu-ju-ping-tai/wei-bo-tong-ji/du-li-zhang-hao-zhan-bi.md)
@@ -166,6 +166,7 @@
         * [十九、获取计算指标 Excel 下载链接](ren-wu/narnia/jie-kou-narnia/shi-jiu-3001-huo-qu-zhi-shu-excel-xia-zai-lian-jie.md)
         * [二十、获取原文 Excel 下载链接](ren-wu/narnia/jie-kou-narnia/er-shi-3001-huo-qu-yuan-wen-excel-xia-zai-lian-jie.md)
         * [二十一、Narnia 自动报告导出](ren-wu/narnia/jie-kou-narnia/er-shi-yi3001-narnia-zi-dong-bao-gao-dao-chu.md)
+        * [二十二、百度指数检测接口](ren-wu/narnia/jie-kou-narnia/er-shi-er-3001-bai-du-zhi-shu-jian-ce-jie-kou.md)
       * [接口 MCI](ren-wu/narnia/jie-kou-mci.md)
         * [一、MCI 自动报告导出](ren-wu/narnia/jie-kou-mci/yi-3001-mci-zi-dong-bao-gao-dao-chu.md)
     * [基本功能](ren-wu/ji-ben-gong-neng.md)
