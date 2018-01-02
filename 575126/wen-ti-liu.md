@@ -76,8 +76,8 @@ Caused by: java.util.concurrent.TimeoutException: null
 
 ```
 RestClientBuilder
-setMaxConnPerRoute(200)  默认 10
-setMaxConnTotal(240)  默认 30
+setMaxConnPerRoute(120)  默认 10
+setMaxConnTotal(140)  默认 30
 ```
 
 
