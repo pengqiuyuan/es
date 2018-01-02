@@ -85,6 +85,8 @@ setMaxConnPerRoute(60)  默认 60
 
 [异步httpclient(httpasyncclient)的使用与总结](http://blog.csdn.net/ouyang111222/article/details/78884634)
 
+[使用httpclient必须知道的参数设置及代码写法、存在的风险](http://jinnianshilongnian.iteye.com/blog/2089792)
+
 
 
 
