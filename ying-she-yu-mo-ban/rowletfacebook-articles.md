@@ -7,7 +7,7 @@
 | 字段含义 | 字段名称 | 数据类型 |
 | :---: | :---: | :---: |
 | 发布时间 | create\_at | Date |
-|   | last\_untime | String |
+|  | last\_untime | String |
 | 用户信息 | user | Object |
 | 内容 | text | String |
 | 评论数 | comment\_num | Number |
@@ -33,9 +33,6 @@
 | 个人简介 | about | String |
 | 个人描述 | description | String |
 | 是否认证 | verification\_status | Boolean |
-
-
-
 
 创建索引`rowlet_facebook_articles`
 
