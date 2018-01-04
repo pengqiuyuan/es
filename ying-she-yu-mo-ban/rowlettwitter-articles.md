@@ -1,4 +1,4 @@
-索引：`rowlet_twitter_articles`
+[^1]索引：`rowlet_twitter_articles`
 
 类型：`rowlet_twitter_articles`
 
@@ -78,8 +78,6 @@
 | 用户国家代码表示 | withheld\_in\_countries | String |
 | 指示被隐藏的部分是状态还是用户 | withheld\_scope | String |
 
-
-
 创建索引`rowlet_twitter_articles`
 
 ```
@@ -92,5 +90,5 @@ curl -XPUT http://127.0.0.1:9222/rowlet_twitter_articles
 
 ```
 
-
+[^1]: Enter footnote here.
 
