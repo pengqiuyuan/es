@@ -88,33 +88,6 @@ PUT /_template/rowlet_facebook_articles
           }
         },
         {
-          "byte_fields": {
-            "match": "*",
-            "match_mapping_type": "byte",
-            "mapping": {
-              "type": "byte"
-            }
-          }
-        },
-        {
-          "short_fields": {
-            "match": "*",
-            "match_mapping_type": "short",
-            "mapping": {
-              "type": "short"
-            }
-          }
-        },
-        {
-          "integer_fields": {
-            "match": "*",
-            "match_mapping_type": "integer",
-            "mapping": {
-              "type": "integer"
-            }
-          }
-        },
-        {
           "long_fields": {
             "match": "*",
             "match_mapping_type": "long",
@@ -156,13 +129,13 @@ PUT /_template/rowlet_facebook_articles
           "search_analyzer": "ik_max_word"
         },
         "comment_num": {
-          "type": "integer"
+          "type": "long"
         },
         "likes_num": {
-          "type": "integer"
+          "type": "long"
         },
         "share_count": {
-          "type": "integer"
+          "type": "long"
         },
         "user": {
         	"properties": {
@@ -182,7 +155,7 @@ PUT /_template/rowlet_facebook_articles
 		          "type": "keyword"
 		        },
 		        "fan_count": {
-		          "type": "integer"
+		          "type": "long"
 		        },
 		        "emails": {
 		          "type": "keyword"
@@ -216,7 +189,7 @@ PUT /_template/rowlet_facebook_articles
 		          "type": "keyword"
 		        },
 		        "likes_count": {
-		          "type": "integer"
+		          "type": "long"
 		        },
 		        "about": {
 		          "type": "text",
