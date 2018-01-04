@@ -27,7 +27,7 @@
 | 邮箱 | emails | String |
 | 家乡 | hometown | String |
 | Facebook 主页链接 | link | String |
-| 地址 | location | String |
+| 地址 | location | Object |
 | 个人网站 | website | String |
 | 喜欢量 | likes\_count | Number |
 | 个人简介 | about | String |
