@@ -161,6 +161,95 @@ jsonData 必填项，json字符串。
                     "total": "89.8"
                 }
             ]
+        },
+        "h4": {
+            "h4_content1": "2017年11月，报纸媒体融合传播效果指数（MCI）为28.1，低于该指数的媒体共有117家。媒体融合传播效果指数最高的3家媒体为【人民日报】、【参考消息】、【环球时报】，其中，位居首位的【人民日报】MCI得分为86.6。",
+            "h4_p1_content1": "2017年11月，党政机关报融合传播效果指数（MCI）为52.0，与报纸媒体MCI相比高出31.6%。党政机关报中低于报纸媒体MCI的共有5家媒体。党政机关报融合传播效果指数最高的3家媒体是【新闻频道】、【财经频道】、【中文国际频道】，其中位居首位的【新闻频道】MCI得分为94.2。",
+            "centerBroadTop10": [
+                {
+                    "rank": "1",
+                    "mediaName": "centerBroadTop10",
+                    "spread": "88.7",
+                    "leadPower": "88.7",
+                    "influence": "88.7",
+                    "trust": "88.7",
+                    "total": "88.7"
+                },
+                {
+                    "rank": "1",
+                    "mediaName": "centerBroadTop10",
+                    "spread": "88.7",
+                    "leadPower": "88.7",
+                    "influence": "88.7",
+                    "trust": "88.7",
+                    "total": "88.7"
+                }
+            ],
+            "h4_p2_content1": "2017年11月，都市报融合传播效果指数（MCI）为52.0，与报纸媒体MCI相比高出31.6%。都市报中低于报纸媒体MCI的共有5家媒体。都市报融合传播效果指数最高的3家媒体是【新闻频道】、【财经频道】、【中文国际频道】，其中位居首位的【新闻频道】MCI得分为94.2。",
+            "privinceBroadTop10": [
+                {
+                    "rank": "1",
+                    "mediaName": "privinceBroadTop10",
+                    "spread": "88.5",
+                    "leadPower": "88.5",
+                    "influence": "88.5",
+                    "trust": "88.5",
+                    "total": "88.5"
+                },
+                {
+                    "rank": "1",
+                    "mediaName": "privinceBroadTop10",
+                    "spread": "88.5",
+                    "leadPower": "88.5",
+                    "influence": "88.5",
+                    "trust": "88.5",
+                    "total": "88.5"
+                }
+            ],
+            "h4_p3_content1": "2017年11月，行业报融合传播效果指数（MCI）为52.0，与报纸媒体MCI相比高出31.6%。行业报中低于报纸媒体MCI的共有5家媒体。行业报融合传播效果指数最高的3家媒体是【新闻频道】、【财经频道】、【中文国际频道】，其中位居首位的【新闻频道】MCI得分为94.2。",
+            "cityBroadTop10": [
+                {
+                    "rank": "1",
+                    "mediaName": "cityBroadTop10",
+                    "spread": "89.8",
+                    "leadPower": "89.8",
+                    "influence": "89.8",
+                    "trust": "89.8",
+                    "total": "89.8"
+                },
+                {
+                    "rank": "1",
+                    "mediaName": "cityBroadTop10",
+                    "spread": "89.8",
+                    "leadPower": "89.8",
+                    "influence": "89.8",
+                    "trust": "89.8",
+                    "total": "89.8"
+                }
+            ]
+        },
+        "h5": {
+            "h5_p1_content1": "2017年11月，【电视】媒体融合传播效果指数整体优于【报纸】媒体。其中，【央视】融合传播效果指数（MCI）达52.0，位居各类媒体首位。",
+            "tongxunsheTop2": [
+                {
+                    "rank": "1",
+                    "mediaName": "tongxunsheTop2",
+                    "spread": "89.8",
+                    "leadPower": "89.8",
+                    "influence": "89.8",
+                    "trust": "89.8",
+                    "total": "89.8"
+                },
+                {
+                    "rank": "1",
+                    "mediaName": "tongxunsheTop2",
+                    "spread": "89.8",
+                    "leadPower": "89.8",
+                    "influence": "89.8",
+                    "trust": "89.8",
+                    "total": "89.8"
+                }
+            ]
         }
     }
 }
@@ -172,7 +261,7 @@ jsonData 必填项，json字符串。
 成功：
 
 {
-    "msPath": "https://narnia.oss-cn-beijing.aliyuncs.com/MCI%E5%AA%92%E4%BD%93%E8%9E%8D%E5%90%88%E4%BC%A0%E6%92%AD%E6%95%88%E6%9E%9C%E6%8C%87%E6%95%B0%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A_20171228191802.docx?Expires=1516287269&OSSAccessKeyId=LTAIARWAKGUIqkn6&Signature=m%2BiLCNVtKv7CQpNTgjOc4Vrx7Tw%3D",
+    "msPath": "https://narnia.oss-cn-beijing.aliyuncs.com/MCI%E4%B8%AD%E5%9B%BD%E5%AA%92%E4%BD%93%E8%9E%8D%E5%90%88%E4%BC%A0%E6%92%AD%E6%95%88%E6%9E%9C%E6%8C%87%E6%95%B0%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A%EF%BC%882017%E5%B9%B412%E6%9C%88%EF%BC%89.docx?Expires=1516867676&OSSAccessKeyId=LTAIARWAKGUIqkn6&Signature=W5emkfLYcd3QXEQId%2BbZn7vLLGc%3D",
     "message": "任务执行成功"
 }
 
