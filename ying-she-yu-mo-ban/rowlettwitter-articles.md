@@ -9,7 +9,7 @@
 | 推文创建时间 | created\_at | Date |
 | 推文id | id\_str | String |
 | 推文内容 | text | String |
-| 推文发布来源(哪一种客户端) | source | String |
+| 推文发布来源\(哪一种客户端\) | source | String |
 | 标志推文是否在显示的时候截断 | truncated | String |
 | 标志推文是否是回复性推文 | in\_reply\_to\_status\_id | Int64 |
 | 若推文为回复性推文，该字段为原始推文id | in\_reply\_to\_status\_id\_str | String |
@@ -27,13 +27,13 @@
 | 转发数 | retweet\_count | Number |
 | 点赞数 | favorite\_count | Number |
 | 推文解析后的对象 | entities | Object |
-|   | extended\_entities | Object |
-|   | favorited | Boolean |
+|  | extended\_entities | Object |
+|  | favorited | Boolean |
 | 标志推文是否被转发 | retweeted | Boolean |
-|   | possibly\_sensitive | Boolean |
-|   | filter\_level | String |
+|  | possibly\_sensitive | Boolean |
+|  | filter\_level | String |
 | 语言 | lang | String |
-|   | matching\_rules | Array |
+|  | matching\_rules | Array |
 
 **用户**
 
@@ -77,6 +77,8 @@
 | 是否默认图片 | default\_profile\_image | Boolean |
 | 用户国家代码表示 | withheld\_in\_countries | String |
 | 指示被隐藏的部分是状态还是用户 | withheld\_scope | String |
+
+
 
 创建索引`rowlet_twitter_articles`
 
