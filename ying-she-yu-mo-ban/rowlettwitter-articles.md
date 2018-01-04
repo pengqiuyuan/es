@@ -1,4 +1,4 @@
-[^1]索引：`rowlet_twitter_articles`
+索引：`rowlet_twitter_articles`
 
 类型：`rowlet_twitter_articles`
 
@@ -81,14 +81,322 @@
 创建索引`rowlet_twitter_articles`
 
 ```
-curl -XPUT http://127.0.0.1:9222/rowlet_twitter_articles
+PUT /rowlet_twitter_articles
 ```
 
 `mapping`
 
 ```
-
+PUT /_template/rowlet_twitter_articles
+{
+  "template": "rowlet_twitter_articles*",
+  "settings": {
+    "refresh_interval": "60s",
+    "number_of_replicas": "1",
+    "number_of_shards": "15"
+  },
+  "mappings": {
+    "_default_": {
+      "_all": {
+        "enabled": true
+      },
+      "_source": {
+        "enabled": true
+      },
+      "dynamic_templates": [
+        {
+          "message_field": {
+            "match": "message",
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "text"
+            }
+          }
+        },
+        {
+          "string_fields": {
+            "match": "*",
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword"
+            }
+          }
+        },
+        {
+          "double_fields": {
+            "match": "*",
+            "match_mapping_type": "double",
+            "mapping": {
+              "type": "double"
+            } 
+          }
+        },
+        {
+          "byte_fields": {
+            "match": "*",
+            "match_mapping_type": "byte",
+            "mapping": {
+              "type": "byte"
+            }
+          }
+        },
+        {
+          "short_fields": {
+            "match": "*",
+            "match_mapping_type": "short",
+            "mapping": {
+              "type": "short"
+            }
+          }
+        },
+        {
+          "integer_fields": {
+            "match": "*",
+            "match_mapping_type": "integer",
+            "mapping": {
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "long_fields": {
+            "match": "*",
+            "match_mapping_type": "long",
+            "mapping": {
+              "type": "long"
+            }
+          }
+        },
+        {
+          "date_fields": {
+            "match": "*",
+            "match_mapping_type": "date",
+            "mapping": {
+              "type": "date"
+            }
+          }
+        },
+        {
+          "geo_point_fields": {
+            "match": "*",
+            "match_mapping_type": "geo_point",
+            "mapping": {
+              "type": "geo_point"
+            }
+          }
+        }
+      ],
+      "properties": {
+        "created_at": {
+          "format": "strict_date_optional_time||epoch_millis",
+          "type": "date"
+        },
+        "id_str": {
+          "type": "keyword"
+        },
+        "text": {
+          "type": "text",
+          "analyzer": "ik_max_word",
+          "search_analyzer": "ik_max_word"
+        },
+        "source": {
+          "type": "keyword"
+        },
+        "truncated": {
+          "type": "keyword"
+        },
+        "in_reply_to_status_id": {
+          "type": "integer"
+        },
+        "in_reply_to_status_id_str": {
+          "type": "keyword"
+        },
+        "in_reply_to_screen_name": {
+          "type": "keyword"
+        },
+        "in_reply_to_user_id": {
+          "type": "integer"
+        },
+        "in_reply_to_user_id_str": {
+          "type": "keyword"
+        },
+        "user": {
+        	"properties": {
+		        "id": {
+		          "type": "integer"
+		        },
+		        "id_str": {
+		          "type": "keyword"
+		        },
+		        "name": {
+		          "type": "keyword"
+		        },
+		        "screen_name": {
+		          "type": "keyword"
+		        },
+		        "location": {
+		          "type": "keyword"
+		        },
+		        "url": {
+		          "type": "keyword"
+		        },
+		        "description": {
+		          "type": "text",
+		          "analyzer": "ik_max_word",
+		          "search_analyzer": "ik_max_word"
+		        },
+		        "derived": {
+		          "type": "keyword"
+		        },
+		        "protected": {
+		          "type": "boolean"
+		        },
+		        "verified": {
+		          "type": "boolean"
+		        },
+		        "followers_count": {
+		          "type": "integer"
+		        },
+		        "friends_count": {
+		          "type": "integer"
+		        },
+		        "listed_count": {
+		          "type": "integer"
+		        },
+		        "favourites_count": {
+		          "type": "integer"
+		        },
+		        "statuses_count": {
+		          "type": "integer"
+		        },
+		        "list_num": {
+		          "type": "integer"
+		        },
+		        "created_at": {
+		          "format": "strict_date_optional_time||epoch_millis",
+		          "type": "date"
+		        },
+		        "utc_offset": {
+		          "type": "integer"
+		        },
+		        "time_zone": {
+		          "type": "keyword"
+		        },
+		        "geo_enabled": {
+		          "type": "boolean"
+		        },
+		        "lang": {
+		          "type": "keyword"
+		        },
+		        "contributors_enabled": {
+		          "type": "boolean"
+		        },
+		        "profile_background_color": {
+		          "type": "keyword"
+		        },
+		        "profile_background_image_url": {
+		          "type": "keyword"
+		        },
+		        "profile_background_image_url_https": {
+		          "type": "keyword"
+		        },
+		        "profile_background_tile": {
+		          "type": "boolean"
+		        },
+		        "profile_banner_url": {
+		          "type": "keyword"
+		        },
+		        "profile_image_url": {
+		          "type": "keyword"
+		        },
+		        "profile_image_url_https": {
+		          "type": "keyword"
+		        },
+		        "profile_link_color": {
+		          "type": "keyword"
+		        },
+		        "profile_sidebar_border_color": {
+		          "type": "keyword"
+		        },
+		        "profile_sidebar_fill_color": {
+		          "type": "keyword"
+		        },
+		        "profile_text_color": {
+		          "type": "keyword"
+		        },
+		        "profile_use_background_image": {
+		          "type": "boolean"
+		        },
+		        "default_profile": {
+		          "type": "boolean"
+		        },
+		        "default_profile_image": {
+		          "type": "boolean"
+		        },
+		        "withheld_in_countries": {
+		          "type": "keyword"
+		        },
+		        "withheld_scope": {
+		          "type": "keyword"
+		        }
+        	}
+        },
+        "coordinates": {
+          "type": "geo_point"
+        },
+        "place": {
+          "type": "object"
+        },
+        "quoted_status_id": {
+          "type": "integer"
+        },
+        "quoted_status_id_str": {
+          "type": "keyword"
+        },
+        "is_quote_status": {
+          "type": "boolean"
+        },
+        "retweeted_status": {
+          "type": "boolean"
+        },
+        "reply_count": {
+          "type": "float"
+        },
+        "retweet_count": {
+          "type": "float"
+        },
+        "favorite_count": {
+          "type": "float"
+        },
+        "entities": {
+          "type": "object"
+        },
+        "extended_entities": {
+          "type": "object"
+        },
+        "favorited": {
+          "type": "boolean"
+        },
+        "retweeted": {
+          "type": "boolean"
+        },
+        "possibly_sensitive": {
+          "type": "boolean"
+        },
+        "filter_level": {
+          "type": "keyword"
+        },
+        "lang": {
+          "type": "keyword"
+        },
+        "matching_rules": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}
 ```
 
-[^1]: Enter footnote here.
+
 
