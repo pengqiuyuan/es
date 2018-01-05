@@ -3,7 +3,7 @@
 ```
 [
     {
-        "id": 848930551989915600,
+        "id": "848930551989915600",
         "index_name": "rowlet_twitter_articles",
         "type_name": "rowlet_twitter_articles",
         "created_at": "2017-03-19T04:21:00.000Z",
