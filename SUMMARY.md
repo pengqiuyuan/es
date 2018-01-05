@@ -99,7 +99,7 @@
       * [TopicDynamicData](xiao-xi-dui-lie/ce-shi/topicranktopicdynamicdatatopicstaticdata/topicdynamicdata.md)
       * [TopicStaticData](xiao-xi-dui-lie/ce-shi/topicranktopicdynamicdatatopicstaticdata/topicstaticdata.md)
     * [Facebook](xiao-xi-dui-lie/ce-shi/facebook.md)
-    * Twitter
+    * [Twitter](xiao-xi-dui-lie/ce-shi/twitter.md)
   * [Kafka](xiao-xi-dui-lie/kafka.md)
   * [Logstash](xiao-xi-dui-lie/logstash.md)
 * [NLP 与 机器学习](nlp-yu-ji-qi-xue-xi.md)
