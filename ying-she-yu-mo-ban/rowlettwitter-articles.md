@@ -167,6 +167,11 @@ PUT /_template/rowlet_twitter_articles
         "id_str": {
           "type": "keyword"
         },
+        "message": {
+          "type": "text",
+          "analyzer": "ik_max_word",
+          "search_analyzer": "ik_max_word"
+        },
         "text": {
           "type": "text",
           "analyzer": "ik_max_word",
@@ -194,135 +199,135 @@ PUT /_template/rowlet_twitter_articles
           "type": "keyword"
         },
         "user": {
-            "properties": {
-                "id": {
-                  "type": "keyword"
-                },
-                "id_str": {
-                  "type": "keyword"
-                },
-                "name": {
-                  "type": "keyword"
-                },
-                "screen_name": {
-                  "type": "keyword"
-                },
-                "location": {
-                  "type": "keyword"
-                },
-                "url": {
-                  "type": "keyword"
-                },
-                "description": {
-                  "type": "text",
-                  "analyzer": "ik_max_word",
-                  "search_analyzer": "ik_max_word"
-                },
-                "derived": {
-                  "type": "keyword"
-                },
-                "protected": {
-                  "type": "boolean"
-                },
-                "verified": {
-                  "type": "boolean"
-                },
-                "followers_count": {
-                  "type": "long"
-                },
-                "friends_count": {
-                  "type": "long"
-                },
-                "listed_count": {
-                  "type": "long"
-                },
-                "favourites_count": {
-                  "type": "long"
-                },
-                "statuses_count": {
-                  "type": "long"
-                },
-                "list_num": {
-                  "type": "long"
-                },
-                "created_at": {
-                  "format": "strict_date_optional_time||epoch_millis",
-                  "type": "date"
-                },
-                "utc_offset": {
-                  "type": "long"
-                },
-                "time_zone": {
-                  "type": "keyword"
-                },
-                "geo_enabled": {
-                  "type": "boolean"
-                },
-                "lang": {
-                  "type": "keyword"
-                },
-                "contributors_enabled": {
-                  "type": "boolean"
-                },
-                "profile_background_color": {
-                  "type": "keyword"
-                },
-                "profile_background_image_url": {
-                  "type": "keyword"
-                },
-                "profile_background_image_url_https": {
-                  "type": "keyword"
-                },
-                "profile_background_tile": {
-                  "type": "boolean"
-                },
-                "profile_banner_url": {
-                  "type": "keyword"
-                },
-                "profile_image_url": {
-                  "type": "keyword"
-                },
-                "profile_image_url_https": {
-                  "type": "keyword"
-                },
-                "profile_link_color": {
-                  "type": "keyword"
-                },
-                "profile_sidebar_border_color": {
-                  "type": "keyword"
-                },
-                "profile_sidebar_fill_color": {
-                  "type": "keyword"
-                },
-                "profile_text_color": {
-                  "type": "keyword"
-                },
-                "profile_use_background_image": {
-                  "type": "boolean"
-                },
-                "default_profile": {
-                  "type": "boolean"
-                },
-                "default_profile_image": {
-                  "type": "boolean"
-                },
-                "withheld_in_countries": {
-                  "type": "keyword"
-                },
-                "withheld_scope": {
-                  "type": "keyword"
-                }
-            }
+        	"properties": {
+		        "id": {
+		          "type": "keyword"
+		        },
+		        "id_str": {
+		          "type": "keyword"
+		        },
+		        "name": {
+		          "type": "keyword"
+		        },
+		        "screen_name": {
+		          "type": "keyword"
+		        },
+		        "location": {
+		          "type": "keyword"
+		        },
+		        "url": {
+		          "type": "keyword"
+		        },
+		        "description": {
+		          "type": "text",
+		          "analyzer": "ik_max_word",
+		          "search_analyzer": "ik_max_word"
+		        },
+		        "derived": {
+		          "type": "keyword"
+		        },
+		        "protected": {
+		          "type": "boolean"
+		        },
+		        "verified": {
+		          "type": "boolean"
+		        },
+		        "followers_count": {
+		          "type": "long"
+		        },
+		        "friends_count": {
+		          "type": "long"
+		        },
+		        "listed_count": {
+		          "type": "long"
+		        },
+		        "favourites_count": {
+		          "type": "long"
+		        },
+		        "statuses_count": {
+		          "type": "long"
+		        },
+		        "list_num": {
+		          "type": "long"
+		        },
+		        "created_at": {
+		          "format": "strict_date_optional_time||epoch_millis",
+		          "type": "date"
+		        },
+		        "utc_offset": {
+		          "type": "long"
+		        },
+		        "time_zone": {
+		          "type": "keyword"
+		        },
+		        "geo_enabled": {
+		          "type": "boolean"
+		        },
+		        "lang": {
+		          "type": "keyword"
+		        },
+		        "contributors_enabled": {
+		          "type": "boolean"
+		        },
+		        "profile_background_color": {
+		          "type": "keyword"
+		        },
+		        "profile_background_image_url": {
+		          "type": "keyword"
+		        },
+		        "profile_background_image_url_https": {
+		          "type": "keyword"
+		        },
+		        "profile_background_tile": {
+		          "type": "boolean"
+		        },
+		        "profile_banner_url": {
+		          "type": "keyword"
+		        },
+		        "profile_image_url": {
+		          "type": "keyword"
+		        },
+		        "profile_image_url_https": {
+		          "type": "keyword"
+		        },
+		        "profile_link_color": {
+		          "type": "keyword"
+		        },
+		        "profile_sidebar_border_color": {
+		          "type": "keyword"
+		        },
+		        "profile_sidebar_fill_color": {
+		          "type": "keyword"
+		        },
+		        "profile_text_color": {
+		          "type": "keyword"
+		        },
+		        "profile_use_background_image": {
+		          "type": "boolean"
+		        },
+		        "default_profile": {
+		          "type": "boolean"
+		        },
+		        "default_profile_image": {
+		          "type": "boolean"
+		        },
+		        "withheld_in_countries": {
+		          "type": "keyword"
+		        },
+		        "withheld_scope": {
+		          "type": "keyword"
+		        }
+        	}
         },
         "coordinates": {
-            "properties": {
-                "coordinates": {
-                  "type": "geo_point"
-                },
-                "type": {
-                  "type": "keyword"
-                }
-            }
+	        "properties": {
+	        	"coordinates": {
+		          "type": "geo_point"
+		        },
+		        "type": {
+		          "type": "keyword"
+		        }
+	        }
         },
         "place": {
           "type": "object"
@@ -376,6 +381,7 @@ PUT /_template/rowlet_twitter_articles
     }
   }
 }
+
 ```
 
 
