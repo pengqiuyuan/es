@@ -222,7 +222,7 @@ Twitter（索引名称、分片名称）：`rowlet_twitter_articles`、`rowlet_t
 
 注意：与上面的 `API` 相比，爬虫只用注意 `URL` 和 多出了两种返回值就好，其他一样。
 
-`POST` `http://127.0.0.1/stq/api/v1/pabulk/Twitter/add`
+`POST` `http://127.0.0.1/stq/api/v1/pabulk/topicRowletTwitter/add`
 
 `HEADERS`：如上
 
