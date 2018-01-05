@@ -138,73 +138,73 @@ PUT /_template/rowlet_facebook_articles
           "type": "long"
         },
         "user": {
-        	"properties": {
-		        "id": {
-		          "type": "keyword"
-		        },
-		        "name": {
-		          "type": "keyword"
-		        },
-		        "current_location": {
-		          "type": "keyword"
-		        },
-		        "birthday": {
-		          "type": "keyword"
-		        },
-		        "category": {
-		          "type": "keyword"
-		        },
-		        "fan_count": {
-		          "type": "long"
-		        },
-		        "emails": {
-		          "type": "keyword"
-		        },
-		        "hometown": {
-		          "type": "keyword"
-		        },
-		        "link": {
-		          "type": "keyword"
-		        },
-		        "location": {
-		        	"properties": {
-				        "city": {
-				          "type": "keyword"
-				        },
-				        "country": {
-				          "type": "keyword"
-				        },
-				        "state": {
-				          "type": "keyword"
-				        },
-				        "street": {
-				          "type": "keyword"
-				        },
-				        "zip": {
-				          "type": "keyword"
-				        }
-				    }    
-		        },
-		        "website": {
-		          "type": "keyword"
-		        },
-		        "likes_count": {
-		          "type": "long"
-		        },
-		        "about": {
-		          "type": "text",
-		          "analyzer": "ik_max_word",
-		          "search_analyzer": "ik_max_word"
-		        },
-		        "description": {
-		          "type": "text",
-		          "analyzer": "ik_max_word",
-		          "search_analyzer": "ik_max_word"
-		        },
-		        "verification_status": {
-		          "type": "boolean"
-		        }
-        	}
+            "properties": {
+                "id": {
+                  "type": "keyword"
+                },
+                "name": {
+                  "type": "keyword"
+                },
+                "current_location": {
+                  "type": "keyword"
+                },
+                "birthday": {
+                  "type": "keyword"
+                },
+                "category": {
+                  "type": "keyword"
+                },
+                "fan_count": {
+                  "type": "long"
+                },
+                "emails": {
+                  "type": "keyword"
+                },
+                "hometown": {
+                  "type": "keyword"
+                },
+                "link": {
+                  "type": "keyword"
+                },
+                "location": {
+                    "properties": {
+                        "city": {
+                          "type": "keyword"
+                        },
+                        "country": {
+                          "type": "keyword"
+                        },
+                        "state": {
+                          "type": "keyword"
+                        },
+                        "street": {
+                          "type": "keyword"
+                        },
+                        "zip": {
+                          "type": "keyword"
+                        }
+                    }    
+                },
+                "website": {
+                  "type": "keyword"
+                },
+                "likes_count": {
+                  "type": "long"
+                },
+                "about": {
+                  "type": "text",
+                  "analyzer": "ik_max_word",
+                  "search_analyzer": "ik_max_word"
+                },
+                "description": {
+                  "type": "text",
+                  "analyzer": "ik_max_word",
+                  "search_analyzer": "ik_max_word"
+                },
+                "verification_status": {
+                  "type": "boolean"
+                }
+            }
         }
       }
     }
