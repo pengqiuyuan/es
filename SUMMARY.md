@@ -130,6 +130,7 @@
       * [天涯](ren-wu/zhi-biao-cun-ru-es/tian-ya.md)
       * [头条](ren-wu/zhi-biao-cun-ru-es/tou-tiao.md)
       * [资讯博客](ren-wu/zhi-biao-cun-ru-es/zi-xun-bo-ke.md)
+    * [基本功能](ren-wu/ji-ben-gong-neng.md)
     * [接入API ](ren-wu/narnia.md)
       * [接口 Ivst](ren-wu/narnia/jie-kou-ivst.md)
         * [一、添加词包任务](ren-wu/narnia/jie-kou-ivst/yi-3001-tian-jia-ci-bao-ren-wu.md)
@@ -177,7 +178,6 @@
         * [二十二、百度指数检测接口](ren-wu/narnia/jie-kou-narnia/er-shi-er-3001-bai-du-zhi-shu-jian-ce-jie-kou.md)
       * [接口 MCI](ren-wu/narnia/jie-kou-mci.md)
         * [一、MCI 自动报告导出](ren-wu/narnia/jie-kou-mci/yi-3001-mci-zi-dong-bao-gao-dao-chu.md)
-    * [基本功能](ren-wu/ji-ben-gong-neng.md)
     * 百度指数
     * 百度新闻
     * [用户画像](ren-wu/yong-hu-hua-xiang.md)

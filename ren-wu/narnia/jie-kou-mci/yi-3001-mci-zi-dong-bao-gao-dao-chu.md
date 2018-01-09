@@ -52,7 +52,6 @@ jsonData 必填项，json字符串。
             ]
         },
         "h2": {
-            "h2_content1": "2017年11月，电视媒体融合传播效果指数（MCI）为39.5，低于该指数的媒体共有28家。媒体融合传播效果指数最高的3家媒体为【中央电视台新闻频道】、【中央电视台财经频道】、【中央电视台中文国际频道】，其中位居首位的【中央电视台新闻频道】MCI得分为94.2",
             "h2_p1_content1": "2017年11月，央视融合传播效果指数（MCI）为52.0，与电视媒体MCI相比高出31.6%。央视中低于电视媒体MCI的共有5家媒体。央视融合传播效果指数最高的3家媒体是【新闻频道】、【财经频道】、【中文国际频道】，其中位居首位的【新闻频道】MCI得分为94.2。",
             "yangshiTop10": [
                 {
@@ -72,27 +71,6 @@ jsonData 必填项，json字符串。
                     "influence": "88.7",
                     "trust": "88.7",
                     "total": "88.7"
-                }
-            ],
-            "h2_p2_content1": "2017年11月，卫视融合传播效果指数（MCI）为33.3，与电视媒体MCI相比低了15.7%。卫视中低于电视媒体MCI的共有22家媒体。卫视融合传播效果指数最高的3家媒体是【湖南卫视】、【山东卫视】、【河南卫视】，其中位居首位的【湖南卫视】MCI得分为60.6。",
-            "weishiTop10": [
-                {
-                    "rank": "1",
-                    "mediaName": "湖南卫视",
-                    "spread": "80.4",
-                    "leadPower": "80.4",
-                    "influence": "80.4",
-                    "trust": "80.4",
-                    "total": "80.4"
-                },
-                {
-                    "rank": "1",
-                    "mediaName": "湖南卫视",
-                    "spread": "80.4",
-                    "leadPower": "80.4",
-                    "influence": "80.4",
-                    "trust": "80.4",
-                    "total": "80.4"
                 }
             ]
         },
@@ -261,7 +239,7 @@ jsonData 必填项，json字符串。
 成功：
 
 {
-    "msPath": "https://narnia.oss-cn-beijing.aliyuncs.com/MCI%E4%B8%AD%E5%9B%BD%E5%AA%92%E4%BD%93%E8%9E%8D%E5%90%88%E4%BC%A0%E6%92%AD%E6%95%88%E6%9E%9C%E6%8C%87%E6%95%B0%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A%EF%BC%882017%E5%B9%B412%E6%9C%88%EF%BC%89.docx?Expires=1516867676&OSSAccessKeyId=LTAIARWAKGUIqkn6&Signature=W5emkfLYcd3QXEQId%2BbZn7vLLGc%3D",
+    "msPath": "https://narnia.oss-cn-beijing.aliyuncs.com/MCI%E4%B8%AD%E5%9B%BD%E5%AA%92%E4%BD%93%E8%9E%8D%E5%90%88%E4%BC%A0%E6%92%AD%E6%95%88%E6%9E%9C%E6%8C%87%E6%95%B0%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A%EF%BC%882017%E5%B9%B412%E6%9C%88%EF%BC%89.docx?Expires=1517299307&OSSAccessKeyId=LTAIARWAKGUIqkn6&Signature=Goh49ndEJxKX7MrteZEq6i46FfA%3D",
     "message": "任务执行成功"
 }
 
