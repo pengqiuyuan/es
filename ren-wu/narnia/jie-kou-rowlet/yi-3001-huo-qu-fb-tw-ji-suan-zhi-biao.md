@@ -1,86 +1,178 @@
-七、获取 Fb、Tw 计算指标
+七、获取 **Fb、Tw** 计算指标
 
-`POST` `http://127.0.0.1/stq/api/v1/words/findWeiboByKeywords`
+`POST` `http://127.0.0.1/stq/api/v1/rowlet/findEsStatsByUserId`
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
 `参数说明`：
 
 ```
-keyword为监测项名称，
 startDate为监测项起始时间（含），
-endDate为监测项结束时间（含），
+endDate为监测项结束时间（不含），
+category分类，fb、tw
+ids 集合。不大于 100。
 ```
 
 `BODY` 体：
 
 ```
 {
-    "keyWord": "大鱼海棠",
-    "startDate": "2017-01-01",
-    "endDate": "2017-01-03"
+      "startDate":"2017-12-09",
+      "endDate":"2017-12-10",
+      "category":"fb",
+      "ids":["18172905","239871673"]
 }
 ```
 
-`response` Es查询有保存计算指标
+`response` 成功
 
 ```
-[
-    {
-        "name": "大鱼海棠",
-        "keywords": "大鱼海棠",
-        "source": "weibo",
-        "startDateString": "2017-01-01",
-        "endDateString": "2017-01-02",
-        "weibo_volume": 7272,
-        "weibo_actualVolume": 240,
-        "weibo_exposure": 9660401,
-        "weibo_interactive": 7306,
-        "weibo_forwardDepth": 9,
-        "weibo_account": 233,
-        "weibo_commentCount": 2857,
-        "weibo_upCount": 4449,
-        "weibo_repostCount": 1535
+{
+  "tw" : [ {
+    "date" : {
+      "buckets" : [ {
+        "doc_count" : 7,
+        "document_count" : {
+          "value" : 7.0
+        },
+        "retweet_count_max" : {
+          "value" : 299.0
+        },
+        "followers_count_sum" : {
+          "value" : 139174.0
+        },
+        "retweet_count_sum" : {
+          "value" : 376.0
+        },
+        "reply_count_sum" : {
+          "value" : 781.0
+        },
+        "key_as_string" : "2017-12-09",
+        "reply_count_max" : {
+          "value" : 537.0
+        },
+        "favourites_count_sum" : {
+          "value" : 1218.0
+        },
+        "favorite_count_sum" : {
+          "value" : 850.0
+        },
+        "friends_count_sum" : {
+          "value" : 12229.0
+        },
+        "key" : 1512748800000,
+        "favorite_count_max" : {
+          "value" : 477.0
+        }
+      }, {
+        "doc_count" : 0,
+        "document_count" : {
+          "value" : 0.0
+        },
+        "retweet_count_max" : { },
+        "followers_count_sum" : {
+          "value" : 0.0
+        },
+        "retweet_count_sum" : {
+          "value" : 0.0
+        },
+        "reply_count_sum" : {
+          "value" : 0.0
+        },
+        "key_as_string" : "2017-12-10",
+        "reply_count_max" : { },
+        "favourites_count_sum" : {
+          "value" : 0.0
+        },
+        "favorite_count_sum" : {
+          "value" : 0.0
+        },
+        "friends_count_sum" : {
+          "value" : 0.0
+        },
+        "key" : 1512835200000,
+        "favorite_count_max" : { }
+      } ]
     },
-    {
-        "name": "大鱼海棠",
-        "keywords": "大鱼海棠",
-        "source": "weibo",
-        "startDateString": "2017-01-02",
-        "endDateString": "2017-01-03",
-        "weibo_volume": 4736,
-        "weibo_actualVolume": 127,
-        "weibo_exposure": 33728971,
-        "weibo_interactive": 2642,
-        "weibo_forwardDepth": 7,
-        "weibo_account": 119,
-        "weibo_commentCount": 560,
-        "weibo_upCount": 2082,
-        "weibo_repostCount": 1174
+    "doc_count" : 7,
+    "key" : "239871673"
+  }, {
+    "date" : {
+      "buckets" : [ {
+        "doc_count" : 3,
+        "document_count" : {
+          "value" : 3.0
+        },
+        "retweet_count_max" : {
+          "value" : 11.0
+        },
+        "followers_count_sum" : {
+          "value" : 333267.0
+        },
+        "retweet_count_sum" : {
+          "value" : 22.0
+        },
+        "reply_count_sum" : {
+          "value" : 16.0
+        },
+        "key_as_string" : "2017-12-09",
+        "reply_count_max" : {
+          "value" : 8.0
+        },
+        "favourites_count_sum" : {
+          "value" : 3948.0
+        },
+        "favorite_count_sum" : {
+          "value" : 19.0
+        },
+        "friends_count_sum" : {
+          "value" : 15168.0
+        },
+        "key" : 1512748800000,
+        "favorite_count_max" : {
+          "value" : 11.0
+        }
+      }, {
+        "doc_count" : 0,
+        "document_count" : {
+          "value" : 0.0
+        },
+        "retweet_count_max" : { },
+        "followers_count_sum" : {
+          "value" : 0.0
+        },
+        "retweet_count_sum" : {
+          "value" : 0.0
+        },
+        "reply_count_sum" : {
+          "value" : 0.0
+        },
+        "key_as_string" : "2017-12-10",
+        "reply_count_max" : { },
+        "favourites_count_sum" : {
+          "value" : 0.0
+        },
+        "favorite_count_sum" : {
+          "value" : 0.0
+        },
+        "friends_count_sum" : {
+          "value" : 0.0
+        },
+        "key" : 1512835200000,
+        "favorite_count_max" : { }
+      } ]
     },
-    {
-        "name": "大鱼海棠",
-        "keywords": "大鱼海棠",
-        "source": "weibo",
-        "startDateString": "2017-01-03",
-        "endDateString": "2017-01-04",
-        "weibo_volume": 4769,
-        "weibo_actualVolume": 122,
-        "weibo_exposure": 18982573,
-        "weibo_interactive": 1671,
-        "weibo_forwardDepth": 8,
-        "weibo_account": 120,
-        "weibo_commentCount": 318,
-        "weibo_upCount": 1353,
-        "weibo_repostCount": 706
-    }
-]
+    "doc_count" : 3,
+    "key" : "18172905"
+  } ],
+  "message" : "任务成功"
+}
 ```
 
-`response` Es查询没有保存计算指标
+`response` 失败
 
 ```
-[]
+{  
+    "message" : "任务失败"
+}
 ```
-
-`response` 请求失败 500
