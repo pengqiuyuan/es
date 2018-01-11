@@ -179,8 +179,9 @@
       * [接口 MCI](ren-wu/narnia/jie-kou-mci.md)
         * [一、MCI 自动报告导出](ren-wu/narnia/jie-kou-mci/yi-3001-mci-zi-dong-bao-gao-dao-chu.md)
       * [接口 Rowlet](ren-wu/narnia/jie-kou-rowlet.md)
+        * [一、获取Fb、Tw计算指标](ren-wu/narnia/jie-kou-rowlet/yi-3001-huo-qu-fb-tw-ji-suan-zhi-biao.md)
     * 百度指数
-    * 百度新闻
+    * [百度新闻](ren-wu/bai-du-xin-wen.md)
     * [用户画像](ren-wu/yong-hu-hua-xiang.md)
   * 问题
     * [超时](ren-wu/chao-shi.md)
