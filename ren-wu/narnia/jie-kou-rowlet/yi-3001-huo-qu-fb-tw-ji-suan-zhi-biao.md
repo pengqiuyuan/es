@@ -27,6 +27,8 @@ ids 集合。不大于 100。
 `response` 成功
 
 ```
+tw
+
 {
   "tw" : [ {
     "date" : {
@@ -134,7 +136,7 @@ ids 集合。不大于 100。
         }
       }, {
         "doc_count" : 0,
-        "document_count" : {
+        "document_count" : { 
           "value" : 0.0
         },
         "retweet_count_max" : { },
@@ -167,6 +169,80 @@ ids 集合。不大于 100。
   } ],
   "message" : "任务成功"
 }
+
+
+fb
+
+
+BODY
+raw 
+{
+  "fb" : [ {
+    "date" : {
+      "buckets" : [ {
+        "key_as_string" : "2017-12-09",
+        "doc_count" : 5,
+        "document_count" : { //期间总发帖量N
+          "value" : 5.0
+        },
+        "share_count_sum" : { //文章总转发量R
+          "value" : 0.0
+        },
+        "comment_num_max" : { //最大单篇评论量Cmax
+          "value" : 39.0
+        },
+        "share_count_max" : { //最大单篇转发量Rmax
+          "value" : 0.0
+        },
+        "likes_num_max" : { //最大单篇点赞量Zmax
+          "value" : 189.0
+        },
+        "comment_num_sum" : { //文章总评论量C
+          "value" : 195.0
+        },
+        "likes_num_sum" : { //文章总点赞量Z
+          "value" : 945.0
+        },
+        "key" : 1512748800000,
+        "fan_count_sum" : {  //日粉丝量F（总）
+          "value" : 64680.0
+        },
+        "likes_count_sum" : { //日用户被like数L（总）
+          "value" : 64960.0
+        }
+      }, {
+        "key_as_string" : "2017-12-10",
+        "doc_count" : 0,
+        "document_count" : {
+          "value" : 0.0
+        },
+        "share_count_sum" : {
+          "value" : 0.0
+        },
+        "comment_num_max" : { },
+        "share_count_max" : { },
+        "likes_num_max" : { },
+        "comment_num_sum" : {
+          "value" : 0.0
+        },
+        "likes_num_sum" : {
+          "value" : 0.0
+        },
+        "key" : 1512835200000,
+        "fan_count_sum" : { 
+          "value" : 0.0
+        },
+        "likes_count_sum" : {
+          "value" : 0.0
+        }
+      } ]
+    },
+    "doc_count" : 5,
+    "key" : "853073668057412"
+  } ],
+  "message" : "任务成功"
+}
+  
 ```
 
 `response` 失败
