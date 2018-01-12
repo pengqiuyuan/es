@@ -33,36 +33,36 @@ tw
   "tw" : [ {
     "date" : {
       "buckets" : [ {
-        "doc_count" : 7,
+        "key_as_string" : "2017-12-09",
+        "key" : 1512748800000,
+        "doc_count" : 7,        
         "document_count" : { //期间总发帖量N
           "value" : 7.0
-        },
-        "repost_max" : { //最大单篇转发量Rmax
-          "value" : 299.0
         },
         "followers_count_sum" : { //日粉丝量F（总）
           "value" : 139174.0
         },
-        "repost_sum" : { //文章总转发量R
-          "value" : 376.0
-        },
-        "comment_sum" : { //文章总评论量C
-          "value" : 781.0
-        },
-        "key_as_string" : "2017-12-09",
-        "comment_max" : { //最大单篇评论量Cmax
-          "value" : 537.0
-        },
         "favourites_count_sum" : { //日用户like量L（总）
           "value" : 1218.0
-        },
-        "up_sum" : { //文章总点赞量Z
-          "value" : 850.0
         },
         "friends_count_sum" : { //日用户朋友数FR（总）
           "value" : 12229.0
         },
-        "key" : 1512748800000,
+        "repost_sum" : { //文章总转发量R
+          "value" : 376.0
+        },
+        "repost_max" : { //最大单篇转发量Rmax
+          "value" : 299.0
+        },
+        "comment_sum" : { //文章总评论量C
+          "value" : 781.0
+        },
+        "comment_max" : { //最大单篇评论量Cmax
+          "value" : 537.0
+        },
+        "up_sum" : { //文章总点赞量Z
+          "value" : 850.0
+        },
         "up_max" : { //最大单篇点赞量Zmax
           "value" : 477.0
         }
