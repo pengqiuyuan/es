@@ -37,33 +37,33 @@ tw
         "document_count" : { //期间总发帖量N
           "value" : 7.0
         },
-        "retweet_count_max" : { //最大单篇转发量Rmax
+        "repost_max" : { //最大单篇转发量Rmax
           "value" : 299.0
         },
         "followers_count_sum" : { //日粉丝量F（总）
           "value" : 139174.0
         },
-        "retweet_count_sum" : { //文章总转发量R
+        "repost_sum" : { //文章总转发量R
           "value" : 376.0
         },
-        "reply_count_sum" : { //文章总评论量C
+        "comment_sum" : { //文章总评论量C
           "value" : 781.0
         },
         "key_as_string" : "2017-12-09",
-        "reply_count_max" : { //最大单篇评论量Cmax
+        "comment_max" : { //最大单篇评论量Cmax
           "value" : 537.0
         },
         "favourites_count_sum" : { //日用户like量L（总）
           "value" : 1218.0
         },
-        "favorite_count_sum" : { //文章总点赞量Z
+        "up_sum" : { //文章总点赞量Z
           "value" : 850.0
         },
         "friends_count_sum" : { //日用户朋友数FR（总）
           "value" : 12229.0
         },
         "key" : 1512748800000,
-        "favorite_count_max" : { //最大单篇点赞量Zmax
+        "up_max" : { //最大单篇点赞量Zmax
           "value" : 477.0
         }
       }, {
@@ -182,33 +182,33 @@ raw
       "buckets" : [ {
         "key_as_string" : "2017-12-09",
         "doc_count" : 5,
-        "document_count" : { //期间总发帖量N
-          "value" : 5.0
-        },
-        "share_count_sum" : { //文章总转发量R
-          "value" : 0.0
-        },
-        "comment_num_max" : { //最大单篇评论量Cmax
-          "value" : 39.0
-        },
-        "share_count_max" : { //最大单篇转发量Rmax
-          "value" : 0.0
-        },
-        "likes_num_max" : { //最大单篇点赞量Zmax
-          "value" : 189.0
-        },
-        "comment_num_sum" : { //文章总评论量C
-          "value" : 195.0
-        },
-        "likes_num_sum" : { //文章总点赞量Z
-          "value" : 945.0
-        },
         "key" : 1512748800000,
-        "fan_count_sum" : {  //日粉丝量F（总）
+        "fan_count_sum" : { //日粉丝量F（总）
           "value" : 64680.0
         },
         "likes_count_sum" : { //日用户被like数L（总）
           "value" : 64960.0
+        },
+        "document_count" : { //期间总发帖量N
+          "value" : 5.0
+        },
+        "repost_sum" : { //文章总转发量R
+          "value" : 0.0
+        },
+        "repost_max" : { //最大单篇转发量Rmax
+          "value" : 0.0
+        },
+        "comment_sum" : { //文章总评论量C
+          "value" : 195.0
+        },
+        "comment_max" : { //最大单篇评论量Cmax
+          "value" : 39.0
+        },
+        "up_sum" : { //文章总点赞量Z
+          "value" : 945.0
+        },
+        "up_max" : { //最大单篇点赞量Zmax
+          "value" : 189.0
         }
       }, {
         "key_as_string" : "2017-12-10",
