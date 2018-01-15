@@ -180,6 +180,7 @@
         * [一、MCI 自动报告导出](ren-wu/narnia/jie-kou-mci/yi-3001-mci-zi-dong-bao-gao-dao-chu.md)
       * [接口 Rowlet](ren-wu/narnia/jie-kou-rowlet.md)
         * [一、获取Fb、Tw计算指标](ren-wu/narnia/jie-kou-rowlet/yi-3001-huo-qu-fb-tw-ji-suan-zhi-biao.md)
+        * [二、获取原文（排序）](ren-wu/narnia/jie-kou-rowlet/er-3001-huo-qu-yuan-wen-ff08-pai-xu-ff09.md)
     * 百度指数
     * [百度新闻](ren-wu/bai-du-xin-wen.md)
     * [用户画像](ren-wu/yong-hu-hua-xiang.md)

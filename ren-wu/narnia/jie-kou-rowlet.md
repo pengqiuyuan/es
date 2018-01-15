@@ -1,5 +1,3 @@
-
-
 ```
 GET /rowlet_twitter_articles/rowlet_twitter_articles/_search
 {
@@ -261,4 +259,6 @@ GET /rowlet_facebook_articles/rowlet_facebook_articles/_search
           }
 }
 ```
+
+
 
