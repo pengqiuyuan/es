@@ -18,6 +18,7 @@ sortField为排序字段，必填。
 sort为排序 asc（升序）、desc（降序，默认）
 pageNumber为第几页，默认1
 pageSize为每页多少条，默认10
+queryMode为查询模式，是否只返回text文本内容。simple、normal，必填。queryMode:"" 默认为 normal。
 ```
 
 `BODY` 体：
