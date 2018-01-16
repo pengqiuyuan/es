@@ -35,7 +35,8 @@ twitter
     "sortField": "comment_count",
     "sort": "desc",
     "pageNumber": "1",
-    "pageSize": "10"
+    "pageSize": "10",
+    "queryMode":"normal"
 }
 
 facebook
@@ -49,7 +50,8 @@ facebook
     "sortField": "comment_count",
     "sort": "asc",
     "pageNumber": "1",
-    "pageSize": "10"
+    "pageSize": "10",
+    "queryMode":"normal"
 }
 ```
 
