@@ -1,4 +1,4 @@
-五、**获取库中匹配到的结果集（Tw、Fb）**
+二、**获取库中匹配到的结果集（Tw、Fb）**
 
 `POST` `http://127.0.0.1/stq/api/v1/rowlet/findEsTextByUserId`
 
