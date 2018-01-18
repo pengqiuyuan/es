@@ -11,7 +11,7 @@ keywords为查询关键字，必填。默认空字符串
 startDate为起始时间（含），必填。
 endDate为结束时间（不含），必填。
 category为数据源 tw、fb，必填
-ids为账号Id数组，必填。
+ids为账号Id数组，必填。可以为空集合
 sortField为排序字段，必填。
     tw（默认 created_at 发布时间）：repost_count（转发）, comment_count（评论）, up_count（点赞）
     fb（默认 created_at 发布时间）：repost_count（转发）, comment_count（评论）, up_count（点赞）
