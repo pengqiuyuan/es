@@ -1,6 +1,6 @@
 二、**按话题查询获取原文**
 
-`POST` `http://127.0.0.1/stq/api/v1/rowlet/findEsTextByUserId`
+`POST` `http://127.0.0.1/stq/api/v1/rowlet/findEsTextByTopic`
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
