@@ -183,6 +183,7 @@
         * [二、获取原文，按关键字查询（排序）](ren-wu/narnia/jie-kou-rowlet/er-3001-huo-qu-yuan-wen-ff08-pai-xu-ff09.md)
         * [三、获取原文，按话题查询](ren-wu/narnia/jie-kou-rowlet/san-3001-huo-qu-yuan-wen-ff0c-an-hua-ti-cha-xun.md)
         * [四、获取热门话题 TopN](ren-wu/narnia/jie-kou-rowlet/si-3001-huoqu-re-men-hua-ti-topn.md)
+        * [五、周、月报自动导出](ren-wu/narnia/jie-kou-rowlet/wu-3001-huo-qu-zhou-3001-yue-bao.md)
     * 百度指数
     * [百度新闻](ren-wu/bai-du-xin-wen.md)
     * [用户画像](ren-wu/yong-hu-hua-xiang.md)
