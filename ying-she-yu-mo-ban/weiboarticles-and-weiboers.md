@@ -357,6 +357,15 @@ curl -XPUT http://localhost:9222/_template/weibo_articles_and_weiboers -d '
                 },
                 "machine_identifier": {
                     "type": "keyword"
+                },                
+                "at_names": {
+                    "type": "keyword"
+                },
+                "at_name_ids": {
+                    "type": "keyword"
+                },
+                "topics": {
+                    "type": "keyword"
                 }
             }
         }
