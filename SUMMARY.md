@@ -45,6 +45,7 @@
     * [数据用例](ying-she-yu-mo-ban/rowletfacebook-articles/shu-ju-yong-li.md)
   * [rowlet\_twitter\_articles](ying-she-yu-mo-ban/rowlettwitter-articles.md)
     * [数据用例](ying-she-yu-mo-ban/rowlettwitter-articles/shu-ju-yong-li.md)
+  * [weiboer\_logs](ying-she-yu-mo-ban/weiboerlogs.md)
 * [安全机制](an-quan-ji-zhi.md)
   * [基于 nginx 配置](an-quan-ji-zhi/ji-yu-nginx-pei-zhi.md)
   * [xpack](an-quan-ji-zhi/xpack.md)
