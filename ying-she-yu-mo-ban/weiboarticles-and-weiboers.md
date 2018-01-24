@@ -359,7 +359,14 @@ PUT /_template/weibo_articles_and_weiboers
 				},
 				"is_add_topics": {
 					"type": "keyword"
+				},
+				"direct_repost_weiboer_name": {
+					"type": "keyword"
+				},
+				"direct_repost_weiboer_id": {
+					"type": "keyword"
 				}
+
 			}
 		}
 	}
