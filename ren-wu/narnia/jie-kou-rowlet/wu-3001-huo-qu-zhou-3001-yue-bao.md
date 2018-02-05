@@ -17,7 +17,7 @@ jsonData 必填项，json字符串。
 
 ```
 {
-    "category": "week",
+    "category":"week",
     "jsonData": {
         "titleName": "IKOLs国际意见领袖传播内容分析周报",
         "titleDate": "（2018年第1周  1月1日—1月7日）",
@@ -25,148 +25,190 @@ jsonData 必填项，json字符串。
         "h1": {
             "h1_p1_content1": "根据IKOLs影响力指数分析， Facebook最具影响力IKOLs是Donald J. Trump、Barack Obama、Michael R. Pence、Ryan Zinke、Elaine Duke， Twitter IKOLs最具影响力的是Melania Trump、Karen Pence、James Mattis、Eric D. Hargan、Sonny Perdue。",
             "ikolsCount": {
-                "tw": [{
+                "tw":[
+                    {
                         "key": "@Donald J. Trump",
-                        "value": "145"
+                        "value": "145",
+                        "job": "总统"
                     },
                     {
                         "key": "@Donald J. Trump",
-                        "value": "145"
+                        "value": "145",
+                        "job": "总统"
                     }
                 ],
-                "fb": [{
+                "fb":[
+                    {
                         "key": "@Melania Trump",
-                        "value": "255"
+                        "value": "255",
+                        "job": "总统"
                     },
                     {
                         "key": "@Melania Trump",
-                        "value": "255"
+                        "value": "255",
+                        "job": "总统"
                     }
                 ]
             },
             "h1_p2_content1": "2018年第1周， Facebook发文量最多的IKOLs是Donald J. Trump、Barack Obama、Michael R. Pence、Elaine L. Chao、Scott Pruitt，IKOLs人均发文量是12条。 Twitter发文量最多的IKOLs是Melania Trump、Karen Pence、James Mattis、Mike Pompeo、Daniel Coats，IKOLs人均发文量是11条。",
             "articlesCount": {
-                "tw": [{
+                "tw":[
+                    {
                         "key": "@Donald J. Trump",
-                        "value": "145"
+                        "value": "145",
+                        "job": "总统"
                     },
                     {
                         "key": "@Donald J. Trump",
-                        "value": "145"
+                        "value": "145",
+                        "job": "总统"
                     }
                 ],
-                "fb": [{
+                "fb":[
+                    {
                         "key": "@Melania Trump",
-                        "value": "255"
+                        "value": "255",
+                        "job": "总统"
                     },
                     {
                         "key": "@Melania Trump",
-                        "value": "255"
+                        "value": "255",
+                        "job": "总统"
                     }
                 ]
             },
             "h1_p3_content1": "2018年第1周，Facebook发文转发量最高的IKOLs是Donald J. Trump、Barack Obama、Michael R. Pence、Ryan Zinke、Elaine Duke，IKOLs人均发文转发量是20。Twitter发文转发量最多的IKOLs是Melania Trump、Karen Pence、James Matti、Eric D. Hargan、Sonny Perdue，IKOLs人均发文转发量是20。",
             "repostCount": {
-                "tw": [{
+                "tw":[
+                    {
                         "key": "@Donald J. Trump",
-                        "value": "145"
+                        "value": "145",
+                        "job": "总统"
                     },
                     {
                         "key": "@Donald J. Trump",
-                        "value": "145"
+                        "value": "145",
+                        "job": "总统"
                     }
                 ],
-                "fb": [{
+                "fb":[
+                    {
                         "key": "@Melania Trump",
-                        "value": "255"
+                        "value": "255",
+                        "job": "总统"
                     },
                     {
                         "key": "@Melania Trump",
-                        "value": "255"
+                        "value": "255",
+                        "job": "总统"
                     }
                 ]
             },
             "h1_p4_content1": "2018年第1周，Facebook发文评论量最多的IKOLs是Donald J. Trump、Barack Obama、Michael R. Pence、Elaine L. Chao、Scott Pruitt，IKOLs人均发文评论量是40条。 Twitter发文评论量最多的IKOLs是Melania Trump、Karen Pence、James Mattis、Mike Pompeo、Daniel Coats，IKOLs人均发文评论量是45。",
             "commentCount": {
-                "tw": [{
+                "tw":[
+                    {
                         "key": "@Donald J. Trump",
-                        "value": "145"
+                        "value": "145",
+                        "job": "总统"
                     },
                     {
                         "key": "@Donald J. Trump",
-                        "value": "145"
+                        "value": "145",
+                        "job": "总统"
                     }
                 ],
-                "fb": [{
+                "fb":[
+                    {
                         "key": "@Melania Trump",
-                        "value": "255"
+                        "value": "255",
+                        "job": "总统"
                     },
                     {
                         "key": "@Melania Trump",
-                        "value": "255"
+                        "value": "255",
+                        "job": "总统"
                     }
                 ]
             },
             "h1_p5_content1": "2018年第1周，Facebook发文点赞量最高的IKOLs是Donald J. Trump、Barack Obama、Michael R. Pence、Ryan Zinke、Elaine Duke，IKOLs人均发文点赞量是500。 Twitter发文点赞量最多的IKOLs是Melania Trump、Karen Pence、James Matti、Eric D. Hargan、Sonny Perdue，IKOLs人均发文点赞量是500。",
             "upCount": {
-                "tw": [{
+                "tw":[
+                    {
                         "key": "@Donald J. Trump",
-                        "value": "145"
+                        "value": "145",
+                        "job": "总统"
                     },
                     {
                         "key": "@Donald J. Trump",
-                        "value": "145"
+                        "value": "145",
+                        "job": "总统"
                     }
                 ],
-                "fb": [{
+                "fb":[
+                    {
                         "key": "@Melania Trump",
-                        "value": "255"
+                        "value": "255",
+                        "job": "总统"
                     },
                     {
                         "key": "@Melania Trump",
-                        "value": "255"
+                        "value": "255",
+                        "job": "总统"
                     }
                 ]
             },
             "h1_p6_content1": "本周Facebook粉丝量最多的IKOLs是Donald J. Trump、Barack Obama、Michael R. Pence、John F. Kelly、David J. Shulkin，粉丝量分别是15901、15872、14981、13687和13465。Twitter粉丝量最多的IKOLs是Melania Trump、Karen Pence、James Mattis、Elaine L. Chao、Scott Pruitt，粉丝量分别是18761、18561、18091、17889、14243。",
             "fansCount": {
-                "tw": [{
+                "tw":[
+                    {
                         "key": "@Donald J. Trump",
-                        "value": "145"
+                        "value": "145",
+                        "job": "总统"
                     },
                     {
                         "key": "@Donald J. Trump",
-                        "value": "145"
+                        "value": "145",
+                        "job": "总统"
                     }
                 ],
-                "fb": [{
+                "fb":[
+                    {
                         "key": "@Melania Trump",
-                        "value": "255"
+                        "value": "255",
+                        "job": "总统"
                     },
                     {
                         "key": "@Melania Trump",
-                        "value": "255"
+                        "value": "255",
+                        "job": "总统"
                     }
                 ]
             },
             "h1_p7_content1": "本周Facebook新增粉丝量最多的IKOLs是Donald J. Trump、Barack Obama、Michael R. Pence、，分别增加了15901、15872、14981、14567和13456； Twitter新增粉丝量最多的IKOLs是Melania Trump、Karen Pence、James Mattis、Elaine L. Chao、Scott Pruitt，分别是18761、18561、18091、17889、14243。",
             "newsFansCount": {
-                "tw": [{
+                "tw":[
+                    {
                         "key": "@Donald J. Trump",
-                        "value": "145"
+                        "value": "145",
+                        "job": "总统"
                     },
                     {
                         "key": "@Donald J. Trump",
-                        "value": "145"
+                        "value": "145",
+                        "job": "总统"
                     }
                 ],
-                "fb": [{
+                "fb":[
+                    {
                         "key": "@Melania Trump",
-                        "value": "255"
+                        "value": "255",
+                        "job": "总统"
                     },
                     {
                         "key": "@Melania Trump",
-                        "value": "255"
+                        "value": "255",
+                        "job": "总统"
                     }
                 ]
             }
@@ -174,13 +216,14 @@ jsonData 必填项，json字符串。
         "h2": {
             "h2_p1_content1": "Facebook转发量最高的发文来自于First Lady Melania Trump、Mike Pence、Barack Obama、Al Franken、Bill Nelson（内容详见下表）。Twitter转发量最高的发文来自于First Lady Melania Trump、Mike Pence、Barack Obama、Ryan Zinke、Dan Coats（内容详见下表）。",
             "repostContent": {
-                "tw": [{
+                "tw":[
+                    {
                         "name": "Chris Christie@govchristie",
                         "date": "2017/12/11 13:34:30",
                         "comment": "2389",
                         "repost": "2389",
                         "up": "2389",
-                        "content": "The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
+                        "content":"The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
                     },
                     {
                         "name": "Chris Christie@govchristie",
@@ -188,16 +231,17 @@ jsonData 必填项，json字符串。
                         "comment": "2389",
                         "repost": "2389",
                         "up": "2389",
-                        "content": "The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
+                        "content":"The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
                     }
                 ],
-                "fb": [{
+                "fb":[
+                    {
                         "name": "Chris Christie@govchristie",
                         "date": "2017/12/11 13:34:30",
                         "comment": "2389",
                         "repost": "2389",
                         "up": "2389",
-                        "content": "The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
+                        "content":"The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
                     },
                     {
                         "name": "Chris Christie@govchristie",
@@ -205,19 +249,20 @@ jsonData 必填项，json字符串。
                         "comment": "2389",
                         "repost": "2389",
                         "up": "2389",
-                        "content": "The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
+                        "content":"The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
                     }
                 ]
             },
             "h2_p2_content1": "Facebook评论量最高的发文来自于 Asa Hutchinson、Ben Cardin、Chris Christie、Ryan Zinke、Dan Coats（内容详见下表）。Twitter评论量最高的发文来自于Charlie Baker 、Chris Murphy、Grassley Press、Ryan Zinke、Dan Coats（内容详见下表）.",
             "commentContent": {
-                "tw": [{
+                "tw":[
+                    {
                         "name": "Chris Christie@govchristie",
                         "date": "2017/12/11 13:34:30",
                         "comment": "2389",
                         "repost": "2389",
                         "up": "2389",
-                        "content": "The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
+                        "content":"The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
                     },
                     {
                         "name": "Chris Christie@govchristie",
@@ -225,16 +270,17 @@ jsonData 必填项，json字符串。
                         "comment": "2389",
                         "repost": "2389",
                         "up": "2389",
-                        "content": "The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
+                        "content":"The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
                     }
                 ],
-                "fb": [{
+                "fb":[
+                    {
                         "name": "Chris Christie@govchristie",
                         "date": "2017/12/11 13:34:30",
                         "comment": "2389",
                         "repost": "2389",
                         "up": "2389",
-                        "content": "The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
+                        "content":"The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
                     },
                     {
                         "name": "Chris Christie@govchristie",
@@ -242,19 +288,20 @@ jsonData 必填项，json字符串。
                         "comment": "2389",
                         "repost": "2389",
                         "up": "2389",
-                        "content": "The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
+                        "content":"The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
                     }
                 ]
             },
             "h2_p3_content1": "Facebook点赞量最高的发文来自于Asa Hutchinson、Ben Cardin、Chris Christie、Chris Murphy、Brian Sandoval （内容详见下表）。Twitte点赞量最高的发文来自于Charlie Baker 、Chris Murphy、 Grassley Press、Al Franken、Chris Christie、Brian Sandoval（内容详见下表）。",
             "upContent": {
-                "tw": [{
+                "tw":[
+                    {
                         "name": "Chris Christie@govchristie",
                         "date": "2017/12/11 13:34:30",
                         "comment": "2389",
                         "repost": "2389",
                         "up": "2389",
-                        "content": "The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
+                        "content":"The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
                     },
                     {
                         "name": "Chris Christie@govchristie",
@@ -262,16 +309,17 @@ jsonData 必填项，json字符串。
                         "comment": "2389",
                         "repost": "2389",
                         "up": "2389",
-                        "content": "The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
+                        "content":"The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
                     }
                 ],
-                "fb": [{
+                "fb":[
+                    {
                         "name": "Chris Christie@govchristie",
                         "date": "2017/12/11 13:34:30",
                         "comment": "2389",
                         "repost": "2389",
                         "up": "2389",
-                        "content": "The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
+                        "content":"The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
                     },
                     {
                         "name": "Chris Christie@govchristie",
@@ -279,13 +327,14 @@ jsonData 必填项，json字符串。
                         "comment": "2389",
                         "repost": "2389",
                         "up": "2389",
-                        "content": "The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
+                        "content":"The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
                     }
                 ]
             },
             "h2_p4_content1": "Facebook点赞量最高的发文来自于Asa Hutchinson、Ben Cardin、Chris Christie、Chris Murphy、Brian Sandoval （内容详见下表）。Twitte点赞量最高的发文来自于Charlie Baker 、Chris Murphy、 Grassley Press、Al Franken、Chris Christie、Brian Sandoval（内容详见下表）。",
             "topicRank": {
-                "tw": [{
+                "tw":[
+                    {
                         "key": "1",
                         "value": "AChristmasStoryLive"
                     },
@@ -294,16 +343,17 @@ jsonData 必填项，json字符串。
                         "value": "WWEClash"
                     }
                 ]
-            },
+            },       
             "h2_p4_content2": "Facebook点赞量最高的发文来自于Asa Hutchinson、Ben Cardin、Chris Christie、Chris Murphy、Brian Sandoval （内容详见下表）。Twitte点赞量最高的发文来自于Charlie Baker 、Chris Murphy、 Grassley Press、Al Franken、Chris Christie、Brian Sandoval（内容详见下表）。",
             "topicContent": {
-                "tw": [{
+                "tw":[
+                    {
                         "name": "Chris Christie@govchristie",
                         "date": "2017/12/11 13:34:30",
                         "comment": "2389",
                         "repost": "2389",
                         "up": "2389",
-                        "content": "The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
+                        "content":"The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
                     },
                     {
                         "name": "Chris Christie@govchristie",
@@ -311,7 +361,7 @@ jsonData 必填项，json字符串。
                         "comment": "2389",
                         "repost": "2389",
                         "up": "2389",
-                        "content": "The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
+                        "content":"The effects of the hurricane season are still being felt throughout southern portions of the U.S. and in Puerto Rico, and residents still need our help. As Christmas and the New Year approach, I encourage people to lend time volunteering or providing financial support to those still reeling from the hurricanes.​"
                     }
                 ]
             }
