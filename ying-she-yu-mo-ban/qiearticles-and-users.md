@@ -22,6 +22,7 @@
 | 评论量 | comment_count | Number |
 | 点赞量 | up_count | Number |
 | 播放量 | play_count | Number |
+| 类型 | type | Number |
 
 创建索引`qie_articles_and_users`
 
