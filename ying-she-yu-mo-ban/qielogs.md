@@ -87,20 +87,31 @@ PUT /_template/qie_logs
         }
       }],
       "properties": {
-        "version": {
+        "crawled_at": {
           "format": "strict_date_optional_time||epoch_millis",
           "type": "date"
+        },
+        "penguin_id": {
+          "type": "keyword"
+        },
+        "avatar_img": {
+          "type": "keyword"
+        },
+        "introduction": {
+          "type": "text",
+          "analyzer": "ik_max_word",
+          "search_analyzer": "ik_max_word"
         },
         "tieba_id": {
           "type": "keyword"
         },
-        "ba_m_num": {
+        "follower_count": {
           "type": "integer"
         },
-        "ba_t_num": {
+        "fans_count": {
           "type": "integer"
         },
-        "ba_p_num": {
+        "read_count": {
           "type": "integer"
         }
       }
