@@ -107,6 +107,7 @@
     * [Twitter](xiao-xi-dui-lie/ce-shi/twitter.md)
     * [WeiboLogs](xiao-xi-dui-lie/ce-shi/weibologs.md)
     * [ToutiaoLogs](xiao-xi-dui-lie/ce-shi/toutiaologs.md)
+    * [数据写入共用接口](xiao-xi-dui-lie/ce-shi/shu-ju-xie-ru-gong-yong-jie-kou.md)
   * [Kafka](xiao-xi-dui-lie/kafka.md)
   * [Logstash](xiao-xi-dui-lie/logstash.md)
 * [NLP 与 机器学习](nlp-yu-ji-qi-xue-xi.md)
