@@ -33,6 +33,9 @@
 | 帖子爬取时间 | created\_at | 日期 |
 | 帖子最后更新时间 | last\_reply\_at | 日期 |
 | 所属贴吧 | tieba\_id | 字符串 |
+| 贴吧关注量 | ba\_m\_num | 数值 |
+| 贴吧主题量 | ba\_t\_num | 数值 |
+| 贴吧帖子量 | ba\_p\_num | 数值 |
 
 创建索引`tieba_posts`
 
@@ -43,7 +46,9 @@ curl -XPUT http://127.0.0.1:9222/tieba_posts
 `mapping`
 
 ```
-curl -XPUT http://127.0.0.1:9222/_template/tieba_posts -d '
+GET _template/tieba_posts
+
+PUT /_template/tieba_posts
 {
     "template": "tieba_posts*",
     "settings": {
@@ -179,12 +184,20 @@ curl -XPUT http://127.0.0.1:9222/_template/tieba_posts -d '
                 "tieba_id": {
                     "type": "keyword",
                     "ignore_above": 256
+                },
+                "ba_m_num": {
+                    "type": "integer"
+                },
+                "ba_t_num": {
+                    "type": "integer"
+                },
+                "ba_p_num": {
+                    "type": "integer"
                 }
             }
         }
     }
 }
-'
 ```
 
 
