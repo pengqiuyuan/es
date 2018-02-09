@@ -11,6 +11,9 @@
 | 贴吧主题量 | ba\_t\_num | Number |
 | 时间版本号 | version | Date |
 | 贴吧帖子量 | ba\_p\_num | Number |
+|  |  |  |
+|  |  |  |
+|  |  |  |
 
 创建索引`qie_logs`
 
