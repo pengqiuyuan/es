@@ -14,6 +14,14 @@
 | 粉丝量 | fans\_count | Number |
 | 浏览量 | read\_count | Number |
 | 抓取时间 | crawled\_at | Date |
+| 发布时间 | published\_at | Date |
+| 资源ID | resource_id | String |
+| 文章标题 | title | String |
+| 文章内容 | content | String |
+| 文章图片 | images | String |
+| 评论量 | comment_count | Number |
+| 点赞量 | up_count | Number |
+| 播放量 | play_count | Number |
 
 创建索引`qie_articles_and_users`
 
