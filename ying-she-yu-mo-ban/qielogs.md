@@ -6,16 +6,14 @@
 
 | 字段含义 | 字段名称 | 数据类型 |
 | :---: | :---: | :---: |
-| 企鹅号ID | tieba\_id | String |
-| 头像图片链接 | ba\_m\_num | Number |
-| 企鹅号名称 | ba\_t\_num | Number |
-| 企鹅号简介 | version | Date |
-| 关注量 | ba\_p\_num | Number |
-| 粉丝量 |  |  |
-| 浏览量 |  |  |
-| 抓取时间 |  |  |
-
-
+| 企鹅号ID | penguin_id | String |
+| 头像图片链接 | avatar_img | String |
+| 企鹅号名称 | name | String |
+| 企鹅号简介 | introduction | String |
+| 关注量 | follower_count | Number |
+| 粉丝量 | fans_count | Number |
+| 浏览量 | read_count | Number |
+| 抓取时间 | crawled_at | Date |
 
 创建索引`qie_logs`
 
