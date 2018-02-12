@@ -1,6 +1,6 @@
-tieba_logs（索引名称、分片名称）：`tieba_logs`、`tieba_logs`
-qie_logs（索引名称、分片名称）：`qie_logs`、`qie_logs`
-qie_articles_and_users（索引名称、分片名称）：`qie_articles_and_users`、`qie_articles_and_users`
+tieba\_logs（索引名称、分片名称）：`tieba_logs`、`tieba_logs`  
+qie\_logs（索引名称、分片名称）：`qie_logs`、`qie_logs`  
+qie\_articles\_and\_users（索引名称、分片名称）：`qie_articles_and_users`、`qie_articles_and_users`
 
 **POST 请求写入数据到 **`kafka`
 
@@ -36,6 +36,7 @@ qie_articles_and_users（索引名称、分片名称）：`qie_articles_and_user
   "success" : "false"
 }
 ```
+
 ---
 
 **POST 请求直接 Bulk 写入数据到 Elasticsearch**
