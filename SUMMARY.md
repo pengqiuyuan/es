@@ -209,4 +209,6 @@
     * [Facebook](ren-wu/rowlet/facebook.md)
 * [单点登录](dan-dian-deng-lu.md)
   * [部署](dan-dian-deng-lu/bu-shu.md)
+  * [域名一（login.idatage.com）](dan-dian-deng-lu/yu-mingyi-ff08-login-idatage-com.md)
+  * [域名二（login.qyconsulting.cn）](dan-dian-deng-lu/yu-minger-ff08-login-qyconsulting-cn.md)
 
