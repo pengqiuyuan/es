@@ -26,10 +26,19 @@ mvn spring-boot:run -Drun.profiles=dev
 ```
 
 ```
+mvn clean package -Dmaven.test.skip=true
+
 nohup java -Xms256m -Xmx256m -jar -Dspring.profiles.active=idatage target/sso-1.0.jar  > nohup_idatage.out &
 
 nohup java -Xms256m -Xmx256m -jar -Dspring.profiles.active=qy target/sso-1.0.jar  > nohup_qy.out &
+```
 
+**测试**
+
+```
+mvn clean package -Dmaven.test.skip=true
+
+nohup java -Xms64m -Xmx64m -jar -Dserver.port=8083 target/com.hellokoding.security-1.5.2.RELEASE.jar  > nohup_test1.out &
 
 ```
 
