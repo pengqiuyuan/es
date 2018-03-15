@@ -26,7 +26,7 @@
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
-`参数说明`：`jwttoken` 加密签名，[具体参考](http://blog.leapoahead.com/2015/09/06/understanding-jwt/)
+`参数说明`：`jwttoken` 加密签名（秘钥为\*\*\*），[具体参考](http://blog.leapoahead.com/2015/09/06/understanding-jwt/)
 
 `response`
 
@@ -34,16 +34,16 @@
 jwttoken 认证成功
 
 {
-	"code": 200,
-	"data": {
-		"mail": "pengqiuyuanfj@gmail.com",
-		"phone": "13654255565",
-		"id": 5,
-		"ttl": 86228,
-		"registerDate": 1520325613000,
-		"status": "1"
-	},
-	"message": "JWT-TOKEN 有效"
+    "code": 200,
+    "data": {
+        "mail": "pengqiuyuanfj@gmail.com",
+        "phone": "13654255565",
+        "id": 5,
+        "ttl": 86228,
+        "registerDate": 1520325613000,
+        "status": "1"
+    },
+    "message": "JWT-TOKEN 有效"
 }
 
 jwttoken 认证失败
@@ -53,7 +53,6 @@ jwttoken 认证失败
     "data": "",
     "message": "JWT-TOKEN 无效"
 }
-
 ```
 
 
