@@ -1,4 +1,4 @@
-**四、跨域示例**
+一**、跨域示例**
 
 ```
 业务A : http://test1.idatage.com/protected-resource
@@ -13,8 +13,6 @@ SSO :  http://login.idatage.com/t/login
 注销（跨域同时注销）：
 第一步：点击业务B测试页面里的Logout按钮 -> 页面跳转至重新登录页面
 第二步：刷新业务A已登录的测试页面 -> 页面同时跳转至重新登录页面
-
-
 ```
 
 
