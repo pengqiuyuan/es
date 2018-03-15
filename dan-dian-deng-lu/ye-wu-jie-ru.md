@@ -26,7 +26,7 @@
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
-`参数说明`：`jwttoken` 加密签名（秘钥为\*\*\*），[具体参考](http://blog.leapoahead.com/2015/09/06/understanding-jwt/)
+`参数说明`：`jwttoken` 加密签名，[具体参考](http://blog.leapoahead.com/2015/09/06/understanding-jwt/)
 
 `response`
 
