@@ -38,8 +38,13 @@ nohup java -Xms256m -Xmx256m -jar -Dspring.profiles.active=qy target/sso-1.0.jar
 ```
 mvn clean package -Dmaven.test.skip=true
 
-nohup java -Xms64m -Xmx64m -jar -Dserver.port=8083 target/com.hellokoding.security-1.5.2.RELEASE.jar  > nohup_test1.out &
+nohup java -Xms32m -Xmx32m -jar -Dserver.port=8083 target/com.hellokoding.security-1.5.2.RELEASE.jar  > nohup_test1.out &
+```
 
+```
+mvn clean package -Dmaven.test.skip=true
+
+nohup java -Xms32m -Xmx32m -jar -Dserver.port=8084 target/com.hellokoding.security-1.5.2.RELEASE.jar  > nohup_test2.out &
 ```
 
 
