@@ -6,17 +6,23 @@
 | 单点登录-登出 | 提供注销的入口 |
 | 单点登录-登录状态 | 提供登录状态校验/登录信息查询的服务 |
 
+
+
 **一、登录地址:**
 
 `GET` `http://login.idatage.com/t/login?redirect=业务地址`
 
 `参数` `redirect 必填`
 
+
+
 **二、登出地址:**
 
 `GET` `http://login.idatage.com/t/logout?redirect=业务地址`
 
 `参数` `redirect 必填`
+
+
 
 **三、登录状态验证接口：**
 
@@ -26,7 +32,7 @@
 
 `参数说明`：`jwttoken` 加密签名，[具体参考](http://blog.leapoahead.com/2015/09/06/understanding-jwt/)
 
-`response`
+`response` ：`ttl` 为查询 `jwttoken` 的剩余有效时间
 
 ```
 jwttoken 认证成功
