@@ -1,4 +1,4 @@
-一**、跨域示例**
+**一、跨域示例**
 
 ```
 业务A : http://test1.idatage.com/protected-resource
