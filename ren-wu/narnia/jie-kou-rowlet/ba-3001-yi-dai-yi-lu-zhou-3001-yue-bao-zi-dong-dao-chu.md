@@ -7,7 +7,7 @@
 `参数说明`：
 
 ```
-fileName 必填，模板名称（固定值）
+fileName 必填，（注意：模板名称为固定值，是保存在磁盘上的.docx 文件，名称不可修改）
     category == week ？一带一路国际传播大数据分析周报模板 : category == month ？一带一路国际传播大数据分析月报模板:""
 category 必填，字符串
     week
