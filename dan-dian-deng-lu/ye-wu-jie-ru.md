@@ -56,35 +56,7 @@ jwttoken 认证失败
 }
 ```
 
-**三、忘记密码、修改密码接口：**
-
-`GET` `http://login.idatage.com/t/sentmail?mail=pengqiuyuanfj@gmail.com&redirect=http://test1.qyconsulting.cn/protected-resource`
-
-`HEADERS`：`"Content-Type" => "application/json"`
-
-`参数说明`：`mail` 需要修改账号的邮箱地址，`redirect` 修改后跳转的业务地址
-
-`response` ：
-
-```
-成功
-
-{
-    "code": 200,
-    "data": "",
-    "message": "邮件正在发送，请耐心等待"
-}
-
-失败
-
-{
-    "code": 400,
-    "data": "",
-    "message": "邮件发送失败"
-}
-```
-
-**五、跨域示例**
+**四、跨域示例**
 
 ```
 业务A : http://test1.idatage.com/protected-resource
