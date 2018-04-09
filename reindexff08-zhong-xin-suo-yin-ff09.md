@@ -5,7 +5,7 @@ Reindex
 `weixiners`
 
 ```
-curl -XPOST http://localhost:9222/_reindex?requests_per_second=100000 -d '
+curl -XPOST http://localhost:9222/c?requests_per_second=100000 -d '
 {
   "source": {
     "remote": {

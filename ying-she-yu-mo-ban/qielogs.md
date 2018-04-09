@@ -6,14 +6,14 @@
 
 | 字段含义 | 字段名称 | 数据类型 |
 | :---: | :---: | :---: |
-| 企鹅号ID | penguin_id | String |
-| 头像图片链接 | avatar_img | String |
+| 企鹅号ID | penguin\_id | String |
+| 头像图片链接 | avatar\_img | String |
 | 企鹅号名称 | name | String |
 | 企鹅号简介 | introduction | String |
-| 关注量 | follower_count | Number |
-| 粉丝量 | fans_count | Number |
-| 浏览量 | read_count | Number |
-| 抓取时间 | crawled_at | Date |
+| 关注量 | follower\_count | Number |
+| 粉丝量 | fans\_count | Number |
+| 浏览量 | read\_count | Number |
+| 抓取时间 | crawled\_at | Date |
 
 创建索引`qie_logs`
 
@@ -109,13 +109,13 @@ PUT /_template/qie_logs
           "type": "keyword"
         },
         "follower_count": {
-          "type": "integer"
+          "type": "long"
         },
         "fans_count": {
-          "type": "integer"
+          "type": "long"
         },
         "read_count": {
-          "type": "integer"
+          "type": "long"
         }
       }
     }
