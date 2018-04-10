@@ -195,6 +195,8 @@
         * [六、获取原文，关键字或账号ID](ren-wu/narnia/jie-kou-rowlet/liu-3001-huo-qu-yuan-wen-ff0c-guan-jian-zi-huo-zhang-hao-id.md)
         * [七、SPC 周、月报自动导出](ren-wu/narnia/jie-kou-rowlet/qi-3001-spc-zhou-3001-yue-bao-zi-dong-dao-chu.md)
         * [八、一带一路周、月报自动导出](ren-wu/narnia/jie-kou-rowlet/ba-3001-yi-dai-yi-lu-zhou-3001-yue-bao-zi-dong-dao-chu.md)
+        * V2
+          * [四、获取热门话题（v2 指定 ids）](ren-wu/narnia/jie-kou-rowlet/si-3001-huo-qu-re-men-hua-ti-ff08-v2-zhi-ding-ids.md)
       * 接口 GNI
         * [一、GNI 自动报告导出](ren-wu/narnia/yi-3001-gni-zi-dong-bao-gao-dao-chu.md)
     * 百度指数
