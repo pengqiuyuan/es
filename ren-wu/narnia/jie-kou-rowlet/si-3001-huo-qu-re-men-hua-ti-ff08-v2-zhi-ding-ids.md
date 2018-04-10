@@ -1,4 +1,4 @@
-二、**获取热门话题 TopN （v2）**
+四、**获取热门话题 TopN （v2）**
 
 `POST` `http://127.0.0.1/stq/api/v2/rowlet/findTopNTopics`
 
