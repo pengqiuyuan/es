@@ -147,6 +147,12 @@ PUT /_template/rowlet_facebook_articles
         },
         "user": {
         	"properties": {
+                        "tag": {
+                            "type": "keyword"
+                        },
+                        "isBR": {
+                            "type": "boolean"
+                        },
 		        "id": {
 		          "type": "keyword"
 		        },
