@@ -200,6 +200,12 @@ PUT /_template/rowlet_twitter_articles
         },
         "user": {
             "properties": {
+                "tag": {
+                  "type": "keyword"
+                },
+                "isBR": {
+                  "type": "boolean"
+                },
                 "id": {
                   "type": "keyword"
                 },
