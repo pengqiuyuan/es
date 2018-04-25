@@ -33,9 +33,7 @@ favorite 喜欢 必填
 
 Demo：
 
-```
-http://127.0.0.1/stq/api/v1/rowlet/upsertTwitterEsById?id=980111653458120704&retweet=2&reply=2&favorite=2
-```
+`http://127.0.0.1/stq/api/v1/rowlet/upsertTwitterEsById?id=980111653458120704&retweet=2&reply=2&favorite=2`
 
 
 
