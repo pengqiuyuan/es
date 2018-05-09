@@ -122,13 +122,13 @@ PUT /_template/qie_articles_and_users
           "search_analyzer": "ik_max_word"
         },
         "follower_count": {
-          "type": "integer"
+          "type": "long"
         },
         "fans_count": {
-          "type": "integer"
+          "type": "long"
         },
         "read_count": {
-          "type": "integer"
+          "type": "long"
         },
         "resource_id": {
           "type": "keyword"
@@ -147,16 +147,16 @@ PUT /_template/qie_articles_and_users
           "type": "keyword"
         },
         "comment_count": {
-          "type": "integer"
+          "type": "long"
         },
         "up_count": {
-          "type": "integer"
+          "type": "long"
         },
         "play_count": {
-          "type": "integer"
+          "type": "long"
         },
         "type": {
-          "type": "integer"
+          "type": "long"
         }
       }
     }
