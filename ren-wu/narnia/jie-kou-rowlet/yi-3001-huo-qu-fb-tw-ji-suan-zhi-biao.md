@@ -171,6 +171,90 @@ tw
 }
 
 
+{
+	"tw": [{
+		"date": {
+			"buckets": [{
+				"repost_max": {
+					"value": 35.0
+				},
+				"doc_count": 10,
+				"comment_max": {
+					"value": 6.0
+				},
+				"document_count": {
+					"value": 10.0
+				},
+				"followers_count_sum": {
+					"value": 624330.0
+				},
+				"repost_sum": {
+					"value": 140.0
+				},
+				"comment_sum": {
+					"value": 19.0
+				},
+				"key_as_string": "2017-12-09",
+				"favourites_count_sum": {
+					"value": 870.0
+				},
+				"friends_count_sum": {
+					"value": 16960.0
+				},
+				"up_sum": {
+					"value": 658.0
+				},
+				"key": 1512748800000,
+				"up_max": {
+					"value": 237.0
+				}
+			}, {
+				"repost_max": {},
+				"doc_count": 0,
+				"comment_max": {},
+				"document_count": {
+					"value": 0.0
+				},
+				"followers_count_sum": {
+					"value": 0.0
+				},
+				"repost_sum": {
+					"value": 0.0
+				},
+				"comment_sum": {
+					"value": 0.0
+				},
+				"key_as_string": "2017-12-10",
+				"favourites_count_sum": {
+					"value": 0.0
+				},
+				"friends_count_sum": {
+					"value": 0.0
+				},
+				"up_sum": {
+					"value": 0.0
+				},
+				"key": 1512835200000,
+				"up_max": {}
+			}]
+		},
+		"doc_count": 10,
+		"key": "19471123"
+	}],
+	"docCountByDays": [{
+		"id": "19471123",
+		"key_as_string": "2017-12-09",
+		"primaryAndForwardCommentCount": "10",
+		"forwardCount": "2"
+	}, {
+		"id": "19471123",
+		"key_as_string": "2017-12-10",
+		"primaryAndForwardCommentCount": "0",
+		"forwardCount": "0"
+	}],
+	"message": "任务成功"
+}
+
 fb
 
 
