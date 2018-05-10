@@ -23,154 +23,28 @@ ids 集合。不大于 100。
       "ids":["18172905","239871673"]
 }
 ```
+返回参数：
+
+```
+"document_count" :  //期间总发帖量N
+"followers_count_sum" :  //日粉丝量F（总）
+"favourites_count_sum" :  //日用户like量L（总）
+"friends_count_sum" :  //日用户朋友数FR（总）
+"repost_sum" :  //文章总转发量R
+"repost_max" :  //最大单篇转发量Rmax
+"comment_sum" :  //文章总评论量C
+"comment_max" :  //最大单篇评论量Cmax
+"up_sum" :  //文章总点赞量Z
+"up_max" :  //最大单篇点赞量Zmax
+
+"docCountByDays": 账号每日（原发+转发评论） 、纯转发
+```
 
 `response` 成功
 
+Twitter
+
 ```
-tw
-
-{
-  "tw" : [ {
-    "date" : {
-      "buckets" : [ {
-        "key_as_string" : "2017-12-09",
-        "key" : 1512748800000,
-        "doc_count" : 7,        
-        "document_count" : { //期间总发帖量N
-          "value" : 7.0
-        },
-        "followers_count_sum" : { //日粉丝量F（总）
-          "value" : 139174.0
-        },
-        "favourites_count_sum" : { //日用户like量L（总）
-          "value" : 1218.0
-        },
-        "friends_count_sum" : { //日用户朋友数FR（总）
-          "value" : 12229.0
-        },
-        "repost_sum" : { //文章总转发量R
-          "value" : 376.0
-        },
-        "repost_max" : { //最大单篇转发量Rmax
-          "value" : 299.0
-        },
-        "comment_sum" : { //文章总评论量C
-          "value" : 781.0
-        },
-        "comment_max" : { //最大单篇评论量Cmax
-          "value" : 537.0
-        },
-        "up_sum" : { //文章总点赞量Z
-          "value" : 850.0
-        },
-        "up_max" : { //最大单篇点赞量Zmax
-          "value" : 477.0
-        }
-      }, {
-        "doc_count" : 0,
-        "document_count" : {
-          "value" : 0.0
-        },
-        "retweet_count_max" : { },
-        "followers_count_sum" : {
-          "value" : 0.0
-        },
-        "retweet_count_sum" : {
-          "value" : 0.0
-        },
-        "reply_count_sum" : {
-          "value" : 0.0
-        },
-        "key_as_string" : "2017-12-10",
-        "reply_count_max" : { },
-        "favourites_count_sum" : {
-          "value" : 0.0
-        },
-        "favorite_count_sum" : {
-          "value" : 0.0
-        },
-        "friends_count_sum" : {
-          "value" : 0.0
-        },
-        "key" : 1512835200000,
-        "favorite_count_max" : { }
-      } ]
-    },
-    "doc_count" : 7,
-    "key" : "239871673"
-  }, {
-    "date" : {
-      "buckets" : [ {
-        "doc_count" : 3,
-        "document_count" : {
-          "value" : 3.0
-        },
-        "retweet_count_max" : {
-          "value" : 11.0
-        },
-        "followers_count_sum" : {
-          "value" : 333267.0
-        },
-        "retweet_count_sum" : {
-          "value" : 22.0
-        },
-        "reply_count_sum" : {
-          "value" : 16.0
-        },
-        "key_as_string" : "2017-12-09",
-        "reply_count_max" : {
-          "value" : 8.0
-        },
-        "favourites_count_sum" : {
-          "value" : 3948.0
-        },
-        "favorite_count_sum" : {
-          "value" : 19.0
-        },
-        "friends_count_sum" : {
-          "value" : 15168.0
-        },
-        "key" : 1512748800000,
-        "favorite_count_max" : {
-          "value" : 11.0
-        }
-      }, {
-        "doc_count" : 0,
-        "document_count" : { 
-          "value" : 0.0
-        },
-        "retweet_count_max" : { },
-        "followers_count_sum" : {
-          "value" : 0.0
-        },
-        "retweet_count_sum" : {
-          "value" : 0.0
-        },
-        "reply_count_sum" : {
-          "value" : 0.0
-        },
-        "key_as_string" : "2017-12-10",
-        "reply_count_max" : { },
-        "favourites_count_sum" : {
-          "value" : 0.0
-        },
-        "favorite_count_sum" : {
-          "value" : 0.0
-        },
-        "friends_count_sum" : {
-          "value" : 0.0
-        },
-        "key" : 1512835200000,
-        "favorite_count_max" : { }
-      } ]
-    },
-    "doc_count" : 3,
-    "key" : "18172905"
-  } ],
-  "message" : "任务成功"
-}
-
-
 {
 	"tw": [{
 		"date": {
@@ -255,11 +129,11 @@ tw
 	"message": "任务成功"
 }
 
-fb
+```
 
+Facebook
 
-BODY
-raw 
+``` 
 {
   "fb" : [ {
     "date" : {
