@@ -23,7 +23,7 @@ jsonData 必填项，json字符串。
 
 ```
 {
-    "fileName": "一带一路国际传播大数据分析月报模板",
+    "fileName": "一带一路国际传播大数据分析月报模板（媒界）",
     "category": "month",
     "jsonData": {
         "titleName": "IKOLs国际意见领袖传播内容分析月报",
