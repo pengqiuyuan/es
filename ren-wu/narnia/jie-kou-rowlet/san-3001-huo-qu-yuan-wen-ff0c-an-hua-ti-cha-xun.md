@@ -23,12 +23,12 @@ hotTopics，话题集合。必填，不可为空
 twitter
 
 {
-    "startDate": "2016-10-09",
-    "endDate": "2017-12-10",
-    "category": "tw",
-    "sortField": "repost_count",
-    "pageSize": "2",
-    "hotTopics": ["DefendDACA"]
+	"startDate": "2017-01-01",
+	"endDate": "2017-12-31",
+	"category": "tw",
+	"sortField": "repost_count",
+	"pageSize": "1",
+	"hotTopics": ["climatechange"]
 }
 ```
 
@@ -38,188 +38,155 @@ twitter
 
 ```
 {
-    "tw": [{
-        "_index": "rowlet_twitter_articles",
-        "_type": "rowlet_twitter_articles",
-        "_source": {
-            "extended_entities": {},
-            "possibly_sensitive": false,
-            "created_at": "2017-09-02T23:12:01.000Z",
-            "truncated": false,
-            "source": "<a href=\"http://sproutsocial.com\" rel=\"nofollow\">Sprout Social</a>",
-            "retweeted_status": false,
-            "reply_count": "3253",
-            "quoted_status_id": 0,
-            "retweet_count": "50165",
-            "retweeted": false,
-            "is_quote_status": false,
-            "entities": {
-                "urls": [],
-                "hashtags": ["DefendDACA"],
-                "user_mentions": [],
-                "symbols": []
-            },
-            "id_str": "904119753287110656",
-            "quoted_status_id_str": "",
-            "favorite_count": "105663",
-            "text": "There is nothing crueler than deporting kids who grew up in America back to a country they don’t even know. #DefendDACA",
-            "lang": "en",
-            "matching_rules": [],
-            "user": {
-                "utc_offset": -28800,
-                "friends_count": 716,
-                "profile_image_url_https": "https://pbs.twimg.com/profile_images/877902898889412608/6Vfu5kVd_normal.jpg",
-                "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/688156932/fb90b2e73377f4603feedb04df168d29.jpeg",
-                "listed_count": 6466,
-                "default_profile_image": false,
-                "favourites_count": 213,
-                "created_at": "2009-04-11T00:42:07.000Z",
-                "description": "Senator for California. Former CA Attorney General. Dedicated to fighting for justice & giving voice to the voiceless. Wife, s-mom, sister, aunt. Aspiring chef.",
-                "is_translator": false,
-                "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/688156932/fb90b2e73377f4603feedb04df168d29.jpeg",
-                "protected": false,
-                "screen_name": "KamalaHarris",
-                "id_str": "30354991",
-                "profile_link_color": "4468A6",
-                "is_translation_enabled": false,
-                "translator_type": "none",
-                "id": 30354991,
-                "geo_enabled": true,
-                "profile_background_color": "FFFFFF",
-                "lang": "en",
-                "has_extended_profile": false,
-                "profile_sidebar_border_color": "FFFFFF",
-                "profile_text_color": "333333",
-                "verified": true,
-                "profile_image_url": "http://pbs.twimg.com/profile_images/877902898889412608/6Vfu5kVd_normal.jpg",
-                "time_zone": "Pacific Time (US & Canada)",
-                "contributors_enabled": false,
-                "url": "http://t.co/IbL01p7pYJ",
-                "profile_background_tile": false,
-                "profile_banner_url": "https://pbs.twimg.com/profile_banners/30354991/1485113375",
-                "entities": {
-                    "description": {
-                        "urls": []
-                    },
-                    "url": {
-                        "urls": [{
-                            "display_url": "KamalaHarris.org",
-                            "indices": [0, 22],
-                            "expanded_url": "http://KamalaHarris.org",
-                            "url": "http://t.co/IbL01p7pYJ"
-                        }]
-                    }
-                },
-                "statuses_count": 7097,
-                "follow_request_sent": false,
-                "following": false,
-                "default_profile": false,
-                "profile_use_background_image": false,
-                "followers_count": 1215705,
-                "name": "Kamala Harris",
-                "location": "California",
-                "profile_sidebar_fill_color": "FFFFFF",
-                "notifications": false
-            },
-            "favorited": false
-        },
-        "_id": "904119753287110656",
-        "sort": [50165]
-    }, {
-        "_index": "rowlet_twitter_articles",
-        "_type": "rowlet_twitter_articles",
-        "_source": {
-            "extended_entities": {},
-            "possibly_sensitive": false,
-            "created_at": "2017-09-04T01:54:02.000Z",
-            "truncated": false,
-            "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-            "retweeted_status": true,
-            "reply_count": "3253",
-            "quoted_status_id": 0,
-            "retweet_count": "50165",
-            "retweeted": false,
-            "is_quote_status": false,
-            "entities": {
-                "urls": [],
-                "hashtags": ["DefendDACA"],
-                "user_mentions": [{
-                    "indices": [3, 16],
-                    "screen_name": "KamalaHarris",
-                    "id_str": "30354991",
-                    "name": "Kamala Harris",
-                    "id": 30354991
-                }],
-                "symbols": []
-            },
-            "id_str": "904522913436635136",
-            "quoted_status_id_str": "",
-            "favorite_count": "105663",
-            "text": "RT @KamalaHarris: There is nothing crueler than deporting kids who grew up in America back to a country they don’t even know. #DefendDACA",
-            "lang": "en",
-            "matching_rules": [],
-            "user": {
-                "utc_offset": -28800,
-                "friends_count": 716,
-                "profile_image_url_https": "https://pbs.twimg.com/profile_images/877902898889412608/6Vfu5kVd_normal.jpg",
-                "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/688156932/fb90b2e73377f4603feedb04df168d29.jpeg",
-                "listed_count": 6466,
-                "default_profile_image": false,
-                "favourites_count": 213,
-                "created_at": "2009-04-11T00:42:07.000Z",
-                "description": "Senator for California. Former CA Attorney General. Dedicated to fighting for justice & giving voice to the voiceless. Wife, s-mom, sister, aunt. Aspiring chef.",
-                "is_translator": false,
-                "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/688156932/fb90b2e73377f4603feedb04df168d29.jpeg",
-                "protected": false,
-                "screen_name": "KamalaHarris",
-                "id_str": "30354991",
-                "profile_link_color": "4468A6",
-                "is_translation_enabled": false,
-                "translator_type": "none",
-                "id": 30354991,
-                "geo_enabled": true,
-                "profile_background_color": "FFFFFF",
-                "lang": "en",
-                "has_extended_profile": false,
-                "profile_sidebar_border_color": "FFFFFF",
-                "profile_text_color": "333333",
-                "verified": true,
-                "profile_image_url": "http://pbs.twimg.com/profile_images/877902898889412608/6Vfu5kVd_normal.jpg",
-                "time_zone": "Pacific Time (US & Canada)",
-                "contributors_enabled": false,
-                "url": "http://t.co/IbL01p7pYJ",
-                "profile_background_tile": false,
-                "profile_banner_url": "https://pbs.twimg.com/profile_banners/30354991/1485113375",
-                "entities": {
-                    "description": {
-                        "urls": []
-                    },
-                    "url": {
-                        "urls": [{
-                            "display_url": "KamalaHarris.org",
-                            "indices": [0, 22],
-                            "expanded_url": "http://KamalaHarris.org",
-                            "url": "http://t.co/IbL01p7pYJ"
-                        }]
-                    }
-                },
-                "statuses_count": 7097,
-                "follow_request_sent": false,
-                "following": false,
-                "default_profile": false,
-                "profile_use_background_image": false,
-                "followers_count": 1215705,
-                "name": "Kamala Harris",
-                "location": "California",
-                "profile_sidebar_fill_color": "FFFFFF",
-                "notifications": false
-            },
-            "favorited": false
-        },
-        "_id": "904522913436635136",
-        "sort": [50165]
-    }],
-    "message": "任务成功"
+	"tw": [{
+		"_index": "twitter_articles",
+		"_type": "twitter_articles",
+		"_source": {
+			"leader": {
+				"continent": 4,
+				"country": 8,
+				"sortName": "Tom",
+				"flag": "ikols",
+				"gender": "M",
+				"created_at": "2018-05-08T15:45:53.778Z",
+				"birth": "1947",
+				"isBR": "f",
+				"classification": "senator",
+				"is_deleted": false,
+				"updated_at": "2018-05-08T15:45:53.778Z",
+				"province": 124,
+				"__v": 0,
+				"name": "Tom Carper",
+				"term": "2018",
+				"_id": 972,
+				"state": "Delaware",
+				"tag": "P",
+				"party": "D"
+			},
+			"possibly_sensitive": false,
+			"reply_count_str": "8",
+			"created_at": "2017-12-18T19:34:29.000Z",
+			"truncated": false,
+			"source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+			"reply_count": 8,
+			"crawled_at": "2018-05-12T16:52:26.287Z",
+			"retweet_count": 57,
+			"retweeted": false,
+			"favorite_count_str": "74",
+			"is_quote_status": false,
+			"entities": {
+				"urls": [{
+					"display_url": "theguardian.com/us-news/2017/d…",
+					"indices": [154, 177],
+					"expanded_url": "https://www.theguardian.com/us-news/2017/dec/18/trump-drop-climate-change-national-security-strategy",
+					"url": "https://t.co/UF9t45uQfD"
+				}],
+				"hashtags": [{
+					"indices": [34, 48],
+					"text": "climatechange"
+				}],
+				"user_mentions": [{
+					"indices": [105, 119],
+					"screen_name": "DeptofDefense",
+					"id_str": "66369181",
+					"name": "U.S. Dept of Defense",
+					"id": 66369181
+				}, {
+					"indices": [121, 128],
+					"screen_name": "USArmy",
+					"id_str": "8775672",
+					"name": "U.S. Army",
+					"id": 8775672
+				}, {
+					"indices": [130, 137],
+					"screen_name": "USNavy",
+					"id_str": "54885400",
+					"name": "U.S. Navy",
+					"id": 54885400
+				}, {
+					"indices": [139, 145],
+					"screen_name": "USGAO",
+					"id_str": "34274380",
+					"name": "U.S. GAO",
+					"id": 34274380
+				}, {
+					"indices": [147, 152],
+					"screen_name": "NASA",
+					"id_str": "11348282",
+					"name": "NASA",
+					"id": 11348282
+				}],
+				"symbols": []
+			},
+			"full_text": "President Trump may not recognize #climatechange as a national security threat, but you know who does? \n\n@DeptofDefense.\n@USArmy.\n@USNavy.\n@USGAO.\n@NASA.\nhttps://t.co/UF9t45uQfD",
+			"id_str": "942840512054288386",
+			"retweet_count_str": "57",
+			"display_text_range": [0, 177],
+			"favorite_count": 74,
+			"lang": "en",
+			"user": {
+				"utc_offset": -14400,
+				"friends_count": 1336,
+				"profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000497501114/77d2bd85a246e66e8f77670018fbaaca_normal.jpeg",
+				"listed_count": 1706,
+				"profile_background_image_url": "http://pbs.twimg.com/profile_background_images/206172638/moran_twitter.jpg",
+				"default_profile_image": false,
+				"favourites_count": 1091,
+				"description": "Husband, father, proud @USNavy veteran and former governor. U.S. Senator for Delaware and ranking member @EPWDems",
+				"created_at": "2011-02-09T19:46:42.000Z",
+				"is_translator": false,
+				"profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/206172638/moran_twitter.jpg",
+				"protected": false,
+				"screen_name": "SenatorCarper",
+				"id_str": "249787913",
+				"profile_link_color": "1E3F66",
+				"is_translation_enabled": false,
+				"translator_type": "none",
+				"id": 249787913,
+				"geo_enabled": true,
+				"profile_background_color": "D6DDE1",
+				"lang": "en",
+				"has_extended_profile": true,
+				"profile_sidebar_border_color": "BAC1C4",
+				"profile_text_color": "737373",
+				"verified": true,
+				"profile_image_url": "http://pbs.twimg.com/profile_images/378800000497501114/77d2bd85a246e66e8f77670018fbaaca_normal.jpeg",
+				"time_zone": "Eastern Time (US & Canada)",
+				"url": "http://t.co/0KSoFFra6j",
+				"contributors_enabled": false,
+				"profile_background_tile": false,
+				"profile_banner_url": "https://pbs.twimg.com/profile_banners/249787913/1466708976",
+				"entities": {
+					"description": {
+						"urls": []
+					},
+					"url": {
+						"urls": [{
+							"display_url": "carper.senate.gov",
+							"indices": [0, 22],
+							"expanded_url": "http://www.carper.senate.gov",
+							"url": "http://t.co/0KSoFFra6j"
+						}]
+					}
+				},
+				"statuses_count": 6994,
+				"follow_request_sent": false,
+				"followers_count": 82641,
+				"profile_use_background_image": true,
+				"default_profile": false,
+				"following": false,
+				"name": "Senator Tom Carper",
+				"location": "Delaware",
+				"profile_sidebar_fill_color": "E2E8EB",
+				"notifications": false
+			},
+			"favorited": false
+		},
+		"_id": "942840512054288386",
+		"sort": [57]
+	}],
+	"count": "17",
+	"message": "任务成功"
 }
 ```
 
