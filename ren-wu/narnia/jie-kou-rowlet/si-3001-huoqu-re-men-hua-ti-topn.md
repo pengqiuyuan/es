@@ -19,10 +19,10 @@ pageSize，必填。获取多少条
 twitter
 
 {
-    "startDate": "2016-10-09",
-    "endDate": "2017-12-10",
-    "category": "tw",
-    "pageSize": "10"
+	"startDate": "2017-01-01",
+	"endDate": "2017-12-31",
+	"category": "tw",
+	"pageSize": "10"
 }
 ```
 
@@ -32,48 +32,48 @@ twitter
 
 ```
 {
-    "tw": [{
-            "doc_count": 5018,
-            "key": "Trumpcare"
-        },
-        {
-            "doc_count": 3859,
-            "key": "ACA"
-        },
-        {
-            "doc_count": 2519,
-            "key": "TaxReform"
-        },
-        {
-            "doc_count": 2487,
-            "key": "TrumpCare"
-        },
-        {
-            "doc_count": 2084,
-            "key": "Obamacare"
-        },
-        {
-            "doc_count": 1909,
-            "key": "ProtectOurCare"
-        },
-        {
-            "doc_count": 1812,
-            "key": "DACA"
-        },
-        {
-            "doc_count": 1653,
-            "key": "taxreform"
-        },
-        {
-            "doc_count": 1557,
-            "key": "GOPTaxScam"
-        },
-        {
-            "doc_count": 1529,
-            "key": "AHCA"
-        }
-    ],
-    "message": "任务成功"
+	"tw": [{
+			"doc_count": 596,
+			"key": "GOPTaxScam"
+		},
+		{
+			"doc_count": 459,
+			"key": "TaxReform"
+		},
+		{
+			"doc_count": 286,
+			"key": "taxreform"
+		},
+		{
+			"doc_count": 236,
+			"key": "TaxCutsandJobsAct"
+		},
+		{
+			"doc_count": 209,
+			"key": "NetNeutrality"
+		},
+		{
+			"doc_count": 164,
+			"key": "GetCovered"
+		},
+		{
+			"doc_count": 123,
+			"key": "Christmas"
+		},
+		{
+			"doc_count": 123,
+			"key": "MerryChristmas"
+		},
+		{
+			"doc_count": 117,
+			"key": "CHIP"
+		},
+		{
+			"doc_count": 98,
+			"key": "DreamActNow"
+		}
+	],
+	"message": "任务成功"
 }
 ```
 
