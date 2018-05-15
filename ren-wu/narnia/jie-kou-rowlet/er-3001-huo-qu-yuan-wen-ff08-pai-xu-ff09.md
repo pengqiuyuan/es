@@ -27,31 +27,31 @@ queryMode为查询模式，是否只返回text文本内容。simple、normal，�
 twitter
 
 {
-    "startDate": "2017-12-09",
-    "endDate": "2017-12-10",
-    "category": "tw",
-    "ids": ["18172905", "239871673", "113036476", "216481299", "44254802", "231592153", "24004390", "912388475974012929", "2891165960", "66891808", "816282120767291392", "95943434", "1347285918", "90484508", "57963724", "232268199", "1712960918", "813792250497028102", "518700708", "4755913398", "194233791", "15678117", "415117361", "3023272478", "1321432124", "2978837542", "240778059", "113795716", "16335288", "234406945", "26103389", "90651198", "44482542", "60688326", "111530769", "104198706", "19471123", "2253968388", "42481696", "1077214808", "224294785", "69086398", "607332953", "3167789983", "33977070", "213795411", "76452765", "237299871", "2861616083", "381152398", "69326168", "2964949642", "28602948", "702601370344402944", "816652616625168388", "21509894", "229197216", "2966570782", "49217025", "1080844782", "20747881", "233693291", "2953974395", "50152441", "234469322", "112651673", "1592481150", "2852998461", "342677019", "1069124515", "25073877", "1071102246", "822127086194348032", "334894942", "813286", "1536791610", "88806753", "15773898", "818876014390603776", "108471631", "303861808", "950783972", "43986986", "799764016885329921", "1074412920", "176512266", "248699486", "935543239599419392", "21346398", "1906282568", "2953494478", "2968007206", "30252303", "817404026992152579", "842072478834909184", "15764644", "248735463", "24913074", "521731529", "377609596", "942156122", "826065858548133888"],
-    "keywords": "china",
-    "sortField": "comment_count",
-    "sort": "desc",
-    "pageNumber": "1",
-    "pageSize": "10",
-    "queryMode":"normal"
+	"startDate": "2017-01-01",
+	"endDate": "2017-12-31",
+	"category": "tw",
+	"ids": ["164007407"],
+	"keywords": "china",
+	"sortField": "repost_count",
+	"sort": "desc",
+	"pageNumber": "1",
+	"pageSize": "10",
+	"queryMode": "normal"
 }
 
 facebook
 
 {
-    "startDate": "2017-12-09",
-    "endDate": "2017-12-10",
-    "category": "fb",
-    "ids": ["7606381190", "551199354892891"],
-    "keywords": "legislation",
-    "sortField": "comment_count",
-    "sort": "asc",
-    "pageNumber": "1",
-    "pageSize": "10",
-    "queryMode":"normal"
+	"startDate": "2017-01-01",
+	"endDate": "2017-12-31",
+	"category": "fb",
+	"ids": ["1002391179791389"],
+	"keywords": "china",
+	"sortField": "comment_count",
+	"sort": "asc",
+	"pageNumber": "1",
+	"pageSize": "10",
+	"queryMode": "normal"
 }
 ```
 
@@ -63,100 +63,132 @@ facebook
 {
 	"tw": [{
 		"highlight": {
-			"text": ["\"Nebraska's beef exports to <em>China</em> were $8.7 million as of Oct. 31, 50.5% of the U.S. total of $17.2", " million.\"\n#\nGrowNE Check out the rest of the article on Nebraska's beef exports to <em>China</em>:"]
+			"full_text": ["country in the world that isn’t participating, and we’re ceding leadership to <em>China</em>. 2/3"]
 		},
-		"_index": "rowlet_twitter_articles",
-		"_type": "rowlet_twitter_articles",
+		"_index": "twitter_articles",
+		"_type": "twitter_articles",
 		"_source": {
-			"extended_entities": {},
-			"possibly_sensitive": false,
-			"created_at": "2017-12-08T21:43:01.000Z",
-			"truncated": true,
+			"leader": {
+				"continent": 4,
+				"country": 8,
+				"sortName": "Eliot",
+				"flag": "ikols",
+				"gender": "M",
+				"assignment": "Agriculture\nTransportation and Infrastructure",
+				"created_at": "2018-05-08T15:45:50.957Z",
+				"birth": "1947",
+				"isBR": "f",
+				"classification": "representatives",
+				"is_deleted": false,
+				"updated_at": "2018-05-08T15:45:50.957Z",
+				"province": 150,
+				"district": "16th",
+				"__v": 0,
+				"name": "Eliot Engel",
+				"_id": 742,
+				"state": "New York",
+				"tag": "P",
+				"party": "D"
+			},
+			"in_reply_to_status_id_str": "946813502890692609",
+			"in_reply_to_status_id": 946813502890692600,
+			"reply_count_str": "5",
+			"created_at": "2017-12-29T18:42:45.000Z",
+			"in_reply_to_user_id_str": "164007407",
 			"source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-			"retweeted_status": false,
-			"reply_count": "2",
-			"quoted_status_id": 939245827112960010,
-			"retweet_count": "23",
-			"url": "https://twitter.com/GovRicketts/status/939248980046897152",
+			"crawled_at": "2018-05-13T02:11:07.979Z",
+			"retweet_count": 6,
 			"retweeted": false,
-			"is_quote_status": true,
+			"in_reply_to_screen_name": "RepEliotEngel",
+			"is_quote_status": false,
+			"full_text": "@POTUS And, the #ParisAgreement was a critical step to fight climate change that would have cost us little or nothing. Allowing #climatechange to get worse is very expensive. Now we’re the only country in the world that isn’t participating, and we’re ceding leadership to China. 2/3",
+			"id_str": "946813759196139523",
+			"retweet_count_str": "6",
+			"in_reply_to_user_id": 164007407,
+			"favorite_count": 12,
+			"lang": "en",
+			"favorited": false,
+			"truncated": false,
+			"reply_count": 5,
+			"favorite_count_str": "12",
 			"entities": {
-				"urls": [{
-					"display_url": "twitter.com/i/web/status/9…",
-					"indices": [111, 134],
-					"expanded_url": "https://twitter.com/i/web/status/939248980046897152",
-					"url": "https://t.co/cR06zqgi4s"
+				"urls": [],
+				"hashtags": [{
+					"indices": [16, 31],
+					"text": "ParisAgreement"
+				}, {
+					"indices": [128, 142],
+					"text": "climatechange"
 				}],
-				"hashtags": [],
-				"user_mentions": [],
+				"user_mentions": [{
+					"indices": [0, 6],
+					"screen_name": "POTUS",
+					"id_str": "822215679726100480",
+					"name": "President Trump",
+					"id": 822215679726100500
+				}],
 				"symbols": []
 			},
-			"id_str": "939248980046897152",
-			"quoted_status_id_str": "939245827112960010",
-			"favorite_count": "48",
-			"text": "\"Nebraska's beef exports to China were $8.7 million as of Oct. 31, 50.5% of the U.S. total of $17.2 million.\"\n#\nGrowNE Check out the rest of the article on Nebraska's beef exports to China:",
-			"lang": "en",
-			"matching_rules": [],
+			"display_text_range": [7, 282],
 			"user": {
-				"utc_offset": -21600,
-				"friends_count": 1045.0,
-				"profile_image_url_https": "https://pbs.twimg.com/profile_images/571738181293191168/7U9JX8Bu_normal.jpeg",
-				"profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-				"listed_count": 274,
+				"utc_offset": -14400,
+				"friends_count": 823,
+				"profile_image_url_https": "https://pbs.twimg.com/profile_images/523095197983309825/3TdNyI76_normal.jpeg",
+				"listed_count": 928,
+				"profile_background_image_url": "http://pbs.twimg.com/profile_background_images/433324934715015168/OV0E-LLI.jpeg",
 				"default_profile_image": false,
-				"favourites_count": 283.0,
-				"created_at": "2014-11-05T21:15:44.000Z",
+				"favourites_count": 121,
+				"description": "Congressman representing parts of the Bronx and Westchester Counties in New York #NY16",
+				"created_at": "2010-07-07T20:34:17.000Z",
 				"is_translator": false,
-				"description": "40th Governor of Nebraska",
-				"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+				"profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/433324934715015168/OV0E-LLI.jpeg",
 				"protected": false,
-				"screen_name": "GovRicketts",
-				"id_str": "2891165960",
-				"profile_link_color": "1DA1F2",
+				"screen_name": "RepEliotEngel",
+				"id_str": "164007407",
+				"profile_link_color": "0084B4",
 				"is_translation_enabled": false,
 				"translator_type": "none",
-				"profile_background_color": "C0DEED",
-				"id": 2891165960,
+				"id": 164007407,
 				"geo_enabled": true,
+				"profile_background_color": "EBE6CE",
 				"lang": "en",
 				"has_extended_profile": false,
-				"profile_sidebar_border_color": "C0DEED",
+				"profile_sidebar_border_color": "FFFFFF",
 				"profile_text_color": "333333",
 				"verified": true,
-				"profile_image_url": "http://pbs.twimg.com/profile_images/571738181293191168/7U9JX8Bu_normal.jpeg",
-				"time_zone": "Central Time (US & Canada)",
-				"url": "https://t.co/XH644geIIN",
+				"profile_image_url": "http://pbs.twimg.com/profile_images/523095197983309825/3TdNyI76_normal.jpeg",
+				"time_zone": "Eastern Time (US & Canada)",
+				"url": "http://t.co/BVwX9Ov3sA",
 				"contributors_enabled": false,
-				"profile_banner_url": "https://pbs.twimg.com/profile_banners/2891165960/1493414718",
 				"profile_background_tile": false,
+				"profile_banner_url": "https://pbs.twimg.com/profile_banners/164007407/1517494271",
 				"entities": {
 					"description": {
 						"urls": []
 					},
 					"url": {
 						"urls": [{
-							"display_url": "governor.nebraska.gov",
-							"indices": [0, 23],
-							"expanded_url": "http://governor.nebraska.gov",
-							"url": "https://t.co/XH644geIIN"
+							"display_url": "engel.house.gov",
+							"indices": [0, 22],
+							"expanded_url": "http://engel.house.gov",
+							"url": "http://t.co/BVwX9Ov3sA"
 						}]
 					}
 				},
+				"statuses_count": 3618,
 				"follow_request_sent": false,
-				"statuses_count": 3130,
-				"followers_count": 13109.0,
-				"default_profile": true,
-				"following": false,
+				"followers_count": 22996,
 				"profile_use_background_image": true,
-				"name": "Gov. Pete Ricketts",
-				"location": "Nebraska",
+				"default_profile": false,
+				"following": false,
+				"name": "Eliot Engel",
+				"location": "",
 				"profile_sidebar_fill_color": "DDEEF6",
 				"notifications": false
-			},
-			"favorited": false
+			}
 		},
-		"_id": "939248980046897152",
-		"sort": [2]
+		"_id": "946813759196139523",
+		"sort": [6]
 	}],
 	"count": "1",
 	"message": "任务成功"
@@ -169,67 +201,56 @@ facebook
 {
 	"fb": [{
 		"highlight": {
-			"text": ["I’m introducing <em>legislation</em> to save the internet - the Save Net Neutrality Act."]
+			"text": ["<em>China</em> has much to gain and Russia much to lose as gas and oil becomes easier to transport around the world."]
 		},
-		"_index": "rowlet_facebook_articles",
-		"_type": "rowlet_facebook_articles",
+		"_index": "facebook_articles",
+		"_type": "facebook_articles",
 		"_source": {
-			"comment_num": 59,
-			"share_count": 207,
-			"update_status": true,
-			"text": "I’m introducing legislation to save the internet - the Save Net Neutrality Act.",
-			"likes_num": 874,
-			"create_at": "2017-12-08T17:34:58.000Z",
-			"permalink_url": "https://facebook.com/repseanmaloney/videos/1761295353883279/",
-			"user": {
-				"friends_count": 0.0,
-				"hometown": "Cold Spring, NY ",
-				"website": "http://seanmaloney.house.gov/",
-				"fan_count": 30363.0,
-				"keywords": "Maloney, Sean Patrick",
-				"facebookId": "551199354892891",
-				"favourites_count": 0.0,
-				"link": "https://www.facebook.com/repseanmaloney/",
-				"about": "Proud to represent New York's 18th Congressional District",
-				"likes_count": 27488.0,
-				"bySheet": "House of Representatives",
-				"followers_count": 0.0,
-				"name": "Representative Sean Patrick Maloney",
-				"location": {
-					"zip": "20515",
-					"country": "United States",
-					"city": "Washington",
-					"street": "1027 Longworth HOB",
-					"state": "DC"
-				},
-				"_id": "5a2612604c7ffb6fc00bea2a",
-				"id": "551199354892891",
-				"category": "Government Official",
-				"likes": {
-					"data": [{
-						"name": "West Point Professional Firefighters",
-						"id": "277336965536"
-					}, {
-						"name": "Planned Parenthood Mid-Hudson Valley Action",
-						"id": "133318081972"
-					}, {
-						"name": "City of Newburgh Firefighters  IAFF Local 589",
-						"id": "131726836605"
-					}],
-					"paging": {
-						"next": "https://graph.facebook.com/v2.10/551199354892891/likes?access_token=EAACEdEose0cBAO22T6Yq1KZAZACVAKHnna8kEZBF8i9U1xMKHJ2PUhnV6l7cjmYL4S3wRnYAizvFgoCv8ZAWn1ZAsB7ZCVuKaH0jwnfNFhEUhtyLhHCxuZAWdEbQaYprGi95V5vhVY4B3xjE3w2YVkAaKZBWpuQ4WvIGHEpUM8ZCXPlxYiJmToSsCRciqOVPcViWV9T2sopeMuwFdsIxCR3HT&limit=3&after=MTMxNzI2ODM2NjA1",
-						"cursors": {
-							"before": "Mjc3MzM2OTY1NTM2",
-							"after": "MTMxNzI2ODM2NjA1"
-						}
-					}
-				}
+			"comment_num": 0,
+			"share_count": 3,
+			"leader": {
+				"continent": 4,
+				"country": 8,
+				"sortName": "The New York Times Books",
+				"flag": "ikols",
+				"gender": "S",
+				"created_at": "2018-05-08T15:46:00.569Z",
+				"isBR": "f",
+				"is_deleted": false,
+				"updated_at": "2018-05-08T15:46:00.569Z",
+				"__v": 0,
+				"name": "The New York Times Books",
+				"_id": 2301,
+				"tag": "M"
 			},
-			"topick": [],
-			"last_untime": "1512754498"
+			"hashtags": [],
+			"mentions": [],
+			"created_at": "2017-12-30T13:00:00.000Z",
+			"text": "China has much to gain and Russia much to lose as gas and oil becomes easier to transport around the world.",
+			"likes_num": 8,
+			"ownerid": "1002391179791389",
+			"permalink_url": "/nytbooks/posts/1749535868410246",
+			"crawled_at": "2018-05-15T06:28:46.017Z",
+			"user": {
+				"website": "http://www.nytimes.com",
+				"verificationStatus": "t",
+				"link": "https://www.facebook.com/nytbooks",
+				"created_at": "2018-05-09T15:04:36.439Z",
+				"leaderId": 2301,
+				"fanCount": 155000,
+				"likesCount": 151000,
+				"is_deleted": false,
+				"updated_at": "2018-05-09T15:04:36.439Z",
+				"__v": 0,
+				"name": "The New York Times Books",
+				"next_sync_at": "2017-05-01T04:18:05.000Z",
+				"_id": "1002391179791389",
+				"latest_sync_at": "2017-05-01T04:18:05.000Z",
+				"status": 1
+			}
 		},
-		"_id": "0f9491a9075e6f9c208e90daed0f7d6d",
-		"sort": [59]
+		"_id": "1749535868410246",
+		"sort": [0]
 	}],
 	"count": "1",
 	"message": "任务成功"
