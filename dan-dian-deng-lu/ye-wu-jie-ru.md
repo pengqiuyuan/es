@@ -35,17 +35,23 @@
 jwttoken 认证成功
 
 {
-    "code": 200,
-    "data": {
-        "mail": "pengqiuyuanfj@gmail.com",
-        "phone": "13654255565",
-        "id": 5,
-        "ttl": 86228,
-        "registerDate": 1520325613000,
-        "status": "1"
-    },
-    "message": "JWT-TOKEN 有效"
+	"code": 200,
+	"data": {
+		"company": "数太奇",
+		"fullname": "彭秋源",
+		"id": 101,
+		"mail": "pengqiuyuanfj@gmail.com",
+		"password": "",
+		"phone": "18610314682",
+		"position": "开发",
+		"registerdate": 1527155804000,
+		"registerway": "测试使用",
+		"status": "1",
+		"wechat": "18610314682"
+	},
+	"message": "JWT-TOKEN 有效"
 }
+
 
 jwttoken 认证失败
 
@@ -71,6 +77,58 @@ SSO :  http://login.idatage.com/t/login
 注销（跨域同时注销）：
 第一步：点击业务B测试页面里的Logout按钮 -> 页面跳转至重新登录页面
 第二步：刷新业务A已登录的测试页面 -> 页面同时跳转至重新登录页面
+```
+
+**五、根据 ids 获取用户信息：**
+
+`POST` `http://login.idatage.com/t/findUserByIds`
+
+`HEADERS`：`"Content-Type" => "application/json"`
+
+`参数说明`：
+
+```
+ids 必填。数组
+```
+
+`BODY` 体：
+
+```
+[26, 101]
+```
+
+
+`response` ：
+
+```
+
+[{
+		"company": "",
+		"fullname": "",
+		"id": 26,
+		"mail": "202XXXX@qq.com",
+		"password": "",
+		"phone": "18210XXXXXX",
+		"position": "",
+		"registerdate": 1521524679000,
+		"registerway": "",
+		"status": "1",
+		"wechat": ""
+	},
+	{
+		"company": "XXX",
+		"fullname": "XXX",
+		"id": 101,
+		"mail": "peXXXX@gmail.com",
+		"password": "",
+		"phone": "18XXXX",
+		"position": "开发",
+		"registerdate": 1527155804000,
+		"registerway": "测试使用",
+		"status": "1",
+		"wechat": "1861XXXX2"
+	}
+]
 ```
 
 
