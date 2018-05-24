@@ -29,6 +29,22 @@
 
 `参数说明`：`jwttoken` 加密签名，[具体参考](http://blog.leapoahead.com/2015/09/06/understanding-jwt/)
 
+```
+        "company": "数太奇",
+        "fullname": "彭秋源",
+        "id": 101,
+        "mail": "pengqiuyuanfj@gmail.com",
+        "password": "",
+        "phone": "18610314682",
+        "position": "开发",
+        "registerdate": 1527155804000,
+        "registerway": "测试使用",
+        "status": "1",
+        "wechat": "18610314682"
+
+```
+
+
 `response` ：`ttl` 为查询 `jwttoken` 的剩余有效时间
 
 ```
