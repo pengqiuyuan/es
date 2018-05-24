@@ -29,19 +29,6 @@
 
 `参数说明`：`jwttoken` 加密签名，[具体参考](http://blog.leapoahead.com/2015/09/06/understanding-jwt/)
 
-```
-company
-fullname
-id
-mail
-phone
-position
-registerdate
-registerway
-status
-wechat:
-
-```
 
 
 `response` ：`ttl` 为查询 `jwttoken` 的剩余有效时间
