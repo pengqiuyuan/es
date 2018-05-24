@@ -29,7 +29,18 @@
 
 `参数说明`：`jwttoken` 加密签名，[具体参考](http://blog.leapoahead.com/2015/09/06/understanding-jwt/)
 
-
+```
+company：工作单位
+fullname：姓名
+id
+mail：有限
+phone：手机号
+position：职位
+registerdate：注册时间
+registerway：注册途径
+status：
+wechat：微信号
+```
 
 `response` ：`ttl` 为查询 `jwttoken` 的剩余有效时间
 
@@ -37,21 +48,21 @@
 jwttoken 认证成功
 
 {
-	"code": 200,
-	"data": {
-		"company": "数太奇",
-		"fullname": "彭秋源",
-		"id": 101,
-		"mail": "pengqiuyuanfj@gmail.com",
-		"password": "",
-		"phone": "18610314682",
-		"position": "开发",
-		"registerdate": 1527155804000,
-		"registerway": "测试使用",
-		"status": "1",
-		"wechat": "18610314682"
-	},
-	"message": "JWT-TOKEN 有效"
+    "code": 200,
+    "data": {
+        "company": "数太奇",
+        "fullname": "彭秋源",
+        "id": 101,
+        "mail": "pengqiuyuanfj@gmail.com",
+        "password": "",
+        "phone": "18610314682",
+        "position": "开发",
+        "registerdate": 1527155804000,
+        "registerway": "测试使用",
+        "status": "1",
+        "wechat": "18610314682"
+    },
+    "message": "JWT-TOKEN 有效"
 }
 
 
@@ -99,37 +110,48 @@ ids 必填。数组
 [26, 101]
 ```
 
-
 `response` ：
 
 ```
+company：工作单位
+fullname：姓名
+id
+mail：有限
+phone：手机号
+position：职位
+registerdate：注册时间
+registerway：注册途径
+status：
+wechat：微信号
+```
 
+```
 [{
-		"company": "",
-		"fullname": "",
-		"id": 26,
-		"mail": "202XXXX@qq.com",
-		"password": "",
-		"phone": "18210XXXXXX",
-		"position": "",
-		"registerdate": 1521524679000,
-		"registerway": "",
-		"status": "1",
-		"wechat": ""
-	},
-	{
-		"company": "XXX",
-		"fullname": "XXX",
-		"id": 101,
-		"mail": "peXXXX@gmail.com",
-		"password": "",
-		"phone": "18XXXX",
-		"position": "开发",
-		"registerdate": 1527155804000,
-		"registerway": "测试使用",
-		"status": "1",
-		"wechat": "1861XXXX2"
-	}
+        "company": "",
+        "fullname": "",
+        "id": 26,
+        "mail": "202XXXX@qq.com",
+        "password": "",
+        "phone": "18210XXXXXX",
+        "position": "",
+        "registerdate": 1521524679000,
+        "registerway": "",
+        "status": "1",
+        "wechat": ""
+    },
+    {
+        "company": "XXX",
+        "fullname": "XXX",
+        "id": 101,
+        "mail": "peXXXX@gmail.com",
+        "password": "",
+        "phone": "18XXXX",
+        "position": "开发",
+        "registerdate": 1527155804000,
+        "registerway": "测试使用",
+        "status": "1",
+        "wechat": "1861XXXX2"
+    }
 ]
 ```
 
