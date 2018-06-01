@@ -222,7 +222,6 @@ appnews:
   memswap_reservation: 0
   kernel_memory: 0
   mem_limit: 0
-
 ```
 
 appnw
