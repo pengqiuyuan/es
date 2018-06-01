@@ -1,6 +1,9 @@
 七、获取 **Fb、Tw** 计算指标
 
-`POST` `http://127.0.0.1/stq/api/v1/rowlet/findEsStatsByUserId`
+`POST` `http://127.0.0.1/stq/api/v1/rowlet/findEsStatsByUserId` 2018年之后
+
+`POST` `http://127.0.0.1/stq/api/v1/rowlet/findEsStatsByUserIdWith2017` 2018年之前
+
 
 `HEADERS`：`"Content-Type" => "application/json"`
 
