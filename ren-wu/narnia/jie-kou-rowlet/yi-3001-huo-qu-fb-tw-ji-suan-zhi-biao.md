@@ -2,7 +2,7 @@
 
 `POST` `http://127.0.0.1/stq/api/v1/rowlet/findEsStatsByUserId` 2018年之后
 
-`POST` `http://127.0.0.1/stq/api/v1/rowlet/findEsStatsByUserIdWith2017` 2018年之前
+`POST` `http://127.0.0.1/stq/api/v1/rowlet/findEsStatsByUserIdWith2017` 2018年之前（20170101（含）-20180101（不含））
 
 
 `HEADERS`：`"Content-Type" => "application/json"`
