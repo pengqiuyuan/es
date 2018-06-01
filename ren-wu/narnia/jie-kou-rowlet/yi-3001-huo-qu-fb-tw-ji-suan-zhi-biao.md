@@ -1,4 +1,4 @@
-七、获取 **Fb、Tw** 计算指标
+一、获取 **Fb、Tw** 计算指标
 
 `POST` `http://127.0.0.1/stq/api/v1/rowlet/findEsStatsByUserId` 2018年之后
 
