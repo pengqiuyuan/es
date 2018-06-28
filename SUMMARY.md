@@ -201,6 +201,8 @@
         * [九、更新 Twitter 转评赞](ren-wu/narnia/jie-kou-rowlet/jiu-3001-geng-xin-twitter-zhuan-ping-zan.md)
       * 接口 GNI
         * [一、GNI 自动报告导出](ren-wu/narnia/yi-3001-gni-zi-dong-bao-gao-dao-chu.md)
+      * 接口 Tencent
+        * [一、数据采集](ren-wu/narnia/yi-3001-shu-ju-cai-ji.md)
     * 百度指数
     * [百度新闻](ren-wu/bai-du-xin-wen.md)
     * [用户画像](ren-wu/yong-hu-hua-xiang.md)
