@@ -109,6 +109,7 @@
     * [WeiboLogs](xiao-xi-dui-lie/ce-shi/weibologs.md)
     * [ToutiaoLogs](xiao-xi-dui-lie/ce-shi/toutiaologs.md)
     * [数据写入共用接口](xiao-xi-dui-lie/ce-shi/shu-ju-xie-ru-gong-yong-jie-kou.md)
+      * [city\_qa\_articles](xiao-xi-dui-lie/ce-shi/shu-ju-xie-ru-gong-yong-jie-kou/cityqa-articles.md)
   * [Kafka](xiao-xi-dui-lie/kafka.md)
   * [Logstash](xiao-xi-dui-lie/logstash.md)
 * [NLP 与 机器学习](nlp-yu-ji-qi-xue-xi.md)
