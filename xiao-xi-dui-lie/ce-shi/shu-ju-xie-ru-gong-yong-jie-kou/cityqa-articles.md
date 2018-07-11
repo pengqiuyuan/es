@@ -36,9 +36,4 @@
 
 `response` 数据写入队列失败
 
-```
-{
-  "success" : "false"
-}
-```
 
