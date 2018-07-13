@@ -2,7 +2,7 @@ baidunews
 
 ```
 baidunews:
-  image: 'registry.cn-hangzhou.aliyuncs.com/shutaiqi/baidunews:latest'
+  image: 'registry.cn-hangzhou.aliyuncs.com/shutaiqi/pqy-baidunews:latest'
   entrypoint:
     - node
     - main/index.js
