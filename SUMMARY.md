@@ -206,6 +206,8 @@
         * [一、GNI 自动报告导出](ren-wu/narnia/yi-3001-gni-zi-dong-bao-gao-dao-chu.md)
       * 接口 Tencent
         * [一、数据采集](ren-wu/narnia/yi-3001-shu-ju-cai-ji.md)
+      * [接口 UGM](ren-wu/narnia/jie-kou-ugm.md)
+        * [一、UGM 自动报告导出](ren-wu/narnia/jie-kou-ugm/yi-3001-ugm-zi-dong-bao-gao-dao-chu.md)
     * 百度指数
     * [百度新闻](ren-wu/bai-du-xin-wen.md)
     * [用户画像](ren-wu/yong-hu-hua-xiang.md)
