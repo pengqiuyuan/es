@@ -23,57 +23,64 @@ jsonData 必填项，json字符串。
 		"journalNum": 1,
 		"titleDate": "2018年8月21日",
 		"summary": "8月21日9时至17时30分，调查组对我区八宝山街道、苹果园街道、五里坨街道、金顶街街道、八角街道、鲁谷社区、古城街道等6类43个实地考察点位进行检查,检查发现问题132个（其中涉及安全环境工作组13个，城市家园80个，人文环境34个，社会环境2个，市场环境3个），涉及责任单位10家（详见附件1、附件2）。",
-		"h1": [{
-				"street": "八宝山街道",
-				"category": [{
-					"name": "超市",
-					"total": "22",
-					"notAccord": "18.18%",
-					"accord": "81.82%",
-					"notAccordNum": "4",
-					"accordNum": "18"
-				}, {
-					"name": "社区",
-					"total": "22",
-					"notAccord": "18.18%",
-					"accord": "81.82%",
-					"notAccordNum": "4",
-					"accordNum": "18"
-				}, {
-					"name": "社区综合文化服务中心",
-					"total": "22",
-					"notAccord": "18.18%",
-					"accord": "81.82%",
-					"notAccordNum": "4",
-					"accordNum": "18"
-				}]
-			},
-			{
-				"street": "八角街道",
-				"category": [{
-					"name": "宾馆饭店",
-					"total": "22",
-					"notAccord": "18.18%",
-					"accord": "81.82%",
-					"notAccordNum": "4",
-					"accordNum": "18"
-				}, {
-					"name": "超市",
-					"total": "22",
-					"notAccord": "18.18%",
-					"accord": "81.82%",
-					"notAccordNum": "4",
-					"accordNum": "18"
-				}, {
-					"name": "医院",
-					"total": "22",
-					"notAccord": "18.18%",
-					"accord": "81.82%",
-					"notAccordNum": "4",
-					"accordNum": "18"
-				}]
-			}
-		],
+		"h1": {
+			"total": "785",
+			"notAccord": "18.18%",
+			"accord": "81.82%",
+			"notAccordNum": "123",
+			"accordNum": "666",
+			"content": [{
+					"street": "八宝山街道",
+					"category": [{
+						"name": "超市",
+						"total": "22",
+						"notAccord": "18.18%",
+						"accord": "81.82%",
+						"notAccordNum": "4",
+						"accordNum": "18"
+					}, {
+						"name": "社区",
+						"total": "22",
+						"notAccord": "18.18%",
+						"accord": "81.82%",
+						"notAccordNum": "4",
+						"accordNum": "18"
+					}, {
+						"name": "社区综合文化服务中心",
+						"total": "22",
+						"notAccord": "18.18%",
+						"accord": "81.82%",
+						"notAccordNum": "4",
+						"accordNum": "18"
+					}]
+				},
+				{
+					"street": "八角街道",
+					"category": [{
+						"name": "宾馆饭店",
+						"total": "22",
+						"notAccord": "18.18%",
+						"accord": "81.82%",
+						"notAccordNum": "4",
+						"accordNum": "18"
+					}, {
+						"name": "超市",
+						"total": "22",
+						"notAccord": "18.18%",
+						"accord": "81.82%",
+						"notAccordNum": "4",
+						"accordNum": "18"
+					}, {
+						"name": "医院",
+						"total": "22",
+						"notAccord": "18.18%",
+						"accord": "81.82%",
+						"notAccordNum": "4",
+						"accordNum": "18"
+					}]
+				}
+			]
+		},
 		"h2": [{
 				"num": "1",
 				"code": "281",
