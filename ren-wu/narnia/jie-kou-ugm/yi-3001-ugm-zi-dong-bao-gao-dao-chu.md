@@ -17,7 +17,7 @@ jsonData 必填项，json字符串。
 
 ```
 {
-	"caseNum": 150,
+	"caseNum": 19,
 	"jsonData": {
 		"titleName": "UGM日报",
 		"journalNum": 1,
@@ -84,6 +84,7 @@ jsonData 必填项，json字符串。
 		"h2": [{
 				"num": "1",
 				"code": "281",
+				"caseId ": "281",
 				"street": "八宝山街道",
 				"category": "超市",
 				"spotName": "北京永辉超市有限公司石景山分公司",
@@ -99,7 +100,8 @@ jsonData 必填项，json字符串。
 
 			{
 				"num": "2",
-				"code": "281",
+				"code": "282",
+				"caseId ": "281",
 				"street": "八宝山街道",
 				"category": "超市",
 				"spotName": "北京永辉超市有限公司石景山分公司",
@@ -116,6 +118,7 @@ jsonData 必填项，json字符串。
 			{
 				"num": "3",
 				"code": "282",
+				"caseId ": "283",
 				"street": "八宝山街道111",
 				"category": "超市",
 				"spotName": "北京永辉超市有限公司石景山分公司",
@@ -138,7 +141,7 @@ jsonData 必填项，json字符串。
 ```
 成功：
 {
-	"msPath": "https://narnia.oss-cn-beijing.aliyuncs.com/UGMæ¥æ¥/20180919105141913/UGMæ¥æ¥ï¼2018å¹´8æ21æ¥ï¼.docx?Expires=1852685503&OSSAccessKeyId=LTAIARWAKGUIqkn6&Signature=gkBJed1pATs7auMmZcBh8Z/nLAI=",
+	"msPath": "https://narnia.oss-cn-beijing.aliyuncs.com/UGMæ¥æ¥/20181105113952414/UGMæ¥æ¥ï¼2018å¹´8æ21æ¥ï¼.docx?Expires=1856749193&OSSAccessKeyId=LTAIARWAKGUIqkn6&Signature=Mrct5vts8I62qxwyUgJiURPNK9A=",
 	"message": "任务执行成功"
 }
 
