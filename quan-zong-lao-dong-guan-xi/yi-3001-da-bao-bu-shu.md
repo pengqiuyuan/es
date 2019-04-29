@@ -22,4 +22,10 @@ mvn spring-boot:run -Drun.jvmArguments='-Dserver.port=8085'
 mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8082
 ```
 
+```
+mvn install
+mvn -pl ruoyi-admin clean test -Dtest=com.ruoyi.project.Ttest#test
+```
+
+
 
