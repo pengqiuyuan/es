@@ -39,6 +39,9 @@ https://stackoverflow.com/questions/43752986/run-test-cases-of-particular-module
  mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8080
  
   mvn clean test -DfailIfNoTests=false  -Dtest=com.ruoyi.project.Ttest#test
+  
+  
+  mvn clean test -Dtest=Ttest#test -DfailIfNoTests=false
 ```
 
 
