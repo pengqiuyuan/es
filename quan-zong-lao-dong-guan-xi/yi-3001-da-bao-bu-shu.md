@@ -45,6 +45,19 @@ https://stackoverflow.com/questions/43752986/run-test-cases-of-particular-module
   
 ```
 
+```
+public class ShiroUtils
+{
+
+    @Before
+    public static Subject getSubject()
+    {
+        DefaultSecurityManager defaultSecurityManager = new DefaultSecurityManager();
+        SecurityUtils.setSecurityManager(defaultSecurityManager);
+        return SecurityUtils.getSubject();
+    }
+}
+```
 
 
 
