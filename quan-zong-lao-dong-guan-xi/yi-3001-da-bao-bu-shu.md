@@ -60,6 +60,7 @@ public class ShiroUtils
 ```
 
 
+mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8084,--spring.profiles.active=druid
 
 
 
