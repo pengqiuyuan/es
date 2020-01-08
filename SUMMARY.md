@@ -234,7 +234,9 @@
   * [一、打包部署](quan-zong-lao-dong-guan-xi/yi-3001-da-bao-bu-shu.md)
 * [问卷吧](wen-juan-ba.md)
   * [题型设计](wen-juan-ba/ti-xing-she-ji.md)
-    * [选择题](wen-juan-ba/ti-xing-she-ji/dan-xuan-ti.md)
     * [文字描述](wen-juan-ba/ti-xing-she-ji/duo-xuan-ti.md)
-    * 填空题
+    * [选择题](wen-juan-ba/ti-xing-she-ji/dan-xuan-ti.md)
+    * [量表题](wen-juan-ba/ti-xing-she-ji/tian-kong-ti.md)
+    * 矩阵选择题
+  * 数据结构
 
