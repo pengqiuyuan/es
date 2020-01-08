@@ -4,7 +4,7 @@ description: 问卷表
 
 # 问卷表
 
-
+`问卷表 wj_surveys`
 
 | 字段含义 | 字段名称 | 数据类型 |
 | :--- | :--- | :--- |
@@ -20,8 +20,10 @@ description: 问卷表
 | 标识符 | identifier |  |
 | 星标 | is\_star |  |
 | 投放渠道 | channel |  |
+| 分页显示数组 | pages | 数组 |
+| 逻辑数组 | logics | 数组 |
 
-> 问卷吧 surveys
+`问卷吧 surveys`
 
 ```text
 { 
