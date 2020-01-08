@@ -1,3 +1,5 @@
+# tieba\_logs
+
 索引：`tieba_logs`
 
 类型：`tieba_logs`
@@ -14,13 +16,13 @@
 
 创建索引`tieba_logs`
 
-```
+```text
 PUT /tieba_logs
 ```
 
 `mapping`
 
-```
+```text
 PUT /_template/tieba_logs
 {
   "template": "tieba_logs*",
@@ -108,6 +110,4 @@ PUT /_template/tieba_logs
   }
 }
 ```
-
-
 

@@ -1,3 +1,5 @@
+# 自动导出模板API
+
 **一**、自动导出月报模板
 
 `POST` `http://127.0.0.1/stq/api/v1/poi/getMsFile`
@@ -6,14 +8,14 @@
 
 `参数说明`：
 
-```
+```text
 category 必填项，根据 category 定义导出相应模板文件。viewspot（景区）、hotel（酒店）、travel（旅游路线）
 jsonData 必填项，json字符串。
 ```
 
 `BODY` 体：
 
-```
+```text
 {
     "category": "travel",
     "jsonData": {
@@ -772,7 +774,7 @@ jsonData 必填项，json字符串。
 
 `response` 返回提示信息
 
-```
+```text
 成功：
 
 {
@@ -787,6 +789,4 @@ jsonData 必填项，json字符串。
     "message": "任务执行错误"
 }
 ```
-
-
 

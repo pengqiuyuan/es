@@ -1,3 +1,5 @@
+# 新增机器
+
 第一步、登录`15`台新机器，创建 `idatage` 用户，`root` 权限
 
 创建用户`sudo adduser idatage`
@@ -6,13 +8,13 @@
 
 `idatage ALL=NOPASSWD:ALL`
 
-第二步、修改 `hosts` 文件，[参考](/chapter1.md)
+第二步、修改 `hosts` 文件，[参考](./)
 
-第三步、配置私钥免密码登录，[参考](/chapter1.md)
+第三步、配置私钥免密码登录，[参考](./)
 
 第四部、挂载 `SSD`，[参考](https://help.aliyun.com/document_detail/25426.html?spm=5176.doc25446.2.4.5NxhED)
 
-```
+```text
 sudo fdisk -l 
 fdisk /dev/vdb 对数据盘进行分区。根据提示，依次输入 n，p，1，两次回车，wq，分区就开始了。
 fdisk -l 
@@ -28,9 +30,9 @@ echo /dev/vdb1 /mnt ext3 defaults 0 0 >> /etc/fstab && cat /etc/fstab && mount /
 
 第五步、执行 `ansible-playbook -s site.yml`
 
-第六步、修改系统配置，[参考](/system-pei-zhi.md)
+第六步、修改系统配置，[参考](../system-pei-zhi.md)
 
-```
+```text
 ansible all -s -m raw -a '
 grep "* - nofile 512000" /etc/security/limits.conf || echo "* - nofile 512000" >> /etc/security/limits.conf
 grep "elasticsearch - nproc unlimited" /etc/security/limits.conf || echo "elasticsearch - nproc unlimited" >> /etc/security/limits.conf
@@ -43,7 +45,7 @@ sysctl -p'
 第七步、`hosts`文件添加 `elasticsearch_data_nodes_16g`、编写 `elasticsearch_data_nodes_16g` ，执行  
 `ansible-playbook elasticsearch_16g.yml`，之后这一段需要合并到 `elasticsearch.yml`
 
-```
+```text
 - hosts: elasticsearch_data_nodes_16g
   become: yes
   roles:
@@ -90,7 +92,7 @@ sysctl -p'
 
 第八步、先手动禁用分片分配，待新添加机器全部加入集群
 
-```
+```text
 curl  -XGET http://127.0.0.1:9222/_cat/health?v
 
 curl -XGET http://127.0.0.1:9222/_cat/nodes?v
@@ -120,7 +122,7 @@ ansible all -s -m raw -a 'tail -50 /mnt/log/elasticsearch/node*-node/tarantula.l
 
 第九步、在这里的时候，新机器就已经加入到集群里了，只是没有安装 `IK` 分词插件导致，分片不平衡 。安装 `IK`
 
-```
+```text
 ansible node16,node17,node18,node19,node20,node21,node22,node23,node24,node25,node26,node27,node28,node29,node30 -s -m copy -a 'src=/home/idatage/plugins/elasticsearch-analysis-ik-5.4.0.zip dest=/usr/share/elasticsearch/elasticsearch-analysis-ik-5.4.0.zip'
 
 ansible node16,node17,node18,node19,node20,node21,node22,node23,node24,node25,node26,node27,node28,node29,node30 -s -m raw -a 'ls /usr/share/elasticsearch'
@@ -136,7 +138,7 @@ ansible node16,node17,node18,node19,node20,node21,node22,node23,node24,node25,no
 
 第十步、等待分片再平衡，10T 数据 1 个多小时
 
-```
+```text
 cluster.routing.allocation.cluster_concurrent_rebalance:22
 
 indices.recovery.max_bytes_per_sec:3072mb
@@ -150,7 +152,7 @@ curl -XGET '127.0.0.1:9222/_cat/recovery?v&pretty&human&active_only=true&detaile
 
 第十一步、安装 `xpack` （`ansible` 启动`xpack plugins`会被移除），重启
 
-```
+```text
 #在node01（安装ansible的机器）上执行
 
 ansible all -s -m raw -a 'mkdir /home/idatage/download && mkdir /home/idatage/plugins'
@@ -176,9 +178,9 @@ ansible all -s -m copy -a 'src=/home/idatage/plugins/x-pack-5.4.0.jar dest=/usr/
 
 1. 如果你有专门的master节点（在节点配置中设置`node.master`为`true`且`node.data`为`false`），先启动他们是一个好的主意。在处理数据节点之前等待它们形成一个集群并选举出一个主节点。你可以通过查看日志来检查进度。
 
-   一旦对方发现了[最小的主节点数](../../Modules/Discovery/Zen_Discovery.md#master-election)，它们将在集群中选举主节点。从这时开始，就可以使用[\_cat/health](../../cat_APIs/cat_health.md)与[\_cat/nodes](../../cat_APIs/cat_nodes.md)API来监控节点加入集群：
+   一旦对方发现了[最小的主节点数](https://github.com/pengqiuyuan/es/tree/38d46a46557117216886c57221178350563dc8c4/Modules/Discovery/Zen_Discovery.md#master-election)，它们将在集群中选举主节点。从这时开始，就可以使用[\_cat/health](https://github.com/pengqiuyuan/es/tree/38d46a46557117216886c57221178350563dc8c4/cat_APIs/cat_health.md)与[\_cat/nodes](https://github.com/pengqiuyuan/es/tree/38d46a46557117216886c57221178350563dc8c4/cat_APIs/cat_nodes.md)API来监控节点加入集群：
 
-   ```js
+   ```javascript
    停止集群
 
    ansible all -s -m raw -a 'service node_elasticsearch stop'
@@ -226,13 +228,13 @@ ansible all -s -m copy -a 'src=/home/idatage/plugins/x-pack-5.4.0.jar dest=/usr/
    }'
    ```
 
-   ```
+   ```text
    使用这些API来检查所有节点已经成功地加入到集群。
    ```
 
 第十二步、开启微博、微信副本
 
-```
+```text
 PUT /weibo/_settings
 {
     "index" : {
@@ -247,6 +249,4 @@ PUT /weixin/_settings
     }
 }
 ```
-
-
 

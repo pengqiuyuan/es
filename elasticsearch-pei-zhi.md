@@ -1,8 +1,10 @@
+# Elasticsearch 配置
+
 `Elasticsearch`配置 ，`ansible` 管理
 
 `master` 节点
 
-```
+```text
 - hosts: elasticsearch_master_nodes
   become: yes
   roles:
@@ -44,7 +46,7 @@
 
 `master` && `data` 节点
 
-```
+```text
 - hosts: elasticsearch_master_data_nodes
   become: yes
   roles:
@@ -86,7 +88,7 @@
 
 `date` 节点
 
-```
+```text
 - hosts: elasticsearch_data_nodes
   become: yes
   roles:
@@ -128,7 +130,7 @@
 
 `client` 节点
 
-```
+```text
 - hosts: elasticsearch_client_nodes
   become: yes
   roles:
@@ -167,6 +169,4 @@
     es_data_dirs: "/mnt/lib/elasticsearch"
     es_log_dir: "/mnt/log/elasticsearch"
 ```
-
-
 

@@ -1,3 +1,5 @@
+# qie\_logs
+
 索引：`qie_logs`
 
 类型：`qie_logs`
@@ -17,13 +19,13 @@
 
 创建索引`qie_logs`
 
-```
+```text
 PUT /qie_logs
 ```
 
 `mapping`
 
-```
+```text
 PUT /_template/qie_logs
 {
   "template": "qie_logs*",
@@ -122,6 +124,4 @@ PUT /_template/qie_logs
   }
 }
 ```
-
-
 

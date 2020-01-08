@@ -1,3 +1,5 @@
+# baidunews\_news
+
 百度新闻
 
 `index` 名称：`baidunews_news`
@@ -18,11 +20,11 @@
 
 创建索引`baidunews_news`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/baidunews_news
 ```
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/_template/baidunews_news -d '
 {
     "template": "baidunews_news*",
@@ -169,6 +171,4 @@ curl -XPUT http://127.0.0.1:9222/_template/baidunews_news -d '
     }
 }'
 ```
-
-
 

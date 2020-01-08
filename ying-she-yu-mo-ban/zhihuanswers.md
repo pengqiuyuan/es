@@ -1,3 +1,5 @@
+# zhihu\_answers
+
 索引：`zhihu_answers`
 
 类型：`zhihu_answers`
@@ -17,13 +19,13 @@
 
 创建索引`zhihu_answers`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/zhihu_answers
 ```
 
 `mapping`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/_template/zhihu_answers -d '
 {
   "template": "zhihu_answers*",
@@ -167,6 +169,4 @@ curl -XPUT http://127.0.0.1:9222/_template/zhihu_answers -d '
   }
 }'
 ```
-
-
 

@@ -1,10 +1,12 @@
+# 独立账号占比
+
 独立账号占比
 
-```
+```text
  A_PCT = weiboer_cache_length / (real_count_avg / delta_avg)
 ```
 
-```
+```text
 GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search 
 {
           "query": {
@@ -87,6 +89,4 @@ GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search
           }
 }
 ```
-
-
 

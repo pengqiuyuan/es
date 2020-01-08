@@ -1,10 +1,12 @@
+# tieba\_posts
+
 旧索引：`tieba_posts`
 
 新索引：`tieba_posts`、类型名称：`tieba_posts`
 
 部分数据：
 
-```
+```text
 {
     "_id": "4995640819",
     "_score": 1,
@@ -39,13 +41,13 @@
 
 创建索引`tieba_posts`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/tieba_posts
 ```
 
 `mapping`
 
-```
+```text
 GET _template/tieba_posts
 
 PUT /_template/tieba_posts
@@ -199,6 +201,4 @@ PUT /_template/tieba_posts
     }
 }
 ```
-
-
 

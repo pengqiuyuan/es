@@ -1,10 +1,12 @@
+# weibo\_article\_tops
+
 旧索引：`weibo_article_tops`
 
 新索引：`weibo_article_tops`
 
 部分数据：
 
-```
+```text
 {
     "_index": "weibo_article_tops",
     "_type": "weibo_article_top",
@@ -63,13 +65,13 @@
 
 创建索引`weibo_article_tops`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/weibo_article_tops
 ```
 
 `mapping`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/_template/weibo_article_tops -d '
 {
     "template": "weibo_article_tops*",
@@ -385,6 +387,4 @@ curl -XPUT http://127.0.0.1:9222/_template/weibo_article_tops -d '
     }
 }'
 ```
-
-
 

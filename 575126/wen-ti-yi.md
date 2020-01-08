@@ -1,8 +1,10 @@
+# 问题一
+
 出错过程还原，解析时间戳类型（秒级）
 
 `mapping`
 
-```
+```text
 curl -XPOST http://localhost:9222/ikindex/fulltext/_mapping -d'
  {
      "fulltext": {
@@ -18,7 +20,7 @@ curl -XPOST http://localhost:9222/ikindex/fulltext/_mapping -d'
 
 插入一条数据
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/ikindex/fulltext/1 -d '
 {
     "crawled_at": 1491979523.6475554
@@ -27,7 +29,7 @@ curl -XPUT http://127.0.0.1:9222/ikindex/fulltext/1 -d '
 
 报错
 
-```
+```text
 {"error":{"root_cause":[{"type":"mapper_parsing_exception","reason":"failed to parse [crawled_at]"}],"type":"mapper_parsing_exception","reason":"failed to parse [crawled_at]","caused_by":{"type":"illegal_argument_exception","reason":"Invalid format: \"1491979523.6475554\" is malformed at \"979523.6475554\""}},"status":400}
 ```
 

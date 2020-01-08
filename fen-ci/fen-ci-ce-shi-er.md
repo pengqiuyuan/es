@@ -1,3 +1,5 @@
+# 分词测试二
+
 `match_phrase` 测试，`es5.3.0` 、`elasticsearch-analysis-ik-5.3.0`
 
 前提：`elasticsearch-analysis-ik-5.3.0` 修改过 `CharacterUtil`
@@ -10,7 +12,7 @@
 
 设置分词`mapping`
 
-```
+```text
 curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_mapping -d'
  {
      "fulltext2": {
@@ -27,7 +29,7 @@ curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_mapping -d'
 
 插入数据
 
-```
+```text
 curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/1 -d'
 {
     "content": "啦啦啦啦啦啦《叶问3》功夫升级 中西拳术巅峰对决甄子丹张晋打到飞起"
@@ -60,7 +62,7 @@ curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/6 -d'
 
 测试分词结果中是否有特殊符号（`$`、`。`、`，`、`@`、`#`），结果含有：`$`、`。`、`，`、`@`、`#`
 
-```
+```text
 curl 'http://127.0.0.1:9222/ikindex3/_analyze?analyzer=ik_smart&pretty=true' -d '
 {
 "text":"$中西拳术。巅峰，对决@甄子丹#张晋打到飞起"
@@ -69,7 +71,7 @@ curl 'http://127.0.0.1:9222/ikindex3/_analyze?analyzer=ik_smart&pretty=true' -d 
 
 如下：
 
-```
+```text
 {
   "tokens" : [
     {
@@ -176,7 +178,7 @@ curl 'http://127.0.0.1:9222/ikindex3/_analyze?analyzer=ik_smart&pretty=true' -d 
 
 一、测试`match_phrase`，查询 `@巅峰`，6条文档，5条含有`巅峰`，2条还有 `@巅峰`，期望结果命中2条带有 `@巅峰`，的文档
 
-```
+```text
 curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
  {
      "query" : { "match_phrase" : { "content" : "巅峰" }},
@@ -192,7 +194,7 @@ curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
 
 结果如下，与预期一致
 
-```
+```text
 {
   "took" : 119,
   "timed_out" : false,
@@ -240,7 +242,7 @@ curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
 
 二、测试`match_phrase`，查询 `$中西`，预期一条符合，结果如下（与预期相符）：
 
-```
+```text
 curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
  {
      "query" : { "match_phrase" : { "content" : "$中西" }},
@@ -286,7 +288,7 @@ curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
 
 三、测试`match_phrase`，查询`巅峰，`，预期一条符合，结果如下（与预期相符）：
 
-```
+```text
 curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
  {
      "query" : { "match_phrase" : { "content" : "巅峰，" }},
@@ -376,7 +378,7 @@ curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
 
 四、测试`match_phrase`，查询`巅峰。`，预期一条符合，结果如下（与预期相符）：
 
-```
+```text
 curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
  {
      "query" : { "match_phrase" : { "content" : "巅峰。" }},

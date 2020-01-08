@@ -1,3 +1,5 @@
+# toutiao\_logs
+
 索引：`toutiao_logs`
 
 类型：`toutiao_logs`
@@ -13,13 +15,13 @@
 
 创建索引`toutiao_logs`
 
-```
+```text
 PUT /toutiao_logs
 ```
 
 `mapping`
 
-```
+```text
 PUT /_template/toutiao_logs
 {
   "template": "toutiao_logs*",
@@ -104,6 +106,4 @@ PUT /_template/toutiao_logs
   }
 }
 ```
-
-
 

@@ -1,8 +1,10 @@
+# china\_news
+
 新索引：`china_news`、类型名称：`china_news`
 
 部分数据：
 
-```
+```text
 {
      "news_source" => "2017-06-23来源：人民日报责任编辑：张旭婵",
        "news_type" => "消费者网-热点",
@@ -26,13 +28,13 @@
 
 创建索引`china_news`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/china_news
 ```
 
 `mapping`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/_template/china_news -d '
 {
     "template": "china_news*",
@@ -166,6 +168,4 @@ curl -XPUT http://127.0.0.1:9222/_template/china_news -d '
 }
 '
 ```
-
-
 

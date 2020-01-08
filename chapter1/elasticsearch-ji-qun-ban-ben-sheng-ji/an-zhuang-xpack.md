@@ -1,12 +1,14 @@
+# Elasticsearch 安装 Xpack 5.4.0
+
 安装 `xpack 5.4.0`
 
 集群第一次安装 xpack 需要执行完全群集重新启动。升级时, 通常可以执行滚动升级。
 
 执行全集群重启升级的过程如下：
 
-1. **停止** `logstash indexer` **端，停止数据写入 **`es`
+1. **停止** `logstash indexer` **端，停止数据写入** `es`
 
-   ```js
+   ```javascript
    sudo docker-compose stop
    ```
 
@@ -14,7 +16,7 @@
 
    当你关闭一个节点时，分配进程在等待一分钟之后开始将此节点上的分片复制到其它节点中，会造成很多浪费的I/O。这可以在节点关闭前通过禁用分片分配来避免：
 
-   ```js
+   ```javascript
    curl -XPUT http://127.0.0.1:9222/_cluster/settings -d '{
      "transient" : {
        "cluster.routing.allocation.enable" : "none"
@@ -26,9 +28,9 @@
 
 3. **执行同步冲刷**
 
-   你可以愉快地继续索引在升级。但是，如果你临时地关闭一些非不要的索引库以及执行一次[同步冲刷](../../Indices_APIs/Flush/Synced_Flush.md)请求可以帮助你快速恢复分片：
+   你可以愉快地继续索引在升级。但是，如果你临时地关闭一些非不要的索引库以及执行一次[同步冲刷](https://github.com/pengqiuyuan/es/tree/38d46a46557117216886c57221178350563dc8c4/Indices_APIs/Flush/Synced_Flush.md)请求可以帮助你快速恢复分片：
 
-   ```js
+   ```javascript
    curl -XPOST http://127.0.0.1:9222/_flush/synced?pretty
    ```
 
@@ -38,13 +40,13 @@
 
    在集群的所有节点上停掉 Elasticsearch 服务。
 
-   ```js
+   ```javascript
    ansible all -s -m raw -a 'service node_elasticsearch stop'
    ```
 
 5. **安装 xpack 插件**
 
-   ```js
+   ```javascript
    #在node01（安装ansible的机器）上执行
 
    ansible all -s -m raw -a 'mkdir /home/idatage/download && mkdir /home/idatage/plugins'
@@ -74,9 +76,9 @@
 
    如果你有专门的master节点（在节点配置中设置`node.master`为`true`且`node.data`为`false`），先启动他们是一个好的主意。在处理数据节点之前等待它们形成一个集群并选举出一个主节点。你可以通过查看日志来检查进度。
 
-   一旦对方发现了[最小的主节点数](../../Modules/Discovery/Zen_Discovery.md#master-election)，它们将在集群中选举主节点。从这时开始，就可以使用[\_cat/health](../../cat_APIs/cat_health.md)与[\_cat/nodes](../../cat_APIs/cat_nodes.md)API来监控节点加入集群：
+   一旦对方发现了[最小的主节点数](https://github.com/pengqiuyuan/es/tree/38d46a46557117216886c57221178350563dc8c4/Modules/Discovery/Zen_Discovery.md#master-election)，它们将在集群中选举主节点。从这时开始，就可以使用[\_cat/health](https://github.com/pengqiuyuan/es/tree/38d46a46557117216886c57221178350563dc8c4/cat_APIs/cat_health.md)与[\_cat/nodes](https://github.com/pengqiuyuan/es/tree/38d46a46557117216886c57221178350563dc8c4/cat_APIs/cat_nodes.md)API来监控节点加入集群：
 
-   ```js
+   ```javascript
    # 先启动 master node
 
    ansible node03,node04,node05 -s -m raw -a 'service node_elasticsearch start'
@@ -120,13 +122,13 @@
    }'
    ```
 
-   ```
+   ```text
    使用这些API来检查所有节点已经成功地加入到集群。
    ```
 
 7. **等待状态**`yellow`
 
-   一旦节点加入了集群，他将开始恢复本地存储的分片数据。刚开始[\_cat/health](../../cat_APIs/cat_health.md)会返回`status`为`red`，这表示还有主分片未分配完成。
+   一旦节点加入了集群，他将开始恢复本地存储的分片数据。刚开始[\_cat/health](https://github.com/pengqiuyuan/es/tree/38d46a46557117216886c57221178350563dc8c4/cat_APIs/cat_health.md)会返回`status`为`red`，这表示还有主分片未分配完成。
 
    一旦本地存储的分片恢复完成，`status`将会变成`yellow`，这表示所有主分片已恢复，但是副本分片没有分配。这是我们预料到的，因为分片分配被我们之前禁用了。
 
@@ -134,7 +136,7 @@
 
    延迟副本分片的分配，直到所有节点都加入了集群且完成了本地分片数据的分配。从这时开始，所有节点都已在集群中，重新打开分片分配是安全的：
 
-   ```js
+   ```javascript
     PUT _cluster/settings
     {
       "transient": {
@@ -145,9 +147,9 @@
 
    集群将开始分片副本到所有的数据节点。这是你可以安全的开始新增索引与执行搜索操作，但是如果你在分片恢复之前延迟这些操作将会使得恢复过程变得更快。
 
-   你可以使用[\_cat/health](../../cat_APIs/cat_health.md)与[\_cat/revocery](../../cat_APIs/cat_recovery.md)API来监控进度：
+   你可以使用[\_cat/health](https://github.com/pengqiuyuan/es/tree/38d46a46557117216886c57221178350563dc8c4/cat_APIs/cat_health.md)与[\_cat/revocery](https://github.com/pengqiuyuan/es/tree/38d46a46557117216886c57221178350563dc8c4/cat_APIs/cat_recovery.md)API来监控进度：
 
-   ```js
+   ```javascript
    curl -u 用户名:密码 -XGET http://127.0.0.1:9222/_cat/health?pretty
 
    curl -u 用户名:密码 -XGET http://127.0.0.1:9222/_cat/nodes?pretty
@@ -158,6 +160,4 @@
    ```
 
    一旦`_cat/health`输出的`status`列变成`green`，所有主分片与副本分片都成功分配完成。
-
-
 

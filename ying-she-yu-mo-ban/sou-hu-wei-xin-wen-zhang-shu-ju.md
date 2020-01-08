@@ -1,3 +1,5 @@
+# 搜狗微信文章数据
+
 索引名称（`_index`）：`sogou_weixin_articles`
 
 分片名称（`_type`）：`sogou_weixin_articles`
@@ -25,13 +27,13 @@
 
 创建索引`sogou_weixin_articles`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/sogou_weixin_articles
 ```
 
 `mapping`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/_template/sogou_weixin_articles -d '
 {
     "template": "sogou_weixin_articles*",
@@ -210,6 +212,4 @@ curl -XPUT http://127.0.0.1:9222/_template/sogou_weixin_articles -d '
     }
 }'
 ```
-
-
 

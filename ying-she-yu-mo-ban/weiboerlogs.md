@@ -1,3 +1,5 @@
+# weiboer\_logs
+
 索引：`weiboer_logs`
 
 类型：`weiboer_logs`
@@ -14,13 +16,13 @@
 
 创建索引`weiboer_logs`
 
-```
+```text
 PUT /weiboer_logs
 ```
 
 `mapping`
 
-```
+```text
 PUT /_template/weiboer_logs
 {
   "template": "weiboer_logs*",
@@ -108,6 +110,4 @@ PUT /_template/weiboer_logs
   }
 }
 ```
-
-
 

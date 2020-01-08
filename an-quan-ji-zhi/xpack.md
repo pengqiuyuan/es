@@ -1,4 +1,6 @@
-```
+# xpack
+
+```text
 ansible all -s -m copy -a 'src=/home/idatage/plugins/peng-qiuyuan-a8b6beab-10ff-480f-9eff-7295efd58242-v5.json dest=/tmp/peng-qiuyuan-a8b6beab-10ff-480f-9eff-7295efd58242-v5.json'
 ansible all -s -m raw -a 'ls /tmp'
 ```
@@ -7,7 +9,7 @@ ansible all -s -m raw -a 'ls /tmp'
 
 `x-pack`重新编译 `LicenseVerifier.java`，`license`验证永远返回 `true`
 
-```
+```text
 package org.elasticsearch.license;
 
 public class LicenseVerifier
@@ -24,37 +26,37 @@ public class LicenseVerifier
 
 本地编译
 
-```
+```text
 javac -encoding UTF-8 -cp ./x-pack-5.3.0.jar  LicenseVerifier.java
 ```
 
 本地替换 `LicenseVerifier.class`、打包
 
-```
+```text
 jar cvf x-pack-5.3.0.jar .
 ```
 
-上传替换 `es`  的 `x-pack-5.3.0.jar`
+上传替换 `es` 的 `x-pack-5.3.0.jar`
 
-```
+```text
 scp ./x-pack-5.3.0.jar root@127.0.0.1:/root/licenseVerifier
 ```
 
 `ansible`目录 `/home/dev/ansible-tinc-elasticsearch`
 
-```
+```text
 ansible all -s -m copy -a 'src=/root/licenseVerifier/x-pack-5.3.0.jar dest=/usr/share/elasticsearch/plugins/x-pack/x-pack-5.3.0.jar'
 ```
 
 重启集群
 
-```
+```text
 ansible all -s -m raw -a 'service node_elasticsearch restart'
 
 ansible all -s -m raw -a 'tail -100 /mnt/log/elasticsearch/*/test.log'
 ```
 
-```
+```text
 curl -XPUT -u elastic:changeme 'http://127.0.0.1:9222/_xpack/license' -d '
 {
   "license" : {
@@ -70,13 +72,13 @@ curl -XPUT -u elastic:changeme 'http://127.0.0.1:9222/_xpack/license' -d '
 }'
 ```
 
-```
+```text
 curl -XGET -u elastic:changeme 'http://127.0.0.1:9222/_xpack/license'
 ```
 
 卸载
 
-```
+```text
 /usr/share/elasticsearch/bin/elasticsearch-plugin remove x-pack
 
 /usr/share/kibana/bin/kibana-plugin remove x-pack
@@ -86,11 +88,9 @@ ansible all -s -m raw -a '/usr/share/elasticsearch/bin/elasticsearch-plugin remo
 
 安装
 
-```
+```text
 /usr/share/elasticsearch/bin/elasticsearch-plugin install file:///root/x-pack-5.3.0.zip
 
 /usr/share/kibana/bin/kibana-plugin install file:///root/x-pack-5.3.0.zip
 ```
-
-
 

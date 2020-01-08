@@ -1,7 +1,8 @@
+# 一、打包部署
+
 打包部署
 
-
-```
+```text
 生成环境
 
 mvn clean package -Dmaven.test.skip=true
@@ -9,7 +10,7 @@ mvn clean package -Dmaven.test.skip=true
 java -Xms4g -Xmx4g -jar -Dserver.port=8081 target/tarzan.jar
 ```
 
-```
+```text
 测试环境
 
 mvn clean package -Dmaven.test.skip=true
@@ -17,12 +18,12 @@ mvn clean package -Dmaven.test.skip=true
 java -Xms4g -Xmx4g -jar -Dserver.port=8081 target/tarzan.jar
 ```
 
-```
+```text
 mvn spring-boot:run -Drun.jvmArguments='-Dserver.port=8085'
 mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8082
 ```
 
-```
+```text
 mvn install
 mvn -pl ruoyi-admin clean test -Dtest=com.ruoyi.project.Ttest#test
 
@@ -37,15 +38,14 @@ mvn -pl ruoyi-admin -am  spring-boot:run -Dspring-boot.run.arguments=--server.po
 https://stackoverflow.com/questions/43752986/run-test-cases-of-particular-module-in-multi-module-project-using-maven
 
  mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8080
- 
+
   mvn clean test -DfailIfNoTests=false  -Dtest=com.ruoyi.project.Ttest#test
-  
-  
+
+
   mvn clean test -Dtest=Ttest#test -DfailIfNoTests=false
-  
 ```
 
-```
+```text
 public class ShiroUtils
 {
 
@@ -59,9 +59,5 @@ public class ShiroUtils
 }
 ```
 
-
 mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8084,--spring.profiles.active=druid
-
-
-
 

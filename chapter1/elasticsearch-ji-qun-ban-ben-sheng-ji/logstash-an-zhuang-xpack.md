@@ -1,15 +1,17 @@
+# Logstash 安装 Xpack 5.4.0
+
 Logstash 使用了[容器](https://hub.docker.com/_/logstash/)
 
 **停止、删除容器**
 
-```
+```text
   sudo docker-compose stop
   sudo docker-compose rm
 ```
 
 **第一步**
 
-```
+```text
   #修改 docker-compose.yml，挂载 logstash.yml，logstash.yml 需要新增的三行
 
   xpack.monitoring.elasticsearch.url: ["http://127.0.0.1:9222"]  
@@ -36,7 +38,7 @@ Logstash 使用了[容器](https://hub.docker.com/_/logstash/)
 
 **第二步**
 
-```
+```text
   index.conf 与 index_kejizixun.conf output es 添加
 
   user => '用户名'
@@ -45,7 +47,7 @@ Logstash 使用了[容器](https://hub.docker.com/_/logstash/)
 
 **第三步**
 
-```
+```text
   #修改 Dockerfile
 
   FROM logstash:5.4.0
@@ -55,12 +57,10 @@ Logstash 使用了[容器](https://hub.docker.com/_/logstash/)
 
 **第四步**
 
-```
+```text
   #启动
 
   sudo docker-compose build
   sudo docker-compose up -d
 ```
-
-
 

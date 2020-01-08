@@ -1,4 +1,6 @@
-**话题排行榜**
+# 话题排行榜（topic\_rank）
+
+**话题排行榜** 
 
 索引：`topic_rank`
 
@@ -6,13 +8,13 @@
 
 创建索引`topic_rank`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/topic_rank
 ```
 
 `mapping`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/_template/topic_rank -d '
 {
   "template": "topic_rank*",
@@ -127,8 +129,5 @@ curl -XPUT http://127.0.0.1:9222/_template/topic_rank -d '
     }
   }
 }'
-
 ```
-
-
 

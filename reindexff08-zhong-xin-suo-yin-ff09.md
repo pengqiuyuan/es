@@ -1,10 +1,12 @@
+# Reindex 重新索引
+
 Reindex
 
 注意：读取远端集群数据需要先配置对应的`reindex.remote.whitelist:192.168.0.2:9200`到 `elasticsearch.yml` 的白名单里。
 
 `weixiners`
 
-```
+```text
 curl -XPOST http://localhost:9222/_reindex?requests_per_second=100000 -d '
 {
   "source": {
@@ -26,7 +28,7 @@ curl -XPOST http://localhost:9222/_reindex?requests_per_second=100000 -d '
 
 `weiboers`
 
-```
+```text
 curl -XPOST http://localhost:9222/_reindex?requests_per_second=100000 -d '
 {
   "source": {
@@ -48,7 +50,7 @@ curl -XPOST http://localhost:9222/_reindex?requests_per_second=100000 -d '
 
 `scroll api`&& `BulkProcessor`
 
-```
+```text
     @Autowired
     private Client client;
 
@@ -114,6 +116,4 @@ curl -XPOST http://localhost:9222/_reindex?requests_per_second=100000 -d '
         System.out.println("程序运行时间： "+(endTime-startTime)+"ms");
     }
 ```
-
-
 

@@ -1,8 +1,10 @@
+# Bigdesk
+
 `Bigdesk`
 
 安装`elasticsearch-bigdesk`，`/home/idatage/plugins`目录下
 
-```
+```text
 # git clone https://github.com/hlstudio/bigdesk
 # cd bigdesk/_site
 # nohup python -mSimpleHTTPServer &

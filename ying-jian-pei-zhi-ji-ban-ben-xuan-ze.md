@@ -1,15 +1,17 @@
+# 硬件配置及版本选择
+
 `15`、`30`、`90`台机器 `Data Client`
 
 * [x] 内存 `32G`
 
-```
+```text
 $ cat /proc/meminfo |grep MemTotal
 MemTotal:       32947548 kB
 ```
 
 * [x] 磁盘 `1T SSD`
 
-```
+```text
 $ df -h
 文件系统        容量  已用  可用 已用% 挂载点
 udev             16G     0   16G    0% /dev
@@ -26,7 +28,7 @@ tmpfs           3.2G     0  3.2G    0% /run/user/1000
 
 逻辑CPU个数：`4`，物理CPU个数：`1`
 
-```
+```text
 $ cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c 
 4  Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
 cat /proc/cpuinfo | grep "physical id" | sort | uniq | wc -l
@@ -44,7 +46,7 @@ physical id    : 0
 
 * [x] 操作系统版本 `Ubuntu 16.04`
 
-```
+```text
 $  head -n 1 /etc/issue
 Ubuntu 16.04.2 LTS \n \l
 $ uname -a
@@ -57,13 +59,13 @@ Linux iZ2ze2q8du3j7164j0v6umZ 4.4.0-63-generic #84-Ubuntu SMP Wed Feb 1 17:20:32
 
 `Sliced Scroll`类型 并发进行数据遍历
 
-`Shrink  API` ，`elasticsearch`索引的`shard`数是固定的，设置好了之后不能修改，如果发现`shard`太多或者太少的问题，那么我们就可以想象成这样一种场景，在写入压力非常大的收集阶段，设置足够多的索引，充分利用`shard`的并行写能力，索引写完之后收缩成更少的`shard`，提高查询性能。
+`Shrink API` ，`elasticsearch`索引的`shard`数是固定的，设置好了之后不能修改，如果发现`shard`太多或者太少的问题，那么我们就可以想象成这样一种场景，在写入压力非常大的收集阶段，设置足够多的索引，充分利用`shard`的并行写能力，索引写完之后收缩成更少的`shard`，提高查询性能。
 
-`Rollover API`  首先创建一个`logs-0001` 的索引，它有一个别名是 `logs_write`, 然后我们给这个 `logs_write` 创建了一个 `rollover` 规则，即这个索引文档不超过 `1000` 个或者最多保存 `7` 天的数据，超过会自动切换别名到`logs-0002`, 你也可以设置索引的 `setting` 、 `mapping` 等参数 , 剩下的 `es` 会自动帮你处理。这个特性对于存放日志数据的场景是极为友好的。
+`Rollover API` 首先创建一个`logs-0001` 的索引，它有一个别名是 `logs_write`, 然后我们给这个 `logs_write` 创建了一个 `rollover` 规则，即这个索引文档不超过 `1000` 个或者最多保存 `7` 天的数据，超过会自动切换别名到`logs-0002`, 你也可以设置索引的 `setting` 、 `mapping` 等参数 , 剩下的 `es` 会自动帮你处理。这个特性对于存放日志数据的场景是极为友好的。
 
 `Reindex`
 
-```
+```text
 curl -XPOST http://localhost:9222/_reindex?slices=5 -d '
 {
   "source": {

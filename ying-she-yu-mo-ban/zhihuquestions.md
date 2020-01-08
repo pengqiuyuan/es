@@ -1,3 +1,5 @@
+# zhihu\_questions
+
 旧索引：`zhihu_questions`
 
 新索引：`zhihu_questions`
@@ -19,7 +21,7 @@
 
 部分数据：
 
-```
+```text
 {
   "_index": "zhihu_questions",
   "_type": "zhihu_questions",
@@ -43,13 +45,13 @@
 
 创建索引`zhihu_questions`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/zhihu_questions
 ```
 
 `mapping`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/_template/zhihu_questions -d '
 {
   "template": "zhihu_questions*",
@@ -194,6 +196,4 @@ curl -XPUT http://127.0.0.1:9222/_template/zhihu_questions -d '
   }
 }'
 ```
-
-
 

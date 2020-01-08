@@ -1,3 +1,5 @@
+# qie\_articles\_and\_users
+
 索引：`qie_articles_and_users`
 
 类型：`qie_articles_and_users`
@@ -26,13 +28,13 @@
 
 创建索引`qie_articles_and_users`
 
-```
+```text
 PUT /qie_articles_and_users
 ```
 
 `mapping`
 
-```
+```text
 PUT /_template/qie_articles_and_users
 {
   "template": "qie_articles_and_users*",
@@ -163,6 +165,4 @@ PUT /_template/qie_articles_and_users
   }
 }
 ```
-
-
 

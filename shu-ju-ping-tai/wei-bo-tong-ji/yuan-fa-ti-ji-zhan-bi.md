@@ -1,6 +1,8 @@
+# 原发提及占比
+
 原发提及占比 分子
 
-```
+```text
 GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search 
 {
           "query": {
@@ -77,7 +79,7 @@ GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search
 
 原发提及占比 分母
 
-```
+```text
 GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search 
 {
           "query": {
@@ -133,8 +135,5 @@ GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search
             }
           }
 }
-
 ```
-
-
 

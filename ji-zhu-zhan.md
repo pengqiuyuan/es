@@ -1,19 +1,21 @@
+# 技术栈
+
 Spring Framework为核心的JavaEE应用
 
-#### Web
+## Web
 
 Spring MVC, JSP/JSTL/Servlet  
 JQuery and plugins, Ajax, Twitter Bootstrap CSS
 
-#### WebService
+## WebService
 
 Spring Restful Service、Http Client
 
-#### Data
+## Data
 
 Spring Data JPA, JPA/Hibernate, Mysql DataSource, Ehcache, Memcached
 
-#### Service
+## Service
 
 Shiro  
 Schedule/Quartz  
@@ -21,19 +23,17 @@ JMS/ActiveMQ/kafka/redis
 log4j  
 hanlp/nlpir
 
-#### Test
+## Test
 
 Unit Test,JMeter
 
-#### Environment
+## Environment
 
 Maven, Git, Jetty
 
-#### General
+## General
 
 常见设计模式、数据结构、集合、IO、并发、多线程
-
----
 
 岗位职责：
 
@@ -58,8 +58,6 @@ JAVA基础扎实，拥有良好的编码习惯，理解io、多线程、集合�
 熟悉常用数据库，熟练掌握SQL语法，对MySQL有一定学习了解
 
 思维逻辑能力强，善沟通，学习能力强
-
----
 
 JAVA Web后端开发工程师
 

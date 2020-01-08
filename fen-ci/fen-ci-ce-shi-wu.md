@@ -1,8 +1,10 @@
+# 分词测试五
+
 一、问题
 
 在使用 `match_phrase` 查询 `金砖国家` 时，预期命中 60 条，实际命中30条。
 
-```
+```text
 第一条，没有命中的文档包含语句段，如下
 "text":  "金砖国家世界文化遗产"
 
@@ -17,7 +19,7 @@
 
 分词："金砖国家世界文化遗产"
 
-```
+```text
 {
   "tokens": [
     {
@@ -103,7 +105,7 @@
 
 分词："彭丽媛为金砖国家和对话会受邀国"
 
-```
+```text
 {
   "tokens": [
     {
@@ -224,7 +226,7 @@
 
 分词："金砖国家工商论坛"
 
-```
+```text
 {
   "tokens": [
     {
@@ -282,7 +284,7 @@
 
 二、解决办法
 
-```
+```text
 1、修改索引 Mapping field ，
 
 "search_analyzer": "ik_max_word"
@@ -308,13 +310,13 @@
 
 `match_phrase`
 
-【1】要求查询语句与匹配的文档之间，分出来的词的相对位置要一致。（匹配不到的 28 条，因为分词后的词项相对位置不一致，不管是  `ik_max_word` 还是 `ik_smart` 文档分词后的结果中间都有一个** 国家工商**）。解决办法，在查询的使用 `"slop":1` ，这里不需要设置太大。
+【1】要求查询语句与匹配的文档之间，分出来的词的相对位置要一致。（匹配不到的 28 条，因为分词后的词项相对位置不一致，不管是 `ik_max_word` 还是 `ik_smart` 文档分词后的结果中间都有一个 **国家工商**）。解决办法，在查询的使用 `"slop":1` ，这里不需要设置太大。
 
 【2】`match_phrase` 适合分出来的词没有位置重叠的场景。（匹配不到的 2 条，`ik_max_word` 细粒话分词之后，导致词项重叠，如：金砖、国家、家和。再如：金砖、国家、家世），国家这个词项，在原文档使用 `"analyzer": "ik_max_word"` 索引的时候，导致了词项重叠）
 
 索引 `mapping` 设置， `"search_analyzer": "ik_max_word"`为默认查询使用分词
 
-```
+```text
 "content_full": {
     "search_analyzer": "ik_max_word",
     "analyzer": "ik_max_word",
@@ -328,13 +330,13 @@
 
 不同的分词会产生不同的分词结果，`ik_max_word`产生的词位置有重叠；`ik_smart`不会有位置重叠；
 
-```
+```text
  "_all": {
   "enabled": true
  }
 ```
 
-```
+```text
 GET ikindex2/_analyze 
 {
   "analyzer": "standard",
@@ -359,7 +361,7 @@ GET ikindex2/_analyze
 
 部分分词结果
 
-```
+```text
     {
       "token": "金",
       "start_offset": 0,

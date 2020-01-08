@@ -1,4 +1,6 @@
-**话题静态数据**
+# 话题静态数据（topic\_static\_data）
+
+**话题静态数据** 
 
 索引：`topic_static_data`
 
@@ -6,13 +8,13 @@
 
 创建索引`topic_static_data`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/topic_static_data
 ```
 
 `mapping`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/_template/topic_static_data -d '
 {
   "template": "topic_static_data*",
@@ -183,8 +185,5 @@ curl -XPUT http://127.0.0.1:9222/_template/topic_static_data -d '
     }
   }
 }'
-
 ```
-
-
 

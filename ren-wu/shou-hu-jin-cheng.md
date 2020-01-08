@@ -1,5 +1,6 @@
+# 守护进程
 
-```
+```text
 #!/bin/sh
 
 #添加本地执行路径
@@ -19,5 +20,6 @@ while true; do
         echo 'narnia 项目正常【不重启】'+${time}
         sleep 60
 done
-~   
+~
 ```
+

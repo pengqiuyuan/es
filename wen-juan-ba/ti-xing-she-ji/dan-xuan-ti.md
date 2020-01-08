@@ -1,13 +1,12 @@
-
+# 选择题
 
 **适用题型：单选、多选、单选下拉列表**
 
 | 字段含义 | 字段名称 | 数据类型 |
 | :---: | :---: | :---: |
-| 区分题型 | question_type | String |
+| 区分题型 | question\_type | String |
 
-
-```
+```text
 { 
     "_id" : ObjectId("5111ec5a408c997fc1000098"), 
     "_type" : "Question", 
@@ -140,9 +139,7 @@
 
 **答案**
 
-
-
-```
+```text
 { 
     "_id" : ObjectId("5119f424408c991b6700000c"), 
     "answer_content" : {
@@ -490,6 +487,4 @@
     "username" : null
 }
 ```
-
-
 

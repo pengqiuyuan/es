@@ -1,3 +1,5 @@
+# 科技资讯站数据（tech\_news）
+
 索引（`_index`）：`tech_news`
 
 （修改：`es 6.0` 以后，只允许一个 `index` 有一个 `type`，`es 7.0` 以后 `type` 被移除。所以不同`_type`，修改为唯一 `_type`）
@@ -44,13 +46,13 @@
 
 创建索引`tech_news`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/tech_news
 ```
 
 `mapping`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/_template/tech_news -d '
 {
     "template": "tech_news*", 
@@ -215,6 +217,4 @@ curl -XPUT http://127.0.0.1:9222/_template/tech_news -d '
     }
 }'
 ```
-
-
 

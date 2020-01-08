@@ -1,3 +1,5 @@
+# toutiao\_articles\_and\_users
+
 索引名称（索引前缀名称为`toutiao_articles_and_users`的都能匹配到，名称为`toutiao_articles_and_users`的`mapping`模板，`*`为通配符）：如，`toutiao_articles_and_users`
 
 `index` 名称：`toutiao_articles_and_users`
@@ -21,8 +23,6 @@
 | 类型 | type | 数值 |
 | 视频时长 | duration | 数值（秒） |
 
----
-
 | 字段含义 | 字段名称 | 数据类型 |
 | :---: | :---: | :---: |
 | 头像图片链接 | avatar\_img | 字符串 |
@@ -33,11 +33,11 @@
 
 创建索引`toutiao_articles_and_users`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/toutiao_articles_and_users
 ```
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/_template/toutiao_articles_and_users -d '
 {
     "template": "toutiao_articles_and_users*",
@@ -210,6 +210,4 @@ curl -XPUT http://127.0.0.1:9222/_template/toutiao_articles_and_users -d '
     }
 }'
 ```
-
-
 

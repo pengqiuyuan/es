@@ -1,10 +1,12 @@
+# weiboers
+
 旧索引：`weiboers`
 
 新索引：`weiboers` 新类型：`weiboer`
 
 元数据
 
-```
+```text
 {
   "_index": "weiboers",
   "_type": "weiboer",
@@ -39,7 +41,7 @@
 
 使用 `Reindex Api`，重新索引
 
-```
+```text
 curl -XPOST http://localhost:9222/_reindex?requests_per_second=100000 -d '
 {
   "source": {
@@ -61,17 +63,17 @@ curl -XPOST http://localhost:9222/_reindex?requests_per_second=100000 -d '
 
 创建索引`weiboers`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/weiboers
 ```
 
-`Mapping`（`weiboers 28.0Gi/55.9Gi    52.1M`）
+`Mapping`（`weiboers 28.0Gi/55.9Gi 52.1M`）
 
 `"refresh_interval" : "60s"`、`"number_of_replicas" : "1"`、`"number_of_shards" : "15"`
 
 索引名称（索引前缀名称为`weiboers`的都能匹配到，名称为`weiboers`的`mapping`模板，`*`为通配符）：如，`weiboers`
 
-```
+```text
 curl -XPUT http://localhost:9222/_template/weiboers -d '
 {
     "template": "weiboers*",
@@ -348,6 +350,4 @@ curl -XPUT http://localhost:9222/_template/weiboers -d '
     }
 }'
 ```
-
-
 

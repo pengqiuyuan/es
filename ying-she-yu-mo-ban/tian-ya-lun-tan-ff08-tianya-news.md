@@ -1,3 +1,5 @@
+# 天涯论坛（tianya\_news）
+
 旧索引：`tianya_news`
 
 新索引：`tianya_news`
@@ -18,7 +20,7 @@
 
 部分数据：
 
-```
+```text
 {
   "_index": "tianya_news",
   "_type": "tianya_news",
@@ -32,13 +34,13 @@
 
 创建索引`tianya_news`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/tianya_news
 ```
 
 `mapping`，添加 `xpack` 执行需要用户名密码
 
-```
+```text
 curl -u 用户名:密码 -XPUT http://127.0.0.1:9222/_template/tianya_news -d '
 {
     "template": "tianya_news*",
@@ -179,6 +181,4 @@ curl -u 用户名:密码 -XPUT http://127.0.0.1:9222/_template/tianya_news -d '
     }
 }'
 ```
-
-
 

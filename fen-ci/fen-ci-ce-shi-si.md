@@ -1,5 +1,6 @@
-```
+# 分词测试四
 
+```text
 curl  -u 用户:密码 -XPUT http://127.0.0.1:9222/ikindex2
 
 
@@ -50,6 +51,4 @@ curl -u 用户:密码  'http://127.0.0.1:9222/ikindex2/_analyze?analyzer=ik_max_
     "text":"习近平主席将迎接金砖国家及受邀国领导人并集体合影"
 }'
 ```
-
-
 

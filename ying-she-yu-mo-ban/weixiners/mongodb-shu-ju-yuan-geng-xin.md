@@ -1,8 +1,10 @@
+# Mongodb 数据源更新
+
 [`mongo-connector` 文档](https://github.com/mongodb-labs/mongo-connector/wiki/Configuration-Options)
 
 `config.json` 模式，`mongo-connector -c weixin.json`
 
-```
+```text
 {
     "mainAddress": "127.0.0.1:6717",
     "authentication": {
@@ -29,6 +31,4 @@
     ]
 }
 ```
-
-
 

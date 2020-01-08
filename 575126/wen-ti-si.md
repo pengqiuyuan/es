@@ -1,3 +1,5 @@
+# 问题四
+
 `Parent/Child` 关系文档
 
 **解决问题：**
@@ -16,9 +18,9 @@
 
 [官网说明](https://www.elastic.co/guide/en/elasticsearch/guide/current/parent-child-performance.html#_global_ordinals_and_latency)
 
-`Parent/Child`  的搜索性能比等效的 `Nested Query` 慢五到十倍。
+`Parent/Child` 的搜索性能比等效的 `Nested Query` 慢五到十倍。
 
-`Parent/Child`  使用 [全局序数](https://www.elastic.co/guide/cn/elasticsearch/guide/current/preload-fielddata.html#global-ordinals) 来加速文档间的 `join`，当索引变更时，全局序数要重建。
+`Parent/Child` 使用 [全局序数](https://www.elastic.co/guide/cn/elasticsearch/guide/current/preload-fielddata.html#global-ordinals) 来加速文档间的 `join`，当索引变更时，全局序数要重建。
 
 父文档越多，那么全局序数的重建时间就越长。父子关系更适合于父文档少、子文档多的情况。
 

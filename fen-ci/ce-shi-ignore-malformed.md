@@ -1,3 +1,5 @@
+# 测试 ignore\_malformed
+
 测试 `ignore_malformed`
 
 测试原因：旧集群的索引，有许多数值类型的字段被自动映射成了`String`类型，原因可能是插入数据的时候，有字符串类型。
@@ -10,7 +12,7 @@
 
 创建 `mapping`
 
-```
+```text
     curl -XPOST http://localhost:9222/ikindex3/fulltext3/_mapping -d'
      {
          "fulltext3": {
@@ -33,7 +35,7 @@
 
 插入数据 `"id":"测试测试"` 数据插入无异常符合预期（对 `id` 做 `sum` 聚合计算 ，`id`为 "测试测试" 的值被忽略，只计算数值）
 
-```
+```text
     curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext3/1 -d'
     {
         "id":1,
@@ -56,6 +58,4 @@
     }'
     {"_index":"ikindex3","_type":"fulltext3","_id":"2","_version":4,"result":"updated","_shards":{"total":2,"successful":2,"failed":0},"created":false}
 ```
-
-
 

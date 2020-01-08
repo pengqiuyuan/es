@@ -1,4 +1,6 @@
-```
+# 分词测试三
+
+```text
 curl 'http://127.0.0.1:9222/ikindex3/_analyze?analyzer=ik_max_word&pretty=true' -d '
 {
 "text":"$中西拳术。巅峰，对决@甄子丹#张晋打到飞起：茶客 #千机伞#[代发]耗时一个月自制-的『金属版』千机伞模型~支持全（形态）十三种变化，不锈钢结构，"
@@ -7,7 +9,7 @@ curl 'http://127.0.0.1:9222/ikindex3/_analyze?analyzer=ik_max_word&pretty=true' 
 
 结果
 
-```
+```text
 {
   "tokens" : [
     {
@@ -527,7 +529,7 @@ curl 'http://127.0.0.1:9222/ikindex3/_analyze?analyzer=ik_max_word&pretty=true' 
 
 插入数据
 
-```
+```text
 curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/8 -d'
 {
     "content": "$中西拳术。巅峰，对决@甄子丹#张晋打到飞起：茶客 #千机伞#[代发]耗时一个月自制-的『金属版』千机伞模型~支持全（形态）十三种变化，不锈钢结构，"
@@ -536,7 +538,7 @@ curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/8 -d'
 
 搜索
 
-```
+```text
 curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
  {
      "query" : { "match_phrase" : { "content" : "自制-" }},
@@ -706,6 +708,4 @@ curl -XPOST http://127.0.0.1:9222/ikindex3/fulltext2/_search?pretty  -d'
   }
 }
 ```
-
-
 

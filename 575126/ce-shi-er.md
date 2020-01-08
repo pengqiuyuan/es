@@ -1,8 +1,10 @@
+# 测试二
+
 聚合查询的两种写法，查询时间相差几百倍，索引大小 `5T`
 
 第一种，正常的 `terms aggs` 查询，每次需要10多秒
 
-```
+```text
 GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search
 {
           "query": {
@@ -38,7 +40,7 @@ GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search
 
 结果 `10秒+`
 
-```
+```text
 {
   "took": 10682,
   "timed_out": false,
@@ -67,9 +69,9 @@ GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search
 }
 ```
 
-第一种， `terms aggs` 查询的 `painless script `写法
+第一种， `terms aggs` 查询的 `painless script`写法
 
-```
+```text
 GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search
 {
           "query": {
@@ -108,7 +110,7 @@ GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search
 
 结果，`183` 毫秒一般都在 `1` 秒以下
 
-```
+```text
 {
   "took": 183,
   "timed_out": false,
@@ -136,6 +138,4 @@ GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search
   }
 }
 ```
-
-
 

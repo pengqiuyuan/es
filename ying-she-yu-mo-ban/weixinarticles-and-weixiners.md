@@ -1,6 +1,8 @@
+# weixin\_articles\_and\_weixiners
+
 索引名称（索引前缀名称为`weixin_articles_and_weixiners`的都能匹配到，名称为`weixin_articles_and_weixiners`的`mapping`模板，`*`为通配符）：如，`weixin_articles_and_weixiners`
 
-```
+```text
 curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
 {
     "template": "weixin_articles_and_weixiners*",
@@ -274,6 +276,4 @@ curl -XPUT http://localhost:9222/_template/weixin_articles_and_weixiners -d '
     }
 }'
 ```
-
-
 

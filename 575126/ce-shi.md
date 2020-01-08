@@ -1,6 +1,8 @@
+# 测试一
+
 新、旧集群统一时间段数据对比
 
-```
+```text
 curl -u 用户名:密码 -XGET http://127.0.0.1:9200/weibo_articles/weibo_article/_search?pretty -d '
 {
   "query": { 
@@ -23,7 +25,7 @@ curl -u 用户名:密码 -XGET http://127.0.0.1:9200/weibo_articles_and_weiboers
 
 `query_string` 全文查询
 
-```
+```text
 GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search
 {
    "query": {
@@ -51,6 +53,4 @@ GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search
   }
 }
 ```
-
-
 

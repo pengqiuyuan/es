@@ -1,6 +1,8 @@
-测试文档更新，`logstash` 添加 `output` 添加  `doc_as_upsert =>true` `action >"update"`，如：
+# 测试三
 
-```
+测试文档更新，`logstash` 添加 `output` 添加 `doc_as_upsert =>true` `action >"update"`，如：
+
+```text
 output {
     if [@metadata][index_name] == "tieba_posts" {
         elasticsearch {
@@ -21,14 +23,13 @@ output {
 希望结果：
 
 * 文档不存在时，索引新文档
-
 * 文档存在时（`_id` 判断），更新部分文档（爬虫上传的 `Body` 体内容）
 
 测试结果：
 
 第一步、`POST` 一条数据，如下：
 
-```
+```text
 [
     {
         "id": "test3",
@@ -42,7 +43,7 @@ output {
         "content": " 二楼地址",
         "date": "2017-02-24T06:26:00.000Z",
         "created_at": 1488509090000,
-      	"tie_url": "http://",
+          "tie_url": "http://",
         "updated_at": 1488509090000,
         "ba_name": "测试"
     }
@@ -51,7 +52,7 @@ output {
 
 `ES` 查询 `tieba_posts` 索引下的 `_id:"test3"` 的数据，结果如下，符合预期
 
-```
+```text
 {
   "_index": "tieba_posts",
   "_type": "tieba_posts",
@@ -76,7 +77,7 @@ output {
 
 第二步、`POST` 一条相同 `ID` 的部分数据数据，如下，我们预期的 `ES` 查询结果希望是原文档所有字段值都在，只有 `tieba_id` 被修改
 
-```
+```text
 [
     {
         "id": "test3",
@@ -91,7 +92,7 @@ output {
 
 `ES` 查询 `tieba_posts` 索引下的 `_id:"test3"` 的数据，结果如下，符合预期`tieba_id` 被修改为 `"tieba_id": 536111` ，其他字段值没有改变
 
-```
+```text
 {
   "_index": "tieba_posts",
   "_type": "tieba_posts",
@@ -116,5 +117,5 @@ output {
 
 结论：
 
-添加 `doc_as_upsert =>true` 与`action >"update"`  ，能够达到预期更新、新增文档的效果
+添加 `doc_as_upsert =>true` 与`action >"update"` ，能够达到预期更新、新增文档的效果
 

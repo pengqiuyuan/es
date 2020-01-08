@@ -1,4 +1,4 @@
-##### 业务接入（支持跨域）
+# 业务接入
 
 * [x] 只需要关心**两个**跳转页面（登录、注销）和**一个**验证 `jwttoken` 有效性接口即可。
 * [x] `http://login.idatage.com/t` 提供 sso 服务
@@ -29,7 +29,7 @@
 
 `参数说明`：`jwttoken` 加密签名，[具体参考](http://blog.leapoahead.com/2015/09/06/understanding-jwt/)
 
-```
+```text
 company：工作单位
 fullname：姓名
 id
@@ -44,7 +44,7 @@ wechat：微信号
 
 `response` ：`ttl` 为查询 `jwttoken` 的剩余有效时间
 
-```
+```text
 jwttoken 认证成功
 
 {
@@ -77,7 +77,7 @@ jwttoken 认证失败
 
 **四、跨域示例**
 
-```
+```text
 业务A : http://test1.idatage.com/protected-resource
 业务B : http://test1.qyconsulting.cn/protected-resource
 SSO :  http://login.idatage.com/t/login
@@ -100,19 +100,19 @@ SSO :  http://login.idatage.com/t/login
 
 `参数说明`：
 
-```
+```text
 ids 必填。数组
 ```
 
 `BODY` 体：
 
-```
+```text
 [26, 101]
 ```
 
 `response` ：
 
-```
+```text
 company：工作单位
 fullname：姓名
 id
@@ -125,7 +125,7 @@ status：
 wechat：微信号
 ```
 
-```
+```text
 [{
         "company": "",
         "fullname": "",
@@ -154,6 +154,4 @@ wechat：微信号
     }
 ]
 ```
-
-
 

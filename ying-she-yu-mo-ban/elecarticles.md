@@ -1,3 +1,5 @@
+# elec\_articles
+
 索引：`elec_articles`
 
 类型：`elec_articles`
@@ -14,13 +16,13 @@
 
 创建索引`elec_articles`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/elec_articles
 ```
 
 `mapping`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/_template/elec_articles -d '
 {
   "template": "elec_articles*",
@@ -166,8 +168,5 @@ curl -XPUT http://127.0.0.1:9222/_template/elec_articles -d '
     }
   }
 }'
-
 ```
-
-
 

@@ -1,10 +1,12 @@
+# news\_articles
+
 旧索引：`latest_news_articles`
 
 新索引：`news_articles` 新类型：`news_articles`
 
 部分数据：
 
-```
+```text
 {
     "_id": "8b3ed44146955abd324fe100cd38c686",
     "_version": 1,
@@ -32,20 +34,20 @@
 
 创建索引`news_articles`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/news_articles
 ```
 
-`mapping`（原索引字段`comments_num`类型为字符串）[测试](/fen-ci/ce-shi-ignore-malformed.md)
+`mapping`（原索引字段`comments_num`类型为字符串）[测试](../fen-ci/ce-shi-ignore-malformed.md)
 
-```
+```text
 "comments_num": {
     "ignore_malformed": true,
     "type": "integer"
 },
 ```
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/_template/news_articles -d '
 {
     "template": "news_articles*",
@@ -294,6 +296,4 @@ curl -XPUT http://127.0.0.1:9222/_template/news_articles -d '
     }
 }'
 ```
-
-
 

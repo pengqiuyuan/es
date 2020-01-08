@@ -1,6 +1,8 @@
+# Logstash
+
 ES 消费 KAFKA 数据
 
-```
+```text
 input {
         kafka {
             bootstrap_servers => "10.27.240.159:9092"
@@ -36,7 +38,7 @@ input {
             auto_offset_reset => "earliest"
             codec => "json"
             group_id => "zhihu_group_1"       
-	}
+    }
         kafka {
             bootstrap_servers => "10.27.240.159:9092"
             topics => ["kejizixun"]
@@ -61,29 +63,27 @@ filter {
     }
 }
 output {
-	if [@metadata][index_name] == "weibo_articles_and_weiboers" {
-		stdout { codec => rubydebug }
-	}
-	else if [@metadata][index_name] == "weixin_articles_and_weixiners" {
-		stdout { codec => rubydebug }
-	}
-	else if [@metadata][index_name] == "toutiao_articles_and_users" {
-		stdout { codec => rubydebug }
-	}
-	else if [@metadata][index_name] == "baidunews_news" {
-		stdout { codec => rubydebug }
-	}
-	else if [@metadata][index_name] == "zhihu_questions" {
-		stdout { codec => rubydebug }
-	}
-	else if [@metadata][index_name] == "tech_news" {
-		stdout { codec => rubydebug }
-	}
-	else if [@metadata][index_name] == "sogou_weixin_articles" {
-		stdout { codec => rubydebug }
-	}
+    if [@metadata][index_name] == "weibo_articles_and_weiboers" {
+        stdout { codec => rubydebug }
+    }
+    else if [@metadata][index_name] == "weixin_articles_and_weixiners" {
+        stdout { codec => rubydebug }
+    }
+    else if [@metadata][index_name] == "toutiao_articles_and_users" {
+        stdout { codec => rubydebug }
+    }
+    else if [@metadata][index_name] == "baidunews_news" {
+        stdout { codec => rubydebug }
+    }
+    else if [@metadata][index_name] == "zhihu_questions" {
+        stdout { codec => rubydebug }
+    }
+    else if [@metadata][index_name] == "tech_news" {
+        stdout { codec => rubydebug }
+    }
+    else if [@metadata][index_name] == "sogou_weixin_articles" {
+        stdout { codec => rubydebug }
+    }
 }
 ```
-
-
 

@@ -1,4 +1,6 @@
-```
+# Es 集群磁盘扩容
+
+```text
 ansible all -s -m raw -a 'service node_elasticsearch stop'
 
 ansible all -s -m raw -a 'tail -50 /mnt/log/elasticsearch/node*-node/tarantula.log'
@@ -10,7 +12,7 @@ ansible all -s -m raw -a 'tail -50 /mnt/log/elasticsearch/node*-node/tarantula.l
 
 步骤（`ROOT`用户）
 
-```
+```text
 df -H
 umount /dev/vdb1
 df -H
@@ -32,6 +34,4 @@ df -h
 
 ansible all -s -m raw -a 'df -h'
 ```
-
-
 

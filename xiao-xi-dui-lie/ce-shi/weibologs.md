@@ -1,6 +1,8 @@
+# WeiboLogs
+
 WeiboLogs（索引名称、分片名称）：`weiboer_logs`、`weiboer_logs`
 
-**POST 请求写入数据到 **`kafka`
+**POST 请求写入数据到** `kafka`
 
 `POST` `http://127.0.0.1/stq/api/v1/pa/weiboerLogs/add`
 
@@ -8,7 +10,7 @@ WeiboLogs（索引名称、分片名称）：`weiboer_logs`、`weiboer_logs`
 
 `BODY` 体参数说明：List 集合、数组
 
-```
+```text
 [
     {
         "id": "1",
@@ -21,7 +23,7 @@ WeiboLogs（索引名称、分片名称）：`weiboer_logs`、`weiboer_logs`
 
 `response` 数据写入队列成功
 
-```
+```text
 {
   "success" : "true"
 }
@@ -29,12 +31,11 @@ WeiboLogs（索引名称、分片名称）：`weiboer_logs`、`weiboer_logs`
 
 `response` 数据写入队列失败
 
-```
+```text
 {
   "success" : "false"
 }
 ```
----
 
 **POST 请求直接 Bulk 写入数据到 Elasticsearch**
 
@@ -48,7 +49,7 @@ WeiboLogs（索引名称、分片名称）：`weiboer_logs`、`weiboer_logs`
 
 `response` 数据 `bulk` 写入 `es` 成功
 
-```
+```text
 {
   "success" : "true"
 }
@@ -56,7 +57,7 @@ WeiboLogs（索引名称、分片名称）：`weiboer_logs`、`weiboer_logs`
 
 `response` 数据 `bulk` 写入 `es` 失败 ，返回 `bulkResponse.buildFailureMessage()` 的错误 `message`
 
-```
+```text
 {
   "success" : "这里面的内容为 bulk 请求失败的 message 提示信息"
 }
@@ -64,11 +65,9 @@ WeiboLogs（索引名称、分片名称）：`weiboer_logs`、`weiboer_logs`
 
 传入的 List 集合为空 `[]`，直接返回 `response`
 
-```
+```text
 {
   "success" : "null"
 }
 ```
-
-
 

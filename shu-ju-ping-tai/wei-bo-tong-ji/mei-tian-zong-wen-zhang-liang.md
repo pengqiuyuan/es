@@ -1,6 +1,8 @@
+# 每天总文章量
+
 每日文章量
 
-```
+```text
 GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search 
 {
           "query": {
@@ -38,6 +40,4 @@ GET /weibo_articles_and_weiboers/weibo_articles_and_weiboer/_search
           }
 }
 ```
-
-
 

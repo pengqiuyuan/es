@@ -1,3 +1,5 @@
+# 接口
+
 微博（索引名称、分片名称）：`weibo_articles_and_weiboers`、`weibo_articles_and_weiboer`
 
 微信（索引名称、分片名称）：`weixin_articles_and_weixiners`、`weixin_articles_and_weixiner`
@@ -8,11 +10,11 @@
 
 知乎问答（索引名称、分片名称）：`zhihu_questions`、`zhihu_questions`
 
-科技资讯（索引名称、分片名称）：`tech_news`、[分片参考](/ying-she-yu-mo-ban/ke-ji-zi-xun-zhan-shu-ju.md)
+科技资讯（索引名称、分片名称）：`tech_news`、[分片参考](../ying-she-yu-mo-ban/ke-ji-zi-xun-zhan-shu-ju.md)
 
 搜狗微信文章（索引名称、分片名称）：`sogou_weixin_articles`、`sogou_weixin_articles`
 
-**POST 请求写入数据到 **`kafka`
+**POST 请求写入数据到** `kafka`
 
 `POST` `http://127.0.0.1/stq/api/v1/pa/xxx/add`
 
@@ -20,7 +22,7 @@
 
 `BODY` 体参数说明：List 集合、数组
 
-```
+```text
 [
     {
       "id": "10",
@@ -37,15 +39,15 @@
 ]
 ```
 
-`logstash`** 消费**`kafka`**中的数据到 **`elasticsearch`
+`logstash` **消费**`kafka`**中的数据到** `elasticsearch`
 
-```
+```text
 ...
 ```
 
 从 `kafka` 队列中读取的数据，两条符合预期（`index_name`、`type_name`、`id`会在`logstash filter`中处理后移除，保存或者更新数据到 `es`）
 
-```
+```text
 {
     "avatar_img" => "xxx",
           "name" => "xxx"
@@ -55,6 +57,4 @@
           "name" => "xxx"
 }
 ```
-
-
 

@@ -1,6 +1,8 @@
+# Kafka
+
 挂载普通磁盘 ROOT 用户
 
-```
+```text
 fdisk -l 
 fdisk /dev/vdc 对数据盘进行分区。根据提示，依次输入 n，p，1，两次回车，wq，分区就开始了。
 fdisk -l 
@@ -14,7 +16,7 @@ df -h
 
 集群：三台机器
 
-```
+```text
 node06 vpn_ip=10.28.1.1
 node07 vpn_ip=10.28.2.2
 node08 vpn_ip=10.27.2.3
@@ -22,14 +24,14 @@ node08 vpn_ip=10.27.2.3
 
 容器：
 
-```
+```text
 docker pull wurstmeister/kafka:latest
 docker pull wurstmeister/zookeeper:latest
 ```
 
 先配置启动 `zookeeper` 集群（逐个启动）、再启动 `kafka` 集群（逐个启动），三台机器分别配置，目录结构如下：
 
-```
+```text
 ~/kafka-docker
 
 ├── zb
@@ -44,7 +46,7 @@ docker pull wurstmeister/zookeeper:latest
 
 * 配置 `zb` 的 `docker-compose.yml` ，`KAFKA_ADVERTISED_HOST_NAME: "10.28.1.1"` 的值，分别配置对应 `IP`
 
-```
+```text
 zookeeper:
   build: ./zookeeper/
   volumes:
@@ -59,18 +61,17 @@ zookeeper:
 
 * 配置`zookeeper`  的 `Dockerfile`
 
-```
+```text
 FROM wurstmeister/zookeeper
 RUN echo "Asia/Shanghai" > /etc/timezone
 ```
 
 * 配置`zookeeper` 的`myid` ，文件内只有一个数字，分别为 `1`、`2`、`3` ，代表 `zookeeper` 的三台服务器
-
 * 配置 `zoo.cfg`,注意 `0.0.0.0:2888:3888` 对应的是 `2888` 和 `3888`
 
 `10.28.1.1`
 
-```
+```text
 tickTime=2000
 initLimit=10
 syncLimit=5
@@ -84,7 +85,7 @@ server.3=10.27.3.3:2889:3889
 
 `10.28.2.2`
 
-```
+```text
 tickTime=2000
 initLimit=10
 syncLimit=5
@@ -98,7 +99,7 @@ server.3=10.27.3.3:2889:3889
 
 `10.27.3.3`
 
-```
+```text
 tickTime=2000
 initLimit=10
 syncLimit=5
@@ -112,7 +113,7 @@ server.3=0.0.0.0:2888:3888
 
 配置 `kafka` 的 `docker-compose.yml`
 
-```
+```text
 kafka:
   image: wurstmeister/kafka
   ports:
@@ -134,11 +135,9 @@ kafka:
 
 `sudo docker-compose up -d`
 
----
-
 Logtash 配置
 
-```
+```text
 input {
         kafka {
             bootstrap_servers => "10.28.1.1:9093,10.28.2.2:9093,10.27.3.3:9093"
@@ -152,7 +151,7 @@ input {
 
 Web Server 配置
 
-```
+```text
     <!-- 生产者配置 -->  
     <bean id="template" class="org.springframework.kafka.core.KafkaTemplate">  
         <constructor-arg index="0">  
@@ -175,6 +174,4 @@ Web Server 配置
         <property name="producerListener" ref="producerListener"/>
     </bean>
 ```
-
-
 

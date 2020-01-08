@@ -1,8 +1,10 @@
-**安装 **`kibana 5`
+# 生产环境部署和Nginx代理配置
+
+**安装** `kibana 5`
 
 安装 `64 bit`：
 
-```
+```text
 wget https://artifacts.elastic.co/downloads/kibana/kibana-5.3.0-amd64.deb
 sha1sum kibana-5.3.0-amd64.deb 
 sudo dpkg -i kibana-5.3.0-amd64.deb
@@ -10,14 +12,14 @@ sudo dpkg -i kibana-5.3.0-amd64.deb
 
 启动、停止、重启、状态
 
-```
+```text
 sudo service kibana start
 sudo service kibana stop
 sudo service kibana restart
 sudo service kibana status
 ```
 
-```
+```text
 $ sudo service kibana status
 ● kibana.service - Kibana
    Loaded: loaded (/etc/systemd/system/kibana.service; disabled; vendor preset: enabled)
@@ -31,9 +33,7 @@ $ sudo service kibana status
 
 `config` 位置 `/etc/kibana`
 
----
-
-`kibana 5 nginx`** 代理配置**
+`kibana 5 nginx` **代理配置**
 
 生成`passfile`文件，
 
@@ -41,7 +41,7 @@ $ sudo service kibana status
 
 配置 `nginx`，目录 `/etc/nginx/sites-available/default`
 
-```
+```text
         location /kibana/ {
                 proxy_pass http://127.0.0.1:5601;
                 rewrite /kibana/(.*)$ /$1 break;
@@ -55,7 +55,7 @@ $ sudo service kibana status
 
 > 注意：需要修改 `/etc/kibana/kibana.yml`
 
-```
+```text
 server.basePath:"/kibana"
 elasticsearch.url:"http://localhost:9222"
 ```

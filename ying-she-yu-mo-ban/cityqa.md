@@ -1,3 +1,5 @@
+# city\_qa
+
 索引：`city_qa_articles`
 
 类型：`city_qa_articles`
@@ -17,13 +19,13 @@
 
 创建索引`city_qa_articles`
 
-```
+```text
 PUT /city_qa_articles
 ```
 
 `mapping`
 
-```
+```text
 PUT /_template/city_qa_articles
 {
     "template": "city_qa_articles*",
@@ -125,6 +127,4 @@ PUT /_template/city_qa_articles
     }
 }
 ```
-
-
 

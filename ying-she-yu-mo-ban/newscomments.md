@@ -1,10 +1,12 @@
+# news\_comments
+
 旧索引：`new_news_comments`
 
 新索引：`news_comments` 新类型：`news_comments`
 
 部分数据：
 
-```
+```text
 {
     "_id": "a95d6cc936ec5638c43c942a44844007",
     "_score": 1.1613197,
@@ -24,13 +26,13 @@
 
 创建索引`news_comments`
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/news_comments
 ```
 
-`mapping`（原索引字段 `reply_count`、`total`、`praise_num`，类型为字符串）[测试](/fen-ci/ce-shi-ignore-malformed.md)
+`mapping`（原索引字段 `reply_count`、`total`、`praise_num`，类型为字符串）[测试](../fen-ci/ce-shi-ignore-malformed.md)
 
-```
+```text
     "reply_count": {
         "ignore_malformed": true,
         "type": "integer"
@@ -45,7 +47,7 @@ curl -XPUT http://127.0.0.1:9222/news_comments
     }
 ```
 
-```
+```text
 curl -XPUT http://127.0.0.1:9222/_template/news_comments -d '
 {
     "template": "news_comments*",
@@ -208,6 +210,4 @@ curl -XPUT http://127.0.0.1:9222/_template/news_comments -d '
     }
 }'
 ```
-
-
 

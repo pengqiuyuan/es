@@ -1,3 +1,5 @@
+# 分词测试一
+
 `match` 测试
 
 创建索引
@@ -6,7 +8,7 @@
 
 设置 `mapping`
 
-```
+```text
 curl -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/_mapping -d'
  {
      "fulltext2": {
@@ -21,7 +23,7 @@ curl -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/_mapping -d'
  }'
 ```
 
-```
+```text
 curl -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/1 -d'
 {
     "content": "1111111《叶问3》功夫升级 中西拳术巅峰对决甄子丹张晋打到飞起"
@@ -50,7 +52,7 @@ curl -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/5 -d'
 
 查询
 
-```
+```text
 curl -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/_search?pretty  -d'
  {
      "query" : { "match" : { "content" : "@巅峰" }},
@@ -66,7 +68,7 @@ curl -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/_search?pretty  -d'
 
 结果，命中4个文档
 
-```
+```text
 {
   "took" : 26,
   "timed_out" : false,
@@ -140,16 +142,16 @@ curl -XPOST http://127.0.0.1:9222/ikindex2/fulltext2/_search?pretty  -d'
 }
 ```
 
-测试分词  `中西拳术@巅峰对决甄子丹#张晋打到飞起`，符号`#、@、。`都在
+测试分词 `中西拳术@巅峰对决甄子丹#张晋打到飞起`，符号`#、@、。`都在
 
-```
+```text
 curl 'http://127.0.0.1:9222/ikindex2/_analyze?analyzer=ik_max_word&pretty=true' -d '
 {
 "text":"#中西拳术@巅峰。"
 }'
 ```
 
-```
+```text
 {
   "tokens" : [
     {
@@ -225,6 +227,4 @@ curl 'http://127.0.0.1:9222/ikindex2/_analyze?analyzer=ik_max_word&pretty=true' 
   ]
 }
 ```
-
-
 
