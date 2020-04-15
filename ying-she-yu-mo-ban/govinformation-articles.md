@@ -1,22 +1,23 @@
 ```
-{
-    "id": "4236281494343340",
-    "text": "时间会证明一切",
-    "created_at": "2018-05-05T03:41:00.000Z",
-    "created_at_str": "5月5日 11:41",
-    "crawled_at": "2018-07-12T08:11:57.459Z",
-    "user": {
-        "id": "2366593365",
-        "screen_name": "上天赐予1"
-    },
-    "commented_article_id": "4236280822994436"
-}
+url,webName,webChannelName,webType,webChannel,artContent,artTime,artFrom,artTitle
+除了artTime文章时间,均为字符串类型
 ```
 
-创建索引`weibo_article_comments`
+```
+[{
+  "id":"test",
+  "index_name":"gov_information_articles",
+  "type_name":"gov_information_articles",
+  "artTime": "2018-04-27T20:46:20.000Z",
+  "artContent":"ceshi11"
+}]
 
 ```
-PUT /weibo_article_comments
+
+创建索引`gov_information_articles`
+
+```
+PUT /gov_information_articles
 ```
 
 `mapping`

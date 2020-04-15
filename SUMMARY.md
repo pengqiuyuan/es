@@ -52,6 +52,7 @@
   * [qie\_articles\_and\_users](ying-she-yu-mo-ban/qiearticles-and-users.md)
   * [city\_qa](ying-she-yu-mo-ban/cityqa.md)
   * [weibo\_article\_comments](ying-she-yu-mo-ban/weiboarticle-comments.md)
+  * [gov\_information\_articles](ying-she-yu-mo-ban/govinformation-articles.md)
 * [安全机制](an-quan-ji-zhi.md)
   * [基于 nginx 配置](an-quan-ji-zhi/ji-yu-nginx-pei-zhi.md)
   * [xpack](an-quan-ji-zhi/xpack.md)
